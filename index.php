@@ -6,5 +6,3 @@
  * Time: 11:26
  */
 echo "hello world!";
-echo "1111";
-echo "2222";
