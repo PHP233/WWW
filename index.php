@@ -6,3 +6,4 @@
  * Time: 11:26
  */
 echo "hello world!";
+echo "I am lcm";
