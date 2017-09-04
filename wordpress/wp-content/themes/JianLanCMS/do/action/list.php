@@ -1,0 +1,1 @@
+    <div class="js_rand">    	<h2><span class="h2_txt">你可能喜欢</span></h2>        <ul>    <?php$rand_posts = get_posts('numberposts=11&orderby=rand');foreach( $rand_posts as $post ) :?><li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo cut_str($post->post_title,34); ?></a></li><?php endforeach; ?>        </ul>    </div>

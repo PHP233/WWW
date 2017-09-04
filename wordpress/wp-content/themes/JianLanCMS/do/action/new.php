@@ -1,0 +1,1 @@
+<div class="hot_tj"><h2><span class="h2_txt">最新文章</span></h2><ul>    <?php$rand_posts = get_posts('numberposts=10&orderby=new');foreach( $rand_posts as $post ) :?><li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo cut_str($post->post_title,33); ?></a></li><?php endforeach; ?></ul>        <div style="clear:both"></div>    </div>

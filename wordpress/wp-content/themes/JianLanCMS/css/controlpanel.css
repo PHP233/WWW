@@ -1,0 +1,97 @@
+.themeform {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.themeform h1 {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: 333;
+	letter-spacing: -1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.themeform h5 {
+	margin-top: 5px;
+	margin-bottom: 15px;
+	padding: 0;
+}
+
+.themeform fieldset {
+	vertical-align: middle;
+}
+
+.themeform label {
+	display: inline;
+	vertical-align: middle;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	margin-right:5px;
+}
+
+.themeform input {
+	display: inline;
+	vertical-align: middle;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+ul#ajaxtabs{
+	margin-top:20px;
+	height:31px;
+	font-size:.85em;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+}
+ul#ajaxtabs li{
+	display: inline;
+	float: left;
+	line-height: 27px;
+	height: 31px;
+	font-weight: bold;
+}
+ul#ajaxtabs li a {
+	display: block;
+	float: left;
+	padding-right:7px;
+	padding-left:7px;
+	text-align: center;
+	text-decoration:none;
+	height: 30px;
+	background: #fafafa;
+	border-top:1px solid #eee;
+	border-right:1px solid #eee;
+	border-left:1px solid #eee;
+	color: #000;
+}
+ul#ajaxtabs li a:hover {
+	background:#efefef;
+}
+ul#ajaxtabs li a.selected {
+	color: #000;
+	display: block;
+	float: left;
+	padding: 0 15px;
+	text-align: center;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-bottom:1px solid #f9f9f9;
+	background: url(images/bgtabsfeatured.gif) repeat-x bottom;
+}
+.ajaxtabsinner {
+	background:#f9f9f9;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	padding-top:6px;
+	padding-right:10px;
+	padding-bottom:6px;
+	padding-left:10px;
+}
+.submit {
+	border:0;
+}
