@@ -4,10 +4,10 @@
 <div class="outerbox">
 <div class="innerbox clearfixmenu">
 <ul class="menu">
-<li class="stmenu"><h3><a href="/wpchajian/" class="xialaguang" title="WordPress插件"><span>WordPress插件</span></a></h3></li>
-<li class="stmenu"><h3><a href="/wpjiaocheng/" class="xialaguang" title="WordPress教程"><span>WordPress教程</span></a></h3></li>
-<li class="stmenu"><h3><a href="/jianzhanzatan/" class="xialaguang" title="建站杂谈"><span>建站杂谈</span></a></h3></li>
-<li class="stmenu"><h3><a href="/seoyouhua/" class="xialaguang" title="SEO"><span>SEO</span></a></h3></li>
+<li class="stmenu"><h3><a href="/wordpress/" class="xialaguang" title="首页"><span>首页</span></a></h3></li>
+<li class="stmenu"><h3><a href="/wpjiaocheng/" class="xialaguang" title="申请立项"><span>申请立项</span></a></h3></li>
+<li class="stmenu"><h3><a href="/wordpress/wp-login.php" class="xialaguang" title="站内管理"><span>站内管理</span></a></h3></li>
+
 <li class="overlay">
 </li>
 </ul>
