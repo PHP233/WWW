@@ -26,7 +26,11 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
+    <style>
+      p {
+        padding: 15px;
+      }
+    </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -97,13 +101,12 @@
           </li>
         </ul>
       </div>
-      <form id="uploadFileForm" enctype="multipart/form-data">
-        <hr>
-          <div class="form-group">
-            <input id="file-zh" name="file-zh" type="file" multiple data-max-file-count="1">
-          </div>
-        <hr>
-      </form>
+      <div id="step1"><?php require 'step1.php' ?></div>
+      <div id="step2"><?php require 'step2.php' ?></div>
+      <div id="step3"><?php require 'step3.php' ?></div>
+      <div id="step4"><?php require 'step4.php' ?></div>
+      <div id="step5"><?php require 'step5.php' ?></div>
+      <div id="step6"><?php require 'step6.php' ?></div>
     </div> <!-- /container -->
 
 
