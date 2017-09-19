@@ -33,6 +33,7 @@ class ProposerController extends Controller {
 			}
 			// 获取申报人所有申报的项目
 			$applies = $proposer->applies;
+			usort($applies->items,"sort_by_created_at");
 			session()->put('applies',$applies);
 			session()->put('proposer',$proposer);
 			return redirect('proposer');
@@ -55,4 +56,9 @@ class ProposerController extends Controller {
 		session()->flush();
 		return redirect('proposer/login');
 	}
+
+	private function sort_by_created_at($a, $b) {
+		return ($a->created_at < $b->created_at) ? -1: 1;
+	}
+
 }
