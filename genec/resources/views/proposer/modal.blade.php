@@ -13,7 +13,7 @@
                         <th>申报时间</th>
                     </tr>
                     <tbody>
-                    @foreach(session('applies') as $apply)
+                    @foreach($applies as $apply)
                     <tr>
                         <td>{{ $apply->title }}</td>
                         <td>{{ $apply->state($apply->state) }}</td>
@@ -41,9 +41,9 @@
                 <h4 class="modal-title">个人信息</h4>
             </div>
             <div class="modal-body">
-                <p class="bg-info">{{ session('proposer')->name }}</p>
-                <p class="bg-primary">{{ session('proposer')->email }}</p>
-                <p class="bg-success">{{ session('proposer')->phone }}</p>
+                <p class="bg-info">{{ $proposer->name }}</p>
+                <p class="bg-primary">{{ $proposer->email }}</p>
+                <p class="bg-success">{{ $proposer->phone }}</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -66,13 +66,13 @@
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">姓名</label>
                         <div class="col-sm-6">
-                            <input type="name" class="form-control" id="name" value="{{ session('proposer')->name }}" placeholder="姓名">
+                            <input type="name" class="form-control" id="name" value="{{ $proposer->name }}" placeholder="姓名">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="phone" class="col-sm-2 control-label">电话</label>
                         <div class="col-sm-6">
-                            <input type="number" class="form-control" id="phone" value="{{ session('proposer')->phone }}" placeholder="手机号码">
+                            <input type="number" class="form-control" id="phone" value="{{ $proposer->phone }}" placeholder="手机号码">
                         </div>
                     </div>
                 </form>

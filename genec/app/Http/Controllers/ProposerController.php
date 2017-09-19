@@ -32,8 +32,7 @@ class ProposerController extends Controller {
 				return redirect()->back()->withInput()->with('error','邮箱或密码错误');
 			}
 			// 获取申报人所有申报的项目
-			$applies = $proposer->applies;
-			usort($applies->items,"sort_by_created_at");
+			$applies = $proposer->applies()->orderBy('created_at','desc')->get();
 			session()->put('applies',$applies);
 			session()->put('proposer',$proposer);
 			return redirect('proposer');
@@ -55,10 +54,6 @@ class ProposerController extends Controller {
 	public function logout(Request $request) {
 		session()->flush();
 		return redirect('proposer/login');
-	}
-
-	private function sort_by_created_at($a, $b) {
-		return ($a->created_at < $b->created_at) ? -1: 1;
 	}
 
 }
