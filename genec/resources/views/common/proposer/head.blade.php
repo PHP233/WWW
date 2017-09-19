@@ -11,7 +11,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">项目申报</a></li>
+                <li><a href="{{ url('proposer/add_apply') }}">项目申报</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#history_apply">历史申报</a></li>
                 <li><a href="#contact">意见反馈</a></li>
             </ul>

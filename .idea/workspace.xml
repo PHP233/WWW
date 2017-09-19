@@ -3,126 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="521e020b-58eb-4f96-9601-3181e1ae068b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/bootstrap/app.php" afterPath="$PROJECT_DIR$/genec/bootstrap/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/bootstrap/autoload.php" afterPath="$PROJECT_DIR$/genec/bootstrap/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/public/index.php" afterPath="$PROJECT_DIR$/genec/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/public/static/assets/js/plugins/datatables.js" afterPath="$PROJECT_DIR$/genec/public/static/assets/js/plugins/datatables.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/common/admin_layout.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/common/admin_layout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/common/layout.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/common/layout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/bin/psysh" afterPath="$PROJECT_DIR$/genec/vendor/bin/psysh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/laravel/framework/src/Illuminate/Queue/Console/ListenCommand.php" afterPath="$PROJECT_DIR$/genec/vendor/laravel/framework/src/Illuminate/Queue/Console/ListenCommand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/laravel/framework/src/Illuminate/Queue/Console/WorkCommand.php" afterPath="$PROJECT_DIR$/genec/vendor/laravel/framework/src/Illuminate/Queue/Console/WorkCommand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/laravel/framework/src/Illuminate/Queue/Listener.php" afterPath="$PROJECT_DIR$/genec/vendor/laravel/framework/src/Illuminate/Queue/Listener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/laravel/framework/src/Illuminate/Queue/Worker.php" afterPath="$PROJECT_DIR$/genec/vendor/laravel/framework/src/Illuminate/Queue/Worker.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/laravel/framework/src/Illuminate/Support/helpers.php" afterPath="$PROJECT_DIR$/genec/vendor/laravel/framework/src/Illuminate/Support/helpers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/mockery/mockery/.travis.yml" afterPath="$PROJECT_DIR$/genec/vendor/mockery/mockery/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/monolog/monolog/src/Monolog/Handler/BrowserConsoleHandler.php" afterPath="$PROJECT_DIR$/genec/vendor/monolog/monolog/src/Monolog/Handler/BrowserConsoleHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/nikic/php-parser/grammar/rebuildParsers.php" afterPath="$PROJECT_DIR$/genec/vendor/nikic/php-parser/grammar/rebuildParsers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/nikic/php-parser/lib/PhpParser/Parser/Php5.php" afterPath="$PROJECT_DIR$/genec/vendor/nikic/php-parser/lib/PhpParser/Parser/Php5.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/nikic/php-parser/lib/PhpParser/Parser/Php7.php" afterPath="$PROJECT_DIR$/genec/vendor/nikic/php-parser/lib/PhpParser/Parser/Php7.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php" afterPath="$PROJECT_DIR$/genec/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/nikic/php-parser/test_old/run.php" afterPath="$PROJECT_DIR$/genec/vendor/nikic/php-parser/test_old/run.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/phpunit/phpunit/src/Util/XML.php" afterPath="$PROJECT_DIR$/genec/vendor/phpunit/phpunit/src/Util/XML.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/psy/psysh/bin/psysh" afterPath="$PROJECT_DIR$/genec/vendor/psy/psysh/bin/psysh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/psy/psysh/src/Psy/Configuration.php" afterPath="$PROJECT_DIR$/genec/vendor/psy/psysh/src/Psy/Configuration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/swiftmailer/swiftmailer/lib/mime_types.php" afterPath="$PROJECT_DIR$/genec/vendor/swiftmailer/swiftmailer/lib/mime_types.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/swiftmailer/swiftmailer/lib/swift_required.php" afterPath="$PROJECT_DIR$/genec/vendor/swiftmailer/swiftmailer/lib/swift_required.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/swiftmailer/swiftmailer/lib/swift_required_pear.php" afterPath="$PROJECT_DIR$/genec/vendor/swiftmailer/swiftmailer/lib/swift_required_pear.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" afterPath="$PROJECT_DIR$/genec/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/console/Tests/ApplicationTest.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/console/Tests/ApplicationTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/console/Tests/Descriptor/AbstractDescriptorTest.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/console/Tests/Descriptor/AbstractDescriptorTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/http-foundation/File/MimeType/MimeTypeExtensionGuesser.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/http-foundation/File/MimeType/MimeTypeExtensionGuesser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/http-foundation/Request.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/http-foundation/Request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/Client.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/Client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/EventListener/SaveSessionListener.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/EventListener/SaveSessionListener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/Tests/ClientTest.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/Tests/ClientTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/Tests/DataCollector/DumpDataCollectorTest.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/Tests/DataCollector/DumpDataCollectorTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/Tests/HttpCache/EsiTest.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/Tests/HttpCache/EsiTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/Tests/HttpCache/SsiTest.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/http-kernel/Tests/HttpCache/SsiTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/process/PhpProcess.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/process/PhpProcess.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/process/Tests/NonStopableProcess.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/process/Tests/NonStopableProcess.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/vendor/symfony/var-dumper/Dumper/HtmlDumper.php" afterPath="$PROJECT_DIR$/genec/vendor/symfony/var-dumper/Dumper/HtmlDumper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/admin.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/custom-header.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/custom-header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/ajax-actions.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/ajax-actions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-bulk-upgrader-skin.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-bulk-upgrader-skin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-pclzip.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-pclzip.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-internal-pointers.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-internal-pointers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-list-table.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-list-table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-press-this.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-press-this.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-themes-list-table.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-themes-list-table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-upgrader-skin.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-upgrader-skin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/file.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/file.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/media.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/media.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/misc.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/misc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/plugin.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/plugin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/upgrade.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/upgrade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/js/editor.js" afterPath="$PROJECT_DIR$/wordpress/wp-admin/js/editor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/js/editor.min.js" afterPath="$PROJECT_DIR$/wordpress/wp-admin/js/editor.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/js/widgets/media-widgets.js" afterPath="$PROJECT_DIR$/wordpress/wp-admin/js/widgets/media-widgets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/js/widgets/text-widgets.js" afterPath="$PROJECT_DIR$/wordpress/wp-admin/js/widgets/text-widgets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-content/languages/admin-zh_CN.po" afterPath="$PROJECT_DIR$/wordpress/wp-content/languages/admin-zh_CN.po" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-content/languages/zh_CN.po" afterPath="$PROJECT_DIR$/wordpress/wp-content/languages/zh_CN.po" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-content/themes/JianLanCMS/do/adm-do.php" afterPath="$PROJECT_DIR$/wordpress/wp-content/themes/JianLanCMS/do/adm-do.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-content/themes/JianLanCMS/img.php" afterPath="$PROJECT_DIR$/wordpress/wp-content/themes/JianLanCMS/img.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-content/themes/twentyfifteen/functions.php" afterPath="$PROJECT_DIR$/wordpress/wp-content/themes/twentyfifteen/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-content/themes/twentyseventeen/assets/js/html5.js" afterPath="$PROJECT_DIR$/wordpress/wp-content/themes/twentyseventeen/assets/js/html5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-content/themes/twentyseventeen/functions.php" afterPath="$PROJECT_DIR$/wordpress/wp-content/themes/twentyseventeen/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-content/themes/twentyseventeen/template-parts/post/content-audio.php" afterPath="$PROJECT_DIR$/wordpress/wp-content/themes/twentyseventeen/template-parts/post/content-audio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-content/themes/twentyseventeen/template-parts/post/content-video.php" afterPath="$PROJECT_DIR$/wordpress/wp-content/themes/twentyseventeen/template-parts/post/content-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-content/themes/twentysixteen/functions.php" afterPath="$PROJECT_DIR$/wordpress/wp-content/themes/twentysixteen/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-content/themes/twentysixteen/js/html5.js" afterPath="$PROJECT_DIR$/wordpress/wp-content/themes/twentysixteen/js/html5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/ID3/getid3.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/ID3/getid3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/ID3/module.tag.id3v2.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/ID3/module.tag.id3v2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/SimplePie/Content/Type/Sniffer.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/SimplePie/Content/Type/Sniffer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/SimplePie/Enclosure.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/SimplePie/Enclosure.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/SimplePie/Sanitize.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/SimplePie/Sanitize.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class-phpmailer.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class-phpmailer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class-simplepie.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class-simplepie.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class-snoopy.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class-snoopy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-customize-nav-menus.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-customize-nav-menus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-editor.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-editor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class.wp-scripts.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class.wp-scripts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/comment-template.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/comment-template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/customize/class-wp-customize-selective-refresh.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/customize/class-wp-customize-selective-refresh.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/default-widgets.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/default-widgets.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/deprecated.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/deprecated.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/embed.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/embed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/formatting.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/formatting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/functions.wp-scripts.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/functions.wp-scripts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/http.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/http.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/customize-selective-refresh.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/customize-selective-refresh.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/customize-selective-refresh.min.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/customize-selective-refresh.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/jquery/jquery-migrate.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/jquery/jquery-migrate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/mce-view.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/mce-view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/mce-view.min.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/mce-view.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/mediaelement/wp-playlist.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/mediaelement/wp-playlist.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/mediaelement/wp-playlist.min.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/mediaelement/wp-playlist.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/quicktags.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/quicktags.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/media/plugin.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/media/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/media/plugin.min.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/media/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/paste/plugin.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/paste/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/paste/plugin.min.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/paste/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wordpress/plugin.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wordpress/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wordpress/plugin.min.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wordpress/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpdialogs/plugin.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpdialogs/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpdialogs/plugin.min.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpdialogs/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/plugin.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/plugin.min.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/tiny_mce_popup.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/tiny_mce_popup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/tinymce.min.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/tinymce.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/twemoji.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/twemoji.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/load.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/load.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/media.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/media.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/script-loader.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/script-loader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/taxonomy.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/taxonomy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/theme.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/theme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/widgets/class-wp-widget-media-video.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/widgets/class-wp-widget-media-video.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/genec/public/static/assets/js/script/app.min.js" afterPath="$PROJECT_DIR$/genec/public/static/assets/js/scripts/app.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/genec/public/static/assets/js/script/demo.min.js" afterPath="$PROJECT_DIR$/genec/public/static/assets/js/scripts/demo.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/genec/public/static/assets/js/script/layout.min.js" afterPath="$PROJECT_DIR$/genec/public/static/assets/js/scripts/layout.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/genec/public/static/assets/js/script/quick-sidebar.min.js" afterPath="$PROJECT_DIR$/genec/public/static/assets/js/scripts/quick-sidebar.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/genec/public/static/assets/js/script/table-datatables-managed.min.js" afterPath="$PROJECT_DIR$/genec/public/static/assets/js/scripts/table-datatables-managed.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" afterPath="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/app/Http/routes.php" afterPath="$PROJECT_DIR$/genec/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/common/proposer/head.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/common/proposer/head.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/proposer/add_apply.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/proposer/add_apply.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/proposer/modal.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/proposer/modal.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -132,32 +18,66 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/public/index.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ProposerController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="1178">
+              <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="39" />
+              <folding>
+                <element signature="e#117#140#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modal.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/modal.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/admin.blade.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="29" />
+            <state relative-caret-position="285">
+              <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <folding>
+                <marker date="1505833115367" expanded="true" signature="95:96" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/common/proposer/head.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="55" lean-forward="true" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_layout.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/genec/resources/views/common/admin_layout.blade.php">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/genec/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="2985" column="58" lean-forward="true" selection-start-line="2985" selection-start-column="58" selection-end-line="2985" selection-end-column="58" />
+            <state relative-caret-position="283">
+              <caret line="38" column="98" lean-forward="false" selection-start-line="38" selection-start-column="98" selection-end-line="38" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_apply.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/add_apply.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -206,17 +126,20 @@
         <option value="$PROJECT_DIR$/laravel/resources/views/proposer/index.blade.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/JianLanCMS/tb-ty.php" />
         <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/genec/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/proposer/modal.html" />
         <option value="$PROJECT_DIR$/genec/resources/views/common/find_password.blade.php" />
-        <option value="$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php" />
-        <option value="$PROJECT_DIR$/genec/resources/views/proposer/modal.blade.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/common/layout.blade.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/reviewer/admin.blade.php" />
         <option value="$PROJECT_DIR$/genec/app/Model/Proposer.php" />
-        <option value="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" />
         <option value="$PROJECT_DIR$/genec/.gitignore" />
         <option value="$PROJECT_DIR$/genec/resources/views/common/admin_layout.blade.php" />
+        <option value="$PROJECT_DIR$/genec/resources/views/proposer/modal.blade.php" />
+        <option value="$PROJECT_DIR$/genec/resources/views/common/proposer/head.blade.php" />
+        <option value="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" />
+        <option value="$PROJECT_DIR$/genec/resources/views/common/proposer/guide.blade.php" />
+        <option value="$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php" />
+        <option value="$PROJECT_DIR$/genec/resources/views/proposer/add_apply.blade.php" />
+        <option value="$PROJECT_DIR$/genec/app/Http/routes.php" />
       </list>
     </option>
   </component>
@@ -239,9 +162,9 @@
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="210" />
-    <option name="y" value="91" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-78" />
+    <option name="y" value="29" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -263,93 +186,90 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="WWW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WWW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="WWW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WWW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="WWW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WWW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="WWW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WWW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="WWW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WWW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="WWW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WWW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="WWW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WWW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="WWW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WWW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="WWW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WWW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="datatables.js" type="620a8d5e:NestingTreeNode" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="proposer" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="WWW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WWW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="proposer" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="reviewer" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -360,15 +280,15 @@
     <property name="nodejs_interpreter_path" value="D:/node/node" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\php_workspace\laravel\app\model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\phpStudy\WWW\genec\public\static\assets\css" />
       <recent name="D:\php_workspace\genec\public\static\assets\js" />
       <recent name="D:\php_workspace\genec\public\static\assets\js\plugins" />
       <recent name="D:\php_workspace\genec\public\static\assets\css\plugins" />
       <recent name="D:\php_workspace\laravel\public\static\assets\css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\php_workspace\laravel\app\model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -459,23 +379,22 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70908000" />
+    <option name="totallyTimeSpent" value="76486000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-78" y="29" width="1386" height="788" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1890625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18853696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30327868" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2828746" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -483,16 +402,17 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30327868" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18910742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,34 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wordpress/wp-content/themes/JianLanCMS/category-tuwen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="59" column="16" lean-forward="false" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wordpress/wp-content/themes/JianLanCMS/do/adm-do.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wordpress/wp-content/themes/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wordpress/wp-content/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wordpress/readme.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1270">
@@ -771,13 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="34" column="62" lean-forward="false" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genec/resources/views/common/find_password.blade.php" />
     <entry file="file://$PROJECT_DIR$/genec/app/Model/Apply.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -786,24 +671,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/modal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="87" column="27" lean-forward="false" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genec/resources/views/common/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
           <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -818,13 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="35" column="56" lean-forward="true" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -847,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-855">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -863,6 +725,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="2985" column="58" lean-forward="true" selection-start-line="2985" selection-start-column="58" selection-end-line="2985" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/common/proposer/head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="55" lean-forward="true" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/common/proposer/guide.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/modal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="39" />
+          <folding>
+            <element signature="e#117#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <marker date="1505833115367" expanded="true" signature="95:96" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/add_apply.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="38" column="98" lean-forward="false" selection-start-line="38" selection-start-column="98" selection-end-line="38" selection-end-column="98" />
           <folding />
         </state>
       </provider>

@@ -34,6 +34,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::any('reviewer/admin', ['uses' => 'ReviewController@admin']);
     Route::any('proposer/login', ['uses' => 'ProposerController@login','as' => 'proposer_login']);
     Route::any('proposer/register', ['uses' => 'ProposerController@register','as' => 'proposer_register']);
-    Route::any('proposer', ['uses' => 'ProposerController@index','as' => 'proposer_index']);
+	Route::any('proposer/add_apply', ['uses' => 'ProposerController@add_apply','as' => 'proposer_add_apply']);
     Route::any('proposer/logout', ['uses' => 'ProposerController@logout','as' => 'proposer_logout']);
+	Route::any('proposer/{id?}', ['uses' => 'ProposerController@index','as' => 'proposer_index']);
 });

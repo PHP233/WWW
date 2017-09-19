@@ -47,8 +47,25 @@ class ProposerController extends Controller {
 		$proposer->save();
 	}
 
-	public function index(Request $request) {
-		return view('proposer/index');
+	public function index(Request $request, $id = null) {
+		$applies = session()->get('applies');
+		if (!isset($id)) {
+			return view('proposer/index', [
+				'show_apply' => $applies->first()
+			]);
+		}
+		for($i=0; $i<count($applies); $i++) {
+			if($applies[$i]->id == $id) {
+				$show_apply = $applies[$i];
+			}
+		}
+		return view('proposer/index',[
+			'show_apply'=> $show_apply,
+		]);
+	}
+
+	public function add_apply(Request $request) {
+		return view('proposer/add_apply');
 	}
 
 	public function logout(Request $request) {

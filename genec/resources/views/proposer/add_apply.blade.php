@@ -1,1 +1,2 @@
-@extends('common.layout')
+@extends('proposer.index')
+

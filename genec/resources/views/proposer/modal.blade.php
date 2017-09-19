@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <table class="table table-striped">
+                <table class="table table-hover">
                     <caption>历史申报列表</caption>
                     <thead>
                     <tr>
@@ -15,7 +15,7 @@
                     <tbody>
                     @foreach($applies as $apply)
                     <tr>
-                        <td>{{ $apply->title }}</td>
+                        <td><a href="{{ url('proposer/'.$apply->id) }}">{{ $apply->title }}</a></td>
                         <td>{{ $apply->state($apply->state) }}</td>
                         <td>{{ $apply->modify_time }}</td>
                         <td>{{ $apply->created_at }}</td>
