@@ -5,7 +5,7 @@
 <div class="innerbox clearfixmenu">
 <ul class="menu">
 <li class="stmenu"><h3><a href="/wordpress/" class="xialaguang" title="首页"><span>首页</span></a></h3></li>
-<li class="stmenu"><h3><a href="/wpjiaocheng/" class="xialaguang" title="申请立项"><span>申请立项</span></a></h3></li>
+<li class="stmenu"><h3><a href="../genec/public/proposer/login" class="xialaguang" title="申请立项"><span>申请立项</span></a></h3></li>
 <li class="stmenu"><h3><a href="/wordpress/wp-login.php" class="xialaguang" title="站内管理"><span>站内管理</span></a></h3></li>
 
 <li class="overlay">
