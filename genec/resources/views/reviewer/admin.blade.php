@@ -1,0 +1,1 @@
+@extends('common.admin_layout')
