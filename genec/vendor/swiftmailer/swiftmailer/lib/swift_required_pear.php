@@ -26,5 +26,5 @@ if (!function_exists('_swiftmailer_init')) {
     }
 }
 
-// Start the autoloader and lazy-load the init script to set up dependency injection
+// Start the autoloader and lazy-load the init scripts to set up dependency injection
 Swift::registerAutoload('_swiftmailer_init');

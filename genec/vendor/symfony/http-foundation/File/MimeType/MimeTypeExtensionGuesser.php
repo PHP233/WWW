@@ -483,7 +483,7 @@ class MimeTypeExtensionGuesser implements ExtensionGuesserInterface
         'application/vnd.xara' => 'xar',
         'application/vnd.xfdl' => 'xfdl',
         'application/vnd.yamaha.hv-dic' => 'hvd',
-        'application/vnd.yamaha.hv-script' => 'hvs',
+        'application/vnd.yamaha.hv-scripts' => 'hvs',
         'application/vnd.yamaha.hv-voice' => 'hvp',
         'application/vnd.yamaha.openscoreformat' => 'osf',
         'application/vnd.yamaha.openscoreformat.osfpvg+xml' => 'osfpvg',

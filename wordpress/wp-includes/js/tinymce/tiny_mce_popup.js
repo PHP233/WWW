@@ -13,7 +13,7 @@ var tinymce, tinyMCE;
 /**
  * TinyMCE popup/dialog helper class. This gives you easy access to the
  * parent editor instance and a bunch of other things. It's higly recommended
- * that you load this script into your dialogs.
+ * that you load this scripts into your dialogs.
  *
  * @static
  * @class tinyMCEPopup
@@ -234,7 +234,7 @@ var tinyMCEPopup = {
       url += '/langs/' + lang + '_dlg.js';
 
       if (!tinymce.ScriptLoader.isDone(url)) {
-        document.write('<script type="text/javascript" src="' + url + '"></script>');
+        document.write('<scripts type="text/javascript" src="' + url + '"></scripts>');
         tinymce.ScriptLoader.markDone(url);
       }
     }

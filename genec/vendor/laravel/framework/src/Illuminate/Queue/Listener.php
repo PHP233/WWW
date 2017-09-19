@@ -120,7 +120,7 @@ class Listener
         });
 
         // Once we have run the job we'll go check if the memory limit has been
-        // exceeded for the script. If it has, we will kill this script so a
+        // exceeded for the scripts. If it has, we will kill this scripts so a
         // process manager will restart this with a clean slate of memory.
         if ($this->memoryExceeded($memory)) {
             $this->stop();
@@ -190,7 +190,7 @@ class Listener
     }
 
     /**
-     * Stop listening and bail out of the script.
+     * Stop listening and bail out of the scripts.
      *
      * @return void
      */

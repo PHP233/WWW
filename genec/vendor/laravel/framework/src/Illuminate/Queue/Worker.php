@@ -312,7 +312,7 @@ class Worker
     }
 
     /**
-     * Stop listening and bail out of the script.
+     * Stop listening and bail out of the scripts.
      *
      * @return void
      */
@@ -324,7 +324,7 @@ class Worker
     }
 
     /**
-     * Sleep the script for a given number of seconds.
+     * Sleep the scripts for a given number of seconds.
      *
      * @param  int   $seconds
      * @return void

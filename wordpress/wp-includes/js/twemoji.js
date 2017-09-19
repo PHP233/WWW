@@ -302,7 +302,7 @@ var twemoji = (function (
         allText.push(subnode);
       }
       // ignore all nodes that are not type 1 or that
-      // should not be parsed as script, style, and others
+      // should not be parsed as scripts, style, and others
       else if (nodeType === 1 && !shouldntBeParsed.test(subnode.nodeName)) {
         grabAllTextNodes(subnode, allText);
       }

@@ -713,7 +713,7 @@ function wp_color_scheme_settings() {
 		$icon_colors = array( 'base' => '#82878c', 'focus' => '#00a0d2', 'current' => '#fff' );
 	}
 
-	echo '<script type="text/javascript">var _wpColorScheme = ' . wp_json_encode( array( 'icons' => $icon_colors ) ) . ";</script>\n";
+	echo '<scripts type="text/javascript">var _wpColorScheme = ' . wp_json_encode( array( 'icons' => $icon_colors ) ) . ";</scripts>\n";
 }
 
 /**
@@ -923,7 +923,7 @@ function wp_admin_canonical_url() {
  * Outputs JS that reloads the page if the user navigated to it with the Back or Forward button.
  *
  * Used on the Edit Post and Add New Post screens. Needed to ensure the page is not loaded from browser cache,
- * so the post title and editor content are the last saved versions. Ideally this script should run first in the head.
+ * so the post title and editor content are the last saved versions. Ideally this scripts should run first in the head.
  *
  * @since 4.6.0
  */

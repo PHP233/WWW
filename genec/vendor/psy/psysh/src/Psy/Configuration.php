@@ -933,7 +933,7 @@ class Configuration
      * Set the PHP manual database file.
      *
      * This file should be an SQLite database generated from the phpdoc source
-     * with the `bin/build_manual` script.
+     * with the `bin/build_manual` scripts.
      *
      * @param string $filename
      */

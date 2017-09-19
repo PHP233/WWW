@@ -475,7 +475,7 @@ function is_allowed_http_origin( $origin = null ) {
  * Send Access-Control-Allow-Origin and related headers if the current request
  * is from an allowed origin.
  *
- * If the request is an OPTIONS request, the script exits with either access
+ * If the request is an OPTIONS request, the scripts exits with either access
  * control headers sent, or a 403 response if the origin is not allowed. For
  * other request methods, you will receive a return value.
  *

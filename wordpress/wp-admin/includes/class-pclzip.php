@@ -54,7 +54,7 @@
   }
 
   // ----- Optional static temporary directory
-  //       By default temporary files are generated in the script current
+  //       By default temporary files are generated in the scripts current
   //       path.
   //       If defined :
   //       - MUST BE terminated by a '/'.

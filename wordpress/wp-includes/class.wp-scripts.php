@@ -55,7 +55,7 @@ class WP_Scripts extends WP_Dependencies {
 	public $in_footer = array();
 
 	/**
-	 * Holds a list of script handles which will be concatenated.
+	 * Holds a list of scripts handles which will be concatenated.
 	 *
 	 * @since 2.8.0
 	 * @access public
@@ -64,7 +64,7 @@ class WP_Scripts extends WP_Dependencies {
 	public $concat = '';
 
 	/**
-	 * Holds a string which contains script handles and their version.
+	 * Holds a string which contains scripts handles and their version.
 	 *
 	 * @since 2.8.0
 	 * @deprecated 3.4.0
@@ -102,7 +102,7 @@ class WP_Scripts extends WP_Dependencies {
 	public $print_code = '';
 
 	/**
-	 * Holds a list of script handles which are not in the default directory
+	 * Holds a list of scripts handles which are not in the default directory
 	 * if concatenation is enabled.
 	 *
 	 * Unused in core.
@@ -172,7 +172,7 @@ class WP_Scripts extends WP_Dependencies {
 	 * @access public
 	 *
 	 * @param mixed $handles Optional. Scripts to be printed. (void) prints queue, (string) prints
-	 *                       that script, (array of strings) prints those scripts. Default false.
+	 *                       that scripts, (array of strings) prints those scripts. Default false.
 	 * @param int   $group   Optional. If scripts were queued in groups prints this group number.
 	 *                       Default false.
 	 * @return array Scripts that have been printed.
@@ -182,7 +182,7 @@ class WP_Scripts extends WP_Dependencies {
 	}
 
 	/**
-	 * Prints extra scripts of a registered script.
+	 * Prints extra scripts of a registered scripts.
 	 *
 	 * @since 2.1.0
 	 * @since 2.8.0 Added the `$echo` parameter.
@@ -191,8 +191,8 @@ class WP_Scripts extends WP_Dependencies {
 	 *
 	 * @see print_extra_script()
 	 *
-	 * @param string $handle The script's registered handle.
-	 * @param bool   $echo   Optional. Whether to echo the extra script instead of just returning it.
+	 * @param string $handle The scripts's registered handle.
+	 * @param bool   $echo   Optional. Whether to echo the extra scripts instead of just returning it.
 	 *                       Default true.
 	 * @return bool|string|void Void if no data exists, extra scripts if `$echo` is true, true otherwise.
 	 */
@@ -202,13 +202,13 @@ class WP_Scripts extends WP_Dependencies {
 	}
 
 	/**
-	 * Prints extra scripts of a registered script.
+	 * Prints extra scripts of a registered scripts.
 	 *
 	 * @since 3.3.0
 	 * @access public
 	 *
-	 * @param string $handle The script's registered handle.
-	 * @param bool   $echo   Optional. Whether to echo the extra script instead of just returning it.
+	 * @param string $handle The scripts's registered handle.
+	 * @param bool   $echo   Optional. Whether to echo the extra scripts instead of just returning it.
 	 *                       Default true.
 	 * @return bool|string|void Void if no data exists, extra scripts if `$echo` is true, true otherwise.
 	 */
@@ -219,17 +219,17 @@ class WP_Scripts extends WP_Dependencies {
 		if ( !$echo )
 			return $output;
 
-		echo "<script type='text/javascript'>\n"; // CDATA and type='text/javascript' is not needed for HTML 5
+		echo "<scripts type='text/javascript'>\n"; // CDATA and type='text/javascript' is not needed for HTML 5
 		echo "/* <![CDATA[ */\n";
 		echo "$output\n";
 		echo "/* ]]> */\n";
-		echo "</script>\n";
+		echo "</scripts>\n";
 
 		return true;
 	}
 
 	/**
-	 * Processes a script dependency.
+	 * Processes a scripts dependency.
 	 *
 	 * @since 2.6.0
 	 * @since 2.8.0 Added the `$group` parameter.
@@ -237,7 +237,7 @@ class WP_Scripts extends WP_Dependencies {
 	 *
 	 * @see WP_Dependencies::do_item()
 	 *
-	 * @param string $handle    The script's registered handle.
+	 * @param string $handle    The scripts's registered handle.
 	 * @param int|false $group  Optional. Group level: (int) level, (false) no groups. Default false.
 	 * @return bool True on success, false on failure.
 	 */
@@ -277,16 +277,16 @@ class WP_Scripts extends WP_Dependencies {
 		$after_handle = $this->print_inline_script( $handle, 'after', false );
 
 		if ( $before_handle ) {
-			$before_handle = sprintf( "<script type='text/javascript'>\n%s\n</script>\n", $before_handle );
+			$before_handle = sprintf( "<scripts type='text/javascript'>\n%s\n</scripts>\n", $before_handle );
 		}
 
 		if ( $after_handle ) {
-			$after_handle = sprintf( "<script type='text/javascript'>\n%s\n</script>\n", $after_handle );
+			$after_handle = sprintf( "<scripts type='text/javascript'>\n%s\n</scripts>\n", $after_handle );
 		}
 
 		if ( $this->do_concat ) {
 			/**
-			 * Filters the script loader source.
+			 * Filters the scripts loader source.
 			 *
 			 * @since 2.2.0
 			 *
@@ -342,16 +342,16 @@ class WP_Scripts extends WP_Dependencies {
 		if ( ! $src )
 			return true;
 
-		$tag = "{$cond_before}{$before_handle}<script type='text/javascript' src='$src'></script>\n{$after_handle}{$cond_after}";
+		$tag = "{$cond_before}{$before_handle}<scripts type='text/javascript' src='$src'></scripts>\n{$after_handle}{$cond_after}";
 
 		/**
-		 * Filters the HTML script tag of an enqueued script.
+		 * Filters the HTML scripts tag of an enqueued scripts.
 		 *
 		 * @since 4.1.0
 		 *
-		 * @param string $tag    The `<script>` tag for the enqueued script.
-		 * @param string $handle The script's registered handle.
-		 * @param string $src    The script's source URL.
+		 * @param string $tag    The `<scripts>` tag for the enqueued scripts.
+		 * @param string $handle The scripts's registered handle.
+		 * @param string $src    The scripts's source URL.
 		 */
 		$tag = apply_filters( 'script_loader_tag', $tag, $handle, $src );
 
@@ -365,14 +365,14 @@ class WP_Scripts extends WP_Dependencies {
 	}
 
 	/**
-	 * Adds extra code to a registered script.
+	 * Adds extra code to a registered scripts.
 	 *
 	 * @since 4.5.0
 	 * @access public
 	 *
-	 * @param string $handle   Name of the script to add the inline script to. Must be lowercase.
+	 * @param string $handle   Name of the scripts to add the inline scripts to. Must be lowercase.
 	 * @param string $data     String containing the javascript to be added.
-	 * @param string $position Optional. Whether to add the inline script before the handle
+	 * @param string $position Optional. Whether to add the inline scripts before the handle
 	 *                         or after. Default 'after'.
 	 * @return bool True on success, false on failure.
 	 */
@@ -397,10 +397,10 @@ class WP_Scripts extends WP_Dependencies {
 	 * @since 4.5.0
 	 * @access public
 	 *
-	 * @param string $handle   Name of the script to add the inline script to. Must be lowercase.
-	 * @param string $position Optional. Whether to add the inline script before the handle
+	 * @param string $handle   Name of the scripts to add the inline scripts to. Must be lowercase.
+	 * @param string $position Optional. Whether to add the inline scripts before the handle
 	 *                         or after. Default 'after'.
-	 * @param bool $echo       Optional. Whether to echo the script instead of just returning it.
+	 * @param bool $echo       Optional. Whether to echo the scripts instead of just returning it.
 	 *                         Default true.
 	 * @return string|false Script on success, false otherwise.
 	 */
@@ -414,14 +414,14 @@ class WP_Scripts extends WP_Dependencies {
 		$output = trim( implode( "\n", $output ), "\n" );
 
 		if ( $echo ) {
-			printf( "<script type='text/javascript'>\n%s\n</script>\n", $output );
+			printf( "<scripts type='text/javascript'>\n%s\n</scripts>\n", $output );
 		}
 
 		return $output;
 	}
 
 	/**
-	 * Localizes a script, only if the script has already been added.
+	 * Localizes a scripts, only if the scripts has already been added.
 	 *
 	 * @since 2.1.0
 	 * @access public
@@ -486,7 +486,7 @@ class WP_Scripts extends WP_Dependencies {
 	}
 
 	/**
-	 * Determines script dependencies.
+	 * Determines scripts dependencies.
      *
 	 * @since 2.1.0
 	 * @access public
@@ -502,11 +502,11 @@ class WP_Scripts extends WP_Dependencies {
 		$r = parent::all_deps( $handles, $recursion, $group );
 		if ( ! $recursion ) {
 			/**
-			 * Filters the list of script dependencies left to print.
+			 * Filters the list of scripts dependencies left to print.
 			 *
 			 * @since 2.3.0
 			 *
-			 * @param array $to_do An array of script dependencies.
+			 * @param array $to_do An array of scripts dependencies.
 			 */
 			$this->to_do = apply_filters( 'print_scripts_array', $this->to_do );
 		}
@@ -549,7 +549,7 @@ class WP_Scripts extends WP_Dependencies {
 	 * @since 2.8.0
 	 * @access public
 	 *
-	 * @param string $src The source of the enqueued script.
+	 * @param string $src The source of the enqueued scripts.
 	 * @return bool True if found, false if not.
 	 */
 	public function in_default_dir( $src ) {

@@ -240,7 +240,7 @@ endif;
  * @since Twenty Fifteen 1.1
  */
 function twentyfifteen_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+	echo "<scripts>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</scripts>\n";
 }
 add_action( 'wp_head', 'twentyfifteen_javascript_detection', 0 );
 
@@ -277,8 +277,8 @@ function twentyfifteen_scripts() {
 		wp_enqueue_script( 'twentyfifteen-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20141010' );
 	}
 
-	wp_enqueue_script( 'twentyfifteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
-	wp_localize_script( 'twentyfifteen-script', 'screenReaderText', array(
+	wp_enqueue_script( 'twentyfifteen-scripts', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
+	wp_localize_script( 'twentyfifteen-scripts', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'twentyfifteen' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'twentyfifteen' ) . '</span>',
 	) );

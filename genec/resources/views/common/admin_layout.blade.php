@@ -25,25 +25,25 @@ License: You must have a valid license purchased only from themeforest(the above
     <meta content="" name="description" />
     <meta content="" name="author" />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="{{ asset('static/assets/plugins/googlefont.css') }}" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/assets/css/plugins/googlefont.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/assets/css/plugins/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/assets/css/plugins/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/assets/css/plugins/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/assets/css/plugins/uniform.default.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/assets/css/plugins/bootstrap-switch.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN PAGE LEVEL PLUGINS -->
-    <link href="../assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/assets/css/plugins/datatables.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/assets/css/plugins/datatables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL STYLES -->
-    <link href="../assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
-    <link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/assets/css/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="{{ asset('static/assets/css/plugins.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
-    <link href="../assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
-    <link href="../assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/assets/css/layout/layout.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/assets/css/layout/darkblue.min.css') }}" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="{{ asset('static/assets/css/layout/custom.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- END THEME LAYOUT STYLES -->
     <link rel="shortcut icon" href="favicon.ico" /> </head>
 <!-- END HEAD -->
@@ -2975,34 +2975,34 @@ License: You must have a valid license purchased only from themeforest(the above
 </div>
 <!-- END FOOTER -->
 <!--[if lt IE 9]>
-<script src="../assets/global/plugins/respond.min.js"></script>
-<script src="../assets/global/plugins/excanvas.min.js"></script>
+<scripts src="../assets/global/plugins/respond.min.js"></scripts>
+<scripts src="../assets/global/plugins/excanvas.min.js"></scripts>
 <![endif]-->
 <!-- BEGIN CORE PLUGINS -->
-<script src="{{ asset('static/assets/jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/jquery.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('static/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
-<script src="../assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
-<script src="../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
-<script src="../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-<script src="../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
-<script src="../assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
-<script src="../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/plugins/js.cookie.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/plugins/bootstrap-hover-dropdown.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/plugins/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/plugins/jquery.blockui.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/plugins/jquery.uniform.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/plugins/bootstrap-switch.min.js') }}" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="../assets/global/scripts/datatable.js" type="text/javascript"></script>
-<script src="../assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
-<script src="../assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/plugins/datatables.js') }}" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/plugins/datatables.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/plugins/datatables.bootstrap.js') }}" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
-<script src="../assets/global/scripts/app.min.js" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/scripts/app.min.js') }}" type="text/javascript"></script>
 <!-- END THEME GLOBAL SCRIPTS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="../assets/pages/scripts/table-datatables-managed.min.js" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/scripts/table-datatables-managed.min.js') }}" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <!-- BEGIN THEME LAYOUT SCRIPTS -->
-<script src="../assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
-<script src="../assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
-<script src="../assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/scripts/layout.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/scripts/demo.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('static/assets/js/scripts/quick-sidebar.min.js') }}" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
 </body>
 

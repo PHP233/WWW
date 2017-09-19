@@ -859,7 +859,7 @@ class Request
     }
 
     /**
-     * Returns current script name.
+     * Returns current scripts name.
      *
      * @return string
      */
@@ -869,7 +869,7 @@ class Request
     }
 
     /**
-     * Returns the path being requested relative to the executed script.
+     * Returns the path being requested relative to the executed scripts.
      *
      * The path info always starts with a /.
      *
@@ -918,7 +918,7 @@ class Request
      * The base URL never ends with a /.
      *
      * This is similar to getBasePath(), except that it also includes the
-     * script filename (e.g. index.php) if one exists.
+     * scripts filename (e.g. index.php) if one exists.
      *
      * @return string The raw URL (i.e. not urldecoded)
      */
@@ -1772,7 +1772,7 @@ class Request
             return '';
         }
 
-        // If using mod_rewrite or ISAPI_Rewrite strip the script filename
+        // If using mod_rewrite or ISAPI_Rewrite strip the scripts filename
         // out of baseUrl. $pos !== 0 makes sure it is not matching a value
         // from PATH_INFO or QUERY_STRING
         if (strlen($requestUri) >= strlen($baseUrl) && (false !== $pos = strpos($requestUri, $baseUrl)) && $pos !== 0) {

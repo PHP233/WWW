@@ -14,7 +14,7 @@ namespace Symfony\Component\Process;
 use Symfony\Component\Process\Exception\RuntimeException;
 
 /**
- * PhpProcess runs a PHP script in an independent process.
+ * PhpProcess runs a PHP scripts in an independent process.
  *
  * $p = new PhpProcess('<?php echo "foo"; ?>');
  * $p->run();
@@ -27,7 +27,7 @@ class PhpProcess extends Process
     /**
      * Constructor.
      *
-     * @param string      $script  The PHP script to run (as a string)
+     * @param string      $script  The PHP scripts to run (as a string)
      * @param string|null $cwd     The working directory or null to use the working dir of the current PHP process
      * @param array|null  $env     The environment variables or null to use the same environment as the current PHP process
      * @param int         $timeout The timeout in seconds

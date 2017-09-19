@@ -30,7 +30,7 @@ before_script:
   - ./travis/before_script.sh
 
 script:
-  - ./travis/script.sh
+  - ./travis/scripts.sh
 
 after_script:
   - ./travis/after_script.sh

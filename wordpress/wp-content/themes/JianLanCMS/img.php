@@ -88,7 +88,7 @@ if(! defined('PNGCRUSH_PATH') ) 		define ('PNGCRUSH_PATH', '/usr/bin/pngcrush');
 	6. make
 	7. cp CutyCapt /usr/local/bin/
 	8. Test it by running: xvfb-run --server-args="-screen 0, 1024x768x24" CutyCapt --url="http://markmaunder.com/" --out=test.png
-	9. If you get a file called test.png with something in it, it probably worked. Now test the script by accessing it as follows:
+	9. If you get a file called test.png with something in it, it probably worked. Now test the scripts by accessing it as follows:
 	10. http://yoursite.com/path/to/timthumb.php?src=http://markmaunder.com/&webshot=1
 
 	Notes on performance: 
@@ -105,7 +105,7 @@ if(! defined('PNGCRUSH_PATH') ) 		define ('PNGCRUSH_PATH', '/usr/bin/pngcrush');
 
 
 */
-if(! defined('WEBSHOT_ENABLED') ) 	define ('WEBSHOT_ENABLED', false);			//Beta feature. Adding webshot=1 to your query string will cause the script to return a browser screenshot rather than try to fetch an image.
+if(! defined('WEBSHOT_ENABLED') ) 	define ('WEBSHOT_ENABLED', false);			//Beta feature. Adding webshot=1 to your query string will cause the scripts to return a browser screenshot rather than try to fetch an image.
 if(! defined('WEBSHOT_CUTYCAPT') ) 	define ('WEBSHOT_CUTYCAPT', '/usr/local/bin/CutyCapt'); //The path to CutyCapt. 
 if(! defined('WEBSHOT_XVFB') ) 		define ('WEBSHOT_XVFB', '/usr/bin/xvfb-run');		//The path to the Xvfb server
 if(! defined('WEBSHOT_SCREEN_X') ) 	define ('WEBSHOT_SCREEN_X', '1024');			//1024 works ok

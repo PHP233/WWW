@@ -89,7 +89,7 @@ final class WP_Internal_Pointers {
 		if ( ! $got_pointers )
 			return;
 
-		// Add pointers script and style to queue
+		// Add pointers scripts and style to queue
 		wp_enqueue_style( 'wp-pointer' );
 		wp_enqueue_script( 'wp-pointer' );
 	}

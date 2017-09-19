@@ -498,7 +498,7 @@ if (! function_exists('data_set')) {
 
 if (! function_exists('dd')) {
     /**
-     * Dump the passed variables and end the script.
+     * Dump the passed variables and end the scripts.
      *
      * @param  mixed
      * @return void

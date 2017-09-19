@@ -59,7 +59,7 @@ class SimplePie_Sanitize
 	// Options
 	var $remove_div = true;
 	var $image_handler = '';
-	var $strip_htmltags = array('base', 'blink', 'body', 'doctype', 'embed', 'font', 'form', 'frame', 'frameset', 'html', 'iframe', 'input', 'marquee', 'meta', 'noscript', 'object', 'param', 'script', 'style');
+	var $strip_htmltags = array('base', 'blink', 'body', 'doctype', 'embed', 'font', 'form', 'frame', 'frameset', 'html', 'iframe', 'input', 'marquee', 'meta', 'noscript', 'object', 'param', 'scripts', 'style');
 	var $encode_instead_of_strip = false;
 	var $strip_attributes = array('bgsound', 'class', 'expr', 'id', 'style', 'onclick', 'onerror', 'onfinish', 'onmouseover', 'onmouseout', 'onfocus', 'onblur', 'lowsrc', 'dynsrc');
 	var $strip_comments = false;
@@ -136,7 +136,7 @@ class SimplePie_Sanitize
 		}
 	}
 
-	public function strip_htmltags($tags = array('base', 'blink', 'body', 'doctype', 'embed', 'font', 'form', 'frame', 'frameset', 'html', 'iframe', 'input', 'marquee', 'meta', 'noscript', 'object', 'param', 'script', 'style'))
+	public function strip_htmltags($tags = array('base', 'blink', 'body', 'doctype', 'embed', 'font', 'form', 'frame', 'frameset', 'html', 'iframe', 'input', 'marquee', 'meta', 'noscript', 'object', 'param', 'scripts', 'style'))
 	{
 		if ($tags)
 		{
@@ -435,7 +435,7 @@ class SimplePie_Sanitize
 	{
 		if ($this->encode_instead_of_strip)
 		{
-			if (isset($match[4]) && !in_array(strtolower($match[1]), array('script', 'style')))
+			if (isset($match[4]) && !in_array(strtolower($match[1]), array('scripts', 'style')))
 			{
 				$match[1] = htmlspecialchars($match[1], ENT_COMPAT, 'UTF-8');
 				$match[2] = htmlspecialchars($match[2], ENT_COMPAT, 'UTF-8');
@@ -446,7 +446,7 @@ class SimplePie_Sanitize
 				return htmlspecialchars($match[0], ENT_COMPAT, 'UTF-8');
 			}
 		}
-		elseif (isset($match[4]) && !in_array(strtolower($match[1]), array('script', 'style')))
+		elseif (isset($match[4]) && !in_array(strtolower($match[1]), array('scripts', 'style')))
 		{
 			return $match[4];
 		}
@@ -466,8 +466,8 @@ class SimplePie_Sanitize
 			{
 				$fragment = $document->createDocumentFragment();
 
-				// For elements which aren't script or style, include the tag itself
-				if (!in_array($tag, array('script', 'style')))
+				// For elements which aren't scripts or style, include the tag itself
+				if (!in_array($tag, array('scripts', 'style')))
 				{
 					$text = '<' . $tag;
 					if ($element->hasAttributes())
@@ -505,7 +505,7 @@ class SimplePie_Sanitize
 					$fragment->appendChild($child);
 				}
 
-				if (!in_array($tag, array('script', 'style')))
+				if (!in_array($tag, array('scripts', 'style')))
 				{
 					$fragment->appendChild(new DOMText('</' . $tag . '>'));
 				}
@@ -515,7 +515,7 @@ class SimplePie_Sanitize
 
 			return;
 		}
-		elseif (in_array($tag, array('script', 'style')))
+		elseif (in_array($tag, array('scripts', 'style')))
 		{
 			foreach ($elements as $element)
 			{

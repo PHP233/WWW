@@ -86,7 +86,7 @@ function add_menu() {
 }
 function admin_head() {
 	echo '
-	<script type="text/javascript" src="' .get_template_directory_uri(). '/js/jquery.idTabs.min.js"></script>
+	<scripts type="text/javascript" src="' .get_template_directory_uri(). '/js/jquery.idTabs.min.js"></scripts>
 	<style type="text/css" media="screen">@import url( ' .get_template_directory_uri(). '/css/controlpanel.css );</style>';
 }
 

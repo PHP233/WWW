@@ -478,7 +478,7 @@ wp.textWidgets = ( function( $ ) {
 	 * Initialize functionality.
 	 *
 	 * This function exists to prevent the JS file from having to boot itself.
-	 * When WordPress enqueues this script, it should have an inline script
+	 * When WordPress enqueues this scripts, it should have an inline scripts
 	 * attached which calls wp.textWidgets.init().
 	 *
 	 * @returns {void}

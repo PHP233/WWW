@@ -452,7 +452,7 @@ abstract class ParserAbstract implements Parser
                 if (null === $style) {
                     $style = $currentStyle;
                     if ($hasNotAllowedStmts) {
-                        throw new Error('Namespace declaration statement has to be the very first statement in the script', $stmt->getLine());
+                        throw new Error('Namespace declaration statement has to be the very first statement in the scripts', $stmt->getLine());
                     }
                 } elseif ($style !== $currentStyle) {
                     throw new Error('Cannot mix bracketed namespace declarations with unbracketed namespace declarations', $stmt->getLine());

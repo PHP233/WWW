@@ -39,7 +39,7 @@ const PARAMS = '\[(?<params>[^[\]]*+(?:\[(?&params)\][^[\]]*+)*+)\]';
 const ARGS   = '\((?<args>[^()]*+(?:\((?&args)\)[^()]*+)*+)\)';
 
 ///////////////////
-/// Main script ///
+/// Main scripts ///
 ///////////////////
 
 $tokens = file_get_contents($tokensFile);

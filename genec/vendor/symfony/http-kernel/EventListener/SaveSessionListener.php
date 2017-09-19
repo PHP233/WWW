@@ -21,7 +21,7 @@ use Symfony\Component\HttpKernel\KernelEvents;
  * This ensures several things in case the developer did not save the session explicitly:
  *
  *  * If a session save handler without locking is used, it ensures the data is available
- *    on the next request, e.g. after a redirect. PHPs auto-save at script end via
+ *    on the next request, e.g. after a redirect. PHPs auto-save at scripts end via
  *    session_register_shutdown is executed after fastcgi_finish_request. So in this case
  *    the data could be missing the next request because it might not be saved the moment
  *    the new request is processed.

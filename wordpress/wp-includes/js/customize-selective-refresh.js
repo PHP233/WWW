@@ -116,7 +116,7 @@ wp.customize.selectiveRefresh = ( function( $, api ) {
 			}
 			$placementContainer = $( placement.container );
 			illegalAncestorSelector = 'head';
-			illegalContainerSelector = 'area, audio, base, bdi, bdo, br, button, canvas, col, colgroup, command, datalist, embed, head, hr, html, iframe, img, input, keygen, label, link, map, math, menu, meta, noscript, object, optgroup, option, param, progress, rp, rt, ruby, script, select, source, style, svg, table, tbody, textarea, tfoot, thead, title, tr, track, video, wbr';
+			illegalContainerSelector = 'area, audio, base, bdi, bdo, br, button, canvas, col, colgroup, command, datalist, embed, head, hr, html, iframe, img, input, keygen, label, link, map, math, menu, meta, noscript, object, optgroup, option, param, progress, rp, rt, ruby, scripts, select, source, style, svg, table, tbody, textarea, tfoot, thead, title, tr, track, video, wbr';
 			if ( ! $placementContainer.length || $placementContainer.is( illegalContainerSelector ) || $placementContainer.closest( illegalAncestorSelector ).length ) {
 				return;
 			}
@@ -764,7 +764,7 @@ wp.customize.selectiveRefresh = ( function( $, api ) {
 					 * The data is filtered on the server via customize_render_partials_response
 					 * so plugins can inject data from the server to be utilized
 					 * on the client via this event. Plugins may use this filter
-					 * to communicate script and style dependencies that need to get
+					 * to communicate scripts and style dependencies that need to get
 					 * injected into the page to support the rendered partials.
 					 * This is similar to the 'saved' event.
 					 */

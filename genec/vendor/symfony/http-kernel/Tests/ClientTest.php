@@ -45,7 +45,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $client->insulate();
         $client->request('GET', '/');
 
-        $this->assertEquals('Request: /', $client->getResponse()->getContent(), '->getScript() returns a script that uses the request handler to make the request');
+        $this->assertEquals('Request: /', $client->getResponse()->getContent(), '->getScript() returns a scripts that uses the request handler to make the request');
     }
 
     public function testFilterResponseConvertsCookies()

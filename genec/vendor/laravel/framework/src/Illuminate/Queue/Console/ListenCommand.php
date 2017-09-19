@@ -54,7 +54,7 @@ class ListenCommand extends Command
 
         $delay = $this->input->getOption('delay');
 
-        // The memory limit is the amount of memory we will allow the script to occupy
+        // The memory limit is the amount of memory we will allow the scripts to occupy
         // before killing it and letting a process manager restart it for us, which
         // is to protect us against any memory leaks that will be in the scripts.
         $memory = $this->input->getOption('memory');

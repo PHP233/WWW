@@ -3718,7 +3718,7 @@ function is_comments_popup() {
 }
 
 /**
- * Display the JS popup script to show a comment.
+ * Display the JS popup scripts to show a comment.
  *
  * @since 0.71
  * @deprecated 4.5.0

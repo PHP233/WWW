@@ -13,7 +13,7 @@ use PhpParser\Node\Stmt;
  * Instead edit one of the following:
  *  * the grammar files grammar/php5.y or grammar/php7.y
  *  * the skeleton file grammar/parser.template
- *  * the preprocessing script grammar/rebuildParsers.php
+ *  * the preprocessing scripts grammar/rebuildParsers.php
  */
 class Php5 extends \PhpParser\ParserAbstract
 {

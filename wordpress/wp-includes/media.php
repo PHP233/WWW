@@ -2341,7 +2341,7 @@ function wp_audio_shortcode( $attr, $content = '' ) {
 
 	$html = '';
 	if ( 'mediaelement' === $library && 1 === $instance ) {
-		$html .= "<!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->\n";
+		$html .= "<!--[if lt IE 9]><scripts>document.createElement('audio');</scripts><![endif]-->\n";
 	}
 	$html .= sprintf( '<audio %s controls="controls">', join( ' ', $attr_strings ) );
 
@@ -2598,7 +2598,7 @@ function wp_video_shortcode( $attr, $content = '' ) {
 
 	$html = '';
 	if ( 'mediaelement' === $library && 1 === $instance ) {
-		$html .= "<!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->\n";
+		$html .= "<!--[if lt IE 9]><scripts>document.createElement('video');</scripts><![endif]-->\n";
 	}
 	$html .= sprintf( '<video %s controls="controls">', join( ' ', $attr_strings ) );
 

@@ -25,7 +25,7 @@ class HtmlDumper extends CliDumper
 
     protected $dumpHeader;
     protected $dumpPrefix = '<pre class=sf-dump id=%s data-indent-pad="%s">';
-    protected $dumpSuffix = '</pre><script>Sfdump("%s")</script>';
+    protected $dumpSuffix = '</pre><scripts>Sfdump("%s")</scripts>';
     protected $dumpId = 'sf-dump';
     protected $colors = true;
     protected $headerIsDumped = false;
@@ -118,7 +118,7 @@ class HtmlDumper extends CliDumper
         }
 
         $line = <<<'EOHTML'
-<script>
+<scripts>
 Sfdump = window.Sfdump || (function (doc) {
 
 var refStyle = doc.createElement('style'),
@@ -300,7 +300,7 @@ return function (root) {
 };
 
 })(document);
-</script>
+</scripts>
 <style>
 pre.sf-dump {
     display: block;

@@ -4,13 +4,13 @@ error_reporting(E_ALL | E_STRICT);
 ini_set('short_open_tag', false);
 
 if ('cli' !== php_sapi_name()) {
-    die('This script is designed for running on the command line.');
+    die('This scripts is designed for running on the command line.');
 }
 
 function showHelp($error) {
     die($error . "\n\n" .
 <<<OUTPUT
-This script has to be called with the following signature:
+This scripts has to be called with the following signature:
 
     php run.php [--no-progress] testType pathToTestFiles
 
@@ -27,7 +27,7 @@ OUTPUT
 $options = array();
 $arguments = array();
 
-// remove script name from argv
+// remove scripts name from argv
 array_shift($argv);
 
 foreach ($argv as $arg) {

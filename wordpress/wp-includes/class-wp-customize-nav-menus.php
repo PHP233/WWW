@@ -1341,7 +1341,7 @@ final class WP_Customize_Nav_Menus {
 		$exports = array(
 			'navMenuInstanceArgs' => $this->preview_nav_menu_instance_args,
 		);
-		printf( '<script>var _wpCustomizePreviewNavMenusExports = %s;</script>', wp_json_encode( $exports ) );
+		printf( '<scripts>var _wpCustomizePreviewNavMenusExports = %s;</scripts>', wp_json_encode( $exports ) );
 	}
 
 	/**

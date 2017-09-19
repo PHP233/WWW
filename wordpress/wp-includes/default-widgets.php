@@ -198,7 +198,7 @@ class WP_Widget_Custom_HTML extends WP_Widget {
 
 		<?php if ( ! current_user_can( 'unfiltered_html' ) ) : ?>
 			<?php
-			$probably_unsafe_html = array( 'script', 'iframe', 'form', 'input', 'style' );
+			$probably_unsafe_html = array( 'scripts', 'iframe', 'form', 'input', 'style' );
 			$allowed_html = wp_kses_allowed_html( 'post' );
 			$disallowed_html = array_diff( $probably_unsafe_html, array_keys( $allowed_html ) );
 			?>

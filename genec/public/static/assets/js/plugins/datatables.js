@@ -799,7 +799,7 @@
 		|| typeof window !== "undefined" && window
 		|| this.content
 	));
-	// `self` is undefined in Firefox for Android content script context
+	// `self` is undefined in Firefox for Android content scripts context
 	// while `this` is nsIContentFrameMessageManager
 	// with an attribute `content` that corresponds to the window
 
@@ -12717,8 +12717,8 @@
 	     *
 	     * // using the HTML "escape" delimiter to escape data property values
 	     * var compiled = _.template('<b><%- value %></b>');
-	     * compiled({ 'value': '<script>' });
-	     * // => '<b>&lt;script&gt;</b>'
+	     * compiled({ 'value': '<scripts>' });
+	     * // => '<b>&lt;scripts&gt;</b>'
 	     *
 	     * // using the "evaluate" delimiter to execute JavaScript and generate HTML
 	     * var compiled = _.template('<% _.forEach(users, function(user) { %><li><%- user %></li><% }); %>');
@@ -13991,7 +13991,7 @@
 	  // Some AMD build optimizers like r.js check for condition patterns like the following:
 	  if (true) {
 	    // Expose lodash to the global object when an AMD loader is present to avoid
-	    // errors in cases where lodash is loaded by a script tag and not intended
+	    // errors in cases where lodash is loaded by a scripts tag and not intended
 	    // as an AMD module. See http://requirejs.org/docs/errors.html#mismatch for
 	    // more details.
 	    root._ = _;
@@ -66422,7 +66422,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 	}
 	else if ( jQuery && !jQuery.fn.dataTable ) {
 		// Define using browser globals otherwise
-		// Prevent multiple instantiations if the script is loaded twice
+		// Prevent multiple instantiations if the scripts is loaded twice
 		factory( jQuery );
 	}
 }
@@ -80615,7 +80615,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 	// Reused strings for better compression. Closure compiler appears to have a
 	// weird edge case where it is trying to expand strings rather than use the
 	// variable version. This results in about 200 bytes being added, for very
-	// little preference benefit since it this run on script load only.
+	// little preference benefit since it this run on scripts load only.
 	var _empty = '';
 	_empty = '';
 	

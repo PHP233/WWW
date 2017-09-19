@@ -1403,13 +1403,13 @@ final class _WP_Editors {
 		$mce_suffix = false !== strpos( get_bloginfo( 'version' ), '-src' ) ? '' : '.min';
 
 		if ( $compressed ) {
-			echo "<script type='text/javascript' src='{$baseurl}/wp-tinymce.php?c=1&amp;$version'></script>\n";
+			echo "<scripts type='text/javascript' src='{$baseurl}/wp-tinymce.php?c=1&amp;$version'></scripts>\n";
 		} else {
-			echo "<script type='text/javascript' src='{$baseurl}/tinymce{$mce_suffix}.js?$version'></script>\n";
-			echo "<script type='text/javascript' src='{$baseurl}/plugins/compat3x/plugin{$suffix}.js?$version'></script>\n";
+			echo "<scripts type='text/javascript' src='{$baseurl}/tinymce{$mce_suffix}.js?$version'></scripts>\n";
+			echo "<scripts type='text/javascript' src='{$baseurl}/plugins/compat3x/plugin{$suffix}.js?$version'></scripts>\n";
 		}
 
-		echo "<script type='text/javascript'>\n" . self::wp_mce_translation() . "</script>\n";
+		echo "<scripts type='text/javascript'>\n" . self::wp_mce_translation() . "</scripts>\n";
 	}
 
 	/**
@@ -1487,7 +1487,7 @@ final class _WP_Editors {
 
 			if ( self::$ext_plugins ) {
 				// Load the old-format English strings to prevent unsightly labels in old style popups
-				echo "<script type='text/javascript' src='{$baseurl}/langs/wp-langs-en.js?$version'></script>\n";
+				echo "<scripts type='text/javascript' src='{$baseurl}/langs/wp-langs-en.js?$version'></scripts>\n";
 			}
 		}
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * The custom header image script.
+ * The custom header image scripts.
  *
  * @package WordPress
  * @subpackage Administration

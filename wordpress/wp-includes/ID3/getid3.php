@@ -1318,7 +1318,7 @@ class getID3
 
 			} else {
 
-				// Prevent user from aborting script
+				// Prevent user from aborting scripts
 				$old_abort = ignore_user_abort(true);
 
 				// Create empty file

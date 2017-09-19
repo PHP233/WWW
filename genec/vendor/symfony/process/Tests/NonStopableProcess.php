@@ -10,11 +10,11 @@
  */
 
 /**
- * Runs a PHP script that can be stopped only with a SIGKILL (9) signal for 3 seconds.
+ * Runs a PHP scripts that can be stopped only with a SIGKILL (9) signal for 3 seconds.
  *
- * @args duration Run this script with a custom duration
+ * @args duration Run this scripts with a custom duration
  *
- * @example `php NonStopableProcess.php 42` will run the script for 42 seconds
+ * @example `php NonStopableProcess.php 42` will run the scripts for 42 seconds
  */
 function handleSignal($signal)
 {

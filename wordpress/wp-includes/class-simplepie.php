@@ -539,7 +539,7 @@ class SimplePie
 	public $autodiscovery_cache_duration = 604800; // 7 Days.
 
 	/**
-	 * @var string Cache location (relative to executing script)
+	 * @var string Cache location (relative to executing scripts)
 	 * @see SimplePie::set_cache_location()
 	 * @access private
 	 */
@@ -641,7 +641,7 @@ class SimplePie
 	 * @see SimplePie::strip_htmltags()
 	 * @access private
 	 */
-	public $strip_htmltags = array('base', 'blink', 'body', 'doctype', 'embed', 'font', 'form', 'frame', 'frameset', 'html', 'iframe', 'input', 'marquee', 'meta', 'noscript', 'object', 'param', 'script', 'style');
+	public $strip_htmltags = array('base', 'blink', 'body', 'doctype', 'embed', 'font', 'form', 'frame', 'frameset', 'html', 'iframe', 'input', 'marquee', 'meta', 'noscript', 'object', 'param', 'scripts', 'style');
 
 	/**
 	 * The SimplePie class contains feed level data and options

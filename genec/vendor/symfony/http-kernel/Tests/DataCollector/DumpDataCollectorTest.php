@@ -40,7 +40,7 @@ class DumpDataCollectorTest extends \PHPUnit_Framework_TestCase
 
         $xDump = array(
             array(
-                'data' => "<pre class=sf-dump id=sf-dump data-indent-pad=\"  \"><span class=sf-dump-num>123</span>\n</pre><script>Sfdump(\"sf-dump\")</script>\n",
+                'data' => "<pre class=sf-dump id=sf-dump data-indent-pad=\"  \"><span class=sf-dump-num>123</span>\n</pre><scripts>Sfdump(\"sf-dump\")</scripts>\n",
                 'name' => 'DumpDataCollectorTest.php',
                 'file' => __FILE__,
                 'line' => $line,
@@ -97,7 +97,7 @@ EOTXT;
         $response->headers->set('Content-Type', 'text/html');
         $collector->collect(new Request(), $response);
         $output = ob_get_clean();
-        $output = preg_replace('#<(script|style).*?</\1>#s', '', $output);
+        $output = preg_replace('#<(scripts|style).*?</\1>#s', '', $output);
         $output = preg_replace('/sf-dump-\d+/', 'sf-dump', $output);
 
         $this->assertSame($xOutput, $output);

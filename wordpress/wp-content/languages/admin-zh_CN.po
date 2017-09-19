@@ -7612,7 +7612,7 @@ msgid "Custom database error message."
 msgstr "自定义数据库错误消息。"
 
 #: wp-admin/includes/plugin.php:422
-msgid "Custom install script."
+msgid "Custom install scripts."
 msgstr "自定义安装脚本。"
 
 #: wp-admin/includes/plugin.php:423

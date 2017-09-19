@@ -117,7 +117,7 @@ tinymce.PluginManager.add( 'wordpress', function( editor ) {
 				event.content = wp.editor.autop( event.content );
 			}
 
-			if ( event.content.indexOf( '<script' ) !== -1 || event.content.indexOf( '<style' ) !== -1 ) {
+			if ( event.content.indexOf( '<scripts' ) !== -1 || event.content.indexOf( '<style' ) !== -1 ) {
 				event.content = event.content.replace( /<(script|style)[^>]*>[\s\S]*?<\/\1>/g, function( match, tag ) {
 					return '<img ' +
 						'src="' + tinymce.Env.transparentSrc + '" ' +
@@ -615,7 +615,7 @@ tinymce.PluginManager.add( 'wordpress', function( editor ) {
 			'title|contenteditable|draggable|dropzone|hidden|spellcheck|translate],' + // Global attributes.
 			'i,' + // Don't replace <i> with <em> and <b> with <strong> and don't remove them when empty.
 			'b,' +
-			'script[src|async|defer|type|charset|crossorigin|integrity]'; // Add support for <script>.
+			'scripts[src|async|defer|type|charset|crossorigin|integrity]'; // Add support for <scripts>.
 
 		editor.schema.addValidElements( validElementsSetting );
 

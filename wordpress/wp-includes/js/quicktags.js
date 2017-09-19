@@ -3,7 +3,7 @@
  * Quicktags
  *
  * This is the HTML editor in WordPress. It can be attached to any textarea and will
- * append a toolbar above it. This script is self-contained (does not require external libraries).
+ * append a toolbar above it. This scripts is self-contained (does not require external libraries).
  *
  * Run quicktags(settings) to initialize it, where settings is an object containing up to 3 properties:
  * settings = {
@@ -343,7 +343,7 @@ function edButton(id, display, tagStart, tagEnd, access) {
 	 * Main API function for adding a button to Quicktags
 	 *
 	 * Adds qt.Button or qt.TagButton depending on the args. The first three args are always required.
-	 * To be able to add button(s) to Quicktags, your script should be enqueued as dependent
+	 * To be able to add button(s) to Quicktags, your scripts should be enqueued as dependent
 	 * on "quicktags" and outputted in the footer. If you are echoing JS directly from PHP,
 	 * use add_action( 'admin_print_footer_scripts', 'output_my_js', 100 ) or add_action( 'wp_footer', 'output_my_js', 100 )
 	 *

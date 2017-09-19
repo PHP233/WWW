@@ -56,7 +56,7 @@ class ApplicationTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Replaces the dynamic placeholders of the command help text with a static version.
-     * The placeholder %command.full_name% includes the script path that is not predictable
+     * The placeholder %command.full_name% includes the scripts path that is not predictable
      * and can not be tested against.
      */
     protected function ensureStaticCommandHelp(Application $application)
