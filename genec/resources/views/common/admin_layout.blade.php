@@ -19,7 +19,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <head>
     <meta charset="utf-8" />
-    <title>Metronic | Managed Datatables</title>
+    <title>@yield('title')</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="" name="description" />
@@ -433,7 +433,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <h3 class="uppercase">立项管理</h3>
                 </li>
                 <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
-                <li class="nav-item start ">
+                <li class="nav-item start active open">
                     <a href="javascript:;" class="nav-link nav-toggle">
                         <i class="icon-home"></i>
                         <span class="title">申请书审批</span>
@@ -510,8 +510,8 @@ License: You must have a valid license purchased only from themeforest(the above
                 <li class="heading">
                     <h3 class="uppercase">人员管理</h3>
                 </li>
-                <li class="nav-item  active open">
-                    <a href="javascript:;" class="nav-link nav-toggle">
+                <li class="nav-item">
+                    <a href="{{ route('reviewer_admin') }}" class="nav-link nav-toggle">
                         <i class="icon-briefcase"></i>
                         <span class="title">审议人管理</span>
                         <span class="selected"></span>
@@ -529,92 +529,9 @@ License: You must have a valid license purchased only from themeforest(the above
     <div class="page-content-wrapper">
         <!-- BEGIN CONTENT BODY -->
         <div class="page-content">
-            <!-- BEGIN PAGE HEADER-->
-            <!-- BEGIN THEME PANEL -->
-            <div class="theme-panel hidden-xs hidden-sm">
-                <div class="toggler"> </div>
-                <div class="toggler-close"> </div>
-                <div class="theme-options">
-                    <div class="theme-option theme-colors clearfix">
-                        <span> THEME COLOR </span>
-                        <ul>
-                            <li class="color-default current tooltips" data-style="default" data-container="body" data-original-title="Default"> </li>
-                            <li class="color-darkblue tooltips" data-style="darkblue" data-container="body" data-original-title="Dark Blue"> </li>
-                            <li class="color-blue tooltips" data-style="blue" data-container="body" data-original-title="Blue"> </li>
-                            <li class="color-grey tooltips" data-style="grey" data-container="body" data-original-title="Grey"> </li>
-                            <li class="color-light tooltips" data-style="light" data-container="body" data-original-title="Light"> </li>
-                            <li class="color-light2 tooltips" data-style="light2" data-container="body" data-html="true" data-original-title="Light 2"> </li>
-                        </ul>
-                    </div>
-                    <div class="theme-option">
-                        <span> Theme Style </span>
-                        <select class="layout-style-option form-control input-sm">
-                            <option value="square" selected="selected">Square corners</option>
-                            <option value="rounded">Rounded corners</option>
-                        </select>
-                    </div>
-                    <div class="theme-option">
-                        <span> Layout </span>
-                        <select class="layout-option form-control input-sm">
-                            <option value="fluid" selected="selected">Fluid</option>
-                            <option value="boxed">Boxed</option>
-                        </select>
-                    </div>
-                    <div class="theme-option">
-                        <span> Header </span>
-                        <select class="page-header-option form-control input-sm">
-                            <option value="fixed" selected="selected">Fixed</option>
-                            <option value="default">Default</option>
-                        </select>
-                    </div>
-                    <div class="theme-option">
-                        <span> Top Menu Dropdown</span>
-                        <select class="page-header-top-dropdown-style-option form-control input-sm">
-                            <option value="light" selected="selected">Light</option>
-                            <option value="dark">Dark</option>
-                        </select>
-                    </div>
-                    <div class="theme-option">
-                        <span> Sidebar Mode</span>
-                        <select class="sidebar-option form-control input-sm">
-                            <option value="fixed">Fixed</option>
-                            <option value="default" selected="selected">Default</option>
-                        </select>
-                    </div>
-                    <div class="theme-option">
-                        <span> Sidebar Menu </span>
-                        <select class="sidebar-menu-option form-control input-sm">
-                            <option value="accordion" selected="selected">Accordion</option>
-                            <option value="hover">Hover</option>
-                        </select>
-                    </div>
-                    <div class="theme-option">
-                        <span> Sidebar Style </span>
-                        <select class="sidebar-style-option form-control input-sm">
-                            <option value="default" selected="selected">Default</option>
-                            <option value="light">Light</option>
-                        </select>
-                    </div>
-                    <div class="theme-option">
-                        <span> Sidebar Position </span>
-                        <select class="sidebar-pos-option form-control input-sm">
-                            <option value="left" selected="selected">Left</option>
-                            <option value="right">Right</option>
-                        </select>
-                    </div>
-                    <div class="theme-option">
-                        <span> Footer </span>
-                        <select class="page-footer-option form-control input-sm">
-                            <option value="fixed">Fixed</option>
-                            <option value="default" selected="selected">Default</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <!-- END THEME PANEL -->
-            <!-- BEGIN PAGE BAR -->
             <div class="page-bar">
                 <ul class="page-breadcrumb">
+                    @section('level_link')
                     <li>
                         <a href="index.html">Home</a>
                         <i class="fa fa-circle"></i>
@@ -626,403 +543,19 @@ License: You must have a valid license purchased only from themeforest(the above
                     <li>
                         <span>Datatables</span>
                     </li>
+                    @show
                 </ul>
             </div>
             <!-- END PAGE BAR -->
             <!-- BEGIN PAGE TITLE-->
-            <h3 class="page-title"> Managed Datatables
-                <small>managed datatable samples</small>
+            <h3 class="page-title">
+                {{--Managed Datatables
+                <small>managed datatable samples</small>--}}
+                @yield('page-title')
             </h3>
             <!-- END PAGE TITLE-->
             <!-- END PAGE HEADER-->
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                    <div class="portlet light bordered">
-                        <div class="portlet-title">
-                            <div class="caption font-dark">
-                                <i class="icon-settings font-dark"></i>
-                                <span class="caption-subject bold uppercase"> Managed Table</span>
-                            </div>
-                        </div>
-                        <div class="portlet-body">
-                            <div class="table-toolbar">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="btn-group">
-                                            <button id="sample_editable_1_new" class="btn sbold green"> Add New
-                                                <i class="fa fa-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="btn-group pull-right">
-                                            <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">Tools
-                                                <i class="fa fa-angle-down"></i>
-                                            </button>
-                                            <ul class="dropdown-menu pull-right">
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-print"></i> Print </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-file-pdf-o"></i> Save as PDF </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-file-excel-o"></i> Export to Excel </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
-                                <thead>
-                                <tr>
-                                    <th>
-                                        <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" /> </th>
-                                    <th> Username </th>
-                                    <th> Email </th>
-                                    <th> Points </th>
-                                    <th> Joined </th>
-                                    <th> Status </th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> shuxer </td>
-                                    <td>
-                                        <a href="mailto:shuxer@gmail.com"> shuxer@gmail.com </a>
-                                    </td>
-                                    <td> 120 </td>
-                                    <td class="center"> 12 Jan 2012 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> looper </td>
-                                    <td>
-                                        <a href="mailto:looper90@gmail.com"> looper90@gmail.com </a>
-                                    </td>
-                                    <td> 120 </td>
-                                    <td class="center"> 12.12.2011 </td>
-                                    <td>
-                                        <span class="label label-sm label-warning"> Suspended </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> userwow </td>
-                                    <td>
-                                        <a href="mailto:userwow@yahoo.com"> userwow@yahoo.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 12.12.2012 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 12.12.2012 </td>
-                                    <td>
-                                        <span class="label label-sm label-default"> Blocked </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> restest </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> test@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 12.12.2012 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> foopl </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 19.11.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> weep </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 19.11.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> coop </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 19.11.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> pppol </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 19.11.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> test </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 19.11.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> userwow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 12.12.2012 </td>
-                                    <td>
-                                        <span class="label label-sm label-default"> Blocked </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> test </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> test@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 12.12.2012 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> goop </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 12.11.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> weep </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 15.11.2011 </td>
-                                    <td>
-                                        <span class="label label-sm label-default"> Blocked </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> toopl </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 16.11.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> userwow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 9.12.2012 </td>
-                                    <td>
-                                        <span class="label label-sm label-default"> Blocked </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> tes21t </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> test@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 14.12.2012 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> fop </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 13.11.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-warning"> Suspended </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> kop </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 17.11.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> vopl </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 19.11.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> userwow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 12.12.2012 </td>
-                                    <td>
-                                        <span class="label label-sm label-default"> Blocked </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> wap </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> test@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 12.12.2012 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> test </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 19.12.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> toop </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 17.12.2010 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                    <td> weep </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                    </td>
-                                    <td> 20 </td>
-                                    <td class="center"> 15.11.2011 </td>
-                                    <td>
-                                        <span class="label label-sm label-success"> Approved </span>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <!-- END EXAMPLE TABLE PORTLET-->
-                </div>
-            </div>
+            @yield('main')
         </div>
         <!-- END CONTENT BODY -->
     </div>
@@ -1590,6 +1123,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="{{ asset('static/assets/js/scripts/layout.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('static/assets/js/scripts/demo.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('static/assets/js/scripts/quick-sidebar.min.js') }}" type="text/javascript"></script>
+@yield('javascript')
 <!-- END THEME LAYOUT SCRIPTS -->
 </body>
 

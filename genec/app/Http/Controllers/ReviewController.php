@@ -7,6 +7,7 @@
  */
 namespace App\Http\Controllers;
 
+use App\Model\Data;
 use App\Model\Reviewer;
 use Illuminate\Http\Request;
 
@@ -20,16 +21,30 @@ class ReviewController extends Controller {
 			               ->where('password', $password)
 			               ->first();
 			if($res != null)
-				return redirect('reviewer/admin');
+				return redirect('reviewer/apply_admin');
 			return redirect()->back()->withInput()->with('error','工号或密码错误');
 		}
 		return view( 'reviewer.login');
 	}
 
-	public function admin(Request $request) {
-		return view('reviewer.admin');
+	public function apply_admin(Request $request) {
+		return view('reviewer.apply_admin');
 	}
 
+	public function draft_admin(Request $request) {
+		return view('reviewer.draft_admin');
+	}
+
+	public function reviewer_admin(Request $request) {
+		return view('reviewer.reviewer_admin');
+	}
+
+	public function get_all_reviewers() {
+		$reviews = Reviewer::where('role',0)->get();
+		$data = new Data();
+		$data->setData($reviews);
+		return response()->json($data);
+	}
 	public function download(Request $request, $filename) {
 		echo $filename;
 		$id = session()->get('proposer')->id;
