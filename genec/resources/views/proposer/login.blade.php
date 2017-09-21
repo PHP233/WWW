@@ -10,3 +10,7 @@
 @section('login_name')
     <input type="text" id="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="邮箱" required autofocus>
 @endsection
+
+@section('css')
+    <link href="{{ asset('static/assets/css/signin.css')  }}" rel="stylesheet">
+@endsection

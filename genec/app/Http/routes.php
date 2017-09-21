@@ -32,6 +32,7 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     Route::any('reviewer/login', ['uses' => 'ReviewController@login']);
     Route::any('reviewer/admin', ['uses' => 'ReviewController@admin']);
+    Route::any('reviewer/download/{filename}', ['uses' => 'ReviewController@download','as' => 'reviewer_download']);
     Route::any('proposer/login', ['uses' => 'ProposerController@login','as' => 'proposer_login']);
     Route::any('proposer/register', ['uses' => 'ProposerController@register','as' => 'proposer_register']);
 	Route::any('proposer/add_apply', ['uses' => 'ProposerController@add_apply','as' => 'proposer_add_apply']);

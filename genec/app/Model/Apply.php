@@ -35,4 +35,8 @@ class Apply extends Model {
 		}
 		return $arr[self::WAIT_REVIEW];
 	}
+
+	protected function getDateFormat() {
+		return time();
+	}
 }

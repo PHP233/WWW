@@ -54,6 +54,10 @@ return [
             'visibility' => 'public',
         ],
 
+	    'apply_uploads' => [
+	        'driver' => 'local',
+		    'root' => storage_path('app\uploads\apply'),
+	    ],
         's3' => [
             'driver' => 's3',
             'key' => 'your-key',

@@ -29,4 +29,20 @@ class ReviewController extends Controller {
 	public function admin(Request $request) {
 		return view('reviewer.admin');
 	}
+
+	public function download(Request $request, $filename) {
+		echo $filename;
+		$id = session()->get('proposer')->id;
+		/*$upload_path = config('filesystems.disks.uploads.root').'\\'.$id.'\\'.$filename;
+		$full_path = $upload_path.'.doc';
+		echo $full_path.'<br>';*/
+		/*if(!file_exists($full_path)) {
+			$full_path = $upload_path.'.docs';
+		}
+		echo $full_path.'<br>';
+		if(!file_exists($full_path)) {
+			exit('文件不存在！');
+		}*/
+		return response()->download(storage_path('app\uploads\\'.$id).'\\'.$filename.'.doc','真名.doc');
+	}
 }

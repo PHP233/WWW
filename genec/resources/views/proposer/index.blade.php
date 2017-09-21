@@ -4,33 +4,35 @@ $applies = session('applies');
 $proposer = session('proposer');
 ?>
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('static/assets/css/process_style.css') }}">
-    <link href="{{ asset('static/assets/css/file_input.min.css') }}" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('static/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('static/assets/css/theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('static/assets/css/process_style.css') }}">
 @endsection
 
 @section('body')
     <!-- Fixed navbar -->
     @include('common.proposer.head')
-    @include('common.proposer.guide')
-
+    <div class="container theme-showcase" role="main">
+        @include('common.proposer.guide')
+        @section('main')
+            @if(isset($show_apply))
+                @if($show_apply->state === 0)
+                    @include('common.proposer.re_upload_file')
+                @endif
+            @endif
+        @show
+    </div>
+    @include('proposer.modal')
 @endsection
-@include('proposer.modal')
+
 
 @section('javascript')
-    <script type="text/javascript" src="{{ asset('static/assets/js/lib.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('static/assets/js/fileinput.min.js') }}"></script>
-    <script src="{{ asset('static/assets/js/zh.js') }}" type="text/javascript"></script>
+    @if(isset($show_apply))
     <script>
-        @if(isset($show_apply))
         $(function() {
             bsStep({{$show_apply->state + 2}});
             //bsStep(i) i 为number 可定位到第几步 如bsStep(2)/bsStep(3)
         })
-        @endif
-        $('#file-zh').fileinput({
-            language: 'zh',
-            uploadUrl: '#',
-            allowedFileExtensions : ['doc','docx']
-        });
     </script>
+    @endif
 @endsection

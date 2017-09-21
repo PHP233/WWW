@@ -3,6 +3,10 @@
 
 @section('form_title','中国基因行业标准化<br>技术委员会申报系统')
 
+@section('css')
+    <link href="{{ asset('static/assets/css/signin.css')  }}" rel="stylesheet">
+@endsection
+
 @section('form')
     <form id="signForm" class="form-signin" method="post" action="" style="max-width: 800px;width: 600px;padding-left: 10px;margin-left: 30%;">
         <h2 class="form-signin-heading">申报系统申报人注册</h2>
