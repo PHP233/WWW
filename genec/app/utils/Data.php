@@ -6,7 +6,7 @@
  * Time: 0:24
  */
 
-namespace App\Model;
+namespace App\utils;
 
 
 class Data {

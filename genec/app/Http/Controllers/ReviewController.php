@@ -7,9 +7,12 @@
  */
 namespace App\Http\Controllers;
 
-use App\Model\Data;
+use App\utils\Code;
+use App\utils\Data;
+use App\utils\Res;
 use App\Model\Reviewer;
 use Illuminate\Http\Request;
+use Mockery\Exception;
 
 class ReviewController extends Controller {
 
@@ -59,5 +62,35 @@ class ReviewController extends Controller {
 			exit('文件不存在！');
 		}*/
 		return response()->download(storage_path('app\uploads\\'.$id).'\\'.$filename.'.doc','真名.doc');
+	}
+
+	public function delete_reviewer(Request $request) {
+		$res = new Res(Code::success,'删除成功');
+		try {
+			Reviewer::destroy($request->id);
+		}
+		catch(Exception $e) {
+			$res = new Res(Code::error,'删除失败，该审议人存在未完成的审议任务');
+		}
+		return response()->json($res);
+	}
+
+	public function add_reviewer(Request $request) {
+		$res = new Res(Code::success,'');
+		if(Reviewer::where('number',$request->number)->count() == 1) {
+			$res->setCode(Code::error);
+			$res->setMsg('创建失败：该工号已存在');
+			return response()->json($res);
+		}
+		try {
+			Reviewer::create($request->all());
+		}
+		catch(Exception $e) {
+			$res->setCode(Code::error);
+			$res->setMsg('创建失败');
+			return response()->json($res);
+		}
+		$res->setMsg('创建审议人'.$request->number.'   '.$request->name.'成功');
+		return response()->json($res);
 	}
 }

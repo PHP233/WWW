@@ -7,7 +7,8 @@
                 <div class="portlet-title">
                     <div class="caption font-dark">
                         <i class="icon-settings font-dark"></i>
-                        <span class="caption-subject bold uppercase"> 审议人管理</span>
+                        <span class="caption-subject bold uppercase"> 审议人管理</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="sign" class="text-success"></span>
                     </div>
                 </div>
                 <div class="portlet-body">
@@ -15,7 +16,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="btn-group">
-                                    <button id="sample_editable_1_new" class="btn sbold green"> 添加审议人
+                                    <button id="sample_editable_1_new" class="btn sbold green" data-toggle="modal" data-target="#reviewer_form"> 添加审议人
                                         <i class="fa fa-plus"></i>
                                     </button>
                                 </div>
@@ -25,10 +26,11 @@
                     <table class="table table-striped table-bordered table-hover table-checkable order-column" id="reviewer_table">
                         <thead>
                         <tr>
-                            <th> 姓名 </th>
                             <th> 工号 </th>
+                            <th> 姓名 </th>
                             <th> 邮箱 </th>
                             <th> 电话 </th>
+                            <th> 性别 </th>
                             <th> 创建日期 </th>
                             <th> 修改 </th>
                             <th> 删除 </th>
@@ -47,8 +49,18 @@
     </div>
 @endsection
 
+@section('modal')
+    @include('common.reviewer.modal')
+@endsection
+
 @section('javascript')
     <script>
+        var edit_modal;
+        $().ready(function () {
+            var sign = $('span#sign');
+            edit_modal = $('#reviewer_form');
+        });
+
     var Table = "";
     var TableDatatablesManage = function () {
     var table = $('#reviewer_table');
@@ -79,13 +91,18 @@
     dataSrc: 'data'
     },
     columns: [
-    { "data": "name"},
     { "data": "number"},
+    { "data": "name"},
     { "data": "email"},
     { "data": "phone"},
-    { "data": "created_at"},
+    { "data": "sex",render: function (data) {
+            return data == '1' ? '男':'女';
+    }},
+    { "data": "created_at",render: function (data) {
+        return formatDate(data);
+    }},
     { "data": "id",render: function(data, type, row, meta) {
-    return '<a href="./toEdit?id='+data+'" class="btn yellow btn-xs">修改</a> <a href="./toDetail?id='+data+'" class="btn green btn-xs">详情</a>';
+    return '<a id="edit" class="btn yellow btn-xs">修改</a> ';
     }},
     {"data": "id",render: function(data, type, row, meta) {
     return '<a id="delete" class="btn red btn-xs">删除</a>'
@@ -141,32 +158,98 @@
     }
 
     $('#reviewer_table tbody').on( 'click', '#delete', function () {
-    var th = $(this);
-    if (confirm("你确认要删除这个商品吗 ?") == false) {
-    return;
-    }
-    var nRow = $(this).parents('tr')[0];
-    var id = nRow.childNodes[0].innerText;
-    $.ajax({
-    url: "./delete",
-    data: {
-    id: id
-    },
-    success: function (res) {
-    if(res.code == 0) {
-    Table
-    .row( th.parents('tr') )
-    .remove()
-    .draw();
-    } else {
-    alert("删除失败：有订单中含有该商品");
-    }
-    },
-    error: function () {
-    alert("sorry,Something is wrong...")
-    }
-    })
+        if (confirm("你确认要删除这位审议人吗 ?") == false) {
+            return;
+        }
+        var th = $(this).parents('tr');
+        var id = Table.row(th).data().id;
+        $.ajax({
+            url: "{{ url('reviewer/delete_reviewer') }}",
+            data: {
+            id: id
+            },
+            success: function (res) {
+                console.log(res);
+                if(res.code == 1) {
+                    Table.row( th).remove().draw();
+                    $(sign).html(res.msg);
+                    } else {
+                    alert(res.msg);
+                    }
+            },
+            error: function () {
+                alert("sorry,Something is wrong...")
+            }
+        })
     } );
 
+        // 修改按钮点击事件处理函数
+        $('#reviewer_table tbody').on('click','#edit',function () {
+            var data = Table.row($(this).parents('tr')).data();
+            console.log(data);
+            edit_modal.find('input#number').val(data.number);
+            edit_modal.find('input#name').val(data.name);
+            if(data.sex == "1") {
+                edit_modal.find('input#sex1').attr('checked','checked');
+                edit_modal.find('input#sex1').parent().addClass('checked');
+                edit_modal.find('input#sex2').removeAttr('checked');
+                edit_modal.find('input#sex2').parent().removeClass('checked');
+            } else {
+                edit_modal.find('input#sex2').attr('checked','checked');
+                edit_modal.find('input#sex2').parent().addClass('checked');
+                edit_modal.find('input#sex1').removeAttr('checked');
+                edit_modal.find('input#sex1').parent().removeClass('checked');
+            }
+            edit_modal.modal('toggle');
+        })
+
+    function formatDate(date) {
+        date = new Date(date);
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        return year + "-" + month + "-" + day;
+    }
+
+    function add() {
+        var error = $('#reviewer_form #form_error');
+        var number = $('#reviewer_form input#number').val();
+        var name = $('#reviewer_form input#name').val();
+        var sex = $('#reviewer_form :checked').val();
+        console.log(number);
+        console.log(name);
+        console.log(sex);
+        if(number == '') {
+            error.text('请输入工号');
+            return;
+        }
+        if(name == '') {
+            error.text('请输入姓名');
+            return;
+        }
+        if(sex == undefined) {
+            error.text('请选择性别');
+            return;
+        }
+        $.ajax({
+            url: "{{ route('add_reviewer') }}",
+            data: {
+                name: name,
+                number: number,
+                sex: sex
+            },
+            success: function (res) {
+                if(res.code == 1) {
+                    $(sign).text(res.msg);
+
+                } else {
+                    error.text(res.msg);
+                }
+            },
+            error: function () {
+                alert('抱歉，创建审议人失败...')
+            }
+        })
+    }
     </script>
 @endsection

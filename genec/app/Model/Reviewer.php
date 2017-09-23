@@ -16,7 +16,7 @@ class Reviewer extends Model {
 	protected $table = 'reviewer';
 
 	protected $fillable = [
-		'number', 'email', 'password',
+		'number','name', 'email', 'password','sex'
 	];
 
 	public function role($role) {
@@ -24,5 +24,11 @@ class Reviewer extends Model {
 			return '审议人';
 		}
 		return 'null';
+	}
+
+	public function sex($sex) {
+		if($sex == '1')
+			return '男';
+		return '女';
 	}
 }

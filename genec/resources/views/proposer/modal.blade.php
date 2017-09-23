@@ -66,7 +66,7 @@
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">姓名</label>
                         <div class="col-sm-6">
-                            <input type="name" class="form-control" id="name" value="{{ $proposer->name }}" placeholder="姓名">
+                            <input type="text" class="form-control" id="name" value="{{ $proposer->name }}" placeholder="姓名">
                         </div>
                     </div>
                     <div class="form-group">

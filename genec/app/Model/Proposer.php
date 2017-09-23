@@ -17,7 +17,7 @@ class Proposer extends Model {
 	protected $table = 'proposer';
 
 	protected $fillable = [
-		'name','email','phone','password',
+		'name','email','phone','password','sex',
 	];
 
 	protected function getDateFormat()
@@ -27,5 +27,11 @@ class Proposer extends Model {
 
 	public function applies() {
 		return $this->hasMany('App\Model\Apply','proposer_id','id');
+	}
+
+	public function sex($sex) {
+		if($sex == '1')
+			return '男';
+		return '女';
 	}
 }

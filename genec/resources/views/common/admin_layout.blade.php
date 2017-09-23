@@ -1083,6 +1083,7 @@ License: You must have a valid license purchased only from themeforest(the above
     </div>
     <!-- END QUICK SIDEBAR -->
 </div>
+@yield('modal')
 <!-- END CONTAINER -->
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
