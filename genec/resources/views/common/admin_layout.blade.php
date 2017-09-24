@@ -44,6 +44,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{ asset('static/assets/css/layout/layout.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('static/assets/css/layout/darkblue.min.css') }}" rel="stylesheet" type="text/css" id="style_color" />
     <link href="{{ asset('static/assets/css/layout/custom.min.css') }}" rel="stylesheet" type="text/css" />
+    @yield('css')
     <!-- END THEME LAYOUT STYLES -->
     <link rel="shortcut icon" href="favicon.ico" /> </head>
 <!-- END HEAD -->
@@ -441,6 +442,12 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item start ">
+                            <a href="{{ route('apply_admin') }}" class="nav-link ">
+                                <i class="icon-bar-chart"></i>
+                                <span class="title">全部</span>
+                            </a>
+                        </li>
+                        <li class="nav-item start ">
                             <a href="index.html" class="nav-link ">
                                 <i class="icon-bar-chart"></i>
                                 <span class="title">未审查</span>
@@ -555,7 +562,38 @@ License: You must have a valid license purchased only from themeforest(the above
             </h3>
             <!-- END PAGE TITLE-->
             <!-- END PAGE HEADER-->
-            @yield('main')
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                    <div class="portlet light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-dark">
+                                <i class="icon-settings font-dark"></i>
+                                <span class="caption-subject bold uppercase">@yield('table_title')</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span id="sign" class="text-success"></span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            @yield('add_button_name')
+                            <table class="table table-striped table-bordered table-hover table-checkable order-column" id="reviewer_table">
+                                <thead>
+                                <tr>
+                                    @yield('td')
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @section('table_content')
+                                <tr class="odd gradeX">
+                                    {{-- ajax 填充 --}}
+                                </tr>
+                                @show
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END EXAMPLE TABLE PORTLET-->
+                </div>
+            </div>
         </div>
         <!-- END CONTENT BODY -->
     </div>

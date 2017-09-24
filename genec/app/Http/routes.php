@@ -32,13 +32,16 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
 	Route::group(['prefix' => 'reviewer'], function () {
 		Route::any('login', ['uses' => 'ReviewController@login']);
-		Route::any('apply_admin', ['uses' => 'ReviewController@apply_admin']);
+		Route::any('apply_admin', ['uses' => 'ReviewController@apply_admin', 'as' => 'apply_admin']);
 		Route::any('draft_admin', ['uses' => 'ReviewController@draft_admin']);
 		Route::any('reviewer_admin', ['uses' => 'ReviewController@reviewer_admin','as' => 'reviewer_admin']);
 		Route::any('get_all_reviewers', ['uses' => 'ReviewController@get_all_reviewers','as' => 'get_all_reviewers']);
-		Route::any('download/{filename}', ['uses' => 'ReviewController@download','as' => 'reviewer_download']);
 		Route::any('delete_reviewer', ['uses' => 'ReviewController@delete_reviewer','as' => 'delete_reviewer']);
 		Route::any('add_reviewer', ['uses' => 'ReviewController@add_reviewer','as' => 'add_reviewer']);
+		Route::any('edit_reviewer', ['uses' => 'ReviewController@edit_reviewer','as' => 'edit_reviewer']);
+		Route::group(['prefix' => 'apply'],function () {
+			Route::any('download/{apply_id}', ['uses' => 'ApplyController@download', 'as' => 'apply_download']);
+		});
 	});
 	Route::group(['prefix' => 'proposer'], function () {
 		Route::any('login', ['uses' => 'ProposerController@login','as' => 'proposer_login']);
@@ -47,4 +50,5 @@ Route::group(['middleware' => ['web']], function () {
 		Route::any('logout', ['uses' => 'ProposerController@logout','as' => 'proposer_logout']);
 		Route::any('{id?}', ['uses' => 'ProposerController@index','as' => 'proposer_index']);
 	});
+
 });

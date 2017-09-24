@@ -7,6 +7,7 @@
  */
 namespace App\Http\Controllers;
 
+use App\Model\Apply;
 use App\utils\Code;
 use App\utils\Data;
 use App\utils\Res;
@@ -31,7 +32,8 @@ class ReviewController extends Controller {
 	}
 
 	public function apply_admin(Request $request) {
-		return view('reviewer.apply_admin');
+		$applies = Apply::all();
+		return view('reviewer.apply_admin')->with('applies', $applies);
 	}
 
 	public function draft_admin(Request $request) {
@@ -47,21 +49,6 @@ class ReviewController extends Controller {
 		$data = new Data();
 		$data->setData($reviews);
 		return response()->json($data);
-	}
-	public function download(Request $request, $filename) {
-		echo $filename;
-		$id = session()->get('proposer')->id;
-		/*$upload_path = config('filesystems.disks.uploads.root').'\\'.$id.'\\'.$filename;
-		$full_path = $upload_path.'.doc';
-		echo $full_path.'<br>';*/
-		/*if(!file_exists($full_path)) {
-			$full_path = $upload_path.'.docs';
-		}
-		echo $full_path.'<br>';
-		if(!file_exists($full_path)) {
-			exit('文件不存在！');
-		}*/
-		return response()->download(storage_path('app\uploads\\'.$id).'\\'.$filename.'.doc','真名.doc');
 	}
 
 	public function delete_reviewer(Request $request) {
@@ -83,7 +70,7 @@ class ReviewController extends Controller {
 			return response()->json($res);
 		}
 		try {
-			Reviewer::create($request->all());
+			$reviewer = Reviewer::create($request->all());
 		}
 		catch(Exception $e) {
 			$res->setCode(Code::error);
@@ -91,6 +78,22 @@ class ReviewController extends Controller {
 			return response()->json($res);
 		}
 		$res->setMsg('创建审议人'.$request->number.'   '.$request->name.'成功');
+		$reviewer->setPhoneAndEmail();
+		$res->setReply($reviewer);
+		return response()->json($res);
+	}
+
+	public function edit_reviewer(Request $request) {
+		$res = new Res(Code::success,'');
+		$reviewer = Reviewer::find($request->id);
+		$reviewer->name = $request->name;
+		$reviewer->number = $request->number;
+		$reviewer->sex = $request->sex;
+		if(!$reviewer->save() ) {
+			$res->setCode(Code::error);
+			$res->setMsg('更新审议人信息失败...');
+		}
+		$res->setReply($reviewer);
 		return response()->json($res);
 	}
 }

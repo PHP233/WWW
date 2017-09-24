@@ -13,5 +13,7 @@ class Code {
 
 	const success = 1;
 	const error = 0;
+	const apply_pre = 'PSA';
+	const draft_pre = 'PSD';
 
 }

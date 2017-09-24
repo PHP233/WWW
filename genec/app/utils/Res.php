@@ -17,6 +17,8 @@ class Res {
 
 	var $msg;
 
+	var $reply;
+
 	function __construct($code, $msg) {
 		$this->code = $code;
 		$this->msg = $msg;
@@ -27,5 +29,8 @@ class Res {
 	}
 	public function setMsg($msg) {
 		$this->msg = $msg;
+	}
+	public function setReply($reply) {
+		$this->reply = $reply;
 	}
 }

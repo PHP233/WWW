@@ -10,6 +10,7 @@
 namespace App\Http\Controllers;
 use App\Model\Apply;
 use App\Model\Proposer;
+use App\utils\Code;
 use \Illuminate\Http\Request;
 
 class ProposerController extends Controller {

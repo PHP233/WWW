@@ -19,6 +19,8 @@ class Reviewer extends Model {
 		'number','name', 'email', 'password','sex'
 	];
 
+	protected $hidden = ['password','updated_at'];
+
 	public function role($role) {
 		if ($role != null && $role == 0) {
 			return '审议人';
@@ -30,5 +32,14 @@ class Reviewer extends Model {
 		if($sex == '1')
 			return '男';
 		return '女';
+	}
+
+	public function setPhoneAndEmail() {
+		if($this->phone == null) {
+			$this->phone = '';
+		}
+		if($this->email == null) {
+			$this->email = '';
+		}
 	}
 }

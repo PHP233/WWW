@@ -1,53 +1,32 @@
 @extends('common.admin_layout')
-@section('main')
+
+@section('td')
+    <th> ID </th>
+    <th> 工号 </th>
+    <th> 姓名 </th>
+    <th> 邮箱 </th>
+    <th> 电话 </th>
+    <th> 性别 </th>
+    <th> 创建日期 </th>
+    <th> 修改 </th>
+    <th> 删除 </th>
+@endsection
+
+@section('add_button_name')
+<div class="table-toolbar">
     <div class="row">
-        <div class="col-md-12">
-            <!-- BEGIN EXAMPLE TABLE PORTLET-->
-            <div class="portlet light bordered">
-                <div class="portlet-title">
-                    <div class="caption font-dark">
-                        <i class="icon-settings font-dark"></i>
-                        <span class="caption-subject bold uppercase"> 审议人管理</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span id="sign" class="text-success"></span>
-                    </div>
-                </div>
-                <div class="portlet-body">
-                    <div class="table-toolbar">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="btn-group">
-                                    <button id="sample_editable_1_new" class="btn sbold green" data-toggle="modal" data-target="#reviewer_form"> 添加审议人
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="reviewer_table">
-                        <thead>
-                        <tr>
-                            <th> 工号 </th>
-                            <th> 姓名 </th>
-                            <th> 邮箱 </th>
-                            <th> 电话 </th>
-                            <th> 性别 </th>
-                            <th> 创建日期 </th>
-                            <th> 修改 </th>
-                            <th> 删除 </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr class="odd gradeX">
-                            {{-- ajax 填充 --}}
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+        <div class="col-md-6">
+            <div class="btn-group">
+                <button id="sample_editable_1_new" class="btn sbold green" data-toggle="modal" data-target="#add_reviewer_form">添加审议人
+                    <i class="fa fa-plus"></i>
+                </button>
             </div>
-            <!-- END EXAMPLE TABLE PORTLET-->
         </div>
     </div>
-@endsection
+</div>
+@stop
+
+@section('table_title','审议人管理')
 
 @section('modal')
     @include('common.reviewer.modal')
@@ -55,84 +34,83 @@
 
 @section('javascript')
     <script>
+        var add_modal;
         var edit_modal;
-        $().ready(function () {
-            var sign = $('span#sign');
-            edit_modal = $('#reviewer_form');
-        });
 
-    var Table = "";
-    var TableDatatablesManage = function () {
-    var table = $('#reviewer_table');
-    var initTable1 = function () {
-    // begin first table
-    Table = table.DataTable({
-    "language": {
-    "aria": {
-    "sortAscending": ": activate to sort column ascending",
-    "sortDescending": ": activate to sort column descending"
-    },
-    "emptyTable": "表格中无可用数据",
-    "info": "展示 _TOTAL_ 条记录中的 第 _START_ 到 第 _END_ 条",
-    "infoEmpty": "找不到记录",
-    "infoFiltered": "(在共  _MAX_ 条数据中)",
-    "lengthMenu": "每页展示 _MENU_ 行数据",
-    "search": "搜索:",
-    "zeroRecords": "无匹配数据",
-    "paginate": {
-    "previous":"上一页",
-    "next": "下一页",
-    "last": "末页",
-    "first": "首页"
-    }
-    },
-    ajax: {
-    url: "{{ route('get_all_reviewers') }}",
-    dataSrc: 'data'
-    },
-    columns: [
-    { "data": "number"},
-    { "data": "name"},
-    { "data": "email"},
-    { "data": "phone"},
-    { "data": "sex",render: function (data) {
-            return data == '1' ? '男':'女';
-    }},
-    { "data": "created_at",render: function (data) {
-        return formatDate(data);
-    }},
-    { "data": "id",render: function(data, type, row, meta) {
-    return '<a id="edit" class="btn yellow btn-xs">修改</a> ';
-    }},
-    {"data": "id",render: function(data, type, row, meta) {
-    return '<a id="delete" class="btn red btn-xs">删除</a>'
-    }}
-    ],
-    buttons: [
-    { extend: 'print', className: 'btn dark btn-outline' , text: '打印'},
-    { extend: 'copy', className: 'btn red btn-outline', text: '复制' },
-    { extend: 'excel', className: 'btn yellow btn-outline' , text: '导出Excel' },
-    { extend: 'colvis', className: 'btn dark btn-outline', text: '显示列'},
-    ],
+        var Table = "";
+        var TableDatatablesManage = function () {
+        var table = $('#reviewer_table');
+        var initTable1 = function () {
+        // begin first table
+        Table = table.DataTable({
+            "language": {
+                "aria": {
+                "sortAscending": ": activate to sort column ascending",
+                "sortDescending": ": activate to sort column descending"
+                },
+                "emptyTable": "表格中无可用数据",
+                "info": "展示 _TOTAL_ 条记录中的 第 _START_ 到 第 _END_ 条",
+                "infoEmpty": "找不到记录",
+                "infoFiltered": "(在共  _MAX_ 条数据中)",
+                "lengthMenu": "每页展示 _MENU_ 行数据",
+                "search": "搜索:",
+                "zeroRecords": "无匹配数据",
+                "paginate": {
+                "previous":"上一页",
+                "next": "下一页",
+                "last": "末页",
+                "first": "首页"
+            }
+        },
+        ajax: {
+            url: "{{ route('get_all_reviewers') }}",
+                dataSrc: 'data'
+            },
+            columns: [
+                { "data": "id"},
+                { "data": "number"},
+                { "data": "name"},
+                { "data": "email"},
+                { "data": "phone"},
+                { "data": "sex",render: function (data) {
+                        return data == '1' ? '男':'女';
+                }},
+                { "data": "created_at",render: function (data) {
+                    return formatDate(data);
+                }
+            },
+                { "data": "id",render: function(data, type, row, meta) {
+                return '<a id="edit" class="btn yellow btn-xs">修改</a> ';
+                }},
+                {"data": "id",render: function(data, type, row, meta) {
+                return '<a id="delete" class="btn red btn-xs">删除</a>'
+                }}
+            ],
+            buttons: [
+                { extend: 'print', className: 'btn dark btn-outline' , text: '打印'},
+                { extend: 'copy', className: 'btn red btn-outline', text: '复制' },
+                { extend: 'excel', className: 'btn yellow btn-outline' , text: '导出Excel' },
+                { extend: 'colvis', className: 'btn dark btn-outline', text: '显示列'},
+            ],
 
-    "bStateSave": true,
+            "bStateSave": true,
 
-    "dom": "<'row' <'col-md-12'B><hr>><'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r><'table-scrollable't><'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>", // horizobtal
+            "dom": "<'row' <'col-md-12'B><hr>><'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r><'table-scrollable't><'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>", // horizobtal
 
-    "lengthMenu": [
-    [5, 15, 20, -1],
-    [5, 15, 20, "All"] // change per page values here
-    ],
-    // set the initial value
-    "pageLength": 5,
-    "pagingType": "bootstrap_full_number",
-    colReorder: true,
-    responsive: false,
-    "scrollX": false,
-    "order": [
-    [0, "asc"]
-    ] // set first column as a default sort by asc
-    });
+            "lengthMenu": [
+            [5, 15, 20, -1],
+            [5, 15, 20, "All"] // change per page values here
+            ],
+            // set the initial value
+            "pageLength": 5,
+            "pagingType": "bootstrap_full_number",
+            colReorder: true,
+            responsive: false,
+            "scrollX": false,
+            "order": [
+            [0]
+            ] // set first column as a default sort by asc
+            });
     };
 
     return {
@@ -142,6 +120,7 @@
     return;
     }
     initTable1();
+    Table.column(0).visible(false);
     },
     reload: function() {
     Table.ajax.reload();
@@ -149,7 +128,11 @@
     };
 
     }();
-
+        $().ready(function () {
+            var sign = $('span#sign');      // 提示信息
+            edit_modal = $('#edit_reviewer_form');
+            add_modal = $('#add_reviewer_form');
+        });
 
     if (App.isAngularJsApp() === false) {
     jQuery(document).ready(function() {
@@ -157,6 +140,7 @@
     });
     }
 
+    // 删除审议人按钮点击事件
     $('#reviewer_table tbody').on( 'click', '#delete', function () {
         if (confirm("你确认要删除这位审议人吗 ?") == false) {
             return;
@@ -189,17 +173,8 @@
             console.log(data);
             edit_modal.find('input#number').val(data.number);
             edit_modal.find('input#name').val(data.name);
-            if(data.sex == "1") {
-                edit_modal.find('input#sex1').attr('checked','checked');
-                edit_modal.find('input#sex1').parent().addClass('checked');
-                edit_modal.find('input#sex2').removeAttr('checked');
-                edit_modal.find('input#sex2').parent().removeClass('checked');
-            } else {
-                edit_modal.find('input#sex2').attr('checked','checked');
-                edit_modal.find('input#sex2').parent().addClass('checked');
-                edit_modal.find('input#sex1').removeAttr('checked');
-                edit_modal.find('input#sex1').parent().removeClass('checked');
-            }
+            edit_modal.find('input#id').val(data.id);
+            edit_modal.find('select#sex').val(data.sex);
             edit_modal.modal('toggle');
         })
 
@@ -212,22 +187,25 @@
     }
 
     function add() {
-        var error = $('#reviewer_form #form_error');
-        var number = $('#reviewer_form input#number').val();
-        var name = $('#reviewer_form input#name').val();
-        var sex = $('#reviewer_form :checked').val();
+        var error = add_modal.find('#form_error');
+        var number = add_modal.find('input#number').val();
+        var name = add_modal.find('input#name').val();
+        var sex = add_modal.find(':checked').val();
         console.log(number);
         console.log(name);
         console.log(sex);
         if(number == '') {
+            error.addClass('text-danger');
             error.text('请输入工号');
             return;
         }
         if(name == '') {
+            error.addClass('text-danger');
             error.text('请输入姓名');
             return;
         }
         if(sex == undefined) {
+            error.addClass('text-danger');
             error.text('请选择性别');
             return;
         }
@@ -241,7 +219,9 @@
             success: function (res) {
                 if(res.code == 1) {
                     $(sign).text(res.msg);
-
+                    var reply = res.reply;
+                    add_modal.modal('hide');    // 关闭模态框
+                    Table.row.add(reply).column('0').order().draw();
                 } else {
                     error.text(res.msg);
                 }
@@ -251,5 +231,55 @@
             }
         })
     }
+
+    function edit() {
+        var error = edit_modal.find('#form_error');
+        var id = edit_modal.find('input#id').val();
+        var number = edit_modal.find('input#number').val();
+        var name = edit_modal.find('input#name').val();
+        var sex = edit_modal.find(':checked').val();
+        console.log(id);
+        console.log(number);
+        console.log(name);
+        console.log(sex);
+        if(number == '') {
+            error.addClass('text-danger');
+            error.text('请输入工号');
+            return;
+        }
+        if(name == '') {
+            error.addClass('text-danger');
+            error.text('请输入姓名');
+            return;
+        }
+        if(sex == undefined) {
+            error.addClass('text-danger');
+            error.text('请选择性别');
+            return;
+        }
+        $.ajax({
+            url: "{{ route('edit_reviewer') }}",
+            data: {
+                id: id,
+                name: name,
+                number: number,
+                sex: sex
+            },
+            success: function (res) {
+                if(res.code == 1) {
+                    $(sign).text(res.msg);
+                    var reply = res.reply;
+                    edit_modal.modal('hide');    // 关闭模态框
+                    Table.ajax.reload();
+                } else {
+                    error.text(res.msg);
+                }
+            },
+            error: function () {
+                alert('抱歉，更新审议人失败...')
+            }
+        })
+    }
+
     </script>
 @endsection

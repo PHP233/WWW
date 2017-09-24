@@ -14,18 +14,20 @@ use Illuminate\Database\Eloquent\Model;
 class Apply extends Model {
 
 	const WAIT_REVIEW = 0;
-	const NO_PASS = 1;
-	const PASS = 2;
+	const WAIT_PASS = 1;
+	const NO_PASS = 2;
+	const PASS = 3;
 
 	protected $table = 'apply';
 
 	public function proposer() {
-		return $this->belongsTo('App\Model\Proposer');
+		return $this->belongsTo('App\Model\Proposer','proposer_id');
 	}
 
 	public function state($state = null) {
 		$arr = [
-			self::WAIT_REVIEW => '待审查',
+			self::WAIT_REVIEW => '未审查',
+			self::WAIT_PASS => '已审查待批准',
 			self::NO_PASS => '已审查未通过',
 			self::PASS => '已通过',
 		];
@@ -38,5 +40,18 @@ class Apply extends Model {
 
 	protected function getDateFormat() {
 		return time();
+	}
+
+	public function getStateClass($state) {
+		$arr = [
+			self::WAIT_REVIEW => 'bg-warning',
+			self::WAIT_PASS => 'bg-info',
+			self::NO_PASS => 'bg-danger',
+			self::PASS => 'bg-success',
+		];
+		if($state !== null) {
+			return array_key_exists($state, $arr) ? $arr[$state] : $arr[self::WAIT_REVIEW];
+		}
+		return $arr[self::WAIT_REVIEW];
 	}
 }
