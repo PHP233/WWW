@@ -16,4 +16,12 @@ class Code {
 	const apply_pre = 'PSA';
 	const draft_pre = 'PSD';
 
+	public static function getApplyNumber($apply) {
+		if($apply != null) {
+			$date = date('Ymd',strtotime($apply->created_at));
+			return $number = $date.$apply->id;
+		}
+		return '';
+	}
+
 }

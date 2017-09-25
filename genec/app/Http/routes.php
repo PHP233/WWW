@@ -32,15 +32,23 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
 	Route::group(['prefix' => 'reviewer'], function () {
 		Route::any('login', ['uses' => 'ReviewController@login']);
-		Route::any('apply_admin', ['uses' => 'ReviewController@apply_admin', 'as' => 'apply_admin']);
+		Route::any('logout', ['uses' => 'ReviewController@logout', 'as' => 'reviewer_logout']);
 		Route::any('draft_admin', ['uses' => 'ReviewController@draft_admin']);
 		Route::any('reviewer_admin', ['uses' => 'ReviewController@reviewer_admin','as' => 'reviewer_admin']);
 		Route::any('get_all_reviewers', ['uses' => 'ReviewController@get_all_reviewers','as' => 'get_all_reviewers']);
 		Route::any('delete_reviewer', ['uses' => 'ReviewController@delete_reviewer','as' => 'delete_reviewer']);
 		Route::any('add_reviewer', ['uses' => 'ReviewController@add_reviewer','as' => 'add_reviewer']);
 		Route::any('edit_reviewer', ['uses' => 'ReviewController@edit_reviewer','as' => 'edit_reviewer']);
-		Route::group(['prefix' => 'apply'],function () {
-			Route::any('download/{apply_id}', ['uses' => 'ApplyController@download', 'as' => 'apply_download']);
+		Route::group(['prefix' => 'apply', 'as' => 'apply::'], function () {
+			Route::any('/', ['uses' => 'ApplyController@index', 'as' => 'index']);
+			Route::any('checker', ['uses' => 'ApplyController@checker', 'as' => '']);
+		});
+		Route::group(['prefix' => 'draft', 'as' => 'draft::'], function () {
+			Route::any('/', ['uses' => 'DraftController@index', 'as' => 'index']);
+			Route::any('upload', ['uses' => 'DraftController@upload', 'as' => 'upload']);
+		});
+		Route::group(['prefix' => 'checker', 'as' => 'checker::'], function () {
+			Route::any('/', ['uses' => 'ReviewerController@checker', 'as' => 'checker']);
 		});
 	});
 	Route::group(['prefix' => 'proposer'], function () {

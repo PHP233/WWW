@@ -27,9 +27,9 @@ class Apply extends Model {
 	public function state($state = null) {
 		$arr = [
 			self::WAIT_REVIEW => '未审查',
-			self::WAIT_PASS => '已审查待批准',
-			self::NO_PASS => '已审查未通过',
-			self::PASS => '已通过',
+			self::WAIT_PASS => '已审查待审批',
+			self::NO_PASS => '已审批未通过',
+			self::PASS => '已批准',
 		];
 
 		if($state !== null) {

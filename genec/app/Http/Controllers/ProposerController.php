@@ -83,7 +83,7 @@ class ProposerController extends Controller {
 				exit('文件类型必须是doc或docx');
 			}
 			// 设置上传文件名:为新增申请记录的id
-			$apply = $this->insert_apply($id, $title);
+			$apply = $this->insert_apply($id, $title,$ext);
 			$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$id;
 			if (!file_exists($upload_path)) {
 				mkdir($upload_path);
@@ -96,15 +96,15 @@ class ProposerController extends Controller {
 		return view('proposer/add_apply');
 	}
 
-	public function logout(Request $request) {
+	public function logout() {
 		session()->flush();
 		return redirect('proposer/login');
 	}
 
-	protected function insert_apply($p_id, $title) {
+	protected function insert_apply($p_id, $title, $ext) {
 		$apply = new Apply();
 		$apply->proposer_id = $p_id;
-		$apply->title = $title;
+		$apply->title = $title.$ext;
 		$apply->save();
 		return $apply;
 	}

@@ -24,16 +24,15 @@ class ReviewController extends Controller {
 			$res = Reviewer::where('number',$number)
 			               ->where('password', $password)
 			               ->first();
-			if($res != null)
-				return redirect('reviewer/apply_admin');
+			if($res != null) {
+				session()->put(['reviewer' => $res]);
+				if($res->role)
+					return redirect('reviewer/apply');
+				return redirect('');
+			}
 			return redirect()->back()->withInput()->with('error','工号或密码错误');
 		}
 		return view( 'reviewer.login');
-	}
-
-	public function apply_admin(Request $request) {
-		$applies = Apply::all();
-		return view('reviewer.apply_admin')->with('applies', $applies);
 	}
 
 	public function draft_admin(Request $request) {
@@ -95,5 +94,10 @@ class ReviewController extends Controller {
 		}
 		$res->setReply($reviewer);
 		return response()->json($res);
+	}
+
+	public function logout() {
+		session()->flush();
+		return redirect('reviewer/login');
 	}
 }

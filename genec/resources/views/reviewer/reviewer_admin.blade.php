@@ -39,7 +39,7 @@
 
         var Table = "";
         var TableDatatablesManage = function () {
-        var table = $('#reviewer_table');
+        var table = $('#data_table');
         var initTable1 = function () {
         // begin first table
         Table = table.DataTable({

@@ -14,10 +14,15 @@ use Illuminate\Http\Request;
 
 class ApplyController extends Controller {
 
+	public function index(Request $request) {
+		$applies = Apply::all();
+		return view('reviewer.apply_admin')->with('applies', $applies);
+	}
+
 	public function download(Request $request) {
 		$apply_id = $request->apply_id;
 		$apply = Apply::find($apply_id);
-		return response()->download(storage_path('app\uploads\apply\\'.$apply->proposer_id.'\\'.$apply_id), $apply->title.'.doc', ['application/msword']);
+		return response()->download(storage_path('app\uploads\apply\\'.$apply->proposer_id.'\\'.$apply_id), $apply->title, ['application/msword']);
 	}
 
 }
