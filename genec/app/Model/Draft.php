@@ -9,14 +9,12 @@
 namespace App\Model;
 
 
-use Illuminate\Database\Eloquent\Model;
+use App\Model\Apply;
 
-class Draft extends  Model {
+class Draft extends  Apply{
 	protected $table = 'draft';
 
-	protected function getDateFormat() {
-		return time();
-	}
-
-
+    public function apply() {
+        return $this->belongsTo('App\Model\Apply','apply_id');
+    }
 }

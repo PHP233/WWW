@@ -16,8 +16,9 @@ use Illuminate\Http\Request;
 class DraftController extends Controller {
 
 	// 返回所有送审表
-	public function index() {
-
+	public function index(Request $request) {
+        $drafts = Draft::all();
+        return view('reviewer.draft_admin')->with('drafts', $drafts);
 	}
 
 	public function upload(Request $request) {
