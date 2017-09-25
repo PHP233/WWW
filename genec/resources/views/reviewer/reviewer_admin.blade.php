@@ -37,12 +37,12 @@
         var add_modal;
         var edit_modal;
 
-        var Table = "";
+        var Table1 = "";
         var TableDatatablesManage = function () {
         var table = $('#data_table');
         var initTable1 = function () {
         // begin first table
-        Table = table.DataTable({
+        Table1 = table.DataTable({
             "language": {
                 "aria": {
                 "sortAscending": ": activate to sort column ascending",
@@ -120,10 +120,10 @@
     return;
     }
     initTable1();
-    Table.column(0).visible(false);
+    Table1.column(0).visible(false);
     },
     reload: function() {
-    Table.ajax.reload();
+    Table1.ajax.reload();
     }
     };
 
@@ -141,12 +141,12 @@
     }
 
     // 删除审议人按钮点击事件
-    $('#reviewer_table tbody').on( 'click', '#delete', function () {
+    $('#data_table tbody').on( 'click', '#delete', function () {
         if (confirm("你确认要删除这位审议人吗 ?") == false) {
             return;
         }
         var th = $(this).parents('tr');
-        var id = Table.row(th).data().id;
+        var id = Table1.row(th).data().id;
         $.ajax({
             url: "{{ url('reviewer/delete_reviewer') }}",
             data: {
@@ -155,7 +155,7 @@
             success: function (res) {
                 console.log(res);
                 if(res.code == 1) {
-                    Table.row( th).remove().draw();
+                    Table1.row( th).remove().draw();
                     $(sign).html(res.msg);
                     } else {
                     alert(res.msg);
@@ -168,8 +168,8 @@
     } );
 
         // 修改按钮点击事件处理函数
-        $('#reviewer_table tbody').on('click','#edit',function () {
-            var data = Table.row($(this).parents('tr')).data();
+        $('#data_table tbody').on('click','#edit',function () {
+            var data = Table1.row($(this).parents('tr')).data();
             console.log(data);
             edit_modal.find('input#number').val(data.number);
             edit_modal.find('input#name').val(data.name);
@@ -221,7 +221,7 @@
                     $(sign).text(res.msg);
                     var reply = res.reply;
                     add_modal.modal('hide');    // 关闭模态框
-                    Table.row.add(reply).column('0').order().draw();
+                    Table1.row.add(reply).column('0').order().draw();
                 } else {
                     error.text(res.msg);
                 }
@@ -270,7 +270,7 @@
                     $(sign).text(res.msg);
                     var reply = res.reply;
                     edit_modal.modal('hide');    // 关闭模态框
-                    Table.ajax.reload();
+                    Table1.ajax.reload();
                 } else {
                     error.text(res.msg);
                 }

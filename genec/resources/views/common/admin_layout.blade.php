@@ -541,16 +541,25 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="{{ asset('static/assets/js/scripts/layout.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('static/assets/js/scripts/demo.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('static/assets/js/scripts/quick-sidebar.min.js') }}" type="text/javascript"></script>
+@yield('javascript')
 <script>
+
     function changeApplyType(type) {
-        if(type == '') {
-            if(location.pathname != '/genec/public/reviewer/apply')
-                window.location.href = '{{ route('apply::index') }}';
+        var now = '{{ route('apply::index') }}';
+        if(location.href != now) {
+            window.location.href = now;
         }
         Table.search(type).draw();
     }
+
+    function toReviewerAdmin() {
+        var now = '{{ route('reviewer_admin') }}';
+        if(location.href != now) {
+            window.location.href = now;
+        }
+        Table1.search('').draw();
+    }
 </script>
-@yield('javascript')
 <!-- END THEME LAYOUT SCRIPTS -->
 </body>
 

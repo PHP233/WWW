@@ -102,7 +102,7 @@
         <h3 class="uppercase">人员管理</h3>
     </li>
     <li class="nav-item">
-        <a href="{{ route('reviewer_admin') }}" class="nav-link nav-toggle">
+        <a href="javascript:toReviewerAdmin();" class="nav-link nav-toggle">
             <i class="icon-briefcase"></i>
             <span class="title">审议人管理</span>
             <span class="selected"></span>

@@ -19,10 +19,9 @@ class ApplyController extends Controller {
 		return view('reviewer.apply_admin')->with('applies', $applies);
 	}
 
-	public function download(Request $request) {
-		$apply_id = $request->apply_id;
-		$apply = Apply::find($apply_id);
-		return response()->download(storage_path('app\uploads\apply\\'.$apply->proposer_id.'\\'.$apply_id), $apply->title, ['application/msword']);
+	public function download(Request $request, $id=null) {
+		$apply = Apply::find($id);
+		return response()->download(storage_path('app\uploads\apply\\'.$apply->proposer_id.'\\'.$id), $apply->title, ['application/msword']);
 	}
 
 }

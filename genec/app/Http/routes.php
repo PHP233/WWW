@@ -42,6 +42,7 @@ Route::group(['middleware' => ['web']], function () {
 		Route::group(['prefix' => 'apply', 'as' => 'apply::'], function () {
 			Route::any('/', ['uses' => 'ApplyController@index', 'as' => 'index']);
 			Route::any('checker', ['uses' => 'ApplyController@checker', 'as' => '']);
+			Route::any('download/{id?}', ['uses' => 'ApplyController@download', 'as' => 'download']);
 		});
 		Route::group(['prefix' => 'draft', 'as' => 'draft::'], function () {
 			Route::any('/', ['uses' => 'DraftController@index', 'as' => 'index']);
