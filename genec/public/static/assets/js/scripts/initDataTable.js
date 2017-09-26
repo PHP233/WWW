@@ -1,3 +1,4 @@
+const typeArr = ['','未审议','未审议','已审议待审批','已审批未通过','已批准'];
 var Table = "";
 var TableDatatablesManage = function () {
     var table = $('#data_table');
@@ -57,6 +58,12 @@ var TableDatatablesManage = function () {
                 return;
             }
             initTable();
+            var type = location.search[location.search.lastIndexOf('=') + 1];
+            if(type == '1' || type == '2' || type =='3' || type == '4' || type == '5') {
+                Table.search(typeArr[type]).draw();
+            } else {
+                Table.search('').draw();
+            }
         }
     };
 }();
@@ -64,4 +71,8 @@ if (App.isAngularJsApp() === false) {
     jQuery(document).ready(function() {
         TableDatatablesManage.init();
     });
+}
+
+function showAssignCheckerModal() {
+    $('#assignTaskModal').modal('show');
 }

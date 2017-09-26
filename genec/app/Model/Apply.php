@@ -13,10 +13,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Apply extends Model {
 
-	const WAIT_REVIEW = 0;
-	const WAIT_PASS = 1;
-	const NO_PASS = 2;
-	const PASS = 3;
+	const NO_ASSIGN_WAIT_REVIEW = 0;
+	const ASSIGN_WAIT_REVIEW = 1;
+	const WAIT_PASS = 2;
+	const NO_PASS = 3;
+	const PASS = 4;
 
 	protected $table = 'apply';
 
@@ -26,8 +27,9 @@ class Apply extends Model {
 
 	public function state($state = null) {
 		$arr = [
-			self::WAIT_REVIEW => '未审查',
-			self::WAIT_PASS => '已审查待审批',
+			self::NO_ASSIGN_WAIT_REVIEW => '未审议',
+			self::ASSIGN_WAIT_REVIEW => '未审议已分配审议任务',
+			self::WAIT_PASS => '已审议待审批',
 			self::NO_PASS => '已审批未通过',
 			self::PASS => '已批准',
 		];
@@ -38,20 +40,52 @@ class Apply extends Model {
 		return $arr[self::WAIT_REVIEW];
 	}
 
+	public function adviceBtn($state) {
+		$arr = [
+			self::NO_ASSIGN_WAIT_REVIEW => [
+				'url' => 'javascript:openAssignTaskModal();',
+				'btnName' => '分配审议人审议',
+			],
+			self::ASSIGN_WAIT_REVIEW => [
+				'url' => '#',
+				'btnName' => '等待审议人审议',
+			],
+			self::WAIT_PASS => [
+				'url' => '',
+				'btnName' => '审批',
+			],
+			self::NO_PASS => [
+				'url' => '',
+				'btnName' => '分配审议人审议',
+			],
+			self::PASS => [
+				'url' => '#',
+				'btnName' => '-',
+			],
+		];
+		if($state !== null) {
+			$btn = array_key_exists($state, $arr) ? $arr[$state] : $arr[self::NO_ASSIGN_WAIT_REVIEW];
+		} else {
+			$btn = $arr[self::NO_ASSIGN_WAIT_REVIEW];
+		}
+		return $btn;
+	}
+
 	protected function getDateFormat() {
 		return time();
 	}
 
 	public function getStateClass($state) {
 		$arr = [
-			self::WAIT_REVIEW => 'bg-warning',
+			self::NO_ASSIGN_WAIT_REVIEW => 'bg-warning',
+			self::ASSIGN_WAIT_REVIEW => 'bg-warning',
 			self::WAIT_PASS => 'bg-info',
 			self::NO_PASS => 'bg-danger',
 			self::PASS => 'bg-success',
 		];
 		if($state !== null) {
-			return array_key_exists($state, $arr) ? $arr[$state] : $arr[self::WAIT_REVIEW];
+			return array_key_exists($state, $arr) ? $arr[$state] : $arr[self::NO_ASSIGN_WAIT_REVIEW];
 		}
-		return $arr[self::WAIT_REVIEW];
+		return $arr[self::NO_ASSIGN_WAIT_REVIEW];
 	}
 }

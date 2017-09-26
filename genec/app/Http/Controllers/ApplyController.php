@@ -10,13 +10,18 @@ namespace App\Http\Controllers;
 
 
 use App\Model\Apply;
+use App\Model\Reviewer;
 use Illuminate\Http\Request;
 
 class ApplyController extends Controller {
 
 	public function index(Request $request) {
+		$checkers = Reviewer::where('role',0)->get();
 		$applies = Apply::all();
-		return view('reviewer.apply_admin')->with('applies', $applies);
+		return view('reviewer.apply_admin',[
+			'applies' => $applies,
+			'checkers' => $checkers,
+		]);
 	}
 
 	public function download(Request $request, $id=null) {

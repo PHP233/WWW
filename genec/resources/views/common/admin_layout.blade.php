@@ -545,11 +545,13 @@ License: You must have a valid license purchased only from themeforest(the above
 <script>
 
     function changeApplyType(type) {
-        var now = '{{ route('apply::index') }}';
-        if(location.href != now) {
-            window.location.href = now;
+        var now = '/genec/public/reviewer/apply';
+        if(location.pathname != now) {
+            if(type === 0)
+                location.href = now;
+            location.href = now + '?type=' + type;
         }
-        Table.search(type).draw();
+        Table.search(typeArr[type]).draw();
     }
 
     function toReviewerAdmin() {
@@ -557,7 +559,6 @@ License: You must have a valid license purchased only from themeforest(the above
         if(location.href != now) {
             window.location.href = now;
         }
-        Table1.search('').draw();
     }
 </script>
 <!-- END THEME LAYOUT SCRIPTS -->

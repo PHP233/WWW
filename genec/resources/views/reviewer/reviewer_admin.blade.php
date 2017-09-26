@@ -120,6 +120,7 @@
     return;
     }
     initTable1();
+    // 隐藏职工id
     Table1.column(0).visible(false);
     },
     reload: function() {

@@ -6,40 +6,40 @@
     </li>
     <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
     <li class="nav-item start active open">
-        <a href="{{ route('apply::index') }}" class="nav-link nav-toggle">
+        <a href="#" class="nav-link nav-toggle">
             <i class="icon-home"></i>
             <span class="title">申请书审批</span>
             <span class="arrow"></span>
         </a>
         <ul class="sub-menu">
             <li class="nav-item start ">
-                <a href="javascript:changeApplyType('');" class="nav-link ">
+                <a href="javascript:changeApplyType(0);" class="nav-link ">
                     <i class="icon-bar-chart"></i>
                     <span class="title">全部</span>
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:changeApplyType('未审查');" class="nav-link ">
+                <a href="javascript:changeApplyType(1);" class="nav-link ">
                     <i class="icon-bar-chart"></i>
-                    <span class="title">未审查</span>
+                    <span class="title">未审议</span>
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:changeApplyType('已审查待审批');" class="nav-link ">
+                <a href="javascript:changeApplyType(3);" class="nav-link ">
                     <i class="icon-bulb"></i>
-                    <span class="title">已审查待审批</span>
+                    <span class="title">已审议待审批</span>
                     <span class="badge badge-success">1</span>
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:changeApplyType('已审批未通过');" class="nav-link ">
+                <a href="javascript:changeApplyType(4);" class="nav-link ">
                     <i class="icon-graph"></i>
                     <span class="title">已审批未通过</span>
                     <span class="badge badge-danger">5</span>
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:changeApplyType('已批准');" class="nav-link ">
+                <a href="javascript:changeApplyType(5);" class="nav-link ">
                     <i class="icon-graph"></i>
                     <span class="title">已批准</span>
                     <span class="badge badge-danger">5</span>
@@ -63,7 +63,7 @@
         </a>
         <ul class="sub-menu">
             <li class="nav-item start ">
-                <a href="{{ route('draft::index') }}" class="nav-link ">
+                <a href="#" class="nav-link ">
                     <i class="icon-bar-chart"></i>
                     <span class="title">全部</span>
                 </a>
@@ -71,13 +71,13 @@
             <li class="nav-item start ">
                 <a href="javascript:;" class="nav-link ">
                     <i class="icon-bar-chart"></i>
-                    <span class="title">未审查</span>
+                    <span class="title">未审议</span>
                 </a>
             </li>
             <li class="nav-item start ">
                 <a href="javascript:;" class="nav-link ">
                     <i class="icon-bulb"></i>
-                    <span class="title">已审查待审批</span>
+                    <span class="title">已审议待审批</span>
                     <span class="badge badge-success">1</span>
                 </a>
             </li>
@@ -112,13 +112,13 @@
     @endif
     @if(!$reviewer->role)
         <li class="heading">
-            <h3 class="uppercase">我的审查任务</h3>
+            <h3 class="uppercase">我的审议任务</h3>
         </li>
         <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
         <li class="nav-item start">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="icon-home"></i>
-                <span class="title">送审表审查</span>
+                <span class="title">送审表审议</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
@@ -131,13 +131,13 @@
                 <li class="nav-item start ">
                     <a href="{{ url('reviewer/apply/0') }}" class="nav-link ">
                         <i class="icon-bar-chart"></i>
-                        <span class="title">未审查</span>
+                        <span class="title">未审议</span>
                     </a>
                 </li>
                 <li class="nav-item start ">
                     <a href="{{ url('reviewer/apply/1') }}" class="nav-link ">
                         <i class="icon-bulb"></i>
-                        <span class="title">已审查</span>
+                        <span class="title">已审议</span>
                         <span class="badge badge-success"></span>
                     </a>
                 </li>
@@ -146,7 +146,7 @@
         <li class="nav-item start active open">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="icon-home"></i>
-                <span class="title">申请书审查</span>
+                <span class="title">申请书审议</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
@@ -159,13 +159,13 @@
                 <li class="nav-item start ">
                     <a href="{{ url('reviewer/apply/0') }}" class="nav-link ">
                         <i class="icon-bar-chart"></i>
-                        <span class="title">未审查</span>
+                        <span class="title">未审议</span>
                     </a>
                 </li>
                 <li class="nav-item start ">
                     <a href="{{ url('reviewer/apply/1') }}" class="nav-link ">
                         <i class="icon-bulb"></i>
-                        <span class="title">已审查</span>
+                        <span class="title">已审议</span>
                         <span class="badge badge-success"></span>
                     </a>
                 </li>
