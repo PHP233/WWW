@@ -8,12 +8,15 @@
 namespace App\Http\Controllers;
 
 use App\Model\Apply;
+use App\Model\Suggest;
 use App\utils\Code;
 use App\utils\Data;
 use App\utils\Res;
 use App\Model\Reviewer;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Mockery\Exception;
+use Illuminate\Support\Facades\DB;
 
 class ReviewController extends Controller {
 
@@ -93,6 +96,33 @@ class ReviewController extends Controller {
 			$res->setMsg('更新审议人信息失败...');
 		}
 		$res->setReply($reviewer);
+		return response()->json($res);
+	}
+
+	public function assign(Request $request) {
+		$res = new Res(Code::success, Apply::find($request->apply_id)->title.'——审议任务已分配');
+		DB::transaction(function () use($request, $res){
+			$apply_id = $request->apply_id;
+			$checker_ids = $request->checker_ids;
+			foreach ($checker_ids as $checker_id) {
+				try{
+					Suggest::firstOrCreate([
+						'apply_id' => $apply_id,
+						'reviewer_id' => $checker_id,
+					]);
+				} catch (QueryException $e) {
+					$res->setCode(Code::error);
+					$res->setMsg('分配任务出现错误...');
+					break;
+				}
+			}
+			try {
+				$r = Apply::find($apply_id)->update(['state'=>1]);
+			} catch (QueryException $e) {
+				$res->setCode(Code::error);
+				$res->setMsg('更改申请书状态出错...');
+			}
+		});
 		return response()->json($res);
 	}
 

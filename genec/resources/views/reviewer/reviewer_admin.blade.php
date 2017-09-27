@@ -43,6 +43,7 @@
         var initTable1 = function () {
         // begin first table
         Table1 = table.DataTable({
+            "bProcessing": true,
             "language": {
                 "aria": {
                 "sortAscending": ": activate to sort column ascending",
@@ -271,7 +272,7 @@
                     $(sign).text(res.msg);
                     var reply = res.reply;
                     edit_modal.modal('hide');    // 关闭模态框
-                    Table1.ajax.reload();
+
                 } else {
                     error.text(res.msg);
                 }

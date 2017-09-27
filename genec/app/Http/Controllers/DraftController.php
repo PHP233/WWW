@@ -37,7 +37,7 @@ class DraftController extends Controller {
 			}
 			$draft = new Draft();
 			$draft->apply_id = $request->apply_id;
-			$draft->title = $request->title.$ext;
+			$draft->title = $request->title.'.'.$ext;
 			$bool = $draft->save();
 			if(!$bool) {
 				return view('reviewer.upload_draft')->with('error','新建送审表失败');

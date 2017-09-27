@@ -18,6 +18,7 @@ class Apply extends Model {
 	const WAIT_PASS = 2;
 	const NO_PASS = 3;
 	const PASS = 4;
+	const DROPPED = 5;
 
 	protected $table = 'apply';
 
@@ -25,25 +26,26 @@ class Apply extends Model {
 		return $this->belongsTo('App\Model\Proposer','proposer_id');
 	}
 
-	public function state($state = null) {
+	public function state() {
 		$arr = [
 			self::NO_ASSIGN_WAIT_REVIEW => '未审议',
 			self::ASSIGN_WAIT_REVIEW => '未审议已分配审议任务',
 			self::WAIT_PASS => '已审议待审批',
-			self::NO_PASS => '已审批未通过',
+			self::NO_PASS => '未通过审批',
 			self::PASS => '已批准',
+			self::DROPPED => '已撤销',
 		];
 
-		if($state !== null) {
-			return array_key_exists($state, $arr) ? $arr[$state] : $arr[self::WAIT_REVIEW];
+		if($this->state !== null) {
+			return array_key_exists($this->state, $arr) ? $arr[$this->state] : $arr[self::NO_ASSIGN_WAIT_REVIEW];
 		}
-		return $arr[self::WAIT_REVIEW];
+		return $arr[self::NO_ASSIGN_WAIT_REVIEW];
 	}
 
-	public function adviceBtn($state) {
+	public function adviceBtn() {
 		$arr = [
 			self::NO_ASSIGN_WAIT_REVIEW => [
-				'url' => 'javascript:openAssignTaskModal();',
+				'url' => 'javascript:openAssignTaskModal('.$this->id.',\''.$this->title.'\');',
 				'btnName' => '分配审议人审议',
 			],
 			self::ASSIGN_WAIT_REVIEW => [
@@ -55,37 +57,45 @@ class Apply extends Model {
 				'btnName' => '审批',
 			],
 			self::NO_PASS => [
-				'url' => '',
-				'btnName' => '分配审议人审议',
+				'url' => '#',
+				'btnName' => '-',
 			],
 			self::PASS => [
 				'url' => '#',
 				'btnName' => '-',
 			],
+			self::DROPPED => [
+				'url' => '#',
+				'btnName' => '-',
+			],
 		];
-		if($state !== null) {
-			$btn = array_key_exists($state, $arr) ? $arr[$state] : $arr[self::NO_ASSIGN_WAIT_REVIEW];
+		if($this->state !== null) {
+			$btn = array_key_exists($this->state, $arr) ? $arr[$this->state] : $arr[self::NO_ASSIGN_WAIT_REVIEW];
 		} else {
 			$btn = $arr[self::NO_ASSIGN_WAIT_REVIEW];
 		}
 		return $btn;
 	}
 
-	protected function getDateFormat() {
-		return time();
-	}
-
-	public function getStateClass($state) {
+	public function getStateClass() {
 		$arr = [
 			self::NO_ASSIGN_WAIT_REVIEW => 'bg-warning',
 			self::ASSIGN_WAIT_REVIEW => 'bg-warning',
 			self::WAIT_PASS => 'bg-info',
 			self::NO_PASS => 'bg-danger',
 			self::PASS => 'bg-success',
+			self::DROPPED => 'bg-danger',
 		];
-		if($state !== null) {
-			return array_key_exists($state, $arr) ? $arr[$state] : $arr[self::NO_ASSIGN_WAIT_REVIEW];
+		if($this->state !== null) {
+			return array_key_exists($this->state, $arr) ? $arr[$this->state] : $arr[self::NO_ASSIGN_WAIT_REVIEW];
 		}
 		return $arr[self::NO_ASSIGN_WAIT_REVIEW];
 	}
+
+	protected $guarded = ['id'];
+
+	protected function getDateFormat() {
+		return time();
+	}
+
 }

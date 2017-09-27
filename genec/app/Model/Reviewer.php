@@ -28,8 +28,8 @@ class Reviewer extends Model {
 		return 'null';
 	}
 
-	public function sex($sex) {
-		if($sex == '1')
+	public function sex() {
+		if($this->sex == '1')
 			return '男';
 		return '女';
 	}

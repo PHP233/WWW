@@ -25,21 +25,21 @@
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:changeApplyType(3);" class="nav-link ">
+                <a href="javascript:changeApplyType(2);" class="nav-link ">
                     <i class="icon-bulb"></i>
                     <span class="title">已审议待审批</span>
                     <span class="badge badge-success">1</span>
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:changeApplyType(4);" class="nav-link ">
+                <a href="javascript:changeApplyType(3);" class="nav-link ">
                     <i class="icon-graph"></i>
-                    <span class="title">已审批未通过</span>
+                    <span class="title">未通过审批</span>
                     <span class="badge badge-danger">5</span>
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:changeApplyType(5);" class="nav-link ">
+                <a href="javascript:changeApplyType(4);" class="nav-link ">
                     <i class="icon-graph"></i>
                     <span class="title">已批准</span>
                     <span class="badge badge-danger">5</span>

@@ -39,6 +39,7 @@ Route::group(['middleware' => ['web']], function () {
 		Route::any('delete_reviewer', ['uses' => 'ReviewController@delete_reviewer','as' => 'delete_reviewer']);
 		Route::any('add_reviewer', ['uses' => 'ReviewController@add_reviewer','as' => 'add_reviewer']);
 		Route::any('edit_reviewer', ['uses' => 'ReviewController@edit_reviewer','as' => 'edit_reviewer']);
+		Route::any('assign', ['uses' => 'ReviewController@assign', 'as' => 'assign']);
 		Route::group(['prefix' => 'apply', 'as' => 'apply::'], function () {
 			Route::any('/', ['uses' => 'ApplyController@index', 'as' => 'index']);
 			Route::any('checker', ['uses' => 'ApplyController@checker', 'as' => '']);
@@ -61,3 +62,5 @@ Route::group(['middleware' => ['web']], function () {
 	});
 
 });
+
+Route::get('test','Test@test');

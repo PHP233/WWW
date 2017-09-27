@@ -1,4 +1,4 @@
-const typeArr = ['','未审议','未审议','已审议待审批','已审批未通过','已批准'];
+const typeArr = ['','未审议','已审议待审批','未通过审批','已批准'];
 var Table = "";
 var TableDatatablesManage = function () {
     var table = $('#data_table');
@@ -71,8 +71,4 @@ if (App.isAngularJsApp() === false) {
     jQuery(document).ready(function() {
         TableDatatablesManage.init();
     });
-}
-
-function showAssignCheckerModal() {
-    $('#assignTaskModal').modal('show');
 }

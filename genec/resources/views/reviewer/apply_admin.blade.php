@@ -5,8 +5,8 @@
         .talbe-span {
             padding: 5px
         }
-        modal-body button {
-            margin: 10px 5px;
+        .modal-body button {
+            margin: 2px 1px;
         }
     </style>
 @stop
@@ -29,9 +29,9 @@
             <td> {{ $apply->title }} </td>
             <td> {{ $apply->proposer->name }} </td>
             <td> {{ $apply->created_at }} </td>
-            <td> <span class="talbe-span {{ $apply->getStateClass($apply->state) }}">{{ $apply->state($apply->state) }}</span> </td>
+            <td> <span class="talbe-span {{ $apply->getStateClass() }}">{{ $apply->state() }}</span> </td>
             <td> {{ $apply->modify_time }} </td>
-            <td> <a href="{{ $apply->adviceBtn($apply->state)['url'] }}">{{ $apply->adviceBtn($apply->state)['btnName'] }}</a> </td>
+            <td> <a href="{{ $apply->adviceBtn()['url'] }}">{{ $apply->adviceBtn()['btnName'] }}</a> </td>
             <td><a href="{{ url('reviewer/apply/download/'.$apply->id) }}">下载</a> </td>
         </tr>
     @endforeach
@@ -54,7 +54,7 @@
                             <h4>点击要分配的审议人          <small><a class="btn btn-success btn-sm" href="javascript:setAll(1);">全选</a></small></h4>
                             <div id="to_select_list" class="row" style="padding: 15px;border-right:solid 1px;">
                                 @foreach($checkers as $checker )
-                                <button type="button" class="btn btn-default" data-id="{{ $checker->id }}" title="{{ $checker->sex($checker->sex) }}, 工号：{{ $checker->number }}">{{ $checker->name }}</button>
+                                <button type="button" class="btn btn-default" data-id="{{ $checker->id }}" title="{{ $checker->sex() }}, 工号：{{ $checker->number }}">{{ $checker->name }}</button>
                                 @endforeach
                             </div>
                         </div>
@@ -68,11 +68,22 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">选好了</button>
+                    <button type="button" class="btn btn-primary" onclick="assignChecker();">选好了</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- modal confirm -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="toast">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="bg-success" style="margin: 15px;padding: 15px;font-size: 20px">分配审议任务成功！</p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 @stop
 
 @section('javascript')
@@ -80,10 +91,16 @@
     <script>
         var to_select;
         var selected;
+        var assignTaskModal;
+        var apply_id;
+        var apply_title;
+        var tr;
+        var toast;
         $(function() {
             to_select = $('#to_select_list');
             selected = $('#selected_list');
-
+            assignTaskModal = $('#assignTaskModal');
+            toast = $('#toast');
             selected.on('click','button', function() {
                 this.remove();
                 addChecker($(this), 0);
@@ -95,13 +112,12 @@
             });
         });
 
-        function openAssignTaskModal() {
-            $('#assignTaskModal').modal('show');
+        function openAssignTaskModal(id,title) {
+            tr = document.activeElement.parentNode.parentNode;
+            apply_id = id;
+            apply_title = title;
+            assignTaskModal.modal('show');
         }
-
-        function openModal() {
-            $('#assignTaskModal').modal('show');
-        };
 
         function addChecker(item, direction) {
             var id = item.data('id');
@@ -125,6 +141,65 @@
                 button.remove();
                 addChecker($(button), type);
             }
+        }
+
+        function assignChecker() {
+            var buttons = $(selected).find('button');
+            var checkers = [];
+            var checkerIds = [];
+            for(button of buttons) {
+                var checker = {};
+                checker.id = $(button).data('id');
+                checker.name = $(button).text();
+                checker.number = $(buttons).attr('title');
+                checkers.push(checker);
+                checkerIds.push(checker.id);
+            }
+            var r = confirm('确定要将审议任务分配给——'+ apply_title +'：' + showSelectedCheckerList(checkers));
+            if(r) {
+                // 发送 ajax 请求，新增审议信息
+                ajaxForAssignReview(checkerIds);
+            }
+        }
+
+        function showSelectedCheckerList(checkers) {
+            var str = '\r\n';
+            for(checker of checkers) {
+                str += checker.number + ', ' + checker.name + '\r\n';
+            }
+            return str;
+        }
+
+        function ajaxForAssignReview(checkerIds) {
+            $.ajax({
+                url: '{{ route('assign') }}',
+                type: 'get',
+                data: {
+                    apply_id: apply_id,
+                    checker_ids: checkerIds
+                },
+                success: function (res) {
+                    if(res.code) {
+                        $('#sign').text(res.msg);
+                        var state = $(tr).children('td')[4];
+                        var btn = $(tr).children('td')[6];
+                        $(state).html('<span class="talbe-span bg-warning">未审议已分配审议任务</span>');
+                        $(btn).html('<a href="#">等待审议人审议</a>');
+                        toast.modal('show');
+                        setTimeout("toast.modal('hide')",2000);
+                    } else {
+                        alert(msg);
+                    }
+                    assignTaskModal.modal('hide');
+                },
+                error: function (error) {
+
+                }
+            });
+        }
+
+        function getCheckerIds(checkers) {
+
         }
     </script>
 @endsection

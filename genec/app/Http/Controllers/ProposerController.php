@@ -104,7 +104,7 @@ class ProposerController extends Controller {
 	protected function insert_apply($p_id, $title, $ext) {
 		$apply = new Apply();
 		$apply->proposer_id = $p_id;
-		$apply->title = $title.$ext;
+		$apply->title = $title.'.'.$ext;
 		$apply->save();
 		return $apply;
 	}

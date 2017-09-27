@@ -32,6 +32,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{ asset('static/assets/css/plugins/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('static/assets/css/plugins/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('static/assets/css/plugins/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('static/dist/css/bootstrap-theme.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('static/assets/css/plugins/uniform.default.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('static/assets/css/plugins/bootstrap-switch.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
