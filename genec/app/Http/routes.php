@@ -50,7 +50,8 @@ Route::group(['middleware' => ['web']], function () {
 			Route::any('upload', ['uses' => 'DraftController@upload', 'as' => 'upload']);
 		});
 		Route::group(['prefix' => 'checker', 'as' => 'checker::'], function () {
-			Route::any('/', ['uses' => 'ReviewerController@checker', 'as' => 'checker']);
+			Route::any('/', ['uses' => 'CheckerController@index', 'as' => 'checker']);
+			Route::any('get_my_apply', ['uses'=>'CheckerController@get_my_apply', 'as' => 'get_my_apply']);
 		});
 	});
 	Route::group(['prefix' => 'proposer'], function () {

@@ -31,7 +31,7 @@ class ReviewController extends Controller {
 				session()->put(['reviewer' => $res]);
 				if($res->role)
 					return redirect('reviewer/apply');
-				return redirect('');
+				return redirect('reviewer/checker');
 			}
 			return redirect()->back()->withInput()->with('error','工号或密码错误');
 		}
@@ -117,7 +117,7 @@ class ReviewController extends Controller {
 				}
 			}
 			try {
-				$r = Apply::find($apply_id)->update(['state'=>1]);
+				Apply::find($apply_id)->update(['state'=>1]);
 			} catch (QueryException $e) {
 				$res->setCode(Code::error);
 				$res->setMsg('更改申请书状态出错...');

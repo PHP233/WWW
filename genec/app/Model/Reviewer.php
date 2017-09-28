@@ -42,4 +42,13 @@ class Reviewer extends Model {
 			$this->email = '';
 		}
 	}
+
+	public function applies() {
+		return $this->belongsToMany('App\Model\Apply', 'suggest','reviewer_id','apply_id')->withPivot('content')->withTimestamps();
+	}
+
+	public function drafts() {
+		return $this->belongsToMany('App\Model\Draft','suggest','reviewer_id','draft_id');
+	}
+
 }

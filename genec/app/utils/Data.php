@@ -16,4 +16,8 @@ class Data {
 	public function setData($arr) {
 		$this->data = $arr;
 	}
+
+	public function Data($data) {
+		$this->data = $data;
+	}
 }

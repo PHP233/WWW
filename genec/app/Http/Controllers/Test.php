@@ -16,8 +16,10 @@ use Illuminate\Database\QueryException;
 class Test extends Controller {
 
 	public function test() {
-		Suggest::create([
-			'reviewer_id' => '1000'
-		]);
+		$applies = Reviewer::find(24)->applies()->get();
+		foreach ($applies as $apply) {
+			echo $apply->pivot->content.'<br/>';
+		}
+		dd($applies);
 	}
 }
