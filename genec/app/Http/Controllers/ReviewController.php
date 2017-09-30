@@ -86,7 +86,7 @@ class ReviewController extends Controller {
 	}
 
 	public function edit_reviewer(Request $request) {
-		$res = new Res(Code::success,'');
+		$res = new Res(Code::success,'修改信息成功');
 		$reviewer = Reviewer::find($request->id);
 		$reviewer->name = $request->name;
 		$reviewer->number = $request->number;

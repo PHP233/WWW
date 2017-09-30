@@ -30,9 +30,11 @@
 
 @section('modal')
     @include('common.reviewer.modal')
+    @include('common.toast')
 @endsection
 
 @section('javascript')
+    <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
     <script>
         var add_modal;
         var edit_modal;
@@ -43,6 +45,7 @@
         var initTable1 = function () {
         // begin first table
         Table1 = table.DataTable({
+            rowId: 'id',
             "bProcessing": true,
             "language": {
                 "aria": {
@@ -158,7 +161,7 @@
                 console.log(res);
                 if(res.code == 1) {
                     Table1.row( th).remove().draw();
-                    $(sign).html(res.msg);
+                    toast($('#toast'),res.msg);
                     } else {
                     alert(res.msg);
                     }
@@ -220,9 +223,9 @@
             },
             success: function (res) {
                 if(res.code == 1) {
-                    $(sign).text(res.msg);
                     var reply = res.reply;
                     add_modal.modal('hide');    // 关闭模态框
+                    toast($('#toast'),res.msg);
                     Table1.row.add(reply).column('0').order().draw();
                 } else {
                     error.text(res.msg);
@@ -269,10 +272,11 @@
             },
             success: function (res) {
                 if(res.code == 1) {
-                    $(sign).text(res.msg);
+                    toast($('#toast'), res.msg);
                     var reply = res.reply;
                     edit_modal.modal('hide');    // 关闭模态框
-
+                    // 修改表格信息
+                    Table1.ajax.reload();
                 } else {
                     error.text(res.msg);
                 }

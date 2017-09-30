@@ -50,7 +50,7 @@
                         { "data": "modify_time"},
                         { "data": "state",render: function (data) {
                             if(data)
-                                return '<a href="#" class="btn btn-xs btn-info">审议</a>';
+                                return '<a href="#" class="btn btn-xs btn-info"><审议/a>';
                             return '<a href="#" class="btn btn-xs btn-success">已审议 - 查看</a>';
                         }},
                         { "data": "id",render: function (data) {

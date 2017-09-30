@@ -73,21 +73,12 @@
             </div>
         </div>
     </div>
-
-    <!-- modal confirm -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="toast">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <p class="bg-success" style="margin: 15px;padding: 15px;font-size: 20px">分配审议任务成功！</p>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+    @include('common.toast')
 @stop
 
 @section('javascript')
     <script src="{{ asset('static/assets/js/scripts/initDataTable.js') }}"></script>
+    <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
     <script>
         var to_select;
         var selected;
@@ -95,12 +86,12 @@
         var apply_id;
         var apply_title;
         var tr;
-        var toast;
+        var toast_modal;
         $(function() {
             to_select = $('#to_select_list');
             selected = $('#selected_list');
             assignTaskModal = $('#assignTaskModal');
-            toast = $('#toast');
+            toast_modal = $('#toast');
             selected.on('click','button', function() {
                 this.remove();
                 addChecker($(this), 0);
@@ -185,8 +176,8 @@
                         var btn = $(tr).children('td')[6];
                         $(state).html('<span class="talbe-span bg-warning">未审议已分配审议任务</span>');
                         $(btn).html('<a href="#">等待审议人审议</a>');
-                        toast.modal('show');
-                        setTimeout("toast.modal('hide')",2000);
+                        toast(toast_modal, res.msg);
+                        //setTimeout("toast_modal.modal('hide')",2000);
                     } else {
                         alert(msg);
                     }
