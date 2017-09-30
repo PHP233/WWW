@@ -1209,7 +1209,7 @@ class WP_Press_This {
 	}
 
 	/**
-	 * Serves the app's base HTML, which in turns calls the load scripts.
+	 * Serves the app's base HTML, which in turns calls the load script.
 	 *
 	 * @since 4.2.0
 	 * @access public

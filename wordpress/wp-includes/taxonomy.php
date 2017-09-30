@@ -3606,7 +3606,7 @@ function _wp_batch_split_terms() {
 		return;
 	}
 
-	// Shared terms found? We'll need to run this scripts again.
+	// Shared terms found? We'll need to run this script again.
 	wp_schedule_single_event( time() + ( 2 * MINUTE_IN_SECONDS ), 'wp_split_shared_term_batch' );
 
 	// Rekey shared term array for faster lookups.

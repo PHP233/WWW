@@ -39,7 +39,7 @@ require( ABSPATH . WPINC . '/functions.wp-styles.php' );
  *
  * Localizes some of them.
  * args order: `$scripts->add( 'handle', 'url', 'dependencies', 'query-string', 1 );`
- * when last arg === 1 queues the scripts for the footer
+ * when last arg === 1 queues the script for the footer
  *
  * @since 2.6.0
  *
@@ -169,7 +169,7 @@ function wp_default_scripts( &$scripts ) {
 
 	$scripts->add( 'wp-lists', "/wp-includes/js/wp-lists$suffix.js", array( 'wp-ajax-response', 'jquery-color' ), false, 1 );
 
-	// WordPress no longer uses or bundles Prototype or scripts.aculo.us. These are now pulled from an external source.
+	// WordPress no longer uses or bundles Prototype or script.aculo.us. These are now pulled from an external source.
 	$scripts->add( 'prototype', 'https://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js', array(), '1.7.1');
 	$scripts->add( 'scriptaculous-root', 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js', array('prototype'), '1.9.0');
 	$scripts->add( 'scriptaculous-builder', 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/builder.js', array('scriptaculous-root'), '1.9.0');
@@ -1116,7 +1116,7 @@ function wp_style_loader_src( $src, $handle ) {
 }
 
 /**
- * Prints the scripts queue in the HTML head on admin pages.
+ * Prints the script queue in the HTML head on admin pages.
  *
  * Postpones the scripts that were queued for the footer.
  * print_footer_scripts() is called in the footer to print these scripts.
@@ -1211,18 +1211,18 @@ function _print_scripts() {
 	if ( $concat = trim( $wp_scripts->concat, ', ' ) ) {
 
 		if ( !empty($wp_scripts->print_code) ) {
-			echo "\n<scripts type='text/javascript'>\n";
+			echo "\n<script type='text/javascript'>\n";
 			echo "/* <![CDATA[ */\n"; // not needed in HTML 5
 			echo $wp_scripts->print_code;
 			echo "/* ]]> */\n";
-			echo "</scripts>\n";
+			echo "</script>\n";
 		}
 
 		$concat = str_split( $concat, 128 );
 		$concat = 'load%5B%5D=' . implode( '&load%5B%5D=', $concat );
 
 		$src = $wp_scripts->base_url . "/wp-admin/load-scripts.php?c={$zip}&" . $concat . '&ver=' . $wp_scripts->default_version;
-		echo "<scripts type='text/javascript' src='" . esc_attr($src) . "'></scripts>\n";
+		echo "<script type='text/javascript' src='" . esc_attr($src) . "'></script>\n";
 	}
 
 	if ( !empty($wp_scripts->print_html) )
@@ -1230,7 +1230,7 @@ function _print_scripts() {
 }
 
 /**
- * Prints the scripts queue in the HTML head on the front end.
+ * Prints the script queue in the HTML head on the front end.
  *
  * Postpones the scripts that were queued for the footer.
  * wp_print_footer_scripts() is called in the footer to print these scripts.

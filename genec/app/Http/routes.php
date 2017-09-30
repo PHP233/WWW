@@ -44,6 +44,7 @@ Route::group(['middleware' => ['web']], function () {
 			Route::any('/', ['uses' => 'ApplyController@index', 'as' => 'index']);
 			Route::any('checker', ['uses' => 'ApplyController@checker', 'as' => '']);
 			Route::any('download/{id?}', ['uses' => 'ApplyController@download', 'as' => 'download']);
+			Route::any('get_review_list', ['uses' => 'ApplyController@get_review_list', 'as' => 'get_review_list']);
 		});
 		Route::group(['prefix' => 'draft', 'as' => 'draft::'], function () {
 			Route::any('/', ['uses' => 'DraftController@index', 'as' => 'index']);
@@ -52,6 +53,7 @@ Route::group(['middleware' => ['web']], function () {
 		Route::group(['prefix' => 'checker', 'as' => 'checker::'], function () {
 			Route::any('/', ['uses' => 'CheckerController@index', 'as' => 'checker']);
 			Route::any('get_my_apply', ['uses'=>'CheckerController@get_my_apply', 'as' => 'get_my_apply']);
+			Route::post('suggest', ['uses' => 'CheckerController@suggest', 'as' => 'suggest']);
 		});
 	});
 	Route::group(['prefix' => 'proposer'], function () {

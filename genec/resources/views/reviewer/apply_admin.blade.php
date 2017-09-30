@@ -41,38 +41,7 @@
 
 @section('modal')
     <!-- select checkers modal -->
-    <div id="assignTaskModal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">分配审议人</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h4>点击要分配的审议人          <small><a class="btn btn-success btn-sm" href="javascript:setAll(1);">全选</a></small></h4>
-                            <div id="to_select_list" class="row" style="padding: 15px;border-right:solid 1px;">
-                                @foreach($checkers as $checker )
-                                <button type="button" class="btn btn-default" data-id="{{ $checker->id }}" title="{{ $checker->sex() }}, 工号：{{ $checker->number }}">{{ $checker->name }}</button>
-                                @endforeach
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <h4>点击移除已选择的审议人         <small><a class="btn btn-info btn-sm" href="javascript:setAll();">清空</a></small></h4>
-                            <div id="selected_list" class="row" style="padding: 15px">
-                                <!-- 填充审议人 -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary" onclick="assignChecker();">选好了</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('common.reviewer.apply_modal')
     @include('common.toast')
 @stop
 
@@ -87,11 +56,17 @@
         var apply_title;
         var tr;
         var toast_modal;
+        var review_list_modal;
+        var review_list;
+        var suggest;
         $(function() {
             to_select = $('#to_select_list');
             selected = $('#selected_list');
             assignTaskModal = $('#assignTaskModal');
             toast_modal = $('#toast');
+            review_list_modal = $('#review_list_modal');
+            review_list = review_list_modal.find('ul');
+            suggest = review_list_modal.find('textarea#reviewContent');
             selected.on('click','button', function() {
                 this.remove();
                 addChecker($(this), 0);
@@ -101,6 +76,8 @@
                 this.remove();
                 addChecker($(this), 1);
             });
+
+            Table.order([0,'desc']).draw();
         });
 
         function openAssignTaskModal(id,title) {
@@ -175,13 +152,11 @@
                         var state = $(tr).children('td')[4];
                         var btn = $(tr).children('td')[6];
                         $(state).html('<span class="talbe-span bg-warning">未审议已分配审议任务</span>');
-                        $(btn).html('<a href="#">等待审议人审议</a>');
-                        toast(toast_modal, res.msg);
-                        //setTimeout("toast_modal.modal('hide')",2000);
+                        $(btn).html('<a href="javascript:reviewList('+ apply_id +');">查看审议情况/审批</a>');
+                        toast(res.msg, assignTaskModal);
                     } else {
                         alert(msg);
                     }
-                    assignTaskModal.modal('hide');
                 },
                 error: function (error) {
 
@@ -189,8 +164,67 @@
             });
         }
 
-        function getCheckerIds(checkers) {
+        var review_arr = [];
+        var temp_applyId;
 
+        function reviewList(apply_id, name) {
+            review_list_modal.find('small').text(name);
+            temp_applyId = apply_id;
+            review_arr = [];
+            $.get('{{ route('apply::get_review_list') }}',{
+                apply_id: apply_id
+            }, function (res) {
+                var str = '';
+                for(var i=0;i<res.length;i++) {
+                    review_arr.push(res[i].content);
+                    var item = '<button onclick="showContent('+ i +',this)" type="button" class="list-group-item" title="'+ sex(res[i].reviewer.sex) + ',' + res[i].reviewer.number +'">'+ res[i].reviewer.name +'</button>';
+                    str += item;
+                }
+                review_list.html(str);
+                showContent(0,review_list.find('button')[0]);
+                review_list_modal.modal('show');
+            });
+        }
+
+        // 切换右侧意见内容
+        function showContent(i, btn) {
+            review_list.find('button').removeClass('active');
+            $(btn).addClass('active');
+            if(review_arr[i] == null)
+                suggest.val($(btn).text() + '——该审议人还没有审议...');
+            else
+                suggest.val($(btn).text() + ':  \n' + review_arr[i]);
+        }
+
+        // 审议列表 和 审批页面进行切换
+        function turn(dir) {
+            if(dir) {
+                $('#reviewListBlock').hide();
+                $('#approveBlock').show();
+            } else {
+                $('#approveBlock').hide();
+                $('#reviewListBlock').show();
+            }
+        }
+
+        // 审议通过
+        function pass() {
+
+        }
+
+        // 不通过
+        function fail() {
+            if($('textarea#approve_content').val().trim() == "") {
+                review_list_modal.find('span.text-danger').text('请输入修改意见');
+                return;
+            }
+        }
+
+        // 数字转性别
+        function sex(sex) {
+            if(sex == "1")
+                return '男';
+            return '女';
         }
     </script>
 @endsection

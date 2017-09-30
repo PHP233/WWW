@@ -175,7 +175,7 @@ class SimplePie_Content_Type_Sniffer
 		$ws = strspn($this->file->body, "\x09\x0A\x0B\x0C\x0D\x20");
 		if (strtolower(substr($this->file->body, $ws, 14)) === '<!doctype html'
 			|| strtolower(substr($this->file->body, $ws, 5)) === '<html'
-			|| strtolower(substr($this->file->body, $ws, 7)) === '<scripts')
+			|| strtolower(substr($this->file->body, $ws, 7)) === '<script')
 		{
 			return 'text/html';
 		}

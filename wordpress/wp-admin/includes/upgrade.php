@@ -8,7 +8,7 @@
  * @subpackage Administration
  */
 
-/** Include user install customize scripts. */
+/** Include user install customize script. */
 if ( file_exists(WP_CONTENT_DIR . '/install.php') )
 	require (WP_CONTENT_DIR . '/install.php');
 

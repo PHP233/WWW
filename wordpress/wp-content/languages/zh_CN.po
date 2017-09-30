@@ -2872,7 +2872,7 @@ msgstr "无效值。"
 msgid "Sorry, you are not allowed to customize this site."
 msgstr "抱歉，您不能自定义此站点。"
 
-#. translators: 1: <scripts>, 2: wp_add_inline_script()
+#. translators: 1: <script>, 2: wp_add_inline_script()
 #. translators: 1: <style>, 2: wp_add_inline_style()
 #: wp-includes/functions.wp-scripts.php:113
 #: wp-includes/functions.wp-styles.php:89
@@ -6537,9 +6537,9 @@ msgctxt "meta widget link text"
 msgid "WordPress.org"
 msgstr "WordPress.org"
 
-#. translators: 1: scripts name, 2: wp_enqueue_scripts
+#. translators: 1: script name, 2: wp_enqueue_scripts
 #: wp-includes/functions.wp-scripts.php:230
-msgid "Do not deregister the %1$s scripts in the administration area. To target the front-end theme, use the %2$s hook."
+msgid "Do not deregister the %1$s script in the administration area. To target the front-end theme, use the %2$s hook."
 msgstr "不在管理区域中反注册%1$s脚本。要将目标定为前端主题，请使用%2$s钩子。"
 
 #: wp-includes/class-wp-xmlrpc-server.php:432

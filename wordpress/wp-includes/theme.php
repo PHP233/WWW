@@ -2952,7 +2952,7 @@ function _wp_customize_changeset_filter_insert_post_data( $post_data, $supplied_
 }
 
 /**
- * Adds settings for the customize-loader scripts.
+ * Adds settings for the customize-loader script.
  *
  * @since 3.4.0
  */
@@ -3003,7 +3003,7 @@ function wp_customize_url( $stylesheet = null ) {
 }
 
 /**
- * Prints a scripts to check whether or not the Customizer is supported,
+ * Prints a script to check whether or not the Customizer is supported,
  * and apply either the no-customize-support or customize-support class
  * to the body.
  *
@@ -3025,9 +3025,9 @@ function wp_customize_support_script() {
 
 	?>
 	<!--[if lte IE 8]>
-		<scripts type="text/javascript">
+		<script type="text/javascript">
 			document.body.className = document.body.className.replace( /(^|\s)(no-)?customize-support(?=\s|$)/, '' ) + ' no-customize-support';
-		</scripts>
+		</script>
 	<![endif]-->
 	<!--[if gte IE 9]><!-->
 		<script type="text/javascript">

@@ -233,7 +233,7 @@ endif;
  * @since Twenty Sixteen 1.0
  */
 function twentysixteen_javascript_detection() {
-	echo "<scripts>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</scripts>\n";
+	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
 add_action( 'wp_head', 'twentysixteen_javascript_detection', 0 );
 
@@ -278,9 +278,9 @@ function twentysixteen_scripts() {
 		wp_enqueue_script( 'twentysixteen-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20160816' );
 	}
 
-	wp_enqueue_script( 'twentysixteen-scripts', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20160816', true );
+	wp_enqueue_script( 'twentysixteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20160816', true );
 
-	wp_localize_script( 'twentysixteen-scripts', 'screenReaderText', array(
+	wp_localize_script( 'twentysixteen-script', 'screenReaderText', array(
 		'expand'   => __( 'expand child menu', 'twentysixteen' ),
 		'collapse' => __( 'collapse child menu', 'twentysixteen' ),
 	) );

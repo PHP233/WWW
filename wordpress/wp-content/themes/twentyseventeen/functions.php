@@ -374,7 +374,7 @@ add_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
  * @since Twenty Seventeen 1.0
  */
 function twentyseventeen_javascript_detection() {
-	echo "<scripts>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</scripts>\n";
+	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
 add_action( 'wp_head', 'twentyseventeen_javascript_detection', 0 );
 

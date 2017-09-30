@@ -49,7 +49,7 @@ function wp_unregister_GLOBALS() {
  * @since 3.0.0
  * @access private
  *
- * @global string $PHP_SELF The filename of the currently executing scripts,
+ * @global string $PHP_SELF The filename of the currently executing script,
  *                          relative to the document root.
  */
 function wp_fix_server_vars() {
@@ -77,7 +77,7 @@ function wp_fix_server_vars() {
 			if ( !isset( $_SERVER['PATH_INFO'] ) && isset( $_SERVER['ORIG_PATH_INFO'] ) )
 				$_SERVER['PATH_INFO'] = $_SERVER['ORIG_PATH_INFO'];
 
-			// Some IIS + PHP configurations puts the scripts-name in the path-info (No need to append it twice)
+			// Some IIS + PHP configurations puts the script-name in the path-info (No need to append it twice)
 			if ( isset( $_SERVER['PATH_INFO'] ) ) {
 				if ( $_SERVER['PATH_INFO'] == $_SERVER['SCRIPT_NAME'] )
 					$_SERVER['REQUEST_URI'] = $_SERVER['PATH_INFO'];
@@ -843,7 +843,7 @@ function get_current_network_id() {
  * the locale has been properly detected and loaded.
  *
  * Designed for unusual load sequences (like setup-config.php) or for when
- * the scripts will then terminate with an error, otherwise there is a risk
+ * the script will then terminate with an error, otherwise there is a risk
  * that a file can be double-included.
  *
  * @since 3.4.0

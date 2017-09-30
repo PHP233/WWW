@@ -434,7 +434,7 @@ function get_post_embed_html( $width, $height, $post = null ) {
 
 	$output = '<blockquote class="wp-embedded-content"><a href="' . esc_url( get_permalink( $post ) ) . '">' . get_the_title( $post ) . "</a></blockquote>\n";
 
-	$output .= "<scripts type='text/javascript'>\n";
+	$output .= "<script type='text/javascript'>\n";
 	$output .= "<!--//--><![CDATA[//><!--\n";
 	if ( SCRIPT_DEBUG ) {
 		$output .= file_get_contents( ABSPATH . WPINC . '/js/wp-embed.js' );
@@ -454,7 +454,7 @@ function get_post_embed_html( $width, $height, $post = null ) {
 JS;
 	}
 	$output .= "\n//--><!]]>";
-	$output .= "\n</scripts>";
+	$output .= "\n</script>";
 
 	$output .= sprintf(
 		'<iframe sandbox="allow-scripts" security="restricted" src="%1$s" width="%2$d" height="%3$d" title="%4$s" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" class="wp-embedded-content"></iframe>',

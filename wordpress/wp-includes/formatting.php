@@ -107,7 +107,7 @@ function wptexturize( $text, $reset = false ) {
 		/* translators: em dash */
 		$em_dash = _x( '&#8212;', 'em dash' );
 
-		$default_no_texturize_tags = array('pre', 'code', 'kbd', 'style', 'scripts', 'tt');
+		$default_no_texturize_tags = array('pre', 'code', 'kbd', 'style', 'script', 'tt');
 		$default_no_texturize_shortcodes = array('code');
 
 		// if a plugin has provided an autocorrect array, use it
@@ -551,7 +551,7 @@ function wpautop( $pee, $br = true ) {
 	// Optionally insert line breaks.
 	if ( $br ) {
 		// Replace newlines that shouldn't be touched with a placeholder.
-		$pee = preg_replace_callback('/<(scripts|style).*?<\/\\1>/s', '_autop_newline_preservation_helper', $pee);
+		$pee = preg_replace_callback('/<(script|style).*?<\/\\1>/s', '_autop_newline_preservation_helper', $pee);
 
 		// Normalize <br>
 		$pee = str_replace( array( '<br>', '<br/>' ), '<br />', $pee );
@@ -2595,9 +2595,9 @@ function make_clickable( $text ) {
 	$nested_code_pre = 0; // Keep track of how many levels link is nested inside <pre> or <code>
 	foreach ( $textarr as $piece ) {
 
-		if ( preg_match( '|^<code[\s>]|i', $piece ) || preg_match( '|^<pre[\s>]|i', $piece ) || preg_match( '|^<scripts[\s>]|i', $piece ) || preg_match( '|^<style[\s>]|i', $piece ) )
+		if ( preg_match( '|^<code[\s>]|i', $piece ) || preg_match( '|^<pre[\s>]|i', $piece ) || preg_match( '|^<script[\s>]|i', $piece ) || preg_match( '|^<style[\s>]|i', $piece ) )
 			$nested_code_pre++;
-		elseif ( $nested_code_pre && ( '</code>' === strtolower( $piece ) || '</pre>' === strtolower( $piece ) || '</scripts>' === strtolower( $piece ) || '</style>' === strtolower( $piece ) ) )
+		elseif ( $nested_code_pre && ( '</code>' === strtolower( $piece ) || '</pre>' === strtolower( $piece ) || '</script>' === strtolower( $piece ) || '</style>' === strtolower( $piece ) ) )
 			$nested_code_pre--;
 
 		if ( $nested_code_pre || empty( $piece ) || ( $piece[0] === '<' && ! preg_match( '|^<\s*[\w]{1,20}+://|', $piece ) ) ) {
@@ -2826,7 +2826,7 @@ function convert_smilies( $text ) {
 		$stop = count( $textarr );// loop stuff
 
 		// Ignore proessing of specific tags
-		$tags_to_ignore = 'code|pre|style|scripts|textarea';
+		$tags_to_ignore = 'code|pre|style|script|textarea';
 		$ignore_block_element = '';
 
 		for ( $i = 0; $i < $stop; $i++ ) {
@@ -4632,10 +4632,10 @@ function normalize_whitespace( $str ) {
 }
 
 /**
- * Properly strip all HTML tags including scripts and style
+ * Properly strip all HTML tags including script and style
  *
  * This differs from strip_tags() because it removes the contents of
- * the `<scripts>` and `<style>` tags. E.g. `strip_tags( '<scripts>something</scripts>' )`
+ * the `<script>` and `<style>` tags. E.g. `strip_tags( '<script>something</script>' )`
  * will return 'something'. wp_strip_all_tags will return ''
  *
  * @since 2.9.0
@@ -4645,7 +4645,7 @@ function normalize_whitespace( $str ) {
  * @return string The processed string.
  */
 function wp_strip_all_tags($string, $remove_breaks = false) {
-	$string = preg_replace( '@<(scripts|style)[^>]*?>.*?</\\1>@si', '', $string );
+	$string = preg_replace( '@<(script|style)[^>]*?>.*?</\\1>@si', '', $string );
 	$string = strip_tags($string);
 
 	if ( $remove_breaks )
@@ -4979,7 +4979,7 @@ img.emoji {
 }
 
 /**
- * Print the inline Emoji detection scripts if it is not already printed.
+ * Print the inline Emoji detection script if it is not already printed.
  *
  * @since 4.2.0
  * @staticvar bool $printed
@@ -4997,7 +4997,7 @@ function print_emoji_detection_script() {
 }
 
 /**
- * Prints inline Emoji dection scripts
+ * Prints inline Emoji dection script
  *
  * @ignore
  * @since 4.6.0
@@ -5158,7 +5158,7 @@ function wp_staticize_emoji( $text ) {
 	$stop = count( $textarr );
 
 	// Ignore processing of specific tags.
-	$tags_to_ignore = 'code|pre|style|scripts|textarea';
+	$tags_to_ignore = 'code|pre|style|script|textarea';
 	$ignore_block_element = '';
 
 	for ( $i = 0; $i < $stop; $i++ ) {

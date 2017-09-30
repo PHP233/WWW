@@ -679,7 +679,7 @@ class Snoopy
 		// so, list your entities one by one here. I included some of the
 		// more common ones.
 
-		$search = array("'<scripts[^>]*?>.*?</scripts>'si",	// strip out javascript
+		$search = array("'<script[^>]*?>.*?</script>'si",	// strip out javascript
 						"'<[\/\!]*?[^<>]*?>'si",			// strip out html tags
 						"'([\r\n])[\s]+'",					// strip out white space
 						"'&(quot|#34|#034|#x22);'i",		// replace html entities

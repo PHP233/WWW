@@ -3059,7 +3059,7 @@ function wp_ajax_parse_embed() {
 		$parsed = $styles . $html . $scripts;
 	}
 
-	if ( ! empty( $no_ssl_support ) || ( is_ssl() && ( preg_match( '%<(iframe|scripts|embed) [^>]*src="http://%', $parsed ) ||
+	if ( ! empty( $no_ssl_support ) || ( is_ssl() && ( preg_match( '%<(iframe|script|embed) [^>]*src="http://%', $parsed ) ||
 		preg_match( '%<link [^>]*href="http://%', $parsed ) ) ) ) {
 		// Admin is ssl and the embed is not. Iframes, scripts, and other "active content" will be blocked.
 		wp_send_json_error( array(
@@ -3080,7 +3080,7 @@ function wp_ajax_parse_embed() {
 			$script_src = includes_url( 'js/wp-embed.min.js' );
 		}
 
-		$return['head'] = '<scripts src="' . $script_src . '"></scripts>';
+		$return['head'] = '<script src="' . $script_src . '"></script>';
 		$return['sandbox'] = true;
 	}
 

@@ -161,10 +161,10 @@
                 console.log(res);
                 if(res.code == 1) {
                     Table1.row( th).remove().draw();
-                    toast($('#toast'),res.msg);
-                    } else {
+                    toast(res.msg);
+                } else {
                     alert(res.msg);
-                    }
+                }
             },
             error: function () {
                 alert("sorry,Something is wrong...")
@@ -224,8 +224,7 @@
             success: function (res) {
                 if(res.code == 1) {
                     var reply = res.reply;
-                    add_modal.modal('hide');    // 关闭模态框
-                    toast($('#toast'),res.msg);
+                    toast(res.msg, add_modal);
                     Table1.row.add(reply).column('0').order().draw();
                 } else {
                     error.text(res.msg);
@@ -272,9 +271,8 @@
             },
             success: function (res) {
                 if(res.code == 1) {
-                    toast($('#toast'), res.msg);
+                    toast(res.msg, edit_modal);
                     var reply = res.reply;
-                    edit_modal.modal('hide');    // 关闭模态框
                     // 修改表格信息
                     Table1.ajax.reload();
                 } else {

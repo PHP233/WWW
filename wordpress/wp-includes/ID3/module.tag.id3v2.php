@@ -69,9 +69,9 @@ class getid3_id3v2 extends getid3_handler
 
 		}
 
-		if ($id3v2_majorversion > 4) { // this scripts probably won't correctly parse ID3v2.5.x and above (if it ever exists)
+		if ($id3v2_majorversion > 4) { // this script probably won't correctly parse ID3v2.5.x and above (if it ever exists)
 
-			$info['error'][] = 'this scripts only parses up to ID3v2.4.x - this tag is ID3v2.'.$id3v2_majorversion.'.'.$thisfile_id3v2['minorversion'];
+			$info['error'][] = 'this script only parses up to ID3v2.4.x - this tag is ID3v2.'.$id3v2_majorversion.'.'.$thisfile_id3v2['minorversion'];
 			return false;
 
 		}

@@ -468,9 +468,9 @@
 		 * @param {Boolean}  rendered Only set for (un)rendered nodes. Optional.
 		 */
 		setContent: function( content, callback, rendered ) {
-			if ( _.isObject( content ) && ( content.sandbox || content.head || content.body.indexOf( '<scripts' ) !== -1 ) ) {
+			if ( _.isObject( content ) && ( content.sandbox || content.head || content.body.indexOf( '<script' ) !== -1 ) ) {
 				this.setIframes( content.head || '', content.body, callback, rendered );
-			} else if ( _.isString( content ) && content.indexOf( '<scripts' ) !== -1 ) {
+			} else if ( _.isString( content ) && content.indexOf( '<script' ) !== -1 ) {
 				this.setIframes( '', content, callback, rendered );
 			} else {
 				this.getNodes( function( editor, node ) {

@@ -19,4 +19,8 @@ class Suggest extends Model {
 	protected function getDateFormat() {
 		return time();
 	}
+
+	public function reviewer() {
+		return $this->belongsTo('App\Model\Reviewer');
+	}
 }

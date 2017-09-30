@@ -11,8 +11,23 @@
 
 @section('table_title','审议申请书')
 
+@section('modal')
+    @include('common.toast')
+    @include('common.reviewer.suggest_modal')
+@stop
+
 @section('javascript')
+    <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
     <script>
+        var suggest_modal;
+        var textarea;
+        var modal_title;
+        var contents = [];
+        $(document).ready(function(){
+           suggest_modal = $('#suggest_modal');
+           textarea = suggest_modal.find('textarea');
+           modal_title = suggest_modal.find('h4');
+        });
         var Table = "";
         var TableDatatablesManage = function () {
             var table = $('#data_table');
@@ -43,15 +58,18 @@
                         url: "{{ route('checker::get_my_apply') }}",
                         dataSrc: 'data'
                     },
+                    rowId: 'id',
                     columns: [
                         { "data": "id"},
                         { "data": "title"},
                         { "data": "pivot.created_at"},
                         { "data": "modify_time"},
-                        { "data": "state",render: function (data) {
-                            if(data)
-                                return '<a href="#" class="btn btn-xs btn-info"><审议/a>';
-                            return '<a href="#" class="btn btn-xs btn-success">已审议 - 查看</a>';
+                        { "data": "pivot.content",render: function (data) {
+                            if(data == null)
+                                return '<a href="#" onclick="suggest(this)" class="btn btn-xs btn-info">审议</a>';
+                            contents.push(data);
+                            var len = contents.length - 1;
+                            return '<a onclick="showMySuggest(this,'+ len +');" class="btn btn-xs btn-success">已审议 - 查看</a>';
                         }},
                         { "data": "id",render: function (data) {
                             var url = './apply/download/' + data;
@@ -93,7 +111,7 @@
                     }
                     initTable();
                     // 隐藏职工id
-                    //Table.column(0).visible(false);
+                    Table.column(0).visible(false);
                 },
                 reload: function() {
                     Table.ajax.reload();
@@ -108,5 +126,40 @@
             });
         }
 
+        var apply_id;
+        function suggest(val) {
+            setRowId(val);
+            textarea.val('');
+            modal_title.text('请填写您的审议意见');
+            suggest_modal.modal('show');
+        }
+
+        function send() {
+            // 没有输入或输入的是空格不予提交
+            if(textarea.val() == null || textarea.val().trim() == '')
+                return;
+            $.post('{{ route('checker::suggest') }}',
+                {
+                    apply_id: apply_id,
+                    suggest: textarea.val()
+                },
+                function (res) {
+                    Table.ajax.reload();
+                    toast(res.msg, suggest_modal);
+                }
+            );
+        }
+
+        function showMySuggest(val, index) {
+            setRowId(val);
+            textarea.val(contents[index]);
+            modal_title.text('更改我的审议意见');
+            suggest_modal.modal('show');
+        }
+
+        function setRowId(a) {
+            var tr = $(a.parentNode.parentNode);
+            apply_id = Table.row(tr).id();
+        }
     </script>
 @stop

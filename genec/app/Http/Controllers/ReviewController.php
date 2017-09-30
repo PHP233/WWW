@@ -46,6 +46,9 @@ class ReviewController extends Controller {
 		return view('reviewer.reviewer_admin');
 	}
 
+	/*
+	 * 获取所有审议人
+	 */
 	public function get_all_reviewers() {
 		$reviews = Reviewer::where('role',0)->get();
 		$data = new Data();
@@ -53,6 +56,9 @@ class ReviewController extends Controller {
 		return response()->json($data);
 	}
 
+	/*
+	 * 删除审议人
+	 */
 	public function delete_reviewer(Request $request) {
 		$res = new Res(Code::success,'删除成功');
 		try {
@@ -64,6 +70,9 @@ class ReviewController extends Controller {
 		return response()->json($res);
 	}
 
+	/*
+	 * 创建审议人
+	 */
 	public function add_reviewer(Request $request) {
 		$res = new Res(Code::success,'');
 		if(Reviewer::where('number',$request->number)->count() == 1) {
@@ -85,6 +94,9 @@ class ReviewController extends Controller {
 		return response()->json($res);
 	}
 
+	/*
+	 * 修改审议人信息
+	 */
 	public function edit_reviewer(Request $request) {
 		$res = new Res(Code::success,'修改信息成功');
 		$reviewer = Reviewer::find($request->id);
@@ -99,6 +111,9 @@ class ReviewController extends Controller {
 		return response()->json($res);
 	}
 
+	/*
+	 *  分配审议任务
+	 */
 	public function assign(Request $request) {
 		$res = new Res(Code::success, Apply::find($request->apply_id)->title.'——审议任务已分配');
 		DB::transaction(function () use($request, $res){

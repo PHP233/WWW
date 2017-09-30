@@ -32,7 +32,7 @@ define('DB_PASSWORD', 'root');
 define('DB_HOST', '127.0.0.1');
 
 /** 创建数据表时默认的文字编码 */
-define('DB_CHARSET', 'utf8mb4');
+define('DB_CHARSET', 'utf8');
 
 /** 数据库整理类型。如不确定请勿更改 */
 define('DB_COLLATE', '');
@@ -47,14 +47,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '~]<h5`3R:kUp)R5EW=>49crj5^DK3m8sne1hqbD)r|h*sTT#6d7t/7f88C!EPG`#');
-define('SECURE_AUTH_KEY',  'c96vW<<|QvV||h6w@h r/d+N.I>DbpuA;d|F?E,pnX[700Ms*1Scq7LD?A:Xvxuc');
-define('LOGGED_IN_KEY',    '}jWhIE*i|KFSTKN6^t|ypo%0.|Cd$`=.,ebu<oMYR{zUsy3o.I a.DuCcI@y~D{[');
-define('NONCE_KEY',        'rEBA_~VjC(Q[H/b;`>wtB9jMUMZJF>:3Tv05BXo:2;)Z;]K-=$jUr.,qE[7ds6e1');
-define('AUTH_SALT',        '?)tE|Unry~yE,r*q]V-~jEKtzfneOt`iOI*.kQZ;#0)L$xjF8x|v*N4qU}l)==1V');
-define('SECURE_AUTH_SALT', 'I{U+pp_e%/C}px{=<B6Hmd54Z8w$43Z[TMQ5n%_G?#g@jO.u82iCBSh>,#53Z6yy');
-define('LOGGED_IN_SALT',   'O{&1ZZJ1)Fk6qI3z0fj{1T4`}~*c%34k>Y]z=+tIKoW^qB~6M(cFkfpikVZP<H+i');
-define('NONCE_SALT',       'I_o ?6J6Oy!=+,fR;^MN })K+>MF^Q3$dDxIEu)8EQBgvK-5Y>vT1P==:#Svcr=$');
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
 
 /**#@-*/
 

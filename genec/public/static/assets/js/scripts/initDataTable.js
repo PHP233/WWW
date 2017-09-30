@@ -28,7 +28,6 @@ var TableDatatablesManage = function () {
                 { extend: 'print', className: 'btn dark btn-outline' , text: '打印'},
                 { extend: 'copy', className: 'btn red btn-outline', text: '复制' },
                 { extend: 'excel', className: 'btn yellow btn-outline' , text: '导出Excel' },
-                { extend: 'colvis', className: 'btn dark btn-outline', text: '显示列'},
             ],
 
             "bStateSave": true,
@@ -44,10 +43,7 @@ var TableDatatablesManage = function () {
             "pagingType": "bootstrap_full_number",
             colReorder: true,
             responsive: false,
-            "scrollX": false,
-            "order": [
-                [2]
-            ] // set first column as a default sort by asc
+            "scrollX": false // set first column as a default sort by asc
         });
     };
 

@@ -490,7 +490,7 @@ function wp_handle_sideload( &$file, $overrides = false, $time = null ) {
  * @return mixed WP_Error on failure, string Filename on success.
  */
 function download_url( $url, $timeout = 300 ) {
-	//WARNING: The file is not automatically deleted, The scripts must unlink() the file.
+	//WARNING: The file is not automatically deleted, The script must unlink() the file.
 	if ( ! $url )
 		return new WP_Error('http_no_url', __('Invalid URL Provided.'));
 

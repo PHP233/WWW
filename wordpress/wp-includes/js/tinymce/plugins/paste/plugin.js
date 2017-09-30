@@ -329,7 +329,7 @@ define(
     function innerText(html) {
       var schema = new Schema(), domParser = new DomParser({}, schema), text = '';
       var shortEndedElements = schema.getShortEndedElements();
-      var ignoreElements = Tools.makeMap('scripts noscript style textarea video audio iframe object', ' ');
+      var ignoreElements = Tools.makeMap('script noscript style textarea video audio iframe object', ' ');
       var blockElements = schema.getBlockElements();
 
       function walk(node) {
@@ -345,7 +345,7 @@ define(
           text += ' ';
         }
 
-        // Ingore scripts, video contents
+        // Ingore script, video contents
         if (ignoreElements[name]) {
           text += ' ';
           return;

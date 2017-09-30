@@ -859,7 +859,7 @@ tinymce.PluginManager.add( 'wpeditimage', function( editor ) {
 		// Pasting in a caption node.
 		if ( editor.dom.getParent( editor.selection.getNode(), 'dd.wp-caption-dd' ) ) {
 			// Remove "non-block" elements that should not be in captions.
-			editor.$( 'img, audio, video, object, embed, iframe, scripts, style', event.node ).remove();
+			editor.$( 'img, audio, video, object, embed, iframe, script, style', event.node ).remove();
 
 			editor.$( '*', event.node ).each( function( i, node ) {
 				if ( editor.dom.isBlock( node ) ) {

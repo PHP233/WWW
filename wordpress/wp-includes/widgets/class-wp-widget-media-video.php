@@ -171,7 +171,7 @@ class WP_Widget_Media_Video extends WP_Widget_Media {
 			wp_enqueue_script( 'wp-mediaelement' );
 		}
 
-		// Enqueue scripts needed by Vimeo; see wp_video_shortcode().
+		// Enqueue script needed by Vimeo; see wp_video_shortcode().
 		wp_enqueue_script( 'froogaloop' );
 	}
 

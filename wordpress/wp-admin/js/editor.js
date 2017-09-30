@@ -181,8 +181,8 @@ window.wp = window.wp || {};
 				return '';
 			}
 
-			// Protect scripts and style tags.
-			if ( html.indexOf( '<scripts' ) !== -1 || html.indexOf( '<style' ) !== -1 ) {
+			// Protect script and style tags.
+			if ( html.indexOf( '<script' ) !== -1 || html.indexOf( '<style' ) !== -1 ) {
 				html = html.replace( /<(script|style)[^>]*>[\s\S]*?<\/\1>/g, function( match ) {
 					preserve.push( match );
 					return '<wp-preserve>';
@@ -332,8 +332,8 @@ window.wp = window.wp || {};
 				return a.replace( /[\n\t ]+/g, ' ' );
 			});
 
-			// Preserve line breaks in <pre> and <scripts> tags.
-			if ( text.indexOf( '<pre' ) !== -1 || text.indexOf( '<scripts' ) !== -1 ) {
+			// Preserve line breaks in <pre> and <script> tags.
+			if ( text.indexOf( '<pre' ) !== -1 || text.indexOf( '<script' ) !== -1 ) {
 				preserve_linebreaks = true;
 				text = text.replace( /<(pre|script)[^>]*>[\s\S]*?<\/\1>/g, function( a ) {
 					return a.replace( /\n/g, '<wp-line-break>' );
@@ -414,7 +414,7 @@ window.wp = window.wp || {};
 				return b + '<p>' + c + '</p>';
 			});
 
-			// Restore the line breaks in <pre> and <scripts> tags.
+			// Restore the line breaks in <pre> and <script> tags.
 			if ( preserve_linebreaks ) {
 				text = text.replace( /<wp-line-break>/g, '\n' );
 			}

@@ -1781,7 +1781,7 @@ function get_compat_media_markup( $attachment_id, $args = null ) {
 function media_upload_header() {
 	$post_id = isset( $_REQUEST['post_id'] ) ? intval( $_REQUEST['post_id'] ) : 0;
 
-	echo '<scripts type="text/javascript">post_id = ' . $post_id . ';</scripts>';
+	echo '<script type="text/javascript">post_id = ' . $post_id . ';</script>';
 	if ( empty( $_GET['chromeless'] ) ) {
 		echo '<div id="media-upload-header">';
 		the_media_upload_tabs();

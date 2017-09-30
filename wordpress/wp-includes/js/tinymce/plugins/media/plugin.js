@@ -234,7 +234,7 @@ define(
       new SaxParser({
         validate: false,
         allow_conditional_comments: false,
-        special: 'scripts,noscript',
+        special: 'script,noscript',
 
         comment: function (text) {
           writer.comment(text);
@@ -644,7 +644,7 @@ define(
       new SaxParser({
         validate: false,
         allow_conditional_comments: true,
-        special: 'scripts,noscript',
+        special: 'script,noscript',
 
         comment: function (text) {
           writer.comment(text);
@@ -844,7 +844,7 @@ define(
       new SaxParser({
         validate: false,
         allow_conditional_comments: true,
-        special: 'scripts,noscript',
+        special: 'script,noscript',
         start: function (name, attrs) {
           if (!data.source1 && name === "param") {
             data.source1 = attrs.map.movie;
@@ -1138,7 +1138,7 @@ define(
             );
           }
         } else if (data.type === "script") {
-          html += '<scripts src="' + data.source1 + '"></scripts>';
+          html += '<script src="' + data.source1 + '"></script>';
         } else {
           if (editor.settings.video_template_callback) {
             html = editor.settings.video_template_callback(data);
@@ -1635,7 +1635,7 @@ define(
         });
 
         // Converts iframe, video etc into placeholder images
-        editor.parser.addNodeFilter('iframe,video,audio,object,embed,scripts',
+        editor.parser.addNodeFilter('iframe,video,audio,object,embed,script',
           Nodes.placeHolderConverter(editor));
 
         // Replaces placeholder images with real elements for video, object, iframe etc
