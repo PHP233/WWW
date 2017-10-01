@@ -13,6 +13,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reviewer extends Model {
 
+	const ADMIN = 1;
+	const CHECKER = 0;
+
 	protected $table = 'reviewer';
 
 	protected $fillable = [

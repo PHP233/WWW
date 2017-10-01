@@ -59,6 +59,8 @@
         var review_list_modal;
         var review_list;
         var suggest;
+        var approve_content;
+        var approve_sign;
         $(function() {
             to_select = $('#to_select_list');
             selected = $('#selected_list');
@@ -67,6 +69,8 @@
             review_list_modal = $('#review_list_modal');
             review_list = review_list_modal.find('ul');
             suggest = review_list_modal.find('textarea#reviewContent');
+            approve_content = $('textarea#approve_content');
+            approve_sign = review_list_modal.find('span.text-danger');
             selected.on('click','button', function() {
                 this.remove();
                 addChecker($(this), 0);
@@ -151,7 +155,7 @@
                         $('#sign').text(res.msg);
                         var state = $(tr).children('td')[4];
                         var btn = $(tr).children('td')[6];
-                        $(state).html('<span class="talbe-span bg-warning">未审议已分配审议任务</span>');
+                        $(state).html('<span class="talbe-span bg-warning">未审议已分配</span>');
                         $(btn).html('<a href="javascript:reviewList('+ apply_id +');">查看审议情况/审批</a>');
                         toast(res.msg, assignTaskModal);
                     } else {
@@ -167,7 +171,17 @@
         var review_arr = [];
         var temp_applyId;
 
+        /*
+        打开审议列表，左侧是审议人，右侧是审议内容
+         */
         function reviewList(apply_id, name) {
+            // 先展示的是审议列表，隐藏审批栏
+            $('#approveBlock').hide();
+            $('#reviewListBlock').show();
+            // 清空上次审批留下的内容
+            approve_content.val('');
+            approve_sign.text('');
+            tr = document.activeElement.parentNode.parentNode;
             review_list_modal.find('small').text(name);
             temp_applyId = apply_id;
             review_arr = [];
@@ -209,15 +223,47 @@
 
         // 审议通过
         function pass() {
-
+            if(!confirm('确定要通过该申请？'))
+                return;
+            var content = approve_content.val().trim();
+            // 如果通过没有给出理由就填写默认的
+            if(content == '') {
+                content = '恭喜您，您的申请书通过了审批';
+                approve_content.val(content);
+            }
+            $.get('{{ route('passOrFail') }}',{
+                isPass: 1,
+                apply_id: temp_applyId,
+                m_content: content
+            },function (res) {
+                var state = $(tr).children('td')[4];
+                var btn = $(tr).children('td')[6];
+                $(state).html('<span class="talbe-span bg-success">已批准</span>');
+                $(btn).html('<a href="javascript:;">-</a>');
+                toast(res.msg, review_list_modal);
+            })
         }
 
         // 不通过
         function fail() {
-            if($('textarea#approve_content').val().trim() == "") {
-                review_list_modal.find('span.text-danger').text('请输入修改意见');
+            var content = approve_content.val().trim();
+            if(content == '') {
+                approve_sign.text('请输入理由和修改意见');
                 return;
             }
+            if(!confirm('确定不通过该申请？'))
+                return;
+            $.get('{{ route('passOrFail') }}',{
+                isPass: 0,
+                apply_id: temp_applyId,
+                m_content: content
+            },function (res) {
+                var state = $(tr).children('td')[4];
+                var btn = $(tr).children('td')[6];
+                $(state).html('<span class="talbe-span bg-danger">未通过审批</span>');
+                $(btn).html('<a href="javascript:;">-</a>');
+                toast(res.msg, review_list_modal);
+            })
         }
 
         // 数字转性别

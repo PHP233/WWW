@@ -28,8 +28,8 @@ class CheckerController extends Controller {
 		$reviewer_id = session()->get('reviewer')->id;
 		$applies = Reviewer::find($reviewer_id)
 		                   ->applies()
-		                   ->where('state','>',0)
-		                   ->where('state','<',3)
+		                   ->where('state','>',Apply::NO_ASSIGN_WAIT_REVIEW)
+		                   ->where('state','<',Apply::NO_PASS)
 		                   ->get();
 		$data = new Data();
 		$data->setData($applies);
@@ -46,7 +46,7 @@ class CheckerController extends Controller {
 			->where('content',null)->count();
 		// 如果都审议了，更改申请书状态为 已审议，待审批
 		if($no_review == 0) {
-			Apply::find($request->apply_id)->update(['state' => 2]);
+			Apply::find($request->apply_id)->update(['state' => Apply::WAIT_PASS]);
 		}
 		if(!$r) {
 			return response()->json(new Res(Code::error, '提交审议意见失败，请重新提交！'));

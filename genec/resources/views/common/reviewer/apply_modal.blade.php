@@ -63,7 +63,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
-                        <textarea id="approve_content" cols="30" rows="10" class="form-control"></textarea><br>
+                        <textarea id="approve_content" cols="30" rows="10" class="form-control" placeholder="不通过请给出理由和修改意见，通过可以不填写"></textarea><br>
                         <div class="input-group">
                             <button class="btn btn-lg btn-success" aria-label="Left-label" onclick="pass()">
                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
@@ -73,7 +73,7 @@
                                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                 不通过
                             </button>
-                            <span class="text-danger"></span>
+                            <span class="text-danger" style="padding-left:50px;"></span>
                         </div>
                     </div>
                 </div>

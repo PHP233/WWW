@@ -504,6 +504,7 @@ License: You must have a valid license purchased only from themeforest(the above
 @yield('modal')
 <!-- END CONTAINER -->
 <!-- BEGIN FOOTER -->
+<div id="loading" hidden><img src="{{ asset('static/assets/img/loading.gif') }}" alt="loading"></div>
 <div class="page-footer">
     <div class="page-footer-inner"> 2014 &copy; Metronic by keenthemes.
         <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
@@ -545,16 +546,65 @@ License: You must have a valid license purchased only from themeforest(the above
 @yield('javascript')
 <script>
 
+    const url_arr = [
+        '/genec/public/reviewer/apply',
+        '/genec/public/reviewer/draft/upload',
+        '/genec/public/reviewer/draft',
+        '/genec/public/reviewer/reviewer_admin',
+    ];
+
+    // 判断请求路径决定左侧导航按钮的高亮
+    $(function () {
+        var toggles = $('.nav-toggle');
+        var url = location.pathname;
+        if(url == url_arr[0]) {
+            $($(toggles[0]).parent()).addClass('active open');
+        } else if(url == url_arr[1]) {
+            $($(toggles[1]).parent()).addClass('active open');
+        } else if(url == url_arr[2]) {
+            $($(toggles[2]).parent()).addClass('active open');
+        } else if(url == url_arr[3]) {
+            $($(toggles[3]).parent()).addClass('active open');
+        }
+    });
+
+    // 设置 ajax 请求加载中动画
+    $(document).ajaxStart(function(){
+        $.blockUI({
+            message: $('#loading'),
+            css: {
+                top:  ($(window).height() - 600) /2 + 'px',
+                left: ($(window).width() - 400) /2 + 'px',
+                width: '400px',
+                border: 'none'
+            },
+            overlayCSS: { backgroundColor: '#fff' }
+        });
+    }).ajaxStop($.unblockUI);
+
+    // 切换申请书不同状态分类
     function changeApplyType(type) {
-        var now = '/genec/public/reviewer/apply';
+        var now = url_arr[0];
         if(location.pathname != now) {
-            if(type === 0)
+            if(type == 0)
                 location.href = now;
             location.href = now + '?type=' + type;
         }
         Table.search(typeArr[type]).draw();
     }
 
+    // 跳转到送审表管理并按状态分类
+    function changeDraftType(type) {
+        var now = url_arr[2];
+        if(location.pathname != now) {
+            if(type == 0)
+                location.href = now;
+            location.href = now + '?type=' + type;
+        }
+        Table2.search(typeArr[type]).draw();
+    }
+
+    // 跳转到审议人管理页面
     function toReviewerAdmin() {
         var now = '{{ route('reviewer_admin') }}';
         if(location.href != now) {

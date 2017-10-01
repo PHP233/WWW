@@ -5,7 +5,7 @@
         <h3 class="uppercase">立项管理</h3>
     </li>
     <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
-    <li class="nav-item start active open">
+    <li class="nav-item start">
         <a href="#" class="nav-link nav-toggle">
             <i class="icon-home"></i>
             <span class="title">申请书审批</span>
@@ -63,35 +63,35 @@
         </a>
         <ul class="sub-menu">
             <li class="nav-item start ">
-                <a href="#" class="nav-link ">
+                <a href="javascript:changeDraftType(0);" class="nav-link ">
                     <i class="icon-bar-chart"></i>
                     <span class="title">全部</span>
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:;" class="nav-link ">
+                <a href="javascript:changeDraftType(1);" class="nav-link ">
                     <i class="icon-bar-chart"></i>
                     <span class="title">未审议</span>
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:;" class="nav-link ">
+                <a href="javascript:changeDraftType(2);" class="nav-link ">
                     <i class="icon-bulb"></i>
                     <span class="title">已审议待审批</span>
                     <span class="badge badge-success">1</span>
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:;" class="nav-link ">
+                <a href="javascript:changeDraftType(3);" class="nav-link ">
                     <i class="icon-graph"></i>
-                    <span class="title">已审批未通过</span>
+                    <span class="title">未通过审批</span>
                     <span class="badge badge-danger">5</span>
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:;" class="nav-link ">
+                <a href="javascript:changeDraftType(4);" class="nav-link ">
                     <i class="icon-graph"></i>
-                    <span class="title">已通过</span>
+                    <span class="title">已批准</span>
                     <span class="badge badge-danger">5</span>
                 </a>
             </li>
@@ -123,7 +123,7 @@
             </a>
             <ul class="sub-menu">
                 <li class="nav-item start ">
-                    <a href="{{ url('reviewer/apply') }}" class="nav-link ">
+                    <a href="" class="nav-link ">
                         <i class="icon-bar-chart"></i>
                         <span class="title">全部</span>
                     </a>

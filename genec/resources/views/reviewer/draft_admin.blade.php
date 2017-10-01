@@ -41,5 +41,5 @@
 @section('table_title','送审稿管理')
 
 @section('javascript')
-    <script src="{{ asset('static/assets/js/scripts/initDataTable.js') }}"></script>
+    <script src="{{ asset('static/assets/js/scripts/initDataTable1.js') }}"></script>
 @endsection

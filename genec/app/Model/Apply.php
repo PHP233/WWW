@@ -29,7 +29,7 @@ class Apply extends Model {
 	public function state() {
 		$arr = [
 			self::NO_ASSIGN_WAIT_REVIEW => '未审议',
-			self::ASSIGN_WAIT_REVIEW => '未审议已分配审议任务',
+			self::ASSIGN_WAIT_REVIEW => '未审议已分配',
 			self::WAIT_PASS => '已审议待审批',
 			self::NO_PASS => '未通过审批',
 			self::PASS => '已批准',

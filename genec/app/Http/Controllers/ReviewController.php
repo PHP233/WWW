@@ -15,6 +15,8 @@ use App\utils\Res;
 use App\Model\Reviewer;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\App;
 use Mockery\Exception;
 use Illuminate\Support\Facades\DB;
 
@@ -50,7 +52,7 @@ class ReviewController extends Controller {
 	 * 获取所有审议人
 	 */
 	public function get_all_reviewers() {
-		$reviews = Reviewer::where('role',0)->get();
+		$reviews = Reviewer::where('role',Reviewer::CHECKER)->get();
 		$data = new Data();
 		$data->setData($reviews);
 		return response()->json($data);
@@ -132,12 +134,45 @@ class ReviewController extends Controller {
 				}
 			}
 			try {
-				Apply::find($apply_id)->update(['state'=>1]);
+				Apply::find($apply_id)->update(['state'=>Apply::ASSIGN_WAIT_REVIEW]);
 			} catch (QueryException $e) {
 				$res->setCode(Code::error);
 				$res->setMsg('更改申请书状态出错...');
 			}
 		});
+		return response()->json($res);
+	}
+
+	/*
+	 * 审批
+	 */
+	public function passOrFail(Request $request) {
+		$reviewer_id = session()->get('reviewer')->id;
+		$res = new Res(Code::success, '审批完成');
+		$isPass = $request->isPass; // 1 通过 0 不通过
+		$apply = Apply::find($request->apply_id);
+		if($isPass) {
+			$r = $apply->update(['state' => Apply::PASS]);
+		} else {
+			$r = $apply->update(['state' => Apply::NO_PASS]);
+		}
+		// 如果修改次数为 0 ，则为第一次审批，新建审批记录
+		if($apply->modify_time == 0) {
+			Suggest::create([
+				'apply_id' => $request->apply_id,
+				'reviewer_id' => $reviewer_id,
+				'content' => $request->m_content,
+			]);
+		} else {
+			// 如果修改次数大于 0 ，则已经审批过，对修改的文档重新审批，在之前的审批结果上更新审批意见
+			Suggest::where('apply_id',$request->apply_id)
+			       ->where('reviewer_id',$reviewer_id)
+			       ->update(['content' => $request->m_content]);
+		}
+		if(!$r) {
+			$res->setCode(Code::error);
+			$res->setMsg('审批失败');
+		}
 		return response()->json($res);
 	}
 
