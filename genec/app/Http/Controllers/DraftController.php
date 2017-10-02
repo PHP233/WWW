@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Apply;
 use App\Model\Draft;
+use App\Model\Reviewer;
 use Illuminate\Http\Request;
 
 class DraftController extends Controller {
@@ -18,7 +19,11 @@ class DraftController extends Controller {
 	// 返回所有送审表
 	public function index(Request $request) {
         $drafts = Draft::all();
-        return view('reviewer.draft_admin')->with('drafts', $drafts);
+        $checkers = Reviewer::where('role',0)->get();
+        return view('reviewer.draft_admin',[
+        	'drafts' => $drafts,
+	        'checkers' => $checkers,
+        ]);
 	}
 
 	public function upload(Request $request) {
@@ -53,5 +58,10 @@ class DraftController extends Controller {
 			return redirect()->back();
 		}
 		return view('reviewer.upload_draft')->with('applies', $applies);
+	}
+
+	public function download(Request $request) {
+		$draft = Draft::find($request->id);
+		return response()->download(storage_path('app\uploads\draft\\'.$request->id), $draft->title, ['application/msword']);
 	}
 }

@@ -589,8 +589,9 @@ License: You must have a valid license purchased only from themeforest(the above
             if(type == 0)
                 location.href = now;
             location.href = now + '?type=' + type;
+        } else {
+            Table.search(typeArr[type]).draw();
         }
-        Table.search(typeArr[type]).draw();
     }
 
     // 跳转到送审表管理并按状态分类
@@ -600,8 +601,9 @@ License: You must have a valid license purchased only from themeforest(the above
             if(type == 0)
                 location.href = now;
             location.href = now + '?type=' + type;
+        } else {
+            Table.search(typeArr[type]).draw();
         }
-        Table2.search(typeArr[type]).draw();
     }
 
     // 跳转到审议人管理页面

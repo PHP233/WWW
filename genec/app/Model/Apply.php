@@ -49,11 +49,11 @@ class Apply extends Model {
 				'btnName' => '分配审议人审议',
 			],
 			self::ASSIGN_WAIT_REVIEW => [
-				'url' => 'javascript:reviewList('.$this->id.',"'.$this->title.'");',
+				'url' => 'javascript:reviewList('.$this->id.','.$this->modify_time.',"'.$this->title.'");',
 				'btnName' => '查看审议情况/审批',
 			],
 			self::WAIT_PASS => [
-				'url' => 'javascript:reviewList('.$this->id.',"'.$this->title.'");',
+				'url' => 'javascript:reviewList('.$this->id.','.$this->modify_time.',"'.$this->title.'");',
 				'btnName' => '查看审议情况/审批',
 			],
 			self::NO_PASS => [

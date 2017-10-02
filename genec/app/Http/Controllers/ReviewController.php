@@ -8,6 +8,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Apply;
+use App\Model\Draft;
 use App\Model\Suggest;
 use App\utils\Code;
 use App\utils\Data;
@@ -114,30 +115,44 @@ class ReviewController extends Controller {
 	}
 
 	/*
-	 *  分配审议任务
+	 *  分配审议任务,记录是第几次的审议结果
 	 */
 	public function assign(Request $request) {
-		$res = new Res(Code::success, Apply::find($request->apply_id)->title.'——审议任务已分配');
+		$res = new Res(Code::success, '');
 		DB::transaction(function () use($request, $res){
 			$apply_id = $request->apply_id;
 			$checker_ids = $request->checker_ids;
-			foreach ($checker_ids as $checker_id) {
-				try{
-					Suggest::firstOrCreate([
-						'apply_id' => $apply_id,
-						'reviewer_id' => $checker_id,
-					]);
-				} catch (QueryException $e) {
-					$res->setCode(Code::error);
-					$res->setMsg('分配任务出现错误...');
-					break;
+			try{
+				// 有两种可能：申请书 或 送审表
+				if($apply_id != null) {
+					$apply = Apply::find($apply_id);
+					$res->setReply($apply);
+					foreach ($checker_ids as $checker_id) {
+						Suggest::create([
+							'apply_id' => $apply_id,
+							'reviewer_id' => $checker_id,
+							'modify_time' => $apply->modify_time,
+						]);
+					}
+					$res->setMsg($apply->title.'——审议任务已分配');
+					$apply->update(['state'=>Apply::ASSIGN_WAIT_REVIEW]);
+				} else {
+					$draft_id = $request->draft_id;
+					$draft = Draft::find($draft_id);
+					$res->setReply($draft);
+					foreach ($checker_ids as $checker_id) {
+						Suggest::create([
+							'draft_id' => $draft_id,
+							'reviewer_id' => $checker_id,
+							'modify_time' => $draft->modify_time,
+						]);
+					}
+					$res->setMsg($draft->title.'——审议任务已分配');
+					$draft->update(['state'=>Draft::ASSIGN_WAIT_REVIEW]);
 				}
-			}
-			try {
-				Apply::find($apply_id)->update(['state'=>Apply::ASSIGN_WAIT_REVIEW]);
 			} catch (QueryException $e) {
 				$res->setCode(Code::error);
-				$res->setMsg('更改申请书状态出错...');
+				$res->setMsg('分配任务出现错误...');
 			}
 		});
 		return response()->json($res);
@@ -150,32 +165,61 @@ class ReviewController extends Controller {
 		$reviewer_id = session()->get('reviewer')->id;
 		$res = new Res(Code::success, '审批完成');
 		$isPass = $request->isPass; // 1 通过 0 不通过
-		$apply = Apply::find($request->apply_id);
-		if($isPass) {
-			$r = $apply->update(['state' => Apply::PASS]);
-		} else {
-			$r = $apply->update(['state' => Apply::NO_PASS]);
-		}
-		// 如果修改次数为 0 ，则为第一次审批，新建审批记录
-		if($apply->modify_time == 0) {
+		// 两种情况：申请书或送审表的判断
+		if ($request->apply_id != null) {
+			$apply = Apply::find($request->apply_id);
+			if($isPass) {
+				$apply->update(['state' => Apply::PASS]);
+			} else {
+				$apply->update(['state' => Apply::NO_PASS]);
+			}
 			Suggest::create([
 				'apply_id' => $request->apply_id,
 				'reviewer_id' => $reviewer_id,
 				'content' => $request->m_content,
+				'modify_time' => $apply->modify_time,
 			]);
 		} else {
-			// 如果修改次数大于 0 ，则已经审批过，对修改的文档重新审批，在之前的审批结果上更新审批意见
-			Suggest::where('apply_id',$request->apply_id)
-			       ->where('reviewer_id',$reviewer_id)
-			       ->update(['content' => $request->m_content]);
-		}
-		if(!$r) {
-			$res->setCode(Code::error);
-			$res->setMsg('审批失败');
+			$draft = Draft::find($request->draft_id);
+			if($isPass) {
+				$draft->update(['state' => Apply::PASS]);
+			} else {
+				$draft->update(['state' => Apply::NO_PASS]);
+			}
+			Suggest::create([
+				'draft_id' => $request->draft_id,
+				'reviewer_id' => $reviewer_id,
+				'content' => $request->m_content,
+				'modify_time' => $draft->modify_time,
+			]);
 		}
 		return response()->json($res);
 	}
 
+	// 获取所有审议结果
+	public function get_review_list(Request $request) {
+		$modify_time = $request->modify_time;
+		$arr = [];
+		// 判断两种情况：申请书 或 送审表
+		if($request->apply_id != null) {
+			for($i=0;$i<=$modify_time;$i++) {
+				$arr[$i] = Suggest::with('reviewer')
+				                  ->where('apply_id',$request->apply_id)
+				                  ->where('modify_time',$i)
+				                  ->get();
+			}
+		} else {
+			for($i=0;$i<=$modify_time;$i++) {
+				$arr[$i] = Suggest::with('reviewer')
+				                  ->where('draft_id',$request->draft_id)
+				                  ->where('modify_time',$i)
+				                  ->get();
+			}
+		}
+		return response()->json($arr);
+	}
+
+	// 登出
 	public function logout() {
 		session()->flush();
 		return redirect('reviewer/login');

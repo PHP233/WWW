@@ -41,22 +41,27 @@ Route::group(['middleware' => ['web']], function () {
 		Route::any('edit_reviewer', ['uses' => 'ReviewController@edit_reviewer','as' => 'edit_reviewer']);
 		Route::any('assign', ['uses' => 'ReviewController@assign', 'as' => 'assign']);
 		Route::any('passOrFail', ['uses' => 'ReviewController@passOrFail', 'as' => 'passOrFail']);
+		Route::any('get_review_list', ['uses' => 'ReviewController@get_review_list', 'as' => 'get_review_list']);
+
 		Route::group(['prefix' => 'apply', 'as' => 'apply::'], function () {
 			Route::any('/', ['uses' => 'ApplyController@index', 'as' => 'index']);
 			Route::any('checker', ['uses' => 'ApplyController@checker', 'as' => '']);
 			Route::any('download/{id?}', ['uses' => 'ApplyController@download', 'as' => 'download']);
-			Route::any('get_review_list', ['uses' => 'ApplyController@get_review_list', 'as' => 'get_review_list']);
 		});
+
 		Route::group(['prefix' => 'draft', 'as' => 'draft::'], function () {
 			Route::any('/', ['uses' => 'DraftController@index', 'as' => 'index']);
 			Route::any('upload', ['uses' => 'DraftController@upload', 'as' => 'upload']);
+			Route::any('download/{id?}', ['uses' => 'DraftController@download', 'as' => 'download']);
 		});
+
 		Route::group(['prefix' => 'checker', 'as' => 'checker::'], function () {
 			Route::any('/', ['uses' => 'CheckerController@index', 'as' => 'checker']);
 			Route::any('get_my_apply', ['uses'=>'CheckerController@get_my_apply', 'as' => 'get_my_apply']);
 			Route::post('suggest', ['uses' => 'CheckerController@suggest', 'as' => 'suggest']);
 		});
 	});
+
 	Route::group(['prefix' => 'proposer'], function () {
 		Route::any('login', ['uses' => 'ProposerController@login','as' => 'proposer_login']);
 		Route::any('register', ['uses' => 'ProposerController@register','as' => 'proposer_register']);

@@ -51,6 +51,14 @@
                 </div>
             </div>
             <div class="modal-footer">
+                <div class="col-sm-6">
+                    <div style="float: left;line-height: 57px"><span>修改次数:&nbsp;&nbsp;</span></div>
+                    <nav aria-label="Page navigation" style="text-align: left">
+                        <ul class="pagination">
+
+                        </ul>
+                    </nav>
+                </div>
                 <button type="button" class="btn btn-default" onclick="turn(1)">审批</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
             </div>
