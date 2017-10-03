@@ -4,17 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <?php v7v3_seo();?>
-<?php if ( get_post_meta($post->ID, 'v7v3comwp_robot', true) ) : ?>
-<?php $meta = get_post_meta($post->ID, 'v7v3comwp_robot', true); ?>
-<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-<?php else: ?>
-<?php endif; ?>
-<?php if ( get_post_meta($post->ID, 'v7v3comwp_description', true) ) : ?>
-<?php $meta = get_post_meta($post->ID, 'v7v3comwp_description', true); ?>
-<!--<meta name="description" content="<?php echo $meta;?>" />-->
-<?php else: ?>
-<!--<meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"......","utf-8"); ?>" />-->
-<?php endif; ?>
+
 <?php  $keywords = get_post_meta($post->ID, "v7v3comwp_keywords", true);
     if($keywords == '') {
         $tags = wp_get_post_tags($post->ID);    
@@ -54,9 +44,6 @@
 
     &nbsp;&nbsp;&nbsp;作者:<?php bloginfo('name'); ?>&nbsp;&nbsp;&nbsp;发布时间:<?php the_time('Y-m-d') ?>&nbsp;&nbsp;&nbsp;
 </p>
-<div class="article_ad">
-<?php echo $theme_options["ad2"]; ?>
-</div>
 <div class="article_txt" id="a_fontsize">
 
 	<?php the_content(); ?>
@@ -86,19 +73,6 @@
 
 
     <div class="share">
-
-    
-
-    <div class="ilike">
-
-
-
-<?php echo $theme_options["bddc"]; ?>
-
-
-
-</div>
-
   <div class="shuming">  
 
 如非注明文章借由<a href="/" title="<?php bloginfo('name')?>"><?php bloginfo('name')?></a>原创，转载请注明出处！<br/>
