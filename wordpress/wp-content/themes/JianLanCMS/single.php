@@ -13,7 +13,7 @@
 <?php $meta = get_post_meta($post->ID, 'v7v3comwp_description', true); ?>
 <!--<meta name="description" content="<?php echo $meta;?>" />-->
 <?php else: ?>
-<meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"......","utf-8"); ?>" />
+<!--<meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"......","utf-8"); ?>" />-->
 <?php endif; ?>
 <?php  $keywords = get_post_meta($post->ID, "v7v3comwp_keywords", true);
     if($keywords == '') {
