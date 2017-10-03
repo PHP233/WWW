@@ -51,7 +51,7 @@ class Reviewer extends Model {
 	}
 
 	public function drafts() {
-		return $this->belongsToMany('App\Model\Draft','suggest','reviewer_id','draft_id');
+		return $this->belongsToMany('App\Model\Draft','suggest','reviewer_id','draft_id')->withPivot('content')->withTimestamps();
 	}
 
 }
