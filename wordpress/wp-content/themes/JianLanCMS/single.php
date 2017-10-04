@@ -88,7 +88,7 @@
 
        	<ul>
 					  			                          						<?php
-$rand_posts = get_posts('numberposts=10&orderby=rand');
+$rand_posts = get_posts('numberposts=5&orderby=rand');
 foreach( $rand_posts as $post ) :
 ?>
 <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
