@@ -47,11 +47,11 @@ class Reviewer extends Model {
 	}
 
 	public function applies() {
-		return $this->belongsToMany('App\Model\Apply', 'suggest','reviewer_id','apply_id')->withPivot('content')->withTimestamps();
+		return $this->belongsToMany('App\Model\Apply', 'suggest','reviewer_id','apply_id')->withPivot('content','modify_time')->withTimestamps();
 	}
 
 	public function drafts() {
-		return $this->belongsToMany('App\Model\Draft','suggest','reviewer_id','draft_id')->withPivot('content')->withTimestamps();
+		return $this->belongsToMany('App\Model\Draft','suggest','reviewer_id','draft_id')->withPivot('content','modify_time')->withTimestamps();
 	}
 
 }

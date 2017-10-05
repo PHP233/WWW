@@ -18,11 +18,12 @@
 
 @section('javascript')
     <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
+    <script src="{{ asset('static/assets/js/scripts/time.js') }}"></script>
     <script>
         var suggest_modal;
         var textarea;
         var modal_title;
-        var contents = [];
+        var content_arr;
         $(document).ready(function(){
            suggest_modal = $('#suggest_modal');
            textarea = suggest_modal.find('textarea');
@@ -32,6 +33,8 @@
         var TableDatatablesManage = function () {
             var table = $('#data_table');
             var initTable = function () {
+                var index = -1;
+                content_arr = [];
                 // begin first table
                 Table = table.DataTable({
                     "bProcessing": true,
@@ -64,12 +67,20 @@
                         { "data": "title"},
                         { "data": "pivot.created_at"},
                         { "data": "modify_time"},
-                        { "data": "pivot.content",render: function (data) {
-                            if(data == null)
-                                return '<a href="#" onclick="suggest(this)" class="btn btn-xs btn-info">审议</a>';
-                            contents.push(data);
-                            var len = contents.length - 1;
-                            return '<a onclick="showMySuggest(this,'+ len +');" class="btn btn-xs btn-success">已审议 - 查看</a>';
+                        { "data": "pivot.content",render: function (data, type, row, meta) {
+                            let str;
+                            if(data == null) {
+                                str =  '<a href="#" onclick="suggest('+ row.id + ','+ row.modify_time +')" class="btn btn-xs btn-info">审议</a>';
+                            } else {
+                                content_arr.push(data);
+                                index = index + 1;
+                                str= '<a onclick="showMySuggest('+ row.id +','+ row.modify_time +','+ index + ');" class="btn btn-xs btn-success">已审议 - 查看</a>';
+                            }
+                            // 可能存在对该文件的审议记录，点击该按钮显示历史记录
+                            if(row.modify_time != 0) {
+                                str += '<a href="#" onclick="record('+ row.id + ','+ row.modify_time +')" class="btn btn-xs btn-info">审议记录</a>';
+                            }
+                            return str;
                         }},
                         { "data": "id",render: function (data) {
                             var url = './apply/download/' + data;
@@ -80,7 +91,6 @@
                         { extend: 'print', className: 'btn dark btn-outline' , text: '打印'},
                         { extend: 'copy', className: 'btn red btn-outline', text: '复制' },
                         { extend: 'excel', className: 'btn yellow btn-outline' , text: '导出Excel' },
-                        { extend: 'colvis', className: 'btn dark btn-outline', text: '显示列'},
                     ],
 
                     "bStateSave": true,
@@ -126,14 +136,18 @@
             });
         }
 
-        var apply_id;
-        function suggest(val) {
-            setRowId(val);
+        let apply_id;
+        let modify_time;
+        // 弹出审议框
+        function suggest(id, time) {
+            apply_id = id;
+            modify_time = time;
             textarea.val('');
             modal_title.text('请填写您的审议意见');
             suggest_modal.modal('show');
         }
 
+        // 发送审议或更新审议结果
         function send() {
             // 没有输入或输入的是空格不予提交
             if(textarea.val() == null || textarea.val().trim() == '')
@@ -141,6 +155,7 @@
             $.post('{{ route('checker::suggest') }}',
                 {
                     apply_id: apply_id,
+                    modify_time: modify_time,
                     suggest: textarea.val()
                 },
                 function (res) {
@@ -150,16 +165,37 @@
             );
         }
 
-        function showMySuggest(val, index) {
-            setRowId(val);
-            textarea.val(contents[index]);
+        // 显示最新一次审议结果
+        function showMySuggest(id,time, index) {
+            apply_id = id;
+            modify_time = time;
             modal_title.text('更改我的审议意见');
+            textarea.val(content_arr[index]);
             suggest_modal.modal('show');
         }
 
-        function setRowId(a) {
-            var tr = $(a.parentNode.parentNode);
-            apply_id = Table.row(tr).id();
+        // 显示可能出现的审议记录
+        function record(id,time) {
+            $.get('{{ route('checker::record') }}',{
+                apply_id: id,
+                modify_time: time
+            },function (res) {
+                if(res.reply.length == 0) {
+                    toast(res.msg);
+                } else {
+                    $('#record_modal h4').text(res.msg);
+                    let str = '';
+                    for(var item of res.reply) {
+                        str += timeStamp2String(item.updated_at) + ':\n';
+                        if (item.content == null)
+                            item.content = '';
+                        str += item.content + '\n\n';
+                    }
+                    $('#record_list').val(str);
+                    $('#record_modal').modal('show');
+                }
+            })
         }
+
     </script>
 @stop

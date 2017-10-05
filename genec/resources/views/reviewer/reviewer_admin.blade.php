@@ -35,6 +35,7 @@
 
 @section('javascript')
     <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
+    <script src="{{ asset('static/assets/js/scripts/time.js') }}"></script>
     <script>
         var add_modal;
         var edit_modal;
@@ -172,24 +173,16 @@
         })
     } );
 
-        // 修改按钮点击事件处理函数
-        $('#data_table tbody').on('click','#edit',function () {
-            var data = Table1.row($(this).parents('tr')).data();
-            console.log(data);
-            edit_modal.find('input#number').val(data.number);
-            edit_modal.find('input#name').val(data.name);
-            edit_modal.find('input#id').val(data.id);
-            edit_modal.find('select#sex').val(data.sex);
-            edit_modal.modal('toggle');
-        })
-
-    function formatDate(date) {
-        date = new Date(date);
-        var year = date.getFullYear();
-        var month = date.getMonth() + 1;
-        var day = date.getDate();
-        return year + "-" + month + "-" + day;
-    }
+    // 修改按钮点击事件处理函数
+    $('#data_table tbody').on('click','#edit',function () {
+        var data = Table1.row($(this).parents('tr')).data();
+        console.log(data);
+        edit_modal.find('input#number').val(data.number);
+        edit_modal.find('input#name').val(data.name);
+        edit_modal.find('input#id').val(data.id);
+        edit_modal.find('select#sex').val(data.sex);
+        edit_modal.modal('toggle');
+    })
 
     function add() {
         var error = add_modal.find('#form_error');

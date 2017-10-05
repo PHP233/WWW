@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo $theme_options["title"]; ?></title>
-    <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/docs.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/patch.css">
+    <?php require 'head.php'?>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/post-wz.css">
 </head>
 <body>

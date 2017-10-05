@@ -70,7 +70,7 @@ function setAll(type) {
     } else {
         buttons = $(selected).find('button');
     }
-    for(button of buttons) {
+    for(var button of buttons) {
         button.remove();
         addChecker($(button), type);
     }
@@ -84,7 +84,7 @@ function assignChecker() {
     }
     var checkers = [];
     var checkerIds = [];
-    for(button of buttons) {
+    for(var button of buttons) {
         var checker = {};
         checker.id = $(button).data('id');
         checker.name = $(button).text();
