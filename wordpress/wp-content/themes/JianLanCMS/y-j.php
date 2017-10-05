@@ -1,35 +1,18 @@
-      <div class="ul_con">
-
-      <ul>
-
-        <li class="h">关于我们</li>
-
-        <li><a rel="nofollow" href="http://v7v3.com/about/">关于我们</a></li>
-
-        <li><a href="http://v7v3.com/sitemap.xml">SiteMap</a></li>
-
-      </ul>
-
-      <ul>
-
-        <li class="h">联系我们</li>
-
-        <li><a rel="nofollow" href="http://v7v3.com/contact/">联系方式</a></li>
-
-        <li><a rel="nofollow" href="http://v7v3.com/group/">交流QQ群</a></li>
-
-        <li><a rel="nofollow" href="http://list.qq.com/cgi-bin/qf_invite?id=3077e5391b4997f56a6854122b0c351be607d83c3ebf649b">RSS订阅</a></li>
-
-        <li><a rel="nofollow" href="http://v7v3.com/bot/">蜘蛛抓取监控</a></li>
-
-      </ul>
-
-      <ul>
-
-        <li class="h">其他帮助</li>
-
-        <li><a rel="nofollow" href="http://v7v3.com/tougao/">用户投稿</a></li>
-
-      </ul>
-
+<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/images/button.gif" alt="">
+<div class="row" style="margin-left: 0">
+    <div class="col-sm-9">
+        <ul class="list-inline" style="margin: 7% 0;">
+            <li><a href="">链接1</a></li>
+            <li><a href="">链接2</a></li>
+            <li><a href="">链接3</a></li>
+            <li><a href="">链接4</a></li>
+            <li><a href="">链接5</a></li>
+        </ul>
     </div>
+    <div class="col-sm-3" style="text-align: right">
+        <img src="<?php bloginfo('template_url'); ?>/images/cheng.jpg" alt="">
+    </div>
+</div>
+<hr />
+<p class="text-center" style="font-size: 12px;color: #A6A6A6;">国际人类基因变异组项目(HVP)中国区工作委员会 京ICP备15036439</p>
+<p class="text-center" style="font-size: 12px;color: #A6A6A6;">联系电话：010-57101765</p>
