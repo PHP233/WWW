@@ -67,7 +67,7 @@ class ReviewController extends Controller {
 		try {
 			Reviewer::destroy($request->id);
 		}
-		catch(Exception $e) {
+		catch(QueryException $e) {
 			$res = new Res(Code::error,'删除失败，该审议人存在未完成的审议任务');
 		}
 		return response()->json($res);

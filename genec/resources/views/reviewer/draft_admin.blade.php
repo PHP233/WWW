@@ -14,7 +14,7 @@
 @section('td')
     <th> 文件编号 </th>
     <th> 题目 </th>
-    <th> 申请书编号 </th>
+    <th> 申请书题目 </th>
     <th> 申请人 </th>
     <th> 申请时间 </th>
     <th> 申请状态 </th>
@@ -28,7 +28,7 @@
         <tr class="odd gradeX">
             <td> {{ \App\utils\Code::getDraftNumber($draft)}} </td>
             <td> {{ $draft->title }} </td>
-            <td> {{ \App\utils\Code::getApplyNumber($draft->apply) }} </td>
+            <td> {{ $draft->apply->title }} </td>
             <td> {{ $draft->apply->proposer->name }} </td>
             <td> {{ $draft->created_at }} </td>
             <td> <span class="talbe-span {{ $draft->getStateClass($draft->state) }}">{{ $draft->state($draft->state) }}</span> </td>

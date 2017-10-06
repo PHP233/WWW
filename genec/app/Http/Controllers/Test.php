@@ -15,11 +15,7 @@ use Illuminate\Database\QueryException;
 
 class Test extends Controller {
 
-	public function test() {
-		$applies = Reviewer::find(24)->applies()->get();
-		foreach ($applies as $apply) {
-			echo $apply->pivot->content.'<br/>';
-		}
-		dd($applies);
+	public function test($r = 0) {
+		echo $r;
 	}
 }

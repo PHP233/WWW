@@ -31,8 +31,6 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
 	Route::group(['prefix' => 'reviewer'], function () {
-		Route::any('login', ['uses' => 'ReviewController@login']);
-		Route::any('logout', ['uses' => 'ReviewController@logout', 'as' => 'reviewer_logout']);
 		Route::any('draft_admin', ['uses' => 'ReviewController@draft_admin']);
 		Route::any('reviewer_admin', ['uses' => 'ReviewController@reviewer_admin','as' => 'reviewer_admin']);
 		Route::any('get_all_reviewers', ['uses' => 'ReviewController@get_all_reviewers','as' => 'get_all_reviewers']);
@@ -53,24 +51,28 @@ Route::group(['middleware' => ['web']], function () {
 			Route::any('/', ['uses' => 'DraftController@index', 'as' => 'index']);
 			Route::any('upload', ['uses' => 'DraftController@upload', 'as' => 'upload']);
 			Route::any('download/{id?}', ['uses' => 'DraftController@download', 'as' => 'download']);
+			Route::any('isHasDraft', ['uses' => 'DraftController@isHasDraft', 'as' => 'isHasDraft']);
 		});
 
 		Route::group(['prefix' => 'checker', 'as' => 'checker::'], function () {
 			Route::any('/', ['uses' => 'CheckerController@index', 'as' => 'checker']);
-			Route::any('get_my_apply', ['uses'=>'CheckerController@get_my_apply', 'as' => 'get_my_apply']);
+			Route::any('toDraft', ['uses' => 'CheckerController@toDraft', 'as' => 'toDraft']);
+			Route::any('get_my_apply/{type?}', ['uses'=>'CheckerController@get_my_apply', 'as' => 'get_my_apply']);
 			Route::post('suggest', ['uses' => 'CheckerController@suggest', 'as' => 'suggest']);
 			Route::get('record', ['uses' => 'CheckerController@record', 'as' => 'record']);
 		});
 	});
 
 	Route::group(['prefix' => 'proposer'], function () {
-		Route::any('login', ['uses' => 'ProposerController@login','as' => 'proposer_login']);
-		Route::any('register', ['uses' => 'ProposerController@register','as' => 'proposer_register']);
 		Route::any('add_apply', ['uses' => 'ProposerController@add_apply','as' => 'proposer_add_apply']);
-		Route::any('logout', ['uses' => 'ProposerController@logout','as' => 'proposer_logout']);
 		Route::any('{id?}', ['uses' => 'ProposerController@index','as' => 'proposer_index']);
 	});
 
 });
 
-Route::get('test','Test@test');
+Route::any('reviewer/login', ['uses' => 'ReviewController@login', 'as' => 'reviewer_login']);
+Route::any('reviewer/logout', ['uses' => 'ReviewController@logout', 'as' => 'reviewer_logout']);
+Route::any('proposer/login', ['uses' => 'ProposerController@login','as' => 'proposer_login']);
+Route::any('proposer/register', ['uses' => 'ProposerController@register','as' => 'proposer_register']);
+Route::any('proposer/logout', ['uses' => 'ProposerController@logout','as' => 'proposer_logout']);
+Route::get('test/{r?}','Test@test');

@@ -16,10 +16,6 @@ class Suggest extends Model {
 
 	protected $guarded = [ 'id' ];
 
-	protected function getDateFormat() {
-		return time();
-	}
-
 	public function reviewer() {
 		return $this->belongsTo('App\Model\Reviewer');
 	}

@@ -1,4 +1,3 @@
-const typeArr = ['','未审议','已审议待审批','未通过审批','已批准'];
 var Table = "";
 var TableDatatablesManage = function () {
     var table = $('#data_table');

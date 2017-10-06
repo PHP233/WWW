@@ -467,7 +467,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="caption font-dark">
                                 <i class="icon-settings font-dark"></i>
                                 <span class="caption-subject bold uppercase">@yield('table_title')</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span id="sign" class="text-success"></span>
+                                <span id="sign" class="text-success">@yield('sign')</span>
                             </div>
                         </div>
                         <div class="portlet-body">
@@ -491,6 +491,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- END EXAMPLE TABLE PORTLET-->
                 </div>
             </div>
+            @yield('introduce')
         </div>
         <!-- END CONTENT BODY -->
     </div>
@@ -545,11 +546,13 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="{{ asset('static/assets/js/scripts/quick-sidebar.min.js') }}" type="text/javascript"></script>
 @yield('javascript')
 <script>
-
+    const typeArr = ['','未审议','已审议','未通过审批','已批准'];
     const url_arr = [
         '/genec/public/reviewer/apply',
-        '/genec/public/reviewer/draft/upload',
         '/genec/public/reviewer/draft',
+        '/genec/public/reviewer/checker',
+        '/genec/public/reviewer/checker/toDraft',
+        '/genec/public/reviewer/draft/upload',
         '/genec/public/reviewer/reviewer_admin',
     ];
 
@@ -559,12 +562,16 @@ License: You must have a valid license purchased only from themeforest(the above
         var url = location.pathname;
         if(url == url_arr[0]) {
             $($(toggles[0]).parent()).addClass('active open');
-        } else if(url == url_arr[1]) {
+        } else if(url == url_arr[4]) {
             $($(toggles[1]).parent()).addClass('active open');
-        } else if(url == url_arr[2]) {
+        } else if(url == url_arr[1]) {
             $($(toggles[2]).parent()).addClass('active open');
-        } else if(url == url_arr[3]) {
+        } else if(url == url_arr[5]) {
             $($(toggles[3]).parent()).addClass('active open');
+        } else if(url == url_arr[2]) {
+            $($(toggles[0]).parent()).addClass('active open');
+        } else if(url == url_arr[3]) {
+            $($(toggles[1]).parent()).addClass('active open');
         }
     });
 
@@ -582,25 +589,14 @@ License: You must have a valid license purchased only from themeforest(the above
         });
     }).ajaxStop($.unblockUI);
 
-    // 切换申请书不同状态分类
-    function changeApplyType(type) {
-        var now = url_arr[0];
+    // 切换不同状态分类
+    function changeType(key,type) {
+        var now = url_arr[key];
         if(location.pathname != now) {
             if(type == 0)
                 location.href = now;
-            location.href = now + '?type=' + type;
-        } else {
-            Table.search(typeArr[type]).draw();
-        }
-    }
-
-    // 跳转到送审表管理并按状态分类
-    function changeDraftType(type) {
-        var now = url_arr[2];
-        if(location.pathname != now) {
-            if(type == 0)
-                location.href = now;
-            location.href = now + '?type=' + type;
+            else
+                location.href = now + '?type=' + type;
         } else {
             Table.search(typeArr[type]).draw();
         }

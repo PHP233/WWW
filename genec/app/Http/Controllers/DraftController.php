@@ -12,6 +12,8 @@ namespace App\Http\Controllers;
 use App\Model\Apply;
 use App\Model\Draft;
 use App\Model\Reviewer;
+use App\utils\Code;
+use App\utils\Res;
 use Illuminate\Http\Request;
 
 class DraftController extends Controller {
@@ -40,12 +42,16 @@ class DraftController extends Controller {
 			if($ext!='doc' && $ext != 'docx') {
 				exit('文件类型必须是doc或docx');
 			}
-			$draft = new Draft();
-			$draft->apply_id = $request->apply_id;
-			$draft->title = $request->title.'.'.$ext;
-			$bool = $draft->save();
-			if(!$bool) {
-				return view('reviewer.upload_draft')->with('error','新建送审表失败');
+			$draft = Draft::where('apply_id',$request->apply_id)->first();
+			if($draft == null) {
+				Draft::create([
+					'apply_id' => $request->apply_id,
+					'title' => $request->title.'.'.$ext,
+				]);
+			} else {
+				$draft->update([
+					'title' => $request->title.'.'.$ext,
+				]);
 			}
 			// 设置上传文件名:为新增申请记录的id
 			$upload_path = config('filesystems.disks.draft_uploads.root').'/';
@@ -53,15 +59,31 @@ class DraftController extends Controller {
 				mkdir($upload_path);
 			}
 			if(!$file->move($upload_path,$draft->id)) {
-				exit('保存文件失败！');
+				return back()->with('sign','保存文件失败！');
 			}
-			return redirect()->back();
+			return back()->with('sign','上传成功！');
 		}
-		return view('reviewer.upload_draft')->with('applies', $applies);
+		return view('reviewer.upload_draft',[
+			'applies' => $applies,
+		]);
 	}
 
+	// 下载送审表
 	public function download(Request $request) {
 		$draft = Draft::find($request->id);
 		return response()->download(storage_path('app\uploads\draft\\'.$request->id), $draft->title, ['application/msword']);
+	}
+
+	// 查看申请书是否已经上传过送审表
+	public function isHasDraft(Request $request) {
+		$res = new Res(Code::success,'');
+		$draft = Draft::where('apply_id',$request->apply_id)->first();
+		if($draft == null) {
+			$res->setCode(Code::error);
+			$res->setMsg('没有上传送审表记录');
+		} else {
+			$res->setMsg('已经上传过送审表：'.$draft->title);
+		}
+		return response()->json($res);
 	}
 }

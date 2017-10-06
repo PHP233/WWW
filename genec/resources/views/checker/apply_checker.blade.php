@@ -122,6 +122,12 @@
                     initTable();
                     // 隐藏职工id
                     Table.column(0).visible(false);
+                    var type = location.search[location.search.lastIndexOf('=') + 1];
+                    if(type == '1' || type == '2') {
+                        Table.search(typeArr[type]).draw();
+                    } else {
+                        Table.search('').draw();
+                    }
                 },
                 reload: function() {
                     Table.ajax.reload();
@@ -186,7 +192,7 @@
                     $('#record_modal h4').text(res.msg);
                     let str = '';
                     for(var item of res.reply) {
-                        str += timeStamp2String(item.updated_at) + ':\n';
+                        str += item.updated_at + ':\n';
                         if (item.content == null)
                             item.content = '';
                         str += item.content + '\n\n';
