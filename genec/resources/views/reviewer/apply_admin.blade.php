@@ -28,7 +28,7 @@
             <td> {{ \App\utils\Code::getApplyNumber($apply)}} </td>
             <td> {{ $apply->title }} </td>
             <td> {{ $apply->proposer->name }} </td>
-            <td> {{ $apply->created_at }} </td>
+            <td> {{ date('Y-m-d',$apply->created_at) }} </td>
             <td> <span class="talbe-span {{ $apply->getStateClass() }}">{{ $apply->state() }}</span> </td>
             <td> {{ $apply->modify_time }} </td>
             <td> <a href="{{ $apply->adviceBtn()['url'] }}">{{ $apply->adviceBtn()['btnName'] }}</a> </td>
@@ -49,6 +49,7 @@
     <script src="{{ asset('static/assets/js/scripts/initDataTable.js') }}"></script>
     <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
     <script src="{{ asset('static/assets/js/scripts/review.js') }}"></script>
+    <script src="{{ asset('static/assets/js/scripts/time.js') }}"></script>
     <script>
         function ajaxForReviewDetail(id,modify_time) {
             $.ajax({

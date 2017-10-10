@@ -32,4 +32,20 @@ class Code {
         return '';
     }
 
+    public static function turnStateToStep($apply) {
+    	switch ($apply->state) {
+		    case 0:
+		    	return 1;
+		    case 1:
+		    case 2:
+		    case 3:
+			    return 2;
+		    case 4:
+		    	return 3;
+		    case 5:
+		    	return 2;
+		    default:
+		    	break;
+	    }
+    }
 }

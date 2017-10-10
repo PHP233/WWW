@@ -14,5 +14,5 @@
     </div>
 </div>
 <hr />
-<p class="text-center" style="font-size: 12px;color: #A6A6A6;">国际人类基因变异组项目(HVP)中国区工作委员会 京ICP备15036439</p>
-<p class="text-center" style="font-size: 12px;color: #A6A6A6;">联系电话：010-57101765</p>
+<p class="text-center" style="font-size: 12px;color: #A6A6A6;">中国基因行业标准化技术委员会...</p>
+<p class="text-center" style="font-size: 12px;color: #A6A6A6;">联系电话：...</p>

@@ -30,7 +30,7 @@
             <td> {{ $draft->title }} </td>
             <td> {{ $draft->apply->title }} </td>
             <td> {{ $draft->apply->proposer->name }} </td>
-            <td> {{ $draft->created_at }} </td>
+            <td> {{ date('Y-m-d',$draft->created_at) }} </td>
             <td> <span class="talbe-span {{ $draft->getStateClass($draft->state) }}">{{ $draft->state($draft->state) }}</span> </td>
             <td> {{ $draft->modify_time }} </td>
             <td> <a href="{{ $draft->adviceBtn()['url'] }}">{{ $draft->adviceBtn()['btnName'] }}</a> </td>

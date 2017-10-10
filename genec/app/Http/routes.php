@@ -15,7 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::any('reviewer/login', ['uses' => 'ReviewController@login', 'as' => 'reviewer_login']);
+Route::any('reviewer/logout', ['uses' => 'ReviewController@logout', 'as' => 'reviewer_logout']);
+Route::any('proposer/login', ['uses' => 'ProposerController@login','as' => 'proposer_login']);
+Route::any('proposer/register', ['uses' => 'ProposerController@register','as' => 'proposer_register']);
+Route::any('proposer/logout', ['uses' => 'ProposerController@logout','as' => 'proposer_logout']);
+Route::get('test/{r?}','Test@test');
 
 
 /*
@@ -69,10 +74,3 @@ Route::group(['middleware' => ['web']], function () {
 	});
 
 });
-
-Route::any('reviewer/login', ['uses' => 'ReviewController@login', 'as' => 'reviewer_login']);
-Route::any('reviewer/logout', ['uses' => 'ReviewController@logout', 'as' => 'reviewer_logout']);
-Route::any('proposer/login', ['uses' => 'ProposerController@login','as' => 'proposer_login']);
-Route::any('proposer/register', ['uses' => 'ProposerController@register','as' => 'proposer_register']);
-Route::any('proposer/logout', ['uses' => 'ProposerController@logout','as' => 'proposer_logout']);
-Route::get('test/{r?}','Test@test');

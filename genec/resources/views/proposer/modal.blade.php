@@ -18,7 +18,7 @@
                         <td><a href="{{ url('proposer/'.$apply->id) }}">{{ $apply->title }}</a></td>
                         <td>{{ $apply->state($apply->state) }}</td>
                         <td>{{ $apply->modify_time }}</td>
-                        <td>{{ $apply->created_at }}</td>
+                        <td>{{ date('Y-m-d',$apply->created_at) }}</td>
                     </tr>
                     @endforeach
                     </tbody>

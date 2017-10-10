@@ -13,9 +13,9 @@ use Closure;
 class LoginMiddleware {
 
 	public function handle($request, Closure $next) {
-		if(!session('reviewer')) {
+		/*if(!session('reviewer')) {
 			return redirect('reviewer/login');
-		}
+		}*/
 		return $next($request);
 	}
 

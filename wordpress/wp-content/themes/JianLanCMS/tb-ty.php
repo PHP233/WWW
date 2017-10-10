@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/wordpress">网站首页</a>
+            <a class="navbar-brand" href="/wordpress" style="font-size: 15px">网站首页</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

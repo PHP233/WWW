@@ -3,7 +3,10 @@
     <div class="row">
         <div class="col-md-4 col-xs-12"><h2>标准申报流程</h2></div>
         @if(isset($show_apply))
-            <div class="col-md-8 col-xs-12"><h3>当前申报: {{ $show_apply->title }}</h3></div>
+            <div class="col-md-8 col-xs-12">
+                <h3>当前申报: {{ $show_apply->title }}</h3>
+                <h4>申报时间: {{ date('Y-m-d',$show_apply->created_at) }}</h4>
+            </div>
         @endif
     </div>
     <ul class="nav nav-pills nav-justified step step-arrow">

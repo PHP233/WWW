@@ -29,7 +29,7 @@
         <label for="inputPhone">手机号</label>
         <div class="row">
             <div class="col-md-8">
-                <input type="text" id="inputPhone" name="phone" class="form-control" placeholder="手机号" autofocus>
+                <input type="number" id="inputPhone" name="phone" class="form-control" placeholder="手机号" autofocus>
             </div>
             <div class="col-md-4">
                 <p id="inputPhone"></p>
@@ -41,16 +41,16 @@
                 <input type="password" id="password" name='password' class="form-control" placeholder="密码">
             </div>
             <div class="col-md-4">
-                <p id="inputPassword"></p>
+                <p id="password"></p>
             </div>
         </div>
         <label for="inputConfirmPassword">确认密码</label>
         <div class="row">
             <div class="col-md-8">
-                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="确认密码">
+                <input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="确认密码">
             </div>
             <div class="col-md-4">
-                <p id="inputConfirmPassword"></p>
+                <p id="confirm_password"></p>
             </div>
         </div>
         <div class="col-md-8">

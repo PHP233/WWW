@@ -15,7 +15,7 @@
 	    <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
         <div class="map"><span class="home_ico">当前位置：<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?> </span></div>
-        <div class="w972" style="margin-top:8px;">
+
             <div class="article_article_left left">
                 <div class="article_con">
                     <h1 title="<?php the_title(); ?>"><?php the_title(); ?></h1>
@@ -64,9 +64,8 @@
 <?php endwhile; ?>
 <?php endif ?>
                 </div>
-
             </div>
-        </div><!-- 文章正文结束 -->
+        <!-- 文章正文结束 -->
         </div>
         <div class="col-md-3">
 		    <?php require 'sider_left.php'?>

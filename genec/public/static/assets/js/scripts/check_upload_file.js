@@ -14,6 +14,7 @@ function check(form) {
     }
     return true;
 }
+
 function getFileName(file) {
     var pos = file.lastIndexOf('\\');
     pos = file.substring(pos + 1).split('.');

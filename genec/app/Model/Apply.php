@@ -98,4 +98,7 @@ class Apply extends Model {
 		return time();
 	}
 
+	protected function asDateTime( $value ) {
+		return $value;
+	}
 }
