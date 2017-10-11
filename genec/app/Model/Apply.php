@@ -101,4 +101,8 @@ class Apply extends Model {
 	protected function asDateTime( $value ) {
 		return $value;
 	}
+
+	public function suggests() {
+		return $this->hasMany('App\Model\Suggest',"apply_id","id");
+	}
 }

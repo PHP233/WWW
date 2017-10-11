@@ -10,6 +10,7 @@
 namespace App\Http\Controllers;
 use App\Model\Apply;
 use App\Model\Proposer;
+use App\Model\Reviewer;
 use App\utils\Code;
 use \Illuminate\Http\Request;
 
@@ -73,8 +74,10 @@ class ProposerController extends Controller {
 		$show_apply = Apply::where('proposer_id',$proposer->id)
 							->where('id',$id)
 							->first();
+		$admin_id = Reviewer::where('role',1)->first()->id;
 		return view('proposer/index',[
 			'show_apply'=> $show_apply,
+			'admin_id' => $admin_id,
 		]);
 	}
 

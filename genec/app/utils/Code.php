@@ -18,7 +18,7 @@ class Code {
 
     public static function getApplyNumber($apply) {
         if($apply != null) {
-            $date = date('Ymd',strtotime($apply->created_at));
+            $date = date('Ymd',$apply->created_at);
             return $number = $date.$apply->id;
         }
         return '';

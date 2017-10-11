@@ -29,7 +29,9 @@ $proposer = session('proposer');
                 @elseif($show_apply->state == 2)
                     <p class="bg-success proposer_p">您的申请书——{{ $show_apply->title }}已审议完成，等待审批</p>
                 @elseif($show_apply->state == 3)
-                    <p class="bg-success proposer_p">很抱歉，您的申请书——{{ $show_apply->title }}未通过审批，审批意见如下：</p>
+                    <p class="bg-success proposer_p">很抱歉，您的申请书——{{ $show_apply->title }}未通过审批，审批意见如下：
+                    {{ \App\Model\Suggest::where('apply_id',$show_apply->id)->where('reviewer_id',$admin_id)->where('modify_time',$show_apply->modify_time)->first()->content }}
+                    </p>
 
                 @elseif($show_apply->state == 4)
                     <p class="bg-success proposer_p">恭喜！您的申请书——{{ $show_apply->title }}已经通过审批，正在为该申请立项</p>
