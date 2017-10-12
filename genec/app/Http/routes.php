@@ -45,6 +45,8 @@ Route::group(['middleware' => ['web']], function () {
 		Route::any('assign', ['uses' => 'ReviewController@assign', 'as' => 'assign']);
 		Route::any('passOrFail', ['uses' => 'ReviewController@passOrFail', 'as' => 'passOrFail']);
 		Route::any('get_review_list', ['uses' => 'ReviewController@get_review_list', 'as' => 'get_review_list']);
+		Route::get('publish', ['uses' => 'ReviewController@publish','as' => 'publish']);
+		Route::get('dropProject', ['uses' => 'ReviewController@dropProject','as' => 'dropProject']);
 
 		Route::group(['prefix' => 'apply', 'as' => 'apply::'], function () {
 			Route::any('/', ['uses' => 'ApplyController@index', 'as' => 'index']);
@@ -70,6 +72,8 @@ Route::group(['middleware' => ['web']], function () {
 
 	Route::group(['prefix' => 'proposer'], function () {
 		Route::any('add_apply', ['uses' => 'ProposerController@add_apply','as' => 'proposer_add_apply']);
+		Route::any('reUploadApply', ['uses' => 'ProposerController@reUploadApply','as' => 'reUploadApply']);
+		Route::any('no_passUpload',['uses' => 'ProposerController@no_passUpload', 'as' => 'no_passUpload']);
 		Route::any('{id?}', ['uses' => 'ProposerController@index','as' => 'proposer_index']);
 	});
 

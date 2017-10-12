@@ -76,7 +76,7 @@
                 var state = $(tr).children('td')[5];
                 var btn = $(tr).children('td')[7];
                 $(state).html('<span class="talbe-span bg-danger">未通过审批</span>');
-                $(btn).html('<a href="javascript:;">-</a>');
+                $(btn).html('<a href="javascript:dropProject('+res.reply.id+');">撤销项目</a>');
                 toast(res.msg, review_list_modal);
             })
         }
@@ -90,7 +90,7 @@
                 var state = $(tr).children('td')[5];
                 var btn = $(tr).children('td')[7];
                 $(state).html('<span class="talbe-span bg-success">已批准</span>');
-                $(btn).html('<a href="javascript:;">-</a>');
+                $(btn).html('<a href="javascript:#;">出版</a>');
                 toast(res.msg, review_list_modal);
             })
         }
@@ -120,6 +120,55 @@
 
                 }
             });
+        }
+
+        /*
+        出版
+         */
+        function publish(id) {
+            tr = document.activeElement.parentNode.parentNode;
+            if(!confirm('确定要出版此项目？')) {
+                return;
+            }
+            $.get('{{ route('publish') }}',{
+                'id': id
+            },function (res) {
+                toast(res.msg);
+                var state = $(tr).children('td')[5];
+                var btn = $(tr).children('td')[7];
+                $(state).html('<span class="talbe-span bg-default">已出版</span>');
+                $(btn).html('<a href="javascript:#;">-</a>');
+            })
+        }
+
+        /*
+        撤销项目
+         */
+        var temp_id;
+        function dropProject(id) {
+            temp_id = id;
+            tr = document.activeElement.parentNode.parentNode;
+            $('#drop_project_modal').modal('show');
+        }
+
+        function ajaxForDropProject() {
+            var password = $('#drop_project_modal #inputPassword').val();
+            if(password.trim() == '') {
+                toast('密码不能为空！');
+                return;
+            }
+            $.get('{{ route('dropProject') }}',{
+                'id': temp_id,
+                'password': password
+            },function (res) {
+                toast(res.msg, $('#drop_project_modal'));
+                if(res.code) {  // 撤销成功
+                    var state = $(tr).children('td')[5];
+                    var btn = $(tr).children('td')[7];
+                    $(state).html('<span class="talbe-span bg-default">已撤销</span>');
+                    $(btn).html('<a href="javascript:#;">-</a>');
+                }
+            })
         }
     </script>
 @endsection

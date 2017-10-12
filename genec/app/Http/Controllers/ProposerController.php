@@ -66,14 +66,17 @@ class ProposerController extends Controller {
 		$proposer = session()->get('proposer');
 		$applies = $proposer->applies()->orderBy('created_at','desc')->get();
 		session()->put('applies',$applies);
-		if (!isset($id)) {
+		$show_apply = Apply::find($id);
+		$isOwner = true;
+		if($show_apply == null || $show_apply->proposer_id != $proposer->id) {
+			$isOwner = false;
+		}
+		if (!isset($id) || !$isOwner) {
 			return view('proposer/index', [
 				'show_apply' => $applies->first()
 			]);
 		}
-		$show_apply = Apply::where('proposer_id',$proposer->id)
-							->where('id',$id)
-							->first();
+		$show_apply = Apply::find($id);
 		$admin_id = Reviewer::where('role',1)->first()->id;
 		return view('proposer/index',[
 			'show_apply'=> $show_apply,
@@ -99,17 +102,8 @@ class ProposerController extends Controller {
 			if($ext!='doc' && $ext != 'docx') {
 				exit('文件类型必须是doc或docx');
 			}
-			$kind = $request->kind;     // 上传文件是第一次上传还是覆盖上传：kind == 1 时为覆盖上传
-			if($kind == 1) {
-				Apply::where('id',$request->id)->update([
-					'title' => $request->title
-				]);
-				$apply = new Apply();
-				$apply->id = $request->id;
-			} else {
-				// 设置上传文件名:为新增申请记录的id
-				$apply = $this->insert_apply($id, $title,$ext);
-			}
+			// 设置上传文件名:为新增申请记录的id
+			$apply = $this->insert_apply($id, $title,$ext);
 			$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$id;
 			if (!file_exists($upload_path)) {
 				mkdir($upload_path);
@@ -135,4 +129,68 @@ class ProposerController extends Controller {
 		return $apply;
 	}
 
+	/*
+	 * 对于已经上传还没有分配审议任务的申请书上传覆盖之前的申请书
+	 */
+	public function reUploadApply(Request $request) {
+		$id = session('proposer')->id;
+		$title = $request->title;
+		$apply_id = $request->id;
+		if(!$request->hasFile('apply')) {
+			exit('上传文件为空！');
+		}
+		$file = $request->file('apply');
+		if(!$file->isValid()) {
+			exit('文件上传出错！');
+		}
+		$ext = $file->getClientOriginalExtension();
+		if($ext!='doc' && $ext != 'docx') {
+			exit('文件类型必须是doc或docx');
+		}
+		Apply::where('id',$apply_id)->update([
+			'title' => $title.'.'.$ext
+		]);
+		$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$id;
+		if (!file_exists($upload_path)) {
+			mkdir($upload_path);
+		}
+		if(!$file->move($upload_path,$apply_id)) {
+			exit('保存文件失败！');
+		}
+		return redirect()->route('proposer_index', [$apply_id]);
+	}
+
+	/*
+	 * 对于未通过审批的申请书重新上传
+	 */
+	public function no_passUpload(Request $request) {
+		$id = session('proposer')->id;
+		$title = $request->title;
+		$apply_id = $request->id;
+		if(!$request->hasFile('apply')) {
+			exit('上传文件为空！');
+		}
+		$file = $request->file('apply');
+		if(!$file->isValid()) {
+			exit('文件上传出错！');
+		}
+		$ext = $file->getClientOriginalExtension();
+		if($ext!='doc' && $ext != 'docx') {
+			exit('文件类型必须是doc或docx');
+		}
+		$apply = Apply::find($apply_id);
+		$apply->update([
+			'title' => $title.'.'.$ext,
+			'modify_time' => $apply->modify_time + 1,
+			'state' => Apply::NO_ASSIGN_WAIT_REVIEW
+		]);
+		$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$id;
+		if (!file_exists($upload_path)) {
+			mkdir($upload_path);
+		}
+		if(!$file->move($upload_path,$apply_id)) {
+			exit('保存文件失败！');
+		}
+		return redirect()->route('proposer_index', [$apply_id]);
+	}
 }

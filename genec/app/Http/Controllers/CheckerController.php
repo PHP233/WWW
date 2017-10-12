@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\Model\Apply;
+use App\Model\Draft;
 use App\Model\Suggest;
 use App\utils\Code;
 use App\utils\Res;
@@ -81,7 +82,7 @@ class CheckerController extends Controller {
 				                    ->where('content',null)->count();
 				// 如果都审议了，更改申请书状态为 已审议，待审批
 				if($no_review == 0) {
-					Apply::find($request->draft_id)->update(['state' => Apply::WAIT_PASS]);
+					Draft::find($request->draft_id)->update(['state' => Apply::WAIT_PASS]);
 				}
 			}
 			if(!$r) {

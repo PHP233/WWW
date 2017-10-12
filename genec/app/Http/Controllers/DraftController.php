@@ -48,6 +48,9 @@ class DraftController extends Controller {
 					'apply_id' => $request->apply_id,
 					'title' => $request->title.'.'.$ext,
 				]);
+				Apply::find($request->apply_id)->update([
+					'state' => Apply::DRAFT_UPLOAD
+				]);
 			} else {
 				$draft->update([
 					'title' => $request->title.'.'.$ext,

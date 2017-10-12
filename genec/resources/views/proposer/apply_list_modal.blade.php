@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-body">
                 <table class="table table-hover">
-                    <caption>历史申报列表</caption>
+                    <caption>历史申报列表——点击题目切换申请</caption>
                     <thead>
                     <tr>
                         <th>题目</th>
@@ -16,7 +16,27 @@
                     @foreach($applies as $apply)
                     <tr>
                         <td><a href="{{ url('proposer/'.$apply->id) }}">{{ $apply->title }}</a></td>
-                        <td>{{ $apply->state($apply->state) }}</td>
+                        @if ($apply->state == 0)
+                            <td class="text-default">{{ $apply->state($apply->state) }}</td>
+                        @elseif ($apply->state == 1)
+                            <td class="text-info">{{ $apply->state($apply->state) }}</td>
+                        @elseif ($apply->state == 2)
+                            <td class="text-warning">{{ $apply->state($apply->state) }}</td>
+                        @elseif ($apply->state == 3)
+                            <td class="text-danger">{{ $apply->state($apply->state) }}</td>
+                        @elseif ($apply->state == 4)
+                            <td class="text-success">{{ $apply->state($apply->state) }}</td>
+                        @elseif ($apply->state == 5)
+                            <td class="text-danger">{{ $apply->state($apply->state) }}</td>
+                        @elseif($apply->state == 6)
+                            <td class="text-success">{{ $apply->state($apply->state) }}</td>
+                        @elseif($apply->state == 7)
+                            <td class="text-success">{{ $apply->state($apply->state) }}</td>
+                        @elseif($apply->state == 8)
+                            <td class="text-success">{{ $apply->state($apply->state) }}</td>
+                        @else
+                            <td class="text-danger">-</td>
+                        @endif
                         <td>{{ $apply->modify_time }}</td>
                         <td>{{ date('Y-m-d',$apply->created_at) }}</td>
                     </tr>

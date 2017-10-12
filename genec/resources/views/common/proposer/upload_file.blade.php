@@ -1,14 +1,19 @@
-<form id="uploadApplyFileForm"  class="form-horizontal" enctype="multipart/form-data" action="" method="post" onsubmit="return check(this)">
+<form id="uploadApplyFileForm"  class="form-horizontal" enctype="multipart/form-data" action="@yield('url')" method="post" onsubmit="return check(this)">
     <hr>
-    <label for="file-zh"><span style="font-size: 30px">Step 1</span>&nbsp;&nbsp;&nbsp;提交申请书</label>
+    @section('sign')
+    <label for="file-zh">
+        <span style="font-size: 30px">Step 1</span>&nbsp;&nbsp;&nbsp;提交申请书
+    </label>
+    @show
     <div class="form-group">
-        <label for="title" class="col-sm-2 control-label">请输入申请书题目</label>
+        <label for="title" class="col-sm-2 control-label">@section('form_title')请输入申请书题目@show</label>
         <div class="col-sm-5">
-            <input type="text" class="form-control" id="title" name="title" placeholder="申请书题目" required>
+            <input type="text" class="form-control" id="title" name="title" placeholder="申请书题目" value="@yield('file_title')" required>
         </div>
     </div>
     <div class="form-group">
         <label for="apply" class="col-sm-2 control-label">上传文件</label>
+        @yield("input")
         <input id="apply" name="apply" type="file" required>
     </div>
     <div class="form-group">

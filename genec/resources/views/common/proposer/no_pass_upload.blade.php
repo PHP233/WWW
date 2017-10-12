@@ -1,20 +1,20 @@
 @extends('common.proposer.upload_file')
 
 @section('url')
-    {{ route('reUploadApply') }}
-@endsection
-
-@section('sign')
-    <p class="bg-success" style="padding: 15px">
-        你已经上传了申请书，请等待组委会评审，在评审前可以重新上传覆盖之前的文件
-    </p>
+    {{ route('no_passUpload') }}
 @endsection
 
 @section('form_title','申请书题目')
 
+@section('sign')
+    <p class="bg-warning" style="padding: 15px">
+        重新上传申请书
+    </p>
+@stop
+
 @section('file_title')
 {{ \App\utils\Code::removeExt($show_apply->title) }}
-@endsection
+@stop
 
 @section('input')
     <input name="id" value="{{ $show_apply->id }}" readonly hidden/>

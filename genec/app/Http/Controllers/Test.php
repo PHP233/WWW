@@ -9,13 +9,16 @@
 namespace App\Http\Controllers;
 
 
+use App\Model\Apply;
 use App\Model\Reviewer;
 use App\Model\Suggest;
+use App\utils\Res;
 use Illuminate\Database\QueryException;
 
 class Test extends Controller {
 
-	public function test($r = 0) {
-		echo $r;
+	public function test() {
+		$a = Apply::find(1);
+		return $a;
 	}
 }

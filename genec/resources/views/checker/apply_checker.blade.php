@@ -3,7 +3,7 @@
 @section('td')
     <th> 文件编号 </th>
     <th> 题目 </th>
-    <th> 申请时间 </th>
+    <th> 任务分配时间 </th>
     <th> 修改次数 </th>
     <th> 审议 </th>
     <th> 下载 </th>
@@ -65,7 +65,9 @@
                     columns: [
                         { "data": "id"},
                         { "data": "title"},
-                        { "data": "pivot.created_at"},
+                        { "data": "pivot.created_at",render: function (data) {
+                            return formatDate(data);
+                        }},
                         { "data": "modify_time"},
                         { "data": "pivot.content",render: function (data, type, row, meta) {
                             let str;

@@ -135,7 +135,8 @@ class ReviewController extends Controller {
 						]);
 					}
 					$res->setMsg($apply->title.'——审议任务已分配');
-					$apply->update(['state'=>Apply::ASSIGN_WAIT_REVIEW]);
+					$apply->state = Apply::ASSIGN_WAIT_REVIEW;
+					$apply->save();
 				} else {
 					$draft_id = $request->draft_id;
 					$draft = Draft::find($draft_id);
@@ -183,6 +184,9 @@ class ReviewController extends Controller {
 			$draft = Draft::find($request->draft_id);
 			if($isPass) {
 				$draft->update(['state' => Apply::PASS]);
+				Apply::find($draft->apply_id)->update([
+					'state' => Apply::DRAFT_PASS
+				]);
 			} else {
 				$draft->update(['state' => Apply::NO_PASS]);
 			}
@@ -192,6 +196,7 @@ class ReviewController extends Controller {
 				'content' => $request->m_content,
 				'modify_time' => $draft->modify_time,
 			]);
+			$res->setReply($draft);
 		}
 		return response()->json($res);
 	}
@@ -217,6 +222,38 @@ class ReviewController extends Controller {
 			}
 		}
 		return response()->json($arr);
+	}
+
+	// 出版
+	public function publish(Request $request) {
+		DB::transaction(function () use ($request){
+			$draft = Draft::find($request->id);
+			$draft->update([
+				'state' => Draft::PUBLISH
+			]);
+			Apply::find($draft->apply_id)->update([
+				'state' => Apply::PUBLISH
+			]);
+		});
+		$res = new Res(Code::success,'该项目出版成功！');
+		return response()->json($res);
+	}
+
+	//撤销项目
+	public function dropProject(Request $request) {
+		if($request->password != session('reviewer')->password) {
+			return response()->json(new Res(Code::error,'密码错误！无法撤销该项目！'));
+		}
+		DB::transaction(function() use($request){
+			$draft = Draft::find($request->id);
+			$draft->update([
+				'state' => Draft::DROPPED
+			]);
+			Apply::find($draft->apply_id)->update([
+				'state' => Apply::DROPPED
+			]);
+		});
+		return response()->json(new Res(Code::success,'该项目已撤销！'));
 	}
 
 	// 登出

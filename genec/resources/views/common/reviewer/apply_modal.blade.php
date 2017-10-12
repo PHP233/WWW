@@ -93,3 +93,23 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="drop_project_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="bg-danger" style="padding: 15px">撤销项目意味着此次项目申报失败，无法再次提交和修改送审表，请慎重选择！
+                    <br>请输入登陆密码</p>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <input id="inputPassword" name="inputPassword" type="password" class="form-control" placeholder="登陆密码"/>
+                    </div>
+                    <button class="btn btn-danger" onclick="ajaxForDropProject()">撤销项目</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
