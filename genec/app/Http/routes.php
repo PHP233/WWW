@@ -47,6 +47,8 @@ Route::group(['middleware' => ['web']], function () {
 		Route::any('get_review_list', ['uses' => 'ReviewController@get_review_list', 'as' => 'get_review_list']);
 		Route::get('publish', ['uses' => 'ReviewController@publish','as' => 'publish']);
 		Route::get('dropProject', ['uses' => 'ReviewController@dropProject','as' => 'dropProject']);
+		Route::post('updateInfo', ['uses' => 'ReviewController@updateInfo', 'as' => 'updateInfo']);
+		Route::post('changePwd', ['uses' => 'ReviewController@changePwd', 'as' => 'changePwd']);
 
 		Route::group(['prefix' => 'apply', 'as' => 'apply::'], function () {
 			Route::any('/', ['uses' => 'ApplyController@index', 'as' => 'index']);

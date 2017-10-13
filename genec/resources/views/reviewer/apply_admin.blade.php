@@ -42,12 +42,10 @@
 @section('modal')
     <!-- select checkers modal -->
     @include('common.reviewer.apply_modal')
-    @include('common.toast')
 @stop
 
 @section('javascript')
     <script src="{{ asset('static/assets/js/scripts/initDataTable.js') }}"></script>
-    <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
     <script src="{{ asset('static/assets/js/scripts/review.js') }}"></script>
     <script src="{{ asset('static/assets/js/scripts/time.js') }}"></script>
     <script>

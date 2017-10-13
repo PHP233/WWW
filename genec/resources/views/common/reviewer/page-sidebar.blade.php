@@ -29,21 +29,18 @@
                 <a href="javascript:changeType(0,2);" class="nav-link ">
                     <i class="icon-bulb"></i>
                     <span class="title">已审议待审批</span>
-                    <span class="badge badge-success">1</span>
                 </a>
             </li>
             <li class="nav-item start ">
                 <a href="javascript:changeType(0,3);" class="nav-link ">
                     <i class="icon-graph"></i>
                     <span class="title">未通过审批</span>
-                    <span class="badge badge-danger">5</span>
                 </a>
             </li>
             <li class="nav-item start ">
                 <a href="javascript:changeType(0,4);" class="nav-link ">
                     <i class="icon-graph"></i>
                     <span class="title">已批准</span>
-                    <span class="badge badge-danger">5</span>
                 </a>
             </li>
         </ul>
@@ -79,21 +76,18 @@
                 <a href="javascript:changeType(1,2);" class="nav-link ">
                     <i class="icon-bulb"></i>
                     <span class="title">已审议待审批</span>
-                    <span class="badge badge-success">1</span>
                 </a>
             </li>
             <li class="nav-item start ">
                 <a href="javascript:changeType(1,3);" class="nav-link ">
                     <i class="icon-graph"></i>
                     <span class="title">未通过审批</span>
-                    <span class="badge badge-danger">5</span>
                 </a>
             </li>
             <li class="nav-item start ">
                 <a href="javascript:changeType(1,4);" class="nav-link ">
                     <i class="icon-graph"></i>
                     <span class="title">已批准</span>
-                    <span class="badge badge-danger">5</span>
                 </a>
             </li>
 

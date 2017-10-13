@@ -261,4 +261,28 @@ class ReviewController extends Controller {
 		session()->flush();
 		return redirect('reviewer/login');
 	}
+
+	// 修改个人信息
+	public function updateInfo(Request $request) {
+		$reviewer = session('reviewer');
+		$reviewer->name = $request->name;
+		$reviewer->phone = $request->phone;
+		$reviewer->save();
+		session()->put('reviewer',$reviewer);
+		$res = new Res(Code::success,'更新个人信息成功！');
+		return response()->json($res);
+	}
+
+	// 修改密码
+	public function changePwd(Request $request) {
+		$reviewer = session('reviewer');
+		if($reviewer->password != $request->pwd0) {
+			$res = new Res(Code::error,'原密码错误！');
+			return response()->json($res);
+		}
+		$reviewer->password = $request->pwd1;
+		$reviewer->save();
+		session()->flush();
+		return response()->json(new Res(Code::success,''));
+	}
 }

@@ -12,12 +12,10 @@
 @section('table_title','审议送审表')
 
 @section('modal')
-    @include('common.toast')
     @include('common.reviewer.suggest_modal')
 @stop
 
 @section('javascript')
-    <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
     <script src="{{ asset('static/assets/js/scripts/time.js') }}"></script>
     <script>
         var suggest_modal;

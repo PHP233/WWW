@@ -30,11 +30,9 @@
 
 @section('modal')
     @include('common.reviewer.modal')
-    @include('common.toast')
 @endsection
 
 @section('javascript')
-    <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
     <script src="{{ asset('static/assets/js/scripts/time.js') }}"></script>
     <script>
         var add_modal;
