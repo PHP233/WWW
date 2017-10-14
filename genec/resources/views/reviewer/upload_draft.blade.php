@@ -48,6 +48,7 @@
 
 @section('introduce')
     <div class="row" style="padding:10px;">
+        <div id="on_pass_draft_sign"></div>
         <p class="bg-warning" style="padding: 15px">请先选择一个申请，对已经上传送审稿的申请项目，再次上传送审稿将覆盖之前的文件</p>
     </div>
 @stop
@@ -68,6 +69,15 @@
             },function (res) {
                 sure = res.code;
                 isHasDraft.text(res.msg);
+                var sign = $('div#on_pass_draft_sign');
+                sign.html('');
+                if(!sure)
+                    return;
+                if(res.reply.state == 3) {
+                    var str = '<p class="bg-danger" style="padding: 15px">该送审表——' + res.reply.title + '未通过审批，请重新上传送审表,并分配审议人审议' +
+                        '<br/>未通过意见：'+ res.reply.suggest +'</p>';
+                    sign.html(str);
+                }
             })
         }
 

@@ -137,6 +137,10 @@ class ProposerController extends Controller {
 		$id = session('proposer')->id;
 		$title = $request->title;
 		$apply_id = $request->id;
+		$apply = Apply::find($apply_id);
+		if($apply->proposer_id != $id) {
+			exit('不能对其他申请进行覆盖！');
+		}
 		if(!$request->hasFile('apply')) {
 			exit('上传文件为空！');
 		}
@@ -148,7 +152,7 @@ class ProposerController extends Controller {
 		if($ext!='doc' && $ext != 'docx') {
 			exit('文件类型必须是doc或docx');
 		}
-		Apply::where('id',$apply_id)->update([
+		$apply->update([
 			'title' => $title.'.'.$ext
 		]);
 		$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$id;
@@ -180,6 +184,9 @@ class ProposerController extends Controller {
 			exit('文件类型必须是doc或docx');
 		}
 		$apply = Apply::find($apply_id);
+		if($apply->proposer_id != $id) {
+			exit('不能对其他申请进行重新上传！');
+		}
 		$apply->update([
 			'title' => $title.'.'.$ext,
 			'modify_time' => $apply->modify_time + 1,

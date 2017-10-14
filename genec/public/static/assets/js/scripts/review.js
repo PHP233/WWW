@@ -141,6 +141,7 @@ function sex(sex) {
 // 将相应结果渲染在页面上
 function showReviewDetail(time) {
     var str = '';
+    review_arr = [];
     for(var i=0;i<review_results[time].length;i++) {
         review_arr.push(review_results[time][i].content);
         var item = '<button onclick="showContent('+ i +',this)" type="button" class="list-group-item" title="'+ sex(review_results[time][i].reviewer.sex) + ',' + review_results[time][i].reviewer.number +'">'+ review_results[time][i].reviewer.name +'</button>';

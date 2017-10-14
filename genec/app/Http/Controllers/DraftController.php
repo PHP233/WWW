@@ -12,9 +12,11 @@ namespace App\Http\Controllers;
 use App\Model\Apply;
 use App\Model\Draft;
 use App\Model\Reviewer;
+use App\Model\Suggest;
 use App\utils\Code;
 use App\utils\Res;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class DraftController extends Controller {
 
@@ -28,8 +30,16 @@ class DraftController extends Controller {
         ]);
 	}
 
+	/*
+	 * 审批人上传送审表
+	 */
 	public function upload(Request $request) {
-		$applies = Apply::where('state', Apply::PASS)->get();
+		// 获取通过审批的申请书或送审表未通过审批的申请书
+		$drafts = Draft::where('state',Draft::NO_ASSIGN_WAIT_REVIEW)->orWhere('state',Draft::NO_PASS)->get();
+		$applies = [];
+		foreach($drafts as $item) {
+			array_push($applies,Apply::find($item->apply_id));
+		}
 		if($request->isMethod('post')) {
 			if(!$request->hasFile('draft')) {
 				exit('上传文件为空！');
@@ -43,6 +53,7 @@ class DraftController extends Controller {
 				exit('文件类型必须是doc或docx');
 			}
 			$draft = Draft::where('apply_id',$request->apply_id)->first();
+			// 如果没有该申请的送审表，则新建
 			if($draft == null) {
 				$draft = Draft::create([
 					'apply_id' => $request->apply_id,
@@ -52,9 +63,20 @@ class DraftController extends Controller {
 					'state' => Apply::DRAFT_UPLOAD
 				]);
 			} else {
-				$draft->update([
-					'title' => $request->title.'.'.$ext,
-				]);
+				// 有该申请的送审表，判断送审表状态，如果是3 即未通过审批，则将送审表modify_time + 1，修改状态为 0
+				if($draft->state == Draft::NO_PASS) {
+					$draft->update([
+						'modify_time' => $draft->modify_time + 1,
+						'title' => $request->title.'.'.$ext,
+						'state' => Draft::NO_ASSIGN_WAIT_REVIEW
+					]);
+				}
+				else if($draft->state == Draft::NO_ASSIGN_WAIT_REVIEW){
+					// 状态为 0 即未分配
+					$draft->update([
+						'title' => $request->title.'.'.$ext,
+					]);
+				}
 			}
 			// 设置上传文件名:为新增申请记录的id
 			$upload_path = config('filesystems.disks.draft_uploads.root').'/';
@@ -72,9 +94,23 @@ class DraftController extends Controller {
 	}
 
 	// 下载送审表
-	public function download(Request $request) {
+	public function download(Request $request, $id=null) {
+		$reviewer = session('reviewer');
 		$draft = Draft::find($request->id);
-		return response()->download(storage_path('app\uploads\draft\\'.$request->id), $draft->title, ['application/msword']);
+		if(!isset($draft)) {
+			exit('无此送审表');
+		}
+		if($reviewer->role == 0) {
+			// 判断有没有符合审议人审议的送审表，没有提示
+			$num = Suggest::where('draft_id',$id)
+				->where('reviewer_id',$reviewer->id)
+				->where('modify_time',$draft->modify_time)
+				->count();
+			if($num == 0) {
+				exit('无下载权限');
+			}
+		}
+		return response()->download(storage_path('app\uploads\draft\\'.$id), $draft->title, ['application/msword']);
 	}
 
 	// 查看申请书是否已经上传过送审表
@@ -86,6 +122,11 @@ class DraftController extends Controller {
 			$res->setMsg('没有上传送审表记录');
 		} else {
 			$res->setMsg('已经上传过送审表：'.$draft->title);
+			if($draft->state == Draft::NO_PASS) {
+				$admin_id = Reviewer::where('role',Reviewer::ADMIN)->first()->id;
+				$draft->suggest = Suggest::where('draft_id',$draft->id)->where('reviewer_id',$admin_id)->first()->content;
+			}
+			$res->setReply($draft);
 		}
 		return response()->json($res);
 	}

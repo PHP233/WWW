@@ -69,6 +69,8 @@ Route::group(['middleware' => ['web']], function () {
 			Route::any('get_my_apply/{type?}', ['uses'=>'CheckerController@get_my_apply', 'as' => 'get_my_apply']);
 			Route::post('suggest', ['uses' => 'CheckerController@suggest', 'as' => 'suggest']);
 			Route::get('record', ['uses' => 'CheckerController@record', 'as' => 'record']);
+			Route::any('download_apply/{id?}', ['uses' => 'ApplyController@download', 'as' => 'download_apply']);
+			Route::any('download_draft/{id?}', ['uses' => 'DraftController@download', 'as' => 'download_draft']);
 		});
 	});
 

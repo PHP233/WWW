@@ -29,7 +29,7 @@ class CheckerController extends Controller {
 		return view('checker.draft_checker');
 	}
 
-	// 获取还未被审批的文件：state为 1 或 2
+	// 获取还未被审批的文件：state为 1 或 2，type == 0 为申请书，type == 1 为送审表
 	public function get_my_apply($type = 0) {
 		$reviewer_id = session()->get('reviewer')->id;
 		if(!$type) {

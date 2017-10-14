@@ -81,7 +81,7 @@
                             return str;
                         }},
                         { "data": "id",render: function (data) {
-                            var url = '../draft/download/' + data;
+                            var url = './download_draft/' + data;
                             return '<a href=' + url + '>下载</a>';
                         }}
                     ],

@@ -14,6 +14,7 @@ use App\utils\Code;
 use App\utils\Data;
 use App\utils\Res;
 use App\Model\Reviewer;
+use Illuminate\Contracts\Validation\UnauthorizedException;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
