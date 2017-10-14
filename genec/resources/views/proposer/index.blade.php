@@ -52,19 +52,38 @@ $proposer = session('proposer');
             @endif
         @show
     </div>
+    <div id="loading" hidden><img src="{{ asset('static/assets/img/loading.gif') }}" alt="loading"></div>
     @include('proposer.apply_list_modal')
+    @include('proposer.update_info_modal')
+    @include('common.toast')
 @endsection
 
 
 @section('javascript')
     @if(isset($show_apply))
     <script src="{{ asset('static/assets/js/lib.js') }}"></script>
+    <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
     <script src="{{ asset('static/assets/js/scripts/check_upload_file.js') }}"></script>
+    <script src="{{ asset('static/assets/js/plugins/jquery.blockui.min.js') }}" type="text/javascript"></script>
     <script>
         $(function() {
             bsStep({{ \App\utils\Code::turnStateToStep($show_apply) }});
             //bsStep(i) i 为number 可定位到第几步 如bsStep(2)/bsStep(3)
         })
+
+        // 设置 ajax 请求加载中动画
+        $(document).ajaxStart(function(){
+            $.blockUI({
+                message: $('#loading'),
+                css: {
+                    top:  ($(window).height() - 600) /2 + 'px',
+                    left: ($(window).width() - 400) /2 + 'px',
+                    width: '400px',
+                    border: 'none'
+                },
+                overlayCSS: { backgroundColor: '#fff' }
+            });
+        }).ajaxStop($.unblockUI);
     </script>
     @endif
 @endsection

@@ -76,6 +76,7 @@ Route::group(['middleware' => ['web']], function () {
 		Route::any('add_apply', ['uses' => 'ProposerController@add_apply','as' => 'proposer_add_apply']);
 		Route::any('reUploadApply', ['uses' => 'ProposerController@reUploadApply','as' => 'reUploadApply']);
 		Route::any('no_passUpload',['uses' => 'ProposerController@no_passUpload', 'as' => 'no_passUpload']);
+		Route::post('changePwd',['uses' => 'ProposerController@changePwd','as'=>'proposer_changePwd']);
 		Route::any('{id?}', ['uses' => 'ProposerController@index','as' => 'proposer_index']);
 	});
 

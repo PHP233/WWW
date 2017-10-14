@@ -70,7 +70,7 @@
                         { "data": "pivot.content",render: function (data, type, row, meta) {
                             let str;
                             if(data == null) {
-                                str =  '<a href="#" onclick="suggest('+ row.id + ','+ row.modify_time +')" class="btn btn-xs btn-info">审议</a>';
+                                str =  '<a href="#" onclick="suggest('+ row.id + ','+ row.modify_time +')" class="btn btn-xs btn-info">未审议</a>';
                             } else {
                                 content_arr.push(data);
                                 index = index + 1;

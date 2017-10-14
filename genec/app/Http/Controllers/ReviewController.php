@@ -267,9 +267,11 @@ class ReviewController extends Controller {
 		$reviewer = session('reviewer');
 		$reviewer->name = $request->name;
 		$reviewer->phone = $request->phone;
+		$reviewer->email = $request->email;
 		$reviewer->save();
 		session()->put('reviewer',$reviewer);
 		$res = new Res(Code::success,'更新个人信息成功！');
+		$res->setReply($reviewer);
 		return response()->json($res);
 	}
 

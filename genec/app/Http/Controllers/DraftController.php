@@ -44,7 +44,7 @@ class DraftController extends Controller {
 			}
 			$draft = Draft::where('apply_id',$request->apply_id)->first();
 			if($draft == null) {
-				Draft::create([
+				$draft = Draft::create([
 					'apply_id' => $request->apply_id,
 					'title' => $request->title.'.'.$ext,
 				]);

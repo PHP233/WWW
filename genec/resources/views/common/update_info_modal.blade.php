@@ -10,15 +10,15 @@
                     <tbody>
                     <tr>
                         <th>姓名</th>
-                        <td id="td_name">{{ $reviewer == null? '' : $reviewer->name }}</td>
+                        <td id="td_name">{{ $reviewer->name }}</td>
                     </tr>
                     <tr>
                         <th>电话</th>
-                        <td id="td_phone">{{ $reviewer == null? '' : $reviewer->phone }}</td>
+                        <td id="td_phone">{{ $reviewer->phone }}</td>
                     </tr>
                     <tr>
                         <th>邮箱</th>
-                        <td>{{ $reviewer == null? '' : $reviewer->email }}</td>
+                        <td id="td_email">{{ $reviewer->email }}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -26,23 +26,21 @@
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">姓名</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="name" value="{{ $reviewer == null? '' : $reviewer->name }}" placeholder="姓名" required>
+                            <input type="text" class="form-control" id="name" value="{{ $reviewer->name }}" placeholder="姓名" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="phone" class="col-sm-2 control-label">电话</label>
                         <div class="col-sm-8">
-                            <input type="number" class="form-control" id="phone" value="{{ $reviewer == null? '' : $reviewer->phone }}" placeholder="电话" required>
+                            <input type="number" class="form-control" id="phone" value="{{ $reviewer->phone }}" placeholder="电话" required>
                         </div>
                     </div>
-                    @if(!$reviewer->role)
-                        <div class="form-group">
-                            <label for="email" class="col-sm-2 control-label">邮箱</label>
-                            <div class="col-sm-8">
-                                <input type="email" class="form-control" id="email" value="{{ $reviewer == null? '' : $reviewer->email }}" placeholder="邮箱" required>
-                            </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">邮箱</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="email" value="{{ $reviewer->email }}" placeholder="邮箱" required>
                         </div>
-                    @endif
+                    </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="button" class="btn btn-default" onclick="updateInfo()">提交修改</button>
@@ -122,18 +120,29 @@
     function updateInfo() {
         let name = $('#self_info_modal #name').val();
         let phone = $('#self_info_modal #phone').val();
-        if(name.trim() == '' || phone.trim() == '') {
-            alert('姓名和电话不能为空！');
+        let email = $('#self_info_modal #email').val();
+        if(name.trim() == '' || phone.trim() == '' || email.trim() == '') {
+            alert('姓名电话邮箱不能为空！');
+            return;
+        }
+        if(phone.trim().length != 11) {
+            alert('手机号码必须为11位！');
+            return;
+        }
+        if(!checkEmail(email.trim())) {
+            alert('邮箱格式不对呦！');
             return;
         }
         $.post('{{ route('updateInfo') }}',{
             'name': name,
-            'phone': phone
+            'phone': phone,
+            'email': email
         },function (res) {
             toast(res.msg, $('#self_info_modal'));
-            $('span.username').text(name);
-            $('td#td_name').text(name);
-            $('td#td_phone').text(phone);
+            $('span.username').text(res.reply.name);
+            $('td#td_name').text(res.reply.name);
+            $('td#td_phone').text(res.reply.phone);
+            $('td#td_email').text(res.reply.email);
         });
     }
 
@@ -167,4 +176,8 @@
         })
     }
 
+    function checkEmail(email) {
+        var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+        return reg.test(email);
+    }
 </script>

@@ -12,6 +12,7 @@ use App\Model\Apply;
 use App\Model\Proposer;
 use App\Model\Reviewer;
 use App\utils\Code;
+use App\utils\Res;
 use \Illuminate\Http\Request;
 
 class ProposerController extends Controller {
@@ -192,5 +193,16 @@ class ProposerController extends Controller {
 			exit('保存文件失败！');
 		}
 		return redirect()->route('proposer_index', [$apply_id]);
+	}
+
+	public function changePwd(Request $request) {
+		$proposer = session('proposer');
+		if($proposer->password != $request->pwd0) {
+			return response()->json(new Res(Code::error,'原密码错误！'));
+		}
+		$proposer->password = $request->pwd1;
+		$proposer->save();
+		session()->flush();
+		return response()->json(new Res(Code::success,''));
 	}
 }
