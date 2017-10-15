@@ -15,7 +15,7 @@
             <div class="col-sm-5">
                 <select class="form-control" id="apply_list" name="apply_id" onchange="ajaxIsHasDraft();">
                 @foreach($applies as $apply)
-                    <option value="{{ $apply->id }}">{{ $apply->title }}</option>
+                    <option value="{{ $apply->id }}">{{ $apply->id }}号申请书：{{ $apply->title }}</option>
                 @endforeach
                 </select>
             </div>
@@ -74,7 +74,7 @@
                 if(!sure)
                     return;
                 if(res.reply.state == 3) {
-                    var str = '<p class="bg-danger" style="padding: 15px">该送审表——' + res.reply.title + '未通过审批，请重新上传送审表,并分配审议人审议' +
+                    var str = '<p class="bg-danger" style="padding: 15px">'+ res.reply.id + ' 号送审表 ' + res.reply.title + '未通过审批，请重新上传送审表,并分配审议人审议' +
                         '<br/>未通过意见：'+ res.reply.suggest +'</p>';
                     sign.html(str);
                 }

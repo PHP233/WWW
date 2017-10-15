@@ -56,12 +56,12 @@ return [
 
 	    'apply_uploads' => [
 	        'driver' => 'local',
-		    'root' => storage_path('app\uploads\apply'),
+		    'root' => storage_path('app/uploads/apply'),
 	    ],
 
 	    'draft_uploads' => [
 	        'driver' => 'local',
-		    'root' => storage_path('app\uploads\draft'),
+		    'root' => storage_path('app/uploads/draft'),
 	    ],
 
         's3' => [

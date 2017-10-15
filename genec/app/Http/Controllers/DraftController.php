@@ -35,11 +35,14 @@ class DraftController extends Controller {
 	 */
 	public function upload(Request $request) {
 		// 获取通过审批的申请书或送审表未通过审批的申请书
-		$drafts = Draft::where('state',Draft::NO_ASSIGN_WAIT_REVIEW)->orWhere('state',Draft::NO_PASS)->get();
+		/*$drafts = Draft::where('state',Draft::NO_ASSIGN_WAIT_REVIEW)->orWhere('state',Draft::NO_PASS)->get();
 		$applies = [];
 		foreach($drafts as $item) {
 			array_push($applies,Apply::find($item->apply_id));
-		}
+		}*/
+		$applies = Apply::where('state',Apply::PASS)
+		                ->orWhere('state',Apply::DRAFT_UPLOAD)
+		                ->get();
 		if($request->isMethod('post')) {
 			if(!$request->hasFile('draft')) {
 				exit('上传文件为空！');
@@ -124,7 +127,10 @@ class DraftController extends Controller {
 			$res->setMsg('已经上传过送审表：'.$draft->title);
 			if($draft->state == Draft::NO_PASS) {
 				$admin_id = Reviewer::where('role',Reviewer::ADMIN)->first()->id;
-				$draft->suggest = Suggest::where('draft_id',$draft->id)->where('reviewer_id',$admin_id)->first()->content;
+				$draft->suggest = Suggest::where('draft_id',$draft->id)
+				                         ->where('reviewer_id',$admin_id)
+				                         ->where('modify_time',$draft->modify_time)
+				                         ->first()->content;
 			}
 			$res->setReply($draft);
 		}
