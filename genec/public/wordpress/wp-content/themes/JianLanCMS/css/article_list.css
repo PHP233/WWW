@@ -1,0 +1,386 @@
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.top {
+	margin: 10px auto 10px;
+	width: 972px;
+}
+
+.logo {
+	width: 231px;
+}
+
+.top_ad {
+	margin-top: 25px;
+	padding-right: 15px;
+}
+
+.stmenu {
+	height: 40px;
+	background: url(../images/nav_li_bg.gif) no-repeat left center;
+}
+
+.suggestionsBox {
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	width: 286px;
+	border: 1px solid #ccc;
+	background: white;
+	color: #323232;
+}
+
+.hot_kwd {
+	left: 330px;
+	height: 45px;
+	line-height: 47px;
+}
+
+.map {
+	position: relative;
+	margin: 0 auto;
+	padding-left: 10px;
+	width: auto;
+	height: 30px;
+	border: 1px solid #CCC;
+	border-top: 0;
+	line-height: 30px;
+}
+
+.home_ico {
+	position: absolute;
+	left: 10px;
+	float: left;
+	padding-left: 22px;
+	background: url(../images/map_ico.gif) no-repeat left center;
+}
+
+.w972 {
+	position: relative;
+	margin: 0 auto;
+	width: auto;
+}
+
+#footer {
+	margin-top: 25px;
+	width: 100%;
+	height: auto;
+	border-top: 2px solid #0055a6;
+}
+
+.foot_con {
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 942px;
+}
+
+.ul_con {
+	float: left;
+	display: inline;
+	margin-left: 30px;
+	width: 550px;
+}
+
+.foot_con .h {
+	color: #0055a6;
+	font-weight: bold;
+}
+
+.foot_con ul {
+	float: left;
+	margin-right: 100px;
+}
+
+.foot_con li {
+	line-height: 2.1;
+}
+
+.foot_con li a {
+	color: #999;
+}
+
+.foot_con li a:hover {
+	color: #0055a6;
+}
+
+.txt_con {
+	float: left;
+	padding-top: 10px;
+	padding-left: 30px;
+	width: 300px;
+	height: 170px;
+	background: url(../images/footer_bg.png) no-repeat left -10px;
+}
+
+.txt_con p {
+	color: #999;
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+	line-height: 1.7;
+}
+
+#totop {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 999;
+	display: none;
+	overflow: hidden;
+	width: 71px;
+	height: 71px;
+	cursor: pointer;
+}
+#totop a {
+	display: block;
+	width: 65px;
+	height: 65px;
+	padding-top: 48px;
+	background: url(../images/totop.png) no-repeat;
+	text-align: center;
+	color: #888;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out
+}
+
+.h2_txt {
+	display: inline-block;
+	background: url(../images/jia_ico.gif) no-repeat left center;
+	padding-left: 12px
+}
+
+.article_list_con {
+	padding-top: 8px
+}
+
+.article_list_left {
+	height: auto;
+	width: 712px;
+	overflow: hidden
+}
+
+
+.h2_text {
+	display: inline-block;
+	background: url(../images/h2_ico.gif) no-repeat left center;
+	padding-left: 10px
+}
+
+.article_list_right {
+	width: 252px;
+	height: auto;
+	overflow: hidden
+}
+
+.rand_pic {
+	width: 250px;
+	height: auto;
+	border: 1px solid #ccc;
+	margin-bottom: 8px;
+	background: url(../images/top_news_bg.gif) no-repeat left top
+}
+
+.rand_pic h2 {
+	padding-left: 3px;
+	margin: 0 10px;
+	height: 35px;
+	border-bottom: 1px solid #CCC;
+	color: #2267b5;
+	font: bold 14px/35px Verdana,Geneva,sans-serif
+}
+
+.rand_pic ul {
+	margin-top: 8px
+}
+
+.rand_pic ul li {
+	float: left;
+	text-align: center;
+	padding-left: 0;
+	width: 108px;
+	height: 110px;
+	margin-left: 12px;
+	display: inline;
+	overflow: hidden
+}
+
+.rand_pic ul li img {
+	width: 100px;
+	height: 80px;
+	border: 1px solid #ccc;
+	padding: 3px
+}
+
+.rand_pic ul span {
+	display: block;
+	height: 25px;
+	line-height: 25px;
+	line-height: 20px!important
+}
+
+.rand_pic ul li a {
+	color: #666;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-out;
+	-ms-transition: all .4s ease-out;
+	-o-transition: all .4s ease-out;
+	transition: all .4s ease-out
+}
+
+.hot_tj {
+	width: 250px;
+	height: auto;
+	border: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 8px;
+	background: url(../images/top_news_bg.gif) no-repeat left top
+}
+
+.hot_tj ul {
+	background: url(../images/ul_bg.gif) no-repeat left 7px;
+	*background: url(../images/ul_bg.gif) no-repeat left 6px;
+	height: 290px;
+	width: 228px;
+	display: block;
+	overflow: hidden;
+	margin: 5px 0 0 12px
+}
+
+.hot_tj ul li {
+	line-height: 2.5;
+	padding-left: 20px
+}
+
+.hot_tj ul li a {
+	color: #666;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-out;
+	-ms-transition: all .4s ease-out;
+	-o-transition: all .4s ease-out;
+	transition: all .4s ease-out
+}
+
+.rand {
+	width: 250px;
+	height: 282px;
+	*height: 310px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	margin-bottom: 8px;
+	background: url(../images/top_news_bg.gif) no-repeat left top
+}
+
+.rand h2 {
+	padding-left: 3px;
+	margin: 0 10px;
+	height: 35px;
+	border-bottom: 1px solid #CCC;
+	color: #2267b5;
+	font: bold 14px/35px Verdana,Geneva,sans-serif
+}
+
+.rand ul {
+	margin-top: 5px;
+	margin-left: 12px
+}
+
+.rand ul li {
+	line-height: 2;
+	padding-left: 10px;
+	background: url(../images/dotted.gif) no-repeat left center
+}
+.article_lanmu {
+	border: 1px solid #CCC;
+	border-bottom: 0;
+	border-top: 0;
+	width: 710px
+}
+
+.h2_text {
+	display: inline-block;
+	background: url(../images/h2_ico.gif) no-repeat left center;
+	padding-left: 10px
+}
+
+.article_lanmu dl {
+	display: block;
+	padding: 15px;
+	border-bottom: 1px dotted #ccc
+}
+
+.article_lanmu dl a {
+	font-family: Verdana,Arial,Helvetica,sans-serif
+}
+
+.article_lanmu dl a:hover {
+	color: #2267b5
+}
+
+.article_lanmu .arc_title {
+	padding-bottom: 5px
+}
+
+.article_lanmu .arc_title a {
+	font: bold 14px/1.6 Verdana,Arial,Helvetica,sans-serif
+}
+
+.article_lanmu .arc_desc {
+	height: 64px;
+	line-height: 1.8;
+	overflow: hidden
+}
+
+.article_lanmu .arc_info {
+	padding-top: 5px;
+	color: #999
+}
+
+.article_lanmu .arc_info span {
+	padding-right: 5px
+}
+
+.article_lanmu .arc_info a {
+	color: #999
+}
+
+.fanye {
+	border: 1px solid #ccc;
+	border-top: 0;
+	height: auto;
+	padding: 8px;
+	width: 694px;
+	text-align: center
+}
+
+.fanye a {
+	display: inline-block;
+	line-height: 25px;
+	padding: 0 10px;
+	height: 25px;
+	border: 1px solid #ccc;
+	background: url(../images/w3c_tt.png) repeat-x left top;
+	border-radius: 3px
+}
+
+.fanye a:hover {
+	color: #2267b5;
+	background: url(../images/w3c_ttt.png) repeat-x left top
+}
+
+.fanye .current {
+	display: inline-block;
+	padding: 0 10px;
+	line-height: 25px;
+	height: 25px;
+	color: #2267b5;
+	font-weight: bold;
+	border: 1px solid #ccc;
+	background: url(../images/w3c_ttt.png) repeat-x left top;
+	border-radius: 3px
+}
