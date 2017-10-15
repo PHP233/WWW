@@ -45,6 +45,6 @@ class ApplyController extends Controller {
 				exit('无下载权限');
 			}
 		}
-		return response()->download(storage_path('app\uploads\apply\\'.$apply->proposer_id.'\\'.$id), $apply->title, ['application/msword']);
+		return response()->download(storage_path('app/uploads/apply/'.$apply->proposer_id.'/'.$id), $apply->title, ['application/msword']);
 	}
 }

@@ -113,7 +113,7 @@ class DraftController extends Controller {
 				exit('无下载权限');
 			}
 		}
-		return response()->download(storage_path('app\uploads\draft\\'.$id), $draft->title, ['application/msword']);
+		return response()->download(storage_path('app/uploads/draft/'.$id), $draft->title, ['application/msword']);
 	}
 
 	// 查看申请书是否已经上传过送审表

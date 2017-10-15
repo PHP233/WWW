@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="521e020b-58eb-4f96-9601-3181e1ae068b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/app/Http/Controllers/ApplyController.php" afterPath="$PROJECT_DIR$/genec/app/Http/Controllers/ApplyController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/app/Http/Controllers/DraftController.php" afterPath="$PROJECT_DIR$/genec/app/Http/Controllers/DraftController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/config/filesystems.php" afterPath="$PROJECT_DIR$/genec/config/filesystems.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/reviewer/upload_draft.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/reviewer/upload_draft.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DraftController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DraftController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/DraftController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="131" column="82" lean-forward="false" selection-start-line="131" selection-start-column="82" selection-end-line="131" selection-end-column="82" />
+            <state relative-caret-position="270">
+              <caret line="115" column="68" lean-forward="false" selection-start-line="115" selection-start-column="68" selection-end-line="115" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -81,8 +79,8 @@
       <file leaf-file-name="ApplyController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ApplyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="55" />
+            <state relative-caret-position="722">
+              <caret line="47" column="92" lean-forward="false" selection-start-line="47" selection-start-column="92" selection-end-line="47" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -98,10 +96,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filesystems.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="filesystems.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/genec/config/filesystems.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
+            <state relative-caret-position="1197">
               <caret line="63" column="56" lean-forward="true" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
               <folding />
             </state>
@@ -213,15 +211,15 @@
         <option value="$PROJECT_DIR$/genec/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/genec/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/checker/draft_checker.blade.php" />
-        <option value="$PROJECT_DIR$/genec/app/Http/Controllers/ApplyController.php" />
         <option value="$PROJECT_DIR$/genec/app/Http/Controllers/CheckerController.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/checker/apply_checker.blade.php" />
         <option value="$PROJECT_DIR$/genec/app/Http/Middleware/Authenticate.php" />
         <option value="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" />
         <option value="$PROJECT_DIR$/genec/public/static/assets/js/scripts/review.js" />
-        <option value="$PROJECT_DIR$/genec/app/Http/Controllers/DraftController.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/reviewer/upload_draft.blade.php" />
         <option value="$PROJECT_DIR$/genec/config/filesystems.php" />
+        <option value="$PROJECT_DIR$/genec/app/Http/Controllers/ApplyController.php" />
+        <option value="$PROJECT_DIR$/genec/app/Http/Controllers/DraftController.php" />
       </list>
     </option>
   </component>
@@ -245,8 +243,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
-    <option name="y" value="73" />
+    <option name="x" value="92" />
+    <option name="y" value="178" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -305,7 +303,22 @@
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
@@ -440,7 +453,7 @@
       <workItem from="1507773476238" duration="30326000" />
       <workItem from="1507881410208" duration="13078000" />
       <workItem from="1507962301208" duration="27544000" />
-      <workItem from="1508060406775" duration="6663000" />
+      <workItem from="1508060406775" duration="7322000" />
     </task>
     <task id="LOCAL-00001" summary="zjm">
       <created>1504500480456</created>
@@ -473,10 +486,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="494439000" />
+    <option name="totallyTimeSpent" value="495098000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="73" width="1386" height="788" extended-state="0" />
+    <frame x="92" y="178" width="1386" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13951735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -823,14 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ApplyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ReviewController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1919">
@@ -843,14 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/DraftController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="131" column="82" lean-forward="false" selection-start-line="131" selection-start-column="82" selection-end-line="131" selection-end-column="82" />
           <folding />
         </state>
       </provider>
@@ -909,8 +906,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/genec/config/filesystems.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="1197">
           <caret line="63" column="56" lean-forward="true" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ApplyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="47" column="92" lean-forward="false" selection-start-line="47" selection-start-column="92" selection-end-line="47" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/DraftController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="115" column="68" lean-forward="false" selection-start-line="115" selection-start-column="68" selection-end-line="115" selection-end-column="68" />
           <folding />
         </state>
       </provider>
