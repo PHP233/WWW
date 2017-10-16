@@ -20,6 +20,7 @@ Route::any('reviewer/logout', ['uses' => 'ReviewController@logout', 'as' => 'rev
 Route::any('proposer/login', ['uses' => 'ProposerController@login','as' => 'proposer_login']);
 Route::any('proposer/register', ['uses' => 'ProposerController@register','as' => 'proposer_register']);
 Route::any('proposer/logout', ['uses' => 'ProposerController@logout','as' => 'proposer_logout']);
+Route::post('changePwd', ['uses' => 'ReviewController@changePwd', 'as' => 'changePwd']);
 Route::get('test/{r?}','Test@test');
 
 
@@ -48,7 +49,6 @@ Route::group(['middleware' => ['web']], function () {
 		Route::get('publish', ['uses' => 'ReviewController@publish','as' => 'publish']);
 		Route::get('dropProject', ['uses' => 'ReviewController@dropProject','as' => 'dropProject']);
 		Route::post('updateInfo', ['uses' => 'ReviewController@updateInfo', 'as' => 'updateInfo']);
-		Route::post('changePwd', ['uses' => 'ReviewController@changePwd', 'as' => 'changePwd']);
 
 		Route::group(['prefix' => 'apply', 'as' => 'apply::'], function () {
 			Route::any('/', ['uses' => 'ApplyController@index', 'as' => 'index']);
