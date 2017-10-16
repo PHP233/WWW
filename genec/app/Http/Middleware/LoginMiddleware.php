@@ -17,6 +17,9 @@ class LoginMiddleware {
 	 * 登录控制器：如果没有登录进行登录
 	 */
 	public function handle($request, Closure $next) {
+		if($request->is('wordpress/*') || $request->is('wordpress')) {
+			return $next($request);
+		}
 		if($request->is('reviewer/*')) {
 			if(!session('reviewer')) {
 				return redirect()->route('reviewer_login');
