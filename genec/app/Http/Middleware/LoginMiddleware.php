@@ -19,11 +19,11 @@ class LoginMiddleware {
 	public function handle($request, Closure $next) {
 		if($request->is('reviewer/*')) {
 			if(!session('reviewer')) {
-				return redirect('reviewer/login');
+				return redirect()->route('reviewer_login');
 			}
 		} else if($request->is('proposer') || $request->is('proposer/*')) {
 			if(!session('proposer')) {
-				return redirect('proposer/login');
+				return redirect()->route('proposer_login');
 			}
 		}
 		return $next($request);

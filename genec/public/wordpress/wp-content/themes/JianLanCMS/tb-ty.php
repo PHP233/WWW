@@ -20,7 +20,7 @@
                 <li><a href="/wordpress?cat=4">最新公告</a></li>
                 <li><a href="/wordpress?cat=5">新闻资讯</a></li>
                 <li><a href="/wordpress?cat=6">行业动态</a></li>
-                <li><a href="/proposer/login">项目申报</a></li>
+                <li><a href="/proposer">项目申报</a></li>
                 <li><a href="#">联系方式</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
