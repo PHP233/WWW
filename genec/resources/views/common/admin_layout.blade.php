@@ -130,24 +130,6 @@ License: You must have a valid license purchased only from themeforest(the above
     <div class="page-content-wrapper">
         <!-- BEGIN CONTENT BODY -->
         <div class="page-content">
-            <div class="page-bar">
-                <ul class="page-breadcrumb">
-                    @section('level_link')
-                    <li>
-                        <a href="index.html">Home</a>
-                        <i class="fa fa-circle"></i>
-                    </li>
-                    <li>
-                        <a href="#">Tables</a>
-                        <i class="fa fa-circle"></i>
-                    </li>
-                    <li>
-                        <span>Datatables</span>
-                    </li>
-                    @show
-                </ul>
-            </div>
-            <!-- END PAGE BAR -->
             <!-- BEGIN PAGE TITLE-->
             <h3 class="page-title">
                 {{--Managed Datatables
@@ -248,12 +230,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <script>
     const typeArr = ['','未审议','已审议','未通过审批','已批准'];
     const url_arr = [
-        '/genec/public/reviewer/apply',
-        '/genec/public/reviewer/draft',
-        '/genec/public/reviewer/checker',
-        '/genec/public/reviewer/checker/toDraft',
-        '/genec/public/reviewer/draft/upload',
-        '/genec/public/reviewer/reviewer_admin',
+        '/reviewer/apply',
+        '/reviewer/draft',
+        '/reviewer/checker',
+        '/reviewer/checker/toDraft',
+        '/reviewer/draft/upload',
+        '/reviewer/reviewer_admin',
     ];
 
     // 判断请求路径决定左侧导航按钮的高亮
@@ -306,7 +288,7 @@ License: You must have a valid license purchased only from themeforest(the above
     function toReviewerAdmin() {
         var now = '{{ route('reviewer_admin') }}';
         if(location.href != now) {
-            window.location.href = now;
+            location.href = now;
         }
     }
 </script>
