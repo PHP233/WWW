@@ -110,7 +110,7 @@
                         $(btn).html('<a href="javascript:reviewList('+ res.reply.id +','+ res.reply.modify_time + ',\''+ res.reply.title +'\');">查看审议情况/审批</a>');
                         toast(res.msg, assignTaskModal);
                     } else {
-                        alert(msg);
+                        alert(res.msg);
                     }
                 },
                 error: function (error) {

@@ -63,9 +63,10 @@ class ProposerController extends Controller {
 	/*
 	 * 申请人主页，将申请书列表显示
 	 */
-	public function index(Request $request, $id = null) {
+	public function index($id = null) {
 		$proposer = session()->get('proposer');
 		$applies = $proposer->applies()->orderBy('created_at','desc')->get();
+		$admin_id = Reviewer::where('role',1)->first()->id;
 		session()->put('applies',$applies);
 		$show_apply = Apply::find($id);
 		$isOwner = true;
@@ -74,11 +75,11 @@ class ProposerController extends Controller {
 		}
 		if (!isset($id) || !$isOwner) {
 			return view('proposer/index', [
-				'show_apply' => $applies->first()
+				'show_apply' => $applies->first(),
+				'admin_id' => $admin_id,
 			]);
 		}
 		$show_apply = Apply::find($id);
-		$admin_id = Reviewer::where('role',1)->first()->id;
 		return view('proposer/index',[
 			'show_apply'=> $show_apply,
 			'admin_id' => $admin_id,

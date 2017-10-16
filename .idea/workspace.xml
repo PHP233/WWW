@@ -2,8 +2,969 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="521e020b-58eb-4f96-9601-3181e1ae068b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/sider_left.php" afterPath="$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/sider_left.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/tb-ty.php" afterPath="$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/tb-ty.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/ChangeLog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/README.VENDOR" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/RELEASE-DATE-3.5.8.2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/browse_foreigners.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/bs_disp_as_mime_type.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/bs_play_media.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/changelog.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/chk_rel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/config.sample.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_datadict.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_events.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_export.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_import.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_operations.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_printview.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_qbe.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_routines.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_sql.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_structure.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_tracking.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/db_triggers.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/docs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/enum_editor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/examples/config.manyhosts.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/examples/create_tables.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/examples/create_tables_drizzle.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/examples/openid.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/examples/signon-script.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/examples/signon.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/examples/swekey.sample.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/examples/upgrade_tables_mysql_4_1_2+.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/export.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/file_echo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/gis_data_editor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/import.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/import_status.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/OpenStreetMap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/canvg/MIT-LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/canvg/canvg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/canvg/flashcanvas.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/canvg/flashcanvas.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/codemirror/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/codemirror/lib/codemirror.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/codemirror/mode/mysql/mysql.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/cross_framing_protection.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/date.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/db_operations.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/db_search.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/db_structure.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/dom-drag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/export.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/get_image.js.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/gis_data_editor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/import.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/indexes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jqplot/excanvas.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jqplot/jquery.jqplot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jqplot/plugins/jqplot.barRenderer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jqplot/plugins/jqplot.canvasAxisLabelRenderer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jqplot/plugins/jqplot.canvasTextRenderer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jqplot/plugins/jqplot.categoryAxisRenderer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jqplot/plugins/jqplot.cursor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jqplot/plugins/jqplot.dateAxisRenderer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jqplot/plugins/jqplot.highlighter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jqplot/plugins/jqplot.pieRenderer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jqplot/plugins/jqplot.pointLabels.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/jquery-1.6.2+fix-9521.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/jquery-ui-1.8.16.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/jquery.cookie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/jquery.event.drag-2.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/jquery.json-2.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/jquery.mousewheel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/jquery.qtip-1.0.0-rc3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/jquery.sortableTable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/jquery.sprintf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/jquery.svg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/jquery.tablesorter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/jquery/timepicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/keyhandler.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/makegrid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/messages.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/navigation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/OpenLayers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/cloud-popup-relative.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/drag-rectangle-off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/drag-rectangle-on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/east-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/layer-switcher-maximize.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/layer-switcher-minimize.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/marker-blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/marker-gold.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/marker-green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/measuring-stick-off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/measuring-stick-on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/north-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/panning-hand-off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/panning-hand-on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/slider.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/south-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/west-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/zoom-minus-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/zoom-plus-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/zoom-world-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/img/zoombar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/framedCloud.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/google.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/ie6-style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/add_point_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/add_point_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/drag-rectangle-off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/drag-rectangle-on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/draw_line_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/draw_line_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/draw_point_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/draw_point_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/draw_polygon_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/draw_polygon_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/editing_tool_bar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/move_feature_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/move_feature_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/navigation_history.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/overview_replacement.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/pan-panel-NOALPHA.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/pan-panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/pan_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/pan_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/panning-hand-off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/panning-hand-on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/remove_point_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/remove_point_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/ruler.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/save_features_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/save_features_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/view_next_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/view_next_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/view_previous_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/view_previous_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/zoom-panel-NOALPHA.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/img/zoom-panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/openlayers/theme/default/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/pmd/ajax.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/pmd/history.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/pmd/iecanvas.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/pmd/move.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/querywindow.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/replication.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/rte/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/rte/events.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/rte/routines.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/rte/triggers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/server_plugins.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/server_privileges.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/server_status.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/server_status_monitor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/server_synchronize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/server_variables.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/sql.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/tbl_change.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/tbl_chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/tbl_gis_visualization.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/tbl_relation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/tbl_select.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/tbl_structure.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/tbl_zoom_plot_jqplot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/js/update-location.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/Advisor.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/Config.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/Error.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/Error_Handler.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/File.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/Index.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/List.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/List_Database.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/Message.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/PDF.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/PMA.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/Partition.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/RecentTable.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/StorageEngine.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/Table.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/Theme.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/Theme_Manager.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/Tracker.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/advisory_rules.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/auth/config.auth.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/auth/cookie.auth.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/auth/http.auth.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/auth/signon.auth.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/auth/swekey/authentication.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/auth/swekey/musbe-ca.crt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/auth/swekey/swekey.auth.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/auth/swekey/swekey.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/bfShapeFiles/ShapeFile.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/blobstreaming.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/blowfish.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/bookmark.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/build_html_for_db.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/charset_conversion.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/check_user_privileges.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/cleanup.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/common.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/common.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/config.default.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/config.values.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/config/ConfigFile.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/config/Form.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/config/FormDisplay.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/config/FormDisplay.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/config/config_functions.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/config/messages.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/config/setup.forms.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/config/user_preferences.forms.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/config/validate.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/core.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/data_dictionary_relations.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/data_drizzle.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/data_mysql.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/database_interface.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/db_common.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/db_info.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/db_links.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/db_structure.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/db_table_exists.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/dbi/drizzle-wrappers.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/dbi/drizzle.dbi.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/dbi/mysql.dbi.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/dbi/mysqli.dbi.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/display_change_password.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/display_create_database.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/display_create_table.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/display_export.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/display_import.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/display_import_ajax.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/display_select_lang.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/display_tbl.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/bdb.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/berkeleydb.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/binlog.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/innobase.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/innodb.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/memory.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/merge.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/mrg_myisam.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/myisam.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/ndbcluster.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/pbms.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/engines/pbxt.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/error.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/codegen.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/csv.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/excel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/htmlword.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/json.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/latex.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/mediawiki.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/ods.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/odt.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/pdf.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/php_array.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/sql.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/texytext.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/xml.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/export/yaml.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/file_listing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/footer.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/gis/pma_gis_factory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/gis/pma_gis_geometry.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/gis/pma_gis_geometrycollection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/gis/pma_gis_linestring.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/gis/pma_gis_multilinestring.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/gis/pma_gis_multipoint.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/gis/pma_gis_multipolygon.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/gis/pma_gis_point.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/gis/pma_gis_polygon.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/gis/pma_gis_visualization.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/gis_visualization.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/grab_globals.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/header.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/header_http.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/header_meta_style.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/header_printview.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/header_scripts.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/iconv_wrapper.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import/csv.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import/docsql.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import/ldi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import/ods.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import/shp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import/sql.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import/upload/apc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import/upload/noplugin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import/upload/uploadprogress.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/import/xml.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/information_schema_relations.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/ip_allow_deny.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/js_escape.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/kanji-encoding.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/language_stats.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/logging.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/mime.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/mult_submits.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/mysql_charsets.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/navigation_header.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/ob.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/opendocument.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/parse_analyze.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/php-gettext/gettext.inc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/php-gettext/gettext.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/php-gettext/streams.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/plugin_interface.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/pmd_common.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/relation.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/relation_cleanup.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/replication.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/replication_gui.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/rte/rte_events.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/rte/rte_export.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/rte/rte_footer.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/rte/rte_list.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/rte/rte_main.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/rte/rte_routines.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/rte/rte_triggers.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/rte/rte_words.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/sanitizing.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/schema/Dia_Relation_Schema.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/schema/Eps_Relation_Schema.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/schema/Export_Relation_Schema.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/schema/Pdf_Relation_Schema.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/schema/Svg_Relation_Schema.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/schema/User_Schema.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/schema/Visio_Relation_Schema.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/select_lang.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/select_server.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/server_common.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/server_links.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/server_synchronize.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/server_variables_doc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/session.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/sql_query_form.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/sqlparser.data.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/sqlparser.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/sqlvalidator.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/sqlvalidator.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/string.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/string_mb.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/string_native.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/string_type_ctype.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/string_type_native.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/sysinfo.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tbl_common.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tbl_info.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tbl_links.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tbl_properties.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tbl_replace_fields.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tbl_select.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/LICENSE.TXT" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/README.TXT" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/config/tcpdf_config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/encodings_maps.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/fonts/dejavu-fonts-ttf-2.33/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/fonts/dejavusans.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/fonts/dejavusans.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/fonts/dejavusans.z" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/fonts/dejavusansb.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/fonts/dejavusansb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/fonts/dejavusansb.z" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/fonts/helvetica.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/htmlcolors.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/tcpdf.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/tcpdf/unicode_data.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/TEMPLATE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/TEMPLATE_MIMETYPE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/application_octetstream__download.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/application_octetstream__hex.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/generator.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/global.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/image_jpeg__inline.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/image_jpeg__link.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/image_png__inline.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/template_generator.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/template_generator_mimetype.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/text_plain__dateformat.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/text_plain__external.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/text_plain__formatted.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/text_plain__imagelink.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/text_plain__link.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/text_plain__longToIpv4.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/text_plain__sql.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/transformations/text_plain__substr.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/url_generating.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/user_preferences.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/user_preferences.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/vendor_config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/zip.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/libraries/zip_extension.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/license.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/locale/en_GB/LC_MESSAGES/phpmyadmin.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/locale/zh_CN/LC_MESSAGES/phpmyadmin.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/locale/zh_TW/LC_MESSAGES/phpmyadmin.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/main.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/navigation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/phpinfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/phpmyadmin.css.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/phpunit.xml.nocoverage" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/pmd_display_field.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/pmd_general.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/pmd_pdf.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/pmd_relation_new.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/pmd_relation_upd.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/pmd_save_pos.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/prefs_forms.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/prefs_manage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/print.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/querywindow.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/schema_edit.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/schema_export.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_binlog.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_collations.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_databases.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_engines.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_export.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_import.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_plugins.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_privileges.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_replication.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_sql.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_status.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_synchronize.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/server_variables.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/frames/config.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/frames/form.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/frames/index.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/frames/menu.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/frames/servers.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/lib/ConfigGenerator.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/lib/common.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/lib/form_processing.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/lib/index.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/scripts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/setup/validate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/show_config_errors.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/sql.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_addfield.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_alter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_change.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_chart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_export.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_get_field.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_gis_visualization.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_import.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_indexes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_move_copy.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_operations.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_printview.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_relation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_replace.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_row_action.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_select.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_sql.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_structure.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_tracking.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_triggers.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/tbl_zoom_select.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/dot.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/css/theme_left.css.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/css/theme_print.css.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/css/theme_right.css.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/ajax_clock_small.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/arrow_ltr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/arrow_rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_bookmark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_browse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_calendar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_chart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_comment.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_dbstatistics.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_deltbl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_docs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_drop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_empty.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_engine.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_event_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_events.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_export.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_ftext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_globe.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_help.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_home.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_import.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_index.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_inline_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_insrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_minus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_more.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_newdb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_newtbl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_nextpage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_plus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_primary.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_print.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_props.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_relations.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_routine_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_routines.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_save.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_sbrowse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_selboard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_snewtbl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_spatial.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_sql.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_sqlhelp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_tblanalyse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_tblexport.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_tblimport.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_tblops.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_tbloptimize.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_tipp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_trigger_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_triggers.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_unique.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_usradd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_usrcheck.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_usrdrop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_usredit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_usrlist.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_view.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/b_views.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_browse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_deltbl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_drop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_empty.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_export.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_ftext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_index.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_insrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_nextpage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_primary.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_sbrowse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_spatial.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/bd_unique.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/cleardot.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/col_drop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/col_pointer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/col_pointer_ver.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/docs_menu_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/east-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/error.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/eye.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/eye_grey.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/item_ltr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/item_rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/logo_left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/logo_right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/more.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/new_data.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/new_data_hovered.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/new_data_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/new_data_selected_hovered.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/new_struct.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/new_struct_hovered.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/new_struct_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/new_struct_selected_hovered.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/north-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pause.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/play.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/2leftarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/2leftarrow_m.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/2rightarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/2rightarrow_m.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/FieldKey_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/Field_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/Field_small_char.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/Field_small_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/Field_small_int.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/Header.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/Header_Linked.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/and_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/ang_direct.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/bord.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/bottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/def.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/display_field.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/downarrow1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/downarrow2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/downarrow2_m.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/exec.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/exec_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/grid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/help.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/help_relation.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/left_panel_butt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/left_panel_tab.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/minus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/or_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/pdf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/plus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/query_builder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/relation.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/reload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/resize.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/rightarrow1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/rightarrow2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/save.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/small_tab.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/table.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/toggle_lines.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/top_panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/pmd/uparrow2_m.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_asc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_asci.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_attention.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_cog.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_db.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_desc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_error2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_fulltext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_host.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_lang.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_loggoff.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_notice.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_okay.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_partialtext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_passwd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_process.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_really.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_reload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_replication.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_rights.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_sortable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_status.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_success.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_sync.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_tbl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_theme.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_vars.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/s_views.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/south-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/spacer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/sprites.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/toggle-ltr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/toggle-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/vertical_line.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/west-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/window-new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/zoom-minus-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/zoom-plus-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/img/zoom-world-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/info.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-bg_glass_75_dadada_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-icons_454545_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-icons_888888_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/images/ui-icons_cd0a0a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/jquery/jquery-ui-1.8.16.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/layout.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/original/sprites.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/css/theme_left.css.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/css/theme_print.css.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/css/theme_right.css.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/ajax_clock_small.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/arrow_ltr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/arrow_rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/asc_order.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_bookmark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_browse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_calendar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_chart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_comment.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_dbstatistics.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_deltbl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_docs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_docsql.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_drop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_empty.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_engine.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_event_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_events.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_export.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_firstpage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_ftext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_globe.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_help.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_home.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_import.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_index.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_inline_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_insrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_lastpage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_minus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_more.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_newdb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_newtbl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_nextpage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_pdfdoc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_plus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_prevpage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_primary.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_print.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_props.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_relations.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_routine_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_routines.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_save.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_sbrowse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_sdb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_selboard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_snewtbl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_spatial.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_sql.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_sqldoc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_sqlhelp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_tblanalyse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_tblexport.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_tblimport.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_tblops.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_tbloptimize.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_tipp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_trigger_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_triggers.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_unique.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_usradd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_usrcheck.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_usrdrop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_usredit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_usrlist.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_view.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/b_views.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_browse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_deltbl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_drop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_empty.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_export.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_firstpage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_ftext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_index.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_insrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_lastpage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_nextpage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_prevpage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_primary.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_sbrowse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_spatial.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/bd_unique.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/body_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/col_drop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/col_pointer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/col_pointer_ver.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/database.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/database_list_li_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/docs_menu_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/east-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/error.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/eye.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/eye_grey.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/input_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/item.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/item_ltr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/item_rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/left_nav_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/logo_left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/logo_right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/marked_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/more.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/new_data.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/new_data_hovered.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/new_data_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/new_data_selected_hovered.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/new_struct.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/new_struct_hovered.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/new_struct_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/new_struct_selected_hovered.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/north-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pause.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/php_sym.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/play.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pma_logo2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/2leftarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/2leftarrow_m.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/2rightarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/2rightarrow_m.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/FieldKey_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/Field_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/Field_small_char.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/Field_small_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/Field_small_int.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/Header.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/Header_Linked.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/and_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/ang_direct.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/bord.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/bottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/def.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/display_field.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/downarrow1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/downarrow2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/downarrow2_m.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/exec.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/exec_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/grid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/help.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/help_relation.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/left_panel_butt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/left_panel_tab.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/minus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/or_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/pdf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/plus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/query_builder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/relation.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/reload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/resize.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/rightarrow1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/rightarrow2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/save.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/small_tab.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/table.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/toggle_lines.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/top_panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/pmd/uparrow2_m.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_asc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_asci.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_attention.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_cancel2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_cog.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_db.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_desc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_error2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_fulltext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_host.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_lang.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_loggoff.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_notice.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_okay.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_partialtext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_passwd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_process.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_really.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_reload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_replication.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_rights.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_sortable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_status.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_success.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_sync.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_tbl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_theme.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_vars.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/s_views.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/south-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/spacer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/sprites.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/tab_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/tab_hover_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/tabactive_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/toggle-ltr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/toggle-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/vertical_line.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/west-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/window-new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/zoom-minus-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/zoom-plus-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/img/zoom-world-mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/info.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_glass_75_dadada_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-icons_454545_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-icons_888888_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/images/ui-icons_cd0a0a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/jquery/jquery-ui-1.8.16.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/layout.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/pmahomme/sprites.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/sprites.css.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/themes/svg_gradient.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/transformation_overview.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/transformation_wrapper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/url.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/user_password.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/version_check.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/view_create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/view_operations.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpMyAdmin/webapp.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" afterPath="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +978,7 @@
       <file leaf-file-name="DraftController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/DraftController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="1957">
               <caret line="115" column="68" lean-forward="false" selection-start-line="115" selection-start-column="68" selection-end-line="115" selection-end-column="68" />
               <folding />
             </state>
@@ -27,10 +988,9 @@
       <file leaf-file-name="upload_draft.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/upload_draft.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="323">
               <caret line="17" column="74" lean-forward="false" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
               <folding>
-                <marker date="1508065025562" expanded="true" signature="705:4034" ph="..." />
                 <marker date="1508065025562" expanded="true" signature="2132:2234" ph="..." />
                 <marker date="1508065025562" expanded="true" signature="2145:2233" ph="..." />
                 <marker date="1508065025562" expanded="true" signature="2273:2962" ph="..." />
@@ -49,14 +1009,14 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="162" column="38" lean-forward="true" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="38" />
+            <state relative-caret-position="3078">
+              <caret line="162" column="38" lean-forward="false" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sider_left.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sider_left.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/sider_left.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
@@ -66,41 +1026,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tb-ty.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/tb-ty.php">
+      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/public/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-642">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Suggest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/app/Model/Suggest.php">
+      <file leaf-file-name="tb-ty.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/tb-ty.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+            <state relative-caret-position="418">
+              <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplyController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ApplyController.php">
+      <file leaf-file-name="ReviewController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ReviewController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="47" column="92" lean-forward="false" selection-start-line="47" selection-start-column="92" selection-end-line="47" selection-end-column="92" />
+            <state relative-caret-position="1919">
+              <caret line="119" column="7" lean-forward="false" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apply_admin.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="102" column="41" lean-forward="false" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -109,18 +1069,18 @@
       <file leaf-file-name="ProposerController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="107" column="69" lean-forward="false" selection-start-line="107" selection-start-column="69" selection-end-line="107" selection-end-column="69" />
+            <state relative-caret-position="304">
+              <caret line="78" column="40" lean-forward="false" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filesystems.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/config/filesystems.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="63" column="56" lean-forward="false" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
+            <state relative-caret-position="361">
+              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -191,7 +1151,6 @@
         <option value="$PROJECT_DIR$/genec/app/utils/Code.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/common/reviewer/apply_modal.blade.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/common/reviewer/page-sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/common/admin_layout.blade.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/reviewer/draft_admin.blade.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/reviewer/reviewer_admin.blade.php" />
@@ -211,7 +1170,6 @@
         <option value="$PROJECT_DIR$/genec/app/Http/Controllers/CheckerController.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/checker/apply_checker.blade.php" />
         <option value="$PROJECT_DIR$/genec/app/Http/Middleware/Authenticate.php" />
-        <option value="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" />
         <option value="$PROJECT_DIR$/genec/public/static/assets/js/scripts/review.js" />
         <option value="$PROJECT_DIR$/genec/resources/views/reviewer/upload_draft.blade.php" />
         <option value="$PROJECT_DIR$/genec/config/filesystems.php" />
@@ -220,6 +1178,8 @@
         <option value="$PROJECT_DIR$/genec/public/wordpress/wp-config.php" />
         <option value="$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/tb-ty.php" />
         <option value="$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/sider_left.php" />
+        <option value="$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php" />
+        <option value="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" />
       </list>
     </option>
   </component>
@@ -242,9 +1202,9 @@
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-5" />
-    <option name="y" value="45" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-114" />
+    <option name="y" value="72" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -285,8 +1245,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,52 +1261,56 @@
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wordpress" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wordpress" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wordpress" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wordpress" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="JianLanCMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="proposer" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
-    <property name="last_opened_file_path" value="D:/phpStudy/php/php-5.6.27-nts/php.gif" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/genec/public/index.php" />
     <property name="nodejs_interpreter_path" value="D:/node/node" />
   </component>
   <component name="RecentsManager">
@@ -382,7 +1344,7 @@
       <TestRunner class="ExampleTest" file="$PROJECT_DIR$/genec/tests/ExampleTest.php" method="testBasicExample" scope="Method" />
     </configuration>
     <configuration default="true" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" />
-    <configuration name="run" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" host="127.0.0.1" />
+    <configuration name="run" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" host="127.0.0.1" router_script="$PROJECT_DIR$/genec/public/index.php" />
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="PHP Built-in Web Server.run" />
       <item index="1" class="java.lang.String" itemvalue="PHPUnit.ExampleTest.testBasicExample" />
@@ -451,7 +1413,8 @@
       <workItem from="1507773476238" duration="30326000" />
       <workItem from="1507881410208" duration="13078000" />
       <workItem from="1507962301208" duration="27544000" />
-      <workItem from="1508060406775" duration="8187000" />
+      <workItem from="1508060406775" duration="10049000" />
+      <workItem from="1508118248600" duration="602000" />
     </task>
     <task id="LOCAL-00001" summary="zjm">
       <created>1504500480456</created>
@@ -484,18 +1447,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="495963000" />
+    <option name="totallyTimeSpent" value="498427000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="45" width="1386" height="788" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23453997" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23903178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22295082" sideWeight="0.5030257" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18654434" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -528,13 +1491,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/common/reviewer/modal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genec/app/utils/Code.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -648,20 +1604,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wordpress/wp-content/themes/JianLanCMS/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="162" column="39" lean-forward="false" selection-start-line="162" selection-start-column="39" selection-end-line="162" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wordpress/wp-content/themes/JianLanCMS/sider_left.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="45" lean-forward="false" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-content/themes/JianLanCMS/index.php" />
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-content/themes/JianLanCMS/sider_left.php" />
     <entry file="file://$PROJECT_DIR$/genec/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -674,7 +1618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="912">
           <caret line="53" column="52" lean-forward="false" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -697,7 +1640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,9 +1663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#118#148#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,7 +1677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="27" column="143" lean-forward="false" selection-start-line="27" selection-start-column="143" selection-end-line="27" selection-end-column="143" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -764,19 +1702,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="60" column="29" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genec/public/static/assets/js/scripts/review.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2717">
           <caret line="143" column="20" lean-forward="false" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,14 +1713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -803,19 +1724,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ReviewController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1919">
-          <caret line="119" column="7" lean-forward="false" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genec/app/Model/Suggest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,9 +1735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1455289520000" expanded="true" signature="0:552" ph="&lt;IfModule mod_rewrite.c&gt;" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -833,7 +1742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-642">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,15 +1749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="107" column="69" lean-forward="false" selection-start-line="107" selection-start-column="69" selection-end-line="107" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -873,13 +1772,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/DraftController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="1957">
           <caret line="115" column="68" lean-forward="false" selection-start-line="115" selection-start-column="68" selection-end-line="115" selection-end-column="68" />
           <folding />
         </state>
@@ -887,10 +1785,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/upload_draft.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="323">
           <caret line="17" column="74" lean-forward="false" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
           <folding>
-            <marker date="1508065025562" expanded="true" signature="705:4034" ph="..." />
             <marker date="1508065025562" expanded="true" signature="2132:2234" ph="..." />
             <marker date="1508065025562" expanded="true" signature="2145:2233" ph="..." />
             <marker date="1508065025562" expanded="true" signature="2273:2962" ph="..." />
@@ -908,15 +1805,15 @@
     <entry file="file://$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/tb-ty.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="44" />
+          <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="162" column="38" lean-forward="true" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="38" />
+        <state relative-caret-position="3078">
+          <caret line="162" column="38" lean-forward="false" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -925,6 +1822,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ReviewController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1919">
+          <caret line="119" column="7" lean-forward="false" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="102" column="41" lean-forward="false" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="78" column="40" lean-forward="false" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding />
         </state>
       </provider>
