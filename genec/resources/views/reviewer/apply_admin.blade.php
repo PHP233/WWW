@@ -32,7 +32,7 @@
             <td> <span class="talbe-span {{ $apply->getStateClass() }}">{{ $apply->state() }}</span> </td>
             <td> {{ $apply->modify_time }} </td>
             <td> <a href="{{ $apply->adviceBtn()['url'] }}">{{ $apply->adviceBtn()['btnName'] }}</a> </td>
-            <td><a href="{{ url('reviewer/apply/download/'.$apply->id) }}">下载</a> </td>
+            <td><a href="{{ url('reviewer/apply/download/'.$apply->id) }}"><span class="glyphicon glyphicon-cloud-download"></span></a> </td>
         </tr>
     @endforeach
 @endsection

@@ -13,7 +13,9 @@ use App\Model\Proposer;
 use App\Model\Reviewer;
 use App\utils\Code;
 use App\utils\Res;
+use App\utils\SendEmail;
 use \Illuminate\Http\Request;
+use MongoDB\Driver\Exception\AuthenticationException;
 
 class ProposerController extends Controller {
 	/*
@@ -23,11 +25,44 @@ class ProposerController extends Controller {
 		if($request->isMethod('post')) {
 			$register = $request->all();
 			array_shift($register);
+			$check = Code::checkRegistInfo($register);
+			if(!$check[0]) {    // 后台检验输入信息
+				return redirect()->back()->withInput()->with('error',$check[1]);
+			}
+			$email = Proposer::where('email',$request->email)->first();
+			if(isset($email)) {   // 如果邮箱已经注册过
+				var_dump($email);
+				return redirect()->back()->withInput()->with('error','该邮箱已被注册');
+			}
+			$register["activeCode"] = md5(uniqid(md5(microtime(true)),true));
 			$proposer = Proposer::create($register);
-			session()->put('proposer',$proposer);
-			return redirect('proposer');
+			// 发送验证邮箱的链接
+			SendEmail::register(Code::call($proposer),route('emailVerification',['proposer_id'=>$proposer->id,'activeCode'=>$proposer->activeCode]),$proposer->email);
+			exit('邮件已发送，请进入邮箱点击验证链接完成验证');
 		}
 		return view('proposer/register');
+	}
+
+	/*
+	 * 邮箱验证账户激活
+	 */
+	public function emailVerification($proposer_id, $activeCode) {
+		$proposer = Proposer::where('id',$proposer_id)
+		                    ->where('activeCode',$activeCode)
+							->first();
+		if(!isset($proposer)) {
+			exit('验证链接无效');
+		}
+		// var_dump($proposer->created_at);
+		else if(time() - $proposer->created_at > 24*60*60) {  // 如果大于24小时失效
+			roposer::destroy($proposer_id);
+			exit('该链接已失效，请重新注册');
+		}
+		// 激活账号，state = 1
+		$proposer->state = 1;
+		$proposer->save();
+		session()->put('proposer',$proposer);
+		return redirect()->route('proposer_index');
 	}
 
 	/*
@@ -39,7 +74,8 @@ class ProposerController extends Controller {
 			$password = $request->password;
 			$proposer = Proposer::where('email',$email)
 			                    ->where('password',$password)
-								->first();
+								->where('state',1)
+			                    ->first();
 			if($proposer == null) {
 				return redirect()->back()->withInput()->with('error','邮箱或密码错误');
 			}
@@ -48,16 +84,6 @@ class ProposerController extends Controller {
 			return redirect()->route('proposer_index');
 		}
 		return view('proposer/login');
-	}
-
-	/*
-	 *  申请人更新自己的信息
-	 */
-	public function update(Request $request) {
-		$proposer = session()->get('proposer');
-		$proposer->name = $request->name;
-		$proposer->phone = $request->phone;
-		$proposer->save();
 	}
 
 	/*
@@ -203,6 +229,9 @@ class ProposerController extends Controller {
 		return redirect()->route('proposer_index', [$apply_id]);
 	}
 
+	/*
+	 * 修改密码
+	 */
 	public function changePwd(Request $request) {
 		$proposer = session('proposer');
 		if($proposer->password != $request->pwd0) {
@@ -212,5 +241,20 @@ class ProposerController extends Controller {
 		$proposer->save();
 		session()->flush();
 		return response()->json(new Res(Code::success,''));
+	}
+
+	/*
+	 * 下载已经上传的申请书
+	 */
+	public function download(Request $request, $apply_id) {
+		$proposer = session('proposer');
+		$apply = Apply::where('id',$apply_id)
+						->where('proposer_id',$proposer->id)
+						->first();
+		// 如果下载的申请书不是申请人上传的
+		if(!isset($apply)) {
+			exit('无下载权限！');
+		}
+		return response()->download(storage_path('app/uploads/apply/'.$proposer->id.'/'.$apply_id), $apply->title, ['application/msword']);
 	}
 }

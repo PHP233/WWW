@@ -84,7 +84,7 @@
                         }},
                         { "data": "id",render: function (data) {
                             var url = './checker/download_apply/' + data;
-                            return '<a href=' + url + '>下载</a>';
+                            return '<a href=' + url + '><span class="glyphicon glyphicon-cloud-download"></span></a>';
                         }}
                     ],
                     buttons: [

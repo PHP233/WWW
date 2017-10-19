@@ -8,7 +8,9 @@
 
 namespace App\utils;
 
-
+/*
+ * 用于 datatables 的 json 数据包裹: data{}
+ */
 class Data {
 
 	var $data;

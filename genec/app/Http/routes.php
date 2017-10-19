@@ -21,6 +21,7 @@ Route::any('proposer/login', ['uses' => 'ProposerController@login','as' => 'prop
 Route::any('proposer/register', ['uses' => 'ProposerController@register','as' => 'proposer_register']);
 Route::any('proposer/logout', ['uses' => 'ProposerController@logout','as' => 'proposer_logout']);
 Route::post('changePwd', ['uses' => 'ReviewController@changePwd', 'as' => 'changePwd']);
+Route::get('emailVerification/{proposer_id}/{activeCode}', ['uses' => 'ProposerController@emailVerification', 'as' => 'emailVerification']);
 Route::get('test/{r?}','Test@test');
 
 
@@ -79,6 +80,7 @@ Route::group(['middleware' => ['web']], function () {
 		Route::any('reUploadApply', ['uses' => 'ProposerController@reUploadApply','as' => 'reUploadApply']);
 		Route::any('no_passUpload',['uses' => 'ProposerController@no_passUpload', 'as' => 'no_passUpload']);
 		Route::post('changePwd',['uses' => 'ProposerController@changePwd','as'=>'proposer_changePwd']);
+		Route::any('download/{apply_id}',['uses'=>'ProposerController@download', 'as' => 'proposer_download']);
 		Route::any('{id?}', ['uses' => 'ProposerController@index','as' => 'proposer_index']);
 	});
 

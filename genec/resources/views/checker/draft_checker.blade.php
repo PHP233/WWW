@@ -82,7 +82,7 @@
                         }},
                         { "data": "id",render: function (data) {
                             var url = './download_draft/' + data;
-                            return '<a href=' + url + '>下载</a>';
+                            return '<a href=' + url + '><span class="glyphicon glyphicon-cloud-download"></span></a>';
                         }}
                     ],
                     buttons: [

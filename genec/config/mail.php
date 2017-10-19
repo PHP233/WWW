@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'zhangjiaming@hrbeu.edu.cn', 'name' => '中国基因行业标准网'],
 
     /*
     |--------------------------------------------------------------------------

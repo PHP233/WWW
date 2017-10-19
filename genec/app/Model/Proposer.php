@@ -17,12 +17,16 @@ class Proposer extends Model {
 	protected $table = 'proposer';
 
 	protected $fillable = [
-		'name','email','phone','password','sex',
+		'name','email','phone','password','sex','activeCode'
 	];
 
 	protected function getDateFormat()
 	{
 		return time();
+	}
+
+	protected function asDateTime( $value ) {
+		return $value;
 	}
 
 	public function applies() {

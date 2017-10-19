@@ -34,7 +34,7 @@
             <td> <span class="talbe-span {{ $draft->getStateClass($draft->state) }}">{{ $draft->state($draft->state) }}</span> </td>
             <td> {{ $draft->modify_time }} </td>
             <td> <a href="{{ $draft->adviceBtn()['url'] }}">{{ $draft->adviceBtn()['btnName'] }}</a> </td>
-            <td><a href="{{ url('reviewer/draft/download/'.$draft->id) }}">下载</a> </td>
+            <td><a href="{{ url('reviewer/draft/download/'.$draft->id) }}"><span class="glyphicon glyphicon-cloud-download"></span></a> </td>
         </tr>
     @endforeach
 @endsection

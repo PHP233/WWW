@@ -11,6 +11,7 @@
                         <th>状态</th>
                         <th>修改次数</th>
                         <th>申报时间</th>
+                        <th>下载</th>
                     </tr>
                     <tbody>
                     @foreach($applies as $apply)
@@ -38,7 +39,8 @@
                             <td class="text-danger">-</td>
                         @endif
                         <td>{{ $apply->modify_time }}</td>
-                        <td>{{ date('Y-m-d',$apply->created_at) }}</td>
+                        <td>{{ date('Y/m/d',$apply->created_at) }}</td>
+                        <td><a href="{{ route('proposer_download',['apply_id' => $apply->id]) }}"><span class="glyphicon glyphicon-cloud-download"></span></a></td>
                     </tr>
                     @endforeach
                     </tbody>

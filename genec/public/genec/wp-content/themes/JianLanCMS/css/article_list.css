@@ -41,17 +41,6 @@
 	line-height: 47px;
 }
 
-.map {
-	position: relative;
-	margin: 0 auto;
-	padding-left: 10px;
-	width: auto;
-	height: 30px;
-	border: 1px solid #CCC;
-	border-top: 0;
-	line-height: 30px;
-}
-
 .home_ico {
 	position: absolute;
 	left: 10px;
