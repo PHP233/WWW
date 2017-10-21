@@ -114,4 +114,8 @@ class Apply extends Model {
 	public function suggests() {
 		return $this->hasMany('App\Model\Suggest',"apply_id","id");
 	}
+
+	public function draft() {
+		return $this->hasOne('App\Model\Draft','apply_id','id');
+	}
 }

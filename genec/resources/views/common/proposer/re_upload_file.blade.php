@@ -12,10 +12,6 @@
 
 @section('form_title','申请书题目')
 
-@section('file_title')
-{{ \App\utils\Code::removeExt($show_apply->title) }}
-@endsection
-
 @section('input')
-    <input name="id" value="{{ $show_apply->id }}" readonly hidden/>
+    <input name="id" value="{{ $show_apply->id }}" hidden/>
 @stop

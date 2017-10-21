@@ -6,15 +6,9 @@
     </label>
     @show
     <div class="form-group">
-        <label for="title" class="col-sm-2 control-label">@section('form_title')请输入申请书题目@show</label>
-        <div class="col-sm-5">
-            <input type="text" class="form-control" id="title" name="title" placeholder="申请书题目" value="@yield('file_title')" required>
-        </div>
-    </div>
-    <div class="form-group">
         <label for="apply" class="col-sm-2 control-label">上传文件</label>
         @yield("input")
-        <input id="apply" name="apply" type="file" required>
+        <input name="file" type="file" required>
     </div>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">

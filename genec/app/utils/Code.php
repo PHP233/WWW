@@ -25,8 +25,7 @@ class Code {
 	 */
     public static function getApplyNumber($apply) {
         if($apply != null) {
-            $date = date('Ymd',$apply->created_at);
-            return $number = $date.$apply->id;
+            return $apply->id.'号';
         }
         return '';
     }
@@ -36,8 +35,7 @@ class Code {
      */
     public static function getDraftNumber($apply) {
         if($apply != null) {
-            $date = date('Ymd',$apply->created_at);
-            return $number = $date.$apply->id;
+            return $apply->id.'号';
         }
         return '';
     }

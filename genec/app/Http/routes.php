@@ -59,9 +59,9 @@ Route::group(['middleware' => ['web']], function () {
 
 		Route::group(['prefix' => 'draft', 'as' => 'draft::'], function () {
 			Route::any('/', ['uses' => 'DraftController@index', 'as' => 'index']);
-			Route::any('upload', ['uses' => 'DraftController@upload', 'as' => 'upload']);
+			Route::post('upload', ['uses' => 'DraftController@upload', 'as' => 'upload']);
+			Route::any('to_draft_upload', ['uses' => 'DraftController@to_draft_upload', 'as' => 'to_draft_upload']);
 			Route::any('download/{id?}', ['uses' => 'DraftController@download', 'as' => 'download']);
-			Route::any('isHasDraft', ['uses' => 'DraftController@isHasDraft', 'as' => 'isHasDraft']);
 		});
 
 		Route::group(['prefix' => 'checker', 'as' => 'checker::'], function () {

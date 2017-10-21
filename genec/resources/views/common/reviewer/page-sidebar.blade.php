@@ -21,7 +21,7 @@
             </li>
             <li class="nav-item start ">
                 <a href="javascript:changeType(0,1);" class="nav-link ">
-                    <i class="icon-bar-chart"></i>
+                    <i class="icon-wallet"></i>
                     <span class="title">未审议</span>
                 </a>
             </li>
@@ -39,14 +39,20 @@
             </li>
             <li class="nav-item start ">
                 <a href="javascript:changeType(0,4);" class="nav-link ">
-                    <i class="icon-graph"></i>
+                    <i class="icon-target"></i>
                     <span class="title">已批准</span>
+                </a>
+            </li>
+            <li class="nav-item start ">
+                <a href="javascript:changeType(0,6);" class="nav-link ">
+                    <i class="glyphicon glyphicon-remove"></i>
+                    <span class="title">已撤销</span>
                 </a>
             </li>
         </ul>
     </li>
     <li class="nav-item">
-        <a href="{{ route('draft::upload') }}" class="nav-link nav-toggle">
+        <a href="{{ route('draft::to_draft_upload') }}" class="nav-link nav-toggle">
             <i class="icon-briefcase"></i>
             <span class="title">上传送审稿</span>
             <span class="selected"></span>
@@ -68,7 +74,7 @@
             </li>
             <li class="nav-item start ">
                 <a href="javascript:changeType(1,1);" class="nav-link ">
-                    <i class="icon-bar-chart"></i>
+                    <i class="icon-wallet"></i>
                     <span class="title">未审议</span>
                 </a>
             </li>
@@ -86,11 +92,22 @@
             </li>
             <li class="nav-item start ">
                 <a href="javascript:changeType(1,4);" class="nav-link ">
-                    <i class="icon-graph"></i>
+                    <i class="icon-target"></i>
                     <span class="title">已批准</span>
                 </a>
             </li>
-
+            <li class="nav-item start ">
+                <a href="javascript:changeType(1,5);" class="nav-link ">
+                    <i class="glyphicon glyphicon-ok"></i>
+                    <span class="title">项目完成</span>
+                </a>
+            </li>
+            <li class="nav-item start ">
+                <a href="javascript:changeType(1,6);" class="nav-link ">
+                    <i class="glyphicon glyphicon-remove"></i>
+                    <span class="title">已撤销</span>
+                </a>
+            </li>
         </ul>
     </li>
     <li class="heading">
