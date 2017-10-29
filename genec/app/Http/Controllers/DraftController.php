@@ -66,6 +66,7 @@ class DraftController extends Controller {
 			$draft = Draft::create([
 				'apply_id' => $request->apply_id,
 				'title' => $title,
+				'modify_time' => 0,
 			]);
 			Apply::find($request->apply_id)->update([
 				'state' => Apply::DRAFT_UPLOAD
@@ -87,9 +88,9 @@ class DraftController extends Controller {
 			}
 		}
 		// 设置上传文件名:为新增申请记录的id
-		$upload_path = config('filesystems.disks.draft_uploads.root').'/';
-		if (!file_exists($upload_path)) {
-			mkdir($upload_path);
+		$upload_path = config('filesystems.disks.draft_uploads.root').'/'.$draft->modify_time;
+		if (!is_dir($upload_path)) {
+			mkdir($upload_path,0777,true);
 		}
 		if(!$file->move($upload_path,$draft->id)) {
 			return back()->with('sign','保存文件失败！');
@@ -98,7 +99,7 @@ class DraftController extends Controller {
 	}
 
 	// 下载送审表
-	public function download(Request $request, $id=null) {
+	public function download(Request $request, $id, $modify_time) {
 		$reviewer = session('reviewer');
 		$draft = Draft::find($request->id);
 		if(!isset($draft)) {
@@ -114,7 +115,10 @@ class DraftController extends Controller {
 				exit('无下载权限');
 			}
 		}
-		return response()->download(storage_path('app/uploads/draft/'.$id), $draft->title, ['application/msword']);
+		if($modify_time < $draft->modify_time) {
+			$draft->title = str_replace_last('.doc','_第'.$modify_time.'版.doc',$draft->title);
+		}
+		return response()->download(storage_path('app/uploads/draft/'.$modify_time.'/'.$id), $draft->title, ['application/msword']);
 	}
 
 }

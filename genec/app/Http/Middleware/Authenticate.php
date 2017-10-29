@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Model\Reviewer;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,9 +26,14 @@ class Authenticate
             }
         }*/
 
-        if(!$request->is('reviewer/checker') && !$request->is('reviewer/checker/*') && !$request->is('proposer') && !$request->is('proposer/*')) {
-		    if ( session( 'reviewer' )->role != 1 ) {
-			    return response('Unauthorized.', 401);;
+        if($request->is('admin') || $request->is('admin/*')) {
+        	if(session('reviewer')->role != Reviewer::ADMIN) {
+		        return response('无此操作权限', 401);
+	        }
+        }
+        else if(!$request->is('reviewer/checker') && !$request->is('reviewer/checker/*') && !$request->is('proposer') && !$request->is('proposer/*')) {
+        	if (session( 'reviewer' )->role != Reviewer::REVIEWER ) {
+			    return response('无此操作权限', 401);
 		    }
 	    }
         return $next($request);

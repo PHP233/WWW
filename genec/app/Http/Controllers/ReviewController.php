@@ -33,8 +33,11 @@ class ReviewController extends Controller {
 			               ->first();
 			if($res != null) {
 				session()->put(['reviewer' => $res]);
-				if($res->role)
-					return redirect('reviewer/apply');
+				if($res->role == Reviewer::REVIEWER) {
+					return redirect()->route('apply::index');
+				} else if($res->role == Reviewer::ADMIN) {
+					return redirect()->route('admin::index');
+				}
 				return redirect('reviewer/checker');
 			}
 			return redirect()->back()->withInput()->with('error','工号或密码错误');
@@ -44,10 +47,6 @@ class ReviewController extends Controller {
 
 	public function draft_admin(Request $request) {
 		return view('reviewer.draft_admin');
-	}
-
-	public function reviewer_admin(Request $request) {
-		return view('reviewer.reviewer_admin');
 	}
 
 	/*

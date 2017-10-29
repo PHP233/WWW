@@ -116,7 +116,7 @@ class ProposerController extends Controller {
 	 * 上传申请书
 	 */
 	public function add_apply(Request $request) {
-		$id = session()->get('proposer')->id;
+		$proposer_id = session()->get('proposer')->id;
 		if ($request->isMethod('post')) {
 			if(!$request->hasFile('file')) {
 				exit('上传文件为空！');
@@ -130,12 +130,12 @@ class ProposerController extends Controller {
 			if($ext!='doc' && $ext != 'docx') {
 				exit('文件类型必须是doc或docx');
 			}
-			// 设置上传文件名:为新增申请记录的id
-			$apply = $this->insert_apply($id, $title);
-			$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$id;
-			if (!file_exists($upload_path)) {
-				mkdir($upload_path);
+			$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$proposer_id.'/0';
+			if (!is_dir($upload_path)) {
+				mkdir($upload_path,0777,true);
 			}
+			// 设置上传文件名:为新增申请记录的id
+			$apply = $this->insert_apply($proposer_id, $title);
 			if(!$file->move($upload_path,$apply->id)) {
 				exit('保存文件失败！');
 			}
@@ -182,10 +182,7 @@ class ProposerController extends Controller {
 		$apply->update([
 			'title' => $title
 		]);
-		$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$id;
-		if (!file_exists($upload_path)) {
-			mkdir($upload_path);
-		}
+		$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$id.'/'.$apply->modify_time;
 		if(!$file->move($upload_path,$apply_id)) {
 			exit('保存文件失败！');
 		}
@@ -220,9 +217,9 @@ class ProposerController extends Controller {
 			'modify_time' => $apply->modify_time + 1,
 			'state' => Apply::NO_ASSIGN_WAIT_REVIEW
 		]);
-		$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$id;
-		if (!file_exists($upload_path)) {
-			mkdir($upload_path);
+		$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$id.'/'.$apply->modify_time;
+		if(is_dir($upload_path)) {
+			mkdir($upload_path, 0777,true);
 		}
 		if(!$file->move($upload_path,$apply_id)) {
 			exit('保存文件失败！');
@@ -256,6 +253,6 @@ class ProposerController extends Controller {
 		if(!isset($apply)) {
 			exit('无下载权限！');
 		}
-		return response()->download(storage_path('app/uploads/apply/'.$proposer->id.'/'.$apply_id), $apply->title, ['application/msword']);
+		return response()->download(storage_path('app/uploads/apply/'.$proposer->id.'/'.$apply->modify_time.'/'.$apply_id), $apply->title, ['application/msword']);
 	}
 }

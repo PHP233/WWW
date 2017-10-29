@@ -228,14 +228,14 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
 @yield('javascript')
 <script>
-    const typeArr = ['','未审议','已审议','未通过审批','已批准'];
+    const typeArr = ['','未审议','已审议','未通过审批','已批准','审批人','审议人'];
     const url_arr = [
         '/reviewer/apply',
         '/reviewer/draft',
         '/reviewer/checker',
         '/reviewer/checker/toDraft',
         '/reviewer/draft/upload',
-        '/reviewer/reviewer_admin',
+        '/admin/reviewer_admin',
     ];
 
     // 判断请求路径决定左侧导航按钮的高亮
@@ -284,11 +284,13 @@ License: You must have a valid license purchased only from themeforest(the above
         }
     }
 
-    // 跳转到审议人管理页面
-    function toReviewerAdmin() {
-        var now = '{{ route('reviewer_admin') }}';
+    // 跳转到人员管理页面
+    function toReviewerAdmin(type) {
+        var now = '{{ route('admin::reviewer_admin') }}';
         if(location.href != now) {
             location.href = now;
+        } else {
+            Table1.search(typeArr[type]).draw();
         }
     }
 </script>

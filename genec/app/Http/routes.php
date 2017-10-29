@@ -37,9 +37,14 @@ Route::get('test/{r?}','Test@test');
 */
 
 Route::group(['middleware' => ['web']], function () {
+	Route::group(['prefix' => 'admin', 'as'=>'admin::'], function () {
+		Route::any('/',['uses'=>'AdminController@index','as'=>'index']);
+		Route::any('reviewer_admin', ['uses' => 'AdminController@reviewer_admin','as' => 'reviewer_admin']);
+		Route::any('get_all_reviewers', ['uses' => 'AdminController@get_all_reviewers','as' => 'get_all_reviewers']);
+	});
+
 	Route::group(['prefix' => 'reviewer'], function () {
 		Route::any('draft_admin', ['uses' => 'ReviewController@draft_admin']);
-		Route::any('reviewer_admin', ['uses' => 'ReviewController@reviewer_admin','as' => 'reviewer_admin']);
 		Route::any('get_all_reviewers', ['uses' => 'ReviewController@get_all_reviewers','as' => 'get_all_reviewers']);
 		Route::any('delete_reviewer', ['uses' => 'ReviewController@delete_reviewer','as' => 'delete_reviewer']);
 		Route::any('add_reviewer', ['uses' => 'ReviewController@add_reviewer','as' => 'add_reviewer']);
@@ -53,15 +58,14 @@ Route::group(['middleware' => ['web']], function () {
 
 		Route::group(['prefix' => 'apply', 'as' => 'apply::'], function () {
 			Route::any('/', ['uses' => 'ApplyController@index', 'as' => 'index']);
-			Route::any('checker', ['uses' => 'ApplyController@checker', 'as' => '']);
-			Route::any('download/{id?}', ['uses' => 'ApplyController@download', 'as' => 'download']);
+			Route::any('download/{id}/{modify_time}', ['uses' => 'ApplyController@download', 'as' => 'download']);
 		});
 
 		Route::group(['prefix' => 'draft', 'as' => 'draft::'], function () {
 			Route::any('/', ['uses' => 'DraftController@index', 'as' => 'index']);
 			Route::post('upload', ['uses' => 'DraftController@upload', 'as' => 'upload']);
 			Route::any('to_draft_upload', ['uses' => 'DraftController@to_draft_upload', 'as' => 'to_draft_upload']);
-			Route::any('download/{id?}', ['uses' => 'DraftController@download', 'as' => 'download']);
+			Route::any('download/{id}/{modify_time}', ['uses' => 'DraftController@download', 'as' => 'download']);
 		});
 
 		Route::group(['prefix' => 'checker', 'as' => 'checker::'], function () {

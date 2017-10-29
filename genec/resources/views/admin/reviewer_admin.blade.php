@@ -8,6 +8,7 @@
     <th> 电话 </th>
     <th> 性别 </th>
     <th> 创建日期 </th>
+    <th> 身份 </th>
     <th> 修改 </th>
     <th> 删除 </th>
 @endsection
@@ -17,7 +18,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="btn-group">
-                <button id="sample_editable_1_new" class="btn sbold green" data-toggle="modal" data-target="#add_reviewer_form">添加审议人
+                <button id="sample_editable_1_new" class="btn sbold green" data-toggle="modal" data-target="#add_reviewer_form">添加人员
                     <i class="fa fa-plus"></i>
                 </button>
             </div>
@@ -26,7 +27,7 @@
 </div>
 @stop
 
-@section('table_title','审议人管理')
+@section('table_title','人员管理')
 
 @section('modal')
     @include('common.reviewer.modal')
@@ -66,7 +67,7 @@
             }
         },
         ajax: {
-            url: "{{ route('get_all_reviewers') }}",
+            url: "{{ route('admin::get_all_reviewers') }}",
                 dataSrc: 'data'
             },
             columns: [
@@ -80,8 +81,12 @@
                 }},
                 { "data": "created_at",render: function (data) {
                     return formatDate(data);
-                }
-            },
+                }},
+                { "data": "role", render: function (data) {
+                    if(data)
+                        return "审批人";
+                    return "审议人";
+                }},
                 { "data": "id",render: function(data, type, row, meta) {
                 return '<a id="edit" class="btn yellow btn-xs">修改</a> ';
                 }},

@@ -1,7 +1,7 @@
 <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
     <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
     {{-- 审批人左侧菜单 --}}
-    @if($reviewer->role)
+    @if($reviewer->role == \App\utils\Code::reviewer)
     <li class="heading">
         <h3 class="uppercase">立项管理</h3>
     </li>
@@ -110,20 +110,9 @@
             </li>
         </ul>
     </li>
-    <li class="heading">
-        <h3 class="uppercase">人员管理</h3>
-    </li>
-    <li class="nav-item">
-        <a href="javascript:toReviewerAdmin();" class="nav-link nav-toggle">
-            <i class="icon-briefcase"></i>
-            <span class="title">审议人管理</span>
-            <span class="selected"></span>
-            <span class="arrow open"></span>
-        </a>
-    </li>
     @endif
     {{-- 普通审议员左侧菜单 --}}
-    @if(!$reviewer->role)
+    @if($reviewer->role == \App\utils\Code::checker)
         <li class="heading">
             <h3 class="uppercase">我的审议任务</h3>
         </li>
@@ -180,6 +169,33 @@
                         <i class="icon-bulb"></i>
                         <span class="title">已审议</span>
                         <span class="badge badge-success"></span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    @endif
+    @if($reviewer->role == \App\utils\Code::admin)
+        <li class="heading">
+            <h3 class="uppercase">人员管理</h3>
+        </li>
+        <li class="nav-item start">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="icon-briefcase"></i>
+                <span class="title">人员管理</span>
+                <span class="selected"></span>
+                <span class="arrow open"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item start ">
+                    <a href="javascript:toReviewerAdmin(5);" class="nav-link ">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">审批人管理</span>
+                    </a>
+                </li>
+                <li class="nav-item start ">
+                    <a href="javascript:toReviewerAdmin(6);" class="nav-link ">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">审议人管理</span>
                     </a>
                 </li>
             </ul>

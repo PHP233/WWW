@@ -29,7 +29,7 @@ class ApplyController extends Controller {
 	/*
 	 * 下载申请书
 	 */
-	public function download(Request $request, $id=null) {
+	public function download(Request $request, $id, $modify_time) {
 		$reviewer = session('reviewer');
 		$apply = Apply::find($id);
 		if(!isset($apply)) {
@@ -39,12 +39,15 @@ class ApplyController extends Controller {
 			// 判断有没有符合审议人审议的申请书
 			$num = Suggest::where('apply_id',$id)
 			       ->where('reviewer_id',$reviewer->id)
-			       ->where('modify_time',$apply->modify_time)
+			       ->where('modify_time',$modify_time)
 			       ->count();
 			if($num == 0) {
 				exit('无下载权限');
 			}
 		}
-		return response()->download(storage_path('app/uploads/apply/'.$apply->proposer_id.'/'.$id), $apply->title, ['application/msword']);
+		if($modify_time < $apply->modify_time) {
+			$apply->title = str_replace_last('.doc','_第'.$modify_time.'版.doc', $apply->title);
+		}
+		return response()->download(storage_path('app/uploads/apply/'.$apply->proposer_id.'/'.$modify_time.'/'.$id), $apply->title, ['application/msword']);
 	}
 }

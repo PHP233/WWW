@@ -17,7 +17,11 @@ class LoginMiddleware {
 	 * 登录控制器：如果没有登录进行登录
 	 */
 	public function handle($request, Closure $next) {
-		if($request->is('reviewer/*')) {
+		if($request->is('admin') || $request->is('admin/*')) {
+			if(!session('reviewer')) {
+				return redirect()->route('reviewer_login');
+			}
+		} else if($request->is('reviewer/*')) {
 			if(!session('reviewer')) {
 				return redirect()->route('reviewer_login');
 			}
@@ -28,5 +32,4 @@ class LoginMiddleware {
 		}
 		return $next($request);
 	}
-
 }

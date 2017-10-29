@@ -34,7 +34,13 @@
             <td> <span class="talbe-span {{ $draft->getStateClass($draft->state) }}">{{ $draft->state($draft->state) }}</span> </td>
             <td> {{ $draft->modify_time }} </td>
             <td> <a href="{{ $draft->adviceBtn()['url'] }}">{{ $draft->adviceBtn()['btnName'] }}</a> </td>
-            <td><a href="{{ url('reviewer/draft/download/'.$draft->id) }}"><span class="glyphicon glyphicon-cloud-download"></span></a> </td>
+            <td>
+                <a href="{{ route('draft::download',['id'=>$draft->id,'modify_time'=>$draft->modify_time]) }}"><span class="glyphicon glyphicon-cloud-download"></span></a>
+                @if($draft->modify_time)
+                    <span>/</span>
+                    <button class="btn btn-xs btn-warning" onclick="showHistoryDraft({{$draft->id}},{{$draft->modify_time}})">历史上传</button>
+                @endif
+            </td>
         </tr>
     @endforeach
 @endsection
@@ -167,6 +173,22 @@
                     $(btn).html('<a href="javascript:#;">-</a>');
                 }
             })
+        }
+
+        /*
+        显示历史上传送审表的模态框
+         */
+        function showHistoryDraft(apply_id, modify_time) {
+            var uploadHistoryModal = $('#upload_history_modal');
+            uploadHistoryModal.modal('show');
+            var content = '';
+            for(var i=0;i<=modify_time;i++) {
+                var item = '<div class="col-md-3"><a class="btn btn-default" style="margin-bottom: 5px" ' +
+                    'href="{{ url('reviewer/draft/download') }}/'+ apply_id + '/'+ i +'">' +
+                    '<span class="glyphicon glyphicon-cloud-download"></span>第'+ i +'次修改</a></div>';
+                content += item;
+            }
+            uploadHistoryModal.find('.row').html(content);
         }
     </script>
 @endsection

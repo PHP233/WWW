@@ -32,7 +32,14 @@
             <td> <span class="talbe-span {{ $apply->getStateClass() }}">{{ $apply->state() }}</span> </td>
             <td> {{ $apply->modify_time }} </td>
             <td> <a href="{{ $apply->adviceBtn()['url'] }}">{{ $apply->adviceBtn()['btnName'] }}</a> </td>
-            <td><a href="{{ url('reviewer/apply/download/'.$apply->id) }}"><span class="glyphicon glyphicon-cloud-download"></span></a> </td>
+            <td><a href="{{ route('apply::download',['id'=>$apply->id,'modify_time'=>$apply->modify_time]) }}">
+                    <span class="glyphicon glyphicon-cloud-download"></span>
+                </a>
+                <span>/</span>
+                @if($apply->modify_time > 0)
+                    <button CLASS="btn btn-xs btn-warning" onclick="openUploadHistory({{ $apply->id }},{{ $apply->modify_time }})">上传记录</button>
+                @endif
+            </td>
         </tr>
     @endforeach
 @endsection
@@ -117,6 +124,22 @@
 
                 }
             });
+        }
+
+        /*
+        打开上传记录模态框
+         */
+        function openUploadHistory(apply_id,modify_time) {
+            var uploadHistoryModal = $('#upload_history_modal');
+            uploadHistoryModal.modal('show');
+            var content = '';
+            for(var i=0;i<=modify_time;i++) {
+                var item = '<div class="col-md-3"><a class="btn btn-default" style="margin-bottom: 5px" ' +
+                    'href="{{ url('reviewer/apply/download') }}/'+ apply_id + '/'+ i +'">' +
+                '<span class="glyphicon glyphicon-cloud-download"></span>第'+ i +'次修改</a></div>';
+                content += item;
+            }
+            uploadHistoryModal.find('.row').html(content);
         }
     </script>
 @endsection

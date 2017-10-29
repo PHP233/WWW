@@ -15,6 +15,9 @@ class Code {
 
 	const success = 1;
 	const error = 0;
+	const reviewer = 1;
+	const checker = 0;
+	const admin = 2;
 	const apply_pre = 'PSA';
 	const draft_pre = 'PSD';
 	const FromName = '中国基因行业标准网';

@@ -1,6 +1,6 @@
 <img src="<?php bloginfo('template_url'); ?>/images/head.PNG" class="img-responsive" alt="Responsive image">
 <!-- 导航栏 -->
-<nav class="navbar navbar-default" style="margin-bottom: 5px">
+<nav class="navbar navbar-default" style="margin-bottom: 5px;background: #ADD8E6">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -16,7 +16,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">简介 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">简介 <span class="sr-only">(current)</span></a></li>
                 <li><a href="/genec?cat=4">最新公告</a></li>
                 <li><a href="/genec?cat=5">新闻资讯</a></li>
                 <li><a href="/genec?cat=6">行业动态</a></li>
