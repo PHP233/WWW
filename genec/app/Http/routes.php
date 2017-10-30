@@ -39,16 +39,18 @@ Route::get('test/{r?}','Test@test');
 Route::group(['middleware' => ['web']], function () {
 	Route::group(['prefix' => 'admin', 'as'=>'admin::'], function () {
 		Route::any('/',['uses'=>'AdminController@index','as'=>'index']);
+		#项目分配
+		Route::any('assign',['uses' => 'AdminController@assign','as' => 'assign']);
+		#人员管理
 		Route::any('reviewer_admin', ['uses' => 'AdminController@reviewer_admin','as' => 'reviewer_admin']);
 		Route::any('get_all_reviewers', ['uses' => 'AdminController@get_all_reviewers','as' => 'get_all_reviewers']);
+		Route::any('delete_reviewer', ['uses' => 'AdminController@delete_reviewer','as' => 'delete_reviewer']);
+		Route::any('add_reviewer', ['uses' => 'AdminController@add_reviewer','as' => 'add_reviewer']);
+		Route::any('edit_reviewer', ['uses' => 'AdminController@edit_reviewer','as' => 'edit_reviewer']);
 	});
 
 	Route::group(['prefix' => 'reviewer'], function () {
 		Route::any('draft_admin', ['uses' => 'ReviewController@draft_admin']);
-		Route::any('get_all_reviewers', ['uses' => 'ReviewController@get_all_reviewers','as' => 'get_all_reviewers']);
-		Route::any('delete_reviewer', ['uses' => 'ReviewController@delete_reviewer','as' => 'delete_reviewer']);
-		Route::any('add_reviewer', ['uses' => 'ReviewController@add_reviewer','as' => 'add_reviewer']);
-		Route::any('edit_reviewer', ['uses' => 'ReviewController@edit_reviewer','as' => 'edit_reviewer']);
 		Route::any('assign', ['uses' => 'ReviewController@assign', 'as' => 'assign']);
 		Route::any('passOrFail', ['uses' => 'ReviewController@passOrFail', 'as' => 'passOrFail']);
 		Route::any('get_review_list', ['uses' => 'ReviewController@get_review_list', 'as' => 'get_review_list']);

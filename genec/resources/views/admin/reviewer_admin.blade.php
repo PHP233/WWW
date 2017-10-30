@@ -157,7 +157,7 @@
         var th = $(this).parents('tr');
         var id = Table1.row(th).data().id;
         $.ajax({
-            url: "{{ url('reviewer/delete_reviewer') }}",
+            url: "{{ route('admin::delete_reviewer') }}",
             data: {
             id: id
             },
@@ -185,16 +185,21 @@
         edit_modal.find('input#id').val(data.id);
         edit_modal.find('select#sex').val(data.sex);
         edit_modal.modal('toggle');
-    })
+    });
 
+    /*
+    增加人员
+     */
     function add() {
         var error = add_modal.find('#form_error');
         var number = add_modal.find('input#number').val();
         var name = add_modal.find('input#name').val();
-        var sex = add_modal.find(':checked').val();
+        var sex = add_modal.find('select#sex').val();
+        var role = add_modal.find('select#role').val();
         console.log(number);
         console.log(name);
         console.log(sex);
+        console.log(role);
         if(number == '') {
             error.addClass('text-danger');
             error.text('请输入工号');
@@ -210,18 +215,31 @@
             error.text('请选择性别');
             return;
         }
+        if(role == undefined) {
+            error.addClass('text-danger');
+            error.text('请指定角色');
+            return;
+        }
         $.ajax({
-            url: "{{ route('add_reviewer') }}",
+            type: 'post',
+            url: "{{ route('admin::add_reviewer') }}",
             data: {
                 name: name,
                 number: number,
-                sex: sex
+                sex: sex,
+                role: role
             },
             success: function (res) {
                 if(res.code == 1) {
                     var reply = res.reply;
                     toast(res.msg, add_modal);
                     Table1.row.add(reply).column('0').order().draw();
+                    // 清空输入记录
+                    error.text('');
+                    add_modal.find('input#number').val('');
+                    add_modal.find('input#name').val('');
+                    add_modal.find('select#sex').val('');
+                    add_modal.find('select#role').val('');
                 } else {
                     error.text(res.msg);
                 }
@@ -258,7 +276,7 @@
             return;
         }
         $.ajax({
-            url: "{{ route('edit_reviewer') }}",
+            url: "{{ route('admin::edit_reviewer') }}",
             data: {
                 id: id,
                 name: name,

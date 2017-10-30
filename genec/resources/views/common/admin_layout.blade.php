@@ -228,14 +228,15 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
 @yield('javascript')
 <script>
-    const typeArr = ['','未审议','已审议','未通过审批','已批准','审批人','审议人'];
+    const typeArr = ['','未审议','已审议','未通过审批','已批准','未分配','已分配','审批人','审议人'];
     const url_arr = [
         '/reviewer/apply',
         '/reviewer/draft',
         '/reviewer/checker',
         '/reviewer/checker/toDraft',
         '/reviewer/draft/upload',
-        '/admin/reviewer_admin',
+        '/admin',
+        '/admin/reviewer_admin'
     ];
 
     // 判断请求路径决定左侧导航按钮的高亮
@@ -244,15 +245,23 @@ License: You must have a valid license purchased only from themeforest(the above
         var url = location.pathname;
         if(url == url_arr[0]) {
             $($(toggles[0]).parent()).addClass('active open');
-        } else if(url == url_arr[4]) {
-            $($(toggles[1]).parent()).addClass('active open');
-        } else if(url == url_arr[1]) {
+        }
+        else if(url == url_arr[1]) {
             $($(toggles[2]).parent()).addClass('active open');
-        } else if(url == url_arr[5]) {
-            $($(toggles[3]).parent()).addClass('active open');
-        } else if(url == url_arr[2]) {
+        }
+        else if(url == url_arr[2]) {
             $($(toggles[0]).parent()).addClass('active open');
-        } else if(url == url_arr[3]) {
+        }
+        else if(url == url_arr[3]) {
+            $($(toggles[1]).parent()).addClass('active open');
+        }
+        else if(url == url_arr[4]) {
+            $($(toggles[1]).parent()).addClass('active open');
+        }
+        else if(url == url_arr[5]) {
+            $($(toggles[0]).parent()).addClass('active open');
+        }
+        else if(url == url_arr[6]) {
             $($(toggles[1]).parent()).addClass('active open');
         }
     });
@@ -284,11 +293,14 @@ License: You must have a valid license purchased only from themeforest(the above
         }
     }
 
-    // 跳转到人员管理页面
-    function toReviewerAdmin(type) {
-        var now = '{{ route('admin::reviewer_admin') }}';
-        if(location.href != now) {
-            location.href = now;
+    // 切换人员管理的状态
+    function changeRole(type) {
+        var now = '/admin/reviewer_admin';
+        if(location.pathname != now) {
+            if(type == 0)
+                location.href = now;
+            else
+                location.href = now + '?type=' + type;
         } else {
             Table1.search(typeArr[type]).draw();
         }

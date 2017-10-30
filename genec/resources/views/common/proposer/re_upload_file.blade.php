@@ -1,5 +1,9 @@
 @extends('common.proposer.upload_file')
 
+@section('question')
+    && confirm('重复上传将会覆盖之前上传的文件！')
+@endsection
+
 @section('url')
     {{ route('reUploadApply') }}
 @endsection

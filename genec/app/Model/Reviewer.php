@@ -20,7 +20,7 @@ class Reviewer extends Model {
 	protected $table = 'reviewer';
 
 	protected $fillable = [
-		'number','name', 'email', 'password','sex'
+		'number','name', 'email', 'password','sex','role'
 	];
 
 	protected $hidden = ['password','updated_at'];
@@ -45,6 +45,10 @@ class Reviewer extends Model {
 		if($this->email == null) {
 			$this->email = '';
 		}
+	}
+
+	public function reviewer_apply() {
+		return $this->hasMany('App\Model\Apply','reviewer_id','id');
 	}
 
 	public function applies() {

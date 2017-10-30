@@ -19,10 +19,6 @@ use Mail;
 class Test extends Controller {
 
 	public function test() {
-		Mail::raw('邮件内容', function ($message) {
-			$message->from(env('MAIL_USERNAME'),'中国基因行业标准网');
-			$message->subject('注册验证');
-			$message->to('1549118476@qq.com');
-		});
+		var_dump(Apply::find(4)->reviewer->name);
 	}
 }

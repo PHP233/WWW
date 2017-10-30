@@ -25,10 +25,6 @@ class Apply extends Model {
 
 	protected $table = 'apply';
 
-	public function proposer() {
-		return $this->belongsTo('App\Model\Proposer','proposer_id');
-	}
-
 	public function state() {
 		$arr = [
 			self::NO_ASSIGN_WAIT_REVIEW => '未审议',
@@ -117,5 +113,13 @@ class Apply extends Model {
 
 	public function draft() {
 		return $this->hasOne('App\Model\Draft','apply_id','id');
+	}
+
+	public function proposer() {
+		return $this->belongsTo('App\Model\Proposer','proposer_id');
+	}
+
+	public function reviewer() {
+		return $this->belongsTo('App\Model\Reviewer','reviewer_id');
 	}
 }

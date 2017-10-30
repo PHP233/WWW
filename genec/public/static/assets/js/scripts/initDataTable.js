@@ -53,8 +53,9 @@ var TableDatatablesManage = function () {
                 return;
             }
             initTable();
+            // 判断请求中的搜索信息
             var type = location.search[location.search.lastIndexOf('=') + 1];
-            if(type == '1' || type == '2' || type =='3' || type == '4' || type == '5') {
+            if(type == '1' || type == '2' || type =='3' || type == '4' || type == '5' || type== '6' || type == '7' || type == '8') {
                 Table.search(typeArr[type]).draw();
             } else {
                 Table.search('').draw();

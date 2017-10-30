@@ -175,8 +175,33 @@
         </li>
     @endif
     @if($reviewer->role == \App\utils\Code::admin)
-        <li class="heading">
-            <h3 class="uppercase">人员管理</h3>
+        <li class="nav-item start">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="icon-briefcase"></i>
+                <span class="title">项目分配</span>
+                <span class="selected"></span>
+                <span class="arrow open"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item start ">
+                    <a href="javascript:changeType(5,0);" class="nav-link ">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">全部</span>
+                    </a>
+                </li>
+                <li class="nav-item start ">
+                    <a href="javascript:changeType(5,5);" class="nav-link ">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">未分配</span>
+                    </a>
+                </li>
+                <li class="nav-item start ">
+                    <a href="javascript:changeType(5,6);" class="nav-link ">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">已分配</span>
+                    </a>
+                </li>
+            </ul>
         </li>
         <li class="nav-item start">
             <a href="javascript:;" class="nav-link nav-toggle">
@@ -187,13 +212,19 @@
             </a>
             <ul class="sub-menu">
                 <li class="nav-item start ">
-                    <a href="javascript:toReviewerAdmin(5);" class="nav-link ">
+                    <a href="javascript:changeRole(0);" class="nav-link ">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">全部</span>
+                    </a>
+                </li>
+                <li class="nav-item start ">
+                    <a href="javascript:changeRole(7);" class="nav-link ">
                         <i class="icon-bar-chart"></i>
                         <span class="title">审批人管理</span>
                     </a>
                 </li>
                 <li class="nav-item start ">
-                    <a href="javascript:toReviewerAdmin(6);" class="nav-link ">
+                    <a href="javascript:changeRole(8);" class="nav-link ">
                         <i class="icon-bar-chart"></i>
                         <span class="title">审议人管理</span>
                     </a>

@@ -1,4 +1,4 @@
-<form id="uploadApplyFileForm"  class="form-horizontal" enctype="multipart/form-data" action="@yield('url')" method="post" onsubmit="return check(this)">
+<form id="uploadApplyFileForm"  class="form-horizontal" enctype="multipart/form-data" action="@yield('url')" method="post" onsubmit="return check(this) @yield('question')">
     <hr>
     @section('sign')
     <label for="file-zh">

@@ -18,6 +18,8 @@ class Code {
 	const reviewer = 1;
 	const checker = 0;
 	const admin = 2;
+	const male = 1;
+	const female = 0;
 	const apply_pre = 'PSA';
 	const draft_pre = 'PSD';
 	const FromName = '中国基因行业标准网';

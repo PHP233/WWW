@@ -23,12 +23,19 @@
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">性别</label>
                         <div class="col-sm-6">
-                            <label class="radio-inline">
-                                <input type="radio" name="sex" id="sex1" value="1" required> 男
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="sex" id="sex2" value="0" required> 女
-                            </label>
+                            <select class="form-control" name="role" id="sex">
+                                <option value="{{ \App\utils\Code::male }}">男</option>
+                                <option value="{{ \App\utils\Code::female }}">女</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">角色</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" name="role" id="role">
+                                <option value="{{ \App\Model\Reviewer::REVIEWER  }}">审批人</option>
+                                <option value="{{ \App\Model\Reviewer::CHECKER }}">审议人</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group">

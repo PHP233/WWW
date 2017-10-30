@@ -18,8 +18,11 @@ use Illuminate\Http\Request;
 class ApplyController extends Controller {
 
 	public function index(Request $request) {
+		$reviewer = session('reviewer');
+		// 所有审议人
 		$checkers = Reviewer::where('role',0)->get();
-		$applies = Apply::all();
+		// 由该审批人负责的所有申请书
+		$applies = $reviewer->reviewer_apply;
 		return view('reviewer.apply_admin',[
 			'applies' => $applies,
 			'checkers' => $checkers,

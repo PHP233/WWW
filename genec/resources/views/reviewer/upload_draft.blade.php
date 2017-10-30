@@ -38,7 +38,7 @@
             <td> {{ date('Y-m-d',$apply->created_at) }} </td>
             <td> {{ isset($apply->draft) ? $apply->draft->title : '无'}} </td>
             <td> <span class="talbe-span {{ isset($apply->draft)?$apply->draft->getStateClass():'' }}">{{ isset($apply->draft)?$apply->draft->state():'-' }}</span> </td>
-            <td> <a href="javascript:openUploadFormModal({{ $apply->id }});"><span class="glyphicon glyphicon-cloud-upload"></span></a> </td>
+            <td> <a href="javascript:openUploadFormModal({{ $apply->id }},{{isset($apply->draft)}} );"><span class="glyphicon glyphicon-cloud-upload"></span></a> </td>
         </tr>
     @endforeach
 @endsection
@@ -52,7 +52,7 @@
 
 @section('modal')
     <!-- upload Draft form modal -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="uploadDraftFormModal">
+    <div class="modal fade" tabindex="-1" role="dialog" id="uploadDraftFormModal" onsubmit="">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -78,9 +78,12 @@
     <script src="{{ asset('static/assets/js/scripts/check_upload_file.js') }}"></script>
     <script>
         // 打开上传文件的模态框
-        function openUploadFormModal(apply_id) {
+        function openUploadFormModal(apply_id, has) {
             $('input#apply_id').val(apply_id);
             $('span#error').text('');
+            if(has) {
+                $('form').attr('onsubmit','return confirm("已上传过送审表，重复上传将覆盖原有的送审表")');
+            }
             $('#uploadDraftFormModal').modal('show');
         }
     </script>
