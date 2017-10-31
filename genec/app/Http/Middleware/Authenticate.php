@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Model\Reviewer;
+use App\utils\Code;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,13 +29,18 @@ class Authenticate
 
         if($request->is('admin') || $request->is('admin/*')) {
         	if(session('reviewer')->role != Reviewer::ADMIN) {
-		        return response('无此操作权限', 401);
+		        return response(Code::authMsg, 401);
 	        }
         }
-        else if(!$request->is('reviewer/checker') && !$request->is('reviewer/checker/*') && !$request->is('proposer') && !$request->is('proposer/*')) {
+        else if($request->is('reviewer/*')) {
         	if (session( 'reviewer' )->role != Reviewer::REVIEWER ) {
-			    return response('无此操作权限', 401);
+			    return response(Code::authMsg, 401);
 		    }
+	    }
+	    else if($request->is('checker/*')) {
+        	if(session('reviewer')->role != Reviewer::CHECKER) {
+        		return response(Code::authMsg, 401);
+	        }
 	    }
         return $next($request);
     }

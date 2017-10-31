@@ -24,6 +24,7 @@ class Code {
 	const draft_pre = 'PSD';
 	const FromName = '中国基因行业标准网';
 	const regist_subject = '注册认证';
+	const authMsg = '无此操作权限';
 
 	/*
 	 * 申请书的文件编号

@@ -17,17 +17,14 @@ class LoginMiddleware {
 	 * 登录控制器：如果没有登录进行登录
 	 */
 	public function handle($request, Closure $next) {
-		if($request->is('admin') || $request->is('admin/*')) {
-			if(!session('reviewer')) {
-				return redirect()->route('reviewer_login');
-			}
-		} else if($request->is('reviewer/*')) {
-			if(!session('reviewer')) {
-				return redirect()->route('reviewer_login');
-			}
-		} else if($request->is('proposer') || $request->is('proposer/*')) {
+		// url start with proposer
+		if($request->is('proposer') || $request->is('proposer/*')) {
 			if(!session('proposer')) {
 				return redirect()->route('proposer_login');
+			}
+		} else {
+			if(!session('reviewer')) {
+				return redirect()->route('reviewer_login');
 			}
 		}
 		return $next($request);

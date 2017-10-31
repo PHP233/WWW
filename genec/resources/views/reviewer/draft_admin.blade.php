@@ -94,7 +94,7 @@
                 var state = $(tr).children('td')[5];
                 var btn = $(tr).children('td')[7];
                 $(state).html('<span class="talbe-span bg-success">已批准</span>');
-                $(btn).html('<a href="javascript:#;">出版</a>');
+                $(btn).html('<a href="javascript:publish(' + temp_documentId + ');">出版</a>');
                 toast(res.msg, review_list_modal);
             })
         }

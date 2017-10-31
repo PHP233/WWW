@@ -232,8 +232,8 @@ License: You must have a valid license purchased only from themeforest(the above
     const url_arr = [
         '/reviewer/apply',
         '/reviewer/draft',
-        '/reviewer/checker',
-        '/reviewer/checker/toDraft',
+        '/checker',
+        '/checker/toDraft',
         '/reviewer/draft/upload',
         '/admin',
         '/admin/reviewer_admin'

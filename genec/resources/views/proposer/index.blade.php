@@ -9,7 +9,7 @@ $proposer = session('proposer');
     <link rel="stylesheet" href="{{ asset('static/assets/css/process_style.css') }}">
     <style>
         .proposer_p {
-            padding: 50px 15px;
+            padding: 20px 15px;
             font-size: 20px;
         }
     </style>
@@ -31,7 +31,7 @@ $proposer = session('proposer');
                 @elseif($show_apply->state == \App\Model\Apply::NO_PASS)
                     <p class="bg-danger proposer_p">很抱歉，您的申请书——{{ $show_apply->title }}未通过审批，审批意见如下：</p>
                     <textarea class="form-control" cols="20" rows="15" readonly>
-                        {{ \App\Model\Suggest::where('apply_id',$show_apply->id)->where('reviewer_id',$admin_id)->where('modify_time',$show_apply->modify_time)->first()->content }}
+                        {{ \App\Model\Suggest::where('apply_id',$show_apply->id)->where('reviewer_id',$show_apply->reviewer->id)->where('modify_time',$show_apply->modify_time)->first()->content }}
                     </textarea>
                     @include('common.proposer.no_pass_upload')
                 @elseif($show_apply->state == \App\Model\Apply::PASS)

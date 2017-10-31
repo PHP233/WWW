@@ -92,7 +92,6 @@ class ProposerController extends Controller {
 	public function index($id = null) {
 		$proposer = session()->get('proposer');
 		$applies = $proposer->applies()->orderBy('created_at','desc')->get();
-		$admin_id = Reviewer::where('role',1)->first()->id;
 		session()->put('applies',$applies);
 		$show_apply = Apply::find($id);
 		$isOwner = true;
@@ -101,14 +100,12 @@ class ProposerController extends Controller {
 		}
 		if (!isset($id) || !$isOwner) {
 			return view('proposer/index', [
-				'show_apply' => $applies->first(),
-				'admin_id' => $admin_id,
+				'show_apply' => $applies->first()
 			]);
 		}
 		$show_apply = Apply::find($id);
 		return view('proposer/index',[
 			'show_apply'=> $show_apply,
-			'admin_id' => $admin_id,
 		]);
 	}
 
@@ -218,7 +215,7 @@ class ProposerController extends Controller {
 			'state' => Apply::NO_ASSIGN_WAIT_REVIEW
 		]);
 		$upload_path = config('filesystems.disks.apply_uploads.root').'/'.$id.'/'.$apply->modify_time;
-		if(is_dir($upload_path)) {
+		if(!is_dir($upload_path)) {
 			mkdir($upload_path, 0777,true);
 		}
 		if(!$file->move($upload_path,$apply_id)) {

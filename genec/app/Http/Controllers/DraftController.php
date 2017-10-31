@@ -15,6 +15,7 @@ use App\Model\Reviewer;
 use App\Model\Suggest;
 use App\utils\Code;
 use App\utils\Res;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -22,7 +23,13 @@ class DraftController extends Controller {
 
 	// 返回所有送审表
 	public function index(Request $request) {
-        $drafts = Draft::all();
+		$reviewer = session('reviewer');
+        //$drafts = Draft::leftJoin('apply','draft.apply_id','=', 'apply.id')->whereRaw('apply.reviewer_id='.$reviewer->id)->get();
+        $drafts = Draft::leftJoin('apply','draft.apply_id','=', 'apply.id')
+                       ->whereRaw('apply.reviewer_id='.$reviewer->id)
+                       ->select('draft.*')
+                       ->with('apply')
+                       ->get();
         $checkers = Reviewer::where('role',0)->get();
         return view('reviewer.draft_admin',[
         	'drafts' => $drafts,
@@ -34,10 +41,11 @@ class DraftController extends Controller {
 	 * 跳转到审批人上传送审表的页面
 	 */
 	public function to_draft_upload() {
+		$reviewer = session('reviewer');
 		// 获取通过审批的申请书或送审表未通过审批的申请书
-		$applies = Apply::with('draft')
-						->where('state',Apply::PASS)
+		$applies = Apply::where('state',Apply::PASS)
 		                ->orWhere('state',Apply::DRAFT_UPLOAD)
+						->where('reviewer_id',$reviewer->id)
 		                ->get();
 		return view('reviewer.upload_draft',[
 			'applies' => $applies,

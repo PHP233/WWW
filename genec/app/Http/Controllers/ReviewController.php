@@ -38,7 +38,7 @@ class ReviewController extends Controller {
 				} else if($res->role == Reviewer::ADMIN) {
 					return redirect()->route('admin::index');
 				}
-				return redirect('reviewer/checker');
+				return redirect()->route('checker::index');
 			}
 			return redirect()->back()->withInput()->with('error','工号或密码错误');
 		}

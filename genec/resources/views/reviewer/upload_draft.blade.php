@@ -36,9 +36,9 @@
             <td> {{ $apply->title }} </td>
             <td> {{ $apply->proposer->name }} </td>
             <td> {{ date('Y-m-d',$apply->created_at) }} </td>
-            <td> {{ isset($apply->draft) ? $apply->draft->title : '无'}} </td>
-            <td> <span class="talbe-span {{ isset($apply->draft)?$apply->draft->getStateClass():'' }}">{{ isset($apply->draft)?$apply->draft->state():'-' }}</span> </td>
-            <td> <a href="javascript:openUploadFormModal({{ $apply->id }},{{isset($apply->draft)}} );"><span class="glyphicon glyphicon-cloud-upload"></span></a> </td>
+            <td> {{ $apply->draft ? $apply->draft->title : '无'}} </td>
+            <td> <span class="talbe-span {{ $apply->draft?$apply->draft->getStateClass():'' }}">{{ isset($apply->draft)?$apply->draft->state():'-' }}</span> </td>
+            <td> <a href="javascript:openUploadFormModal({{ $apply->id }},{{ isset($apply->draft) }} );"><span class="glyphicon glyphicon-cloud-upload"></span></a> </td>
         </tr>
     @endforeach
 @endsection

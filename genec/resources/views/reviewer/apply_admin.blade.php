@@ -35,8 +35,8 @@
             <td><a href="{{ route('apply::download',['id'=>$apply->id,'modify_time'=>$apply->modify_time]) }}">
                     <span class="glyphicon glyphicon-cloud-download"></span>
                 </a>
-                <span>/</span>
                 @if($apply->modify_time > 0)
+                    <span>/</span>
                     <button CLASS="btn btn-xs btn-warning" onclick="openUploadHistory({{ $apply->id }},{{ $apply->modify_time }})">上传记录</button>
                 @endif
             </td>

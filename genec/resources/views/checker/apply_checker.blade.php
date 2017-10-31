@@ -82,8 +82,8 @@
                             }
                             return str;
                         }},
-                        { "data": "id",render: function (data) {
-                            var url = './checker/download_apply/' + data;
+                        { "data": "id",render: function (data, type, row) {
+                            var url = './checker/download_apply/' + data + '/' + row.modify_time;
                             return '<a href=' + url + '><span class="glyphicon glyphicon-cloud-download"></span></a>';
                         }}
                     ],

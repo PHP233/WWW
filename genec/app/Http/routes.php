@@ -70,15 +70,17 @@ Route::group(['middleware' => ['web']], function () {
 			Route::any('download/{id}/{modify_time}', ['uses' => 'DraftController@download', 'as' => 'download']);
 		});
 
-		Route::group(['prefix' => 'checker', 'as' => 'checker::'], function () {
-			Route::any('/', ['uses' => 'CheckerController@index', 'as' => 'checker']);
-			Route::any('toDraft', ['uses' => 'CheckerController@toDraft', 'as' => 'toDraft']);
-			Route::any('get_my_apply/{type?}', ['uses'=>'CheckerController@get_my_apply', 'as' => 'get_my_apply']);
-			Route::post('suggest', ['uses' => 'CheckerController@suggest', 'as' => 'suggest']);
-			Route::get('record', ['uses' => 'CheckerController@record', 'as' => 'record']);
-			Route::any('download_apply/{id?}', ['uses' => 'ApplyController@download', 'as' => 'download_apply']);
-			Route::any('download_draft/{id?}', ['uses' => 'DraftController@download', 'as' => 'download_draft']);
-		});
+	});
+
+	# 审议人模块
+	Route::group(['prefix' => 'checker', 'as' => 'checker::'], function () {
+		Route::any('/', ['uses' => 'CheckerController@index', 'as' => 'index']);
+		Route::any('toDraft', ['uses' => 'CheckerController@toDraft', 'as' => 'toDraft']);
+		Route::any('get_my_apply/{type?}', ['uses'=>'CheckerController@get_my_apply', 'as' => 'get_my_apply']);
+		Route::post('suggest', ['uses' => 'CheckerController@suggest', 'as' => 'suggest']);
+		Route::get('record', ['uses' => 'CheckerController@record', 'as' => 'record']);
+		Route::any('download_apply/{id}/{modify_time}', ['uses' => 'ApplyController@download', 'as' => 'download_apply']);
+		Route::any('download_draft/{id}/{modify_time}', ['uses' => 'DraftController@download', 'as' => 'download_draft']);
 	});
 
 	Route::group(['prefix' => 'proposer'], function () {

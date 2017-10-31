@@ -56,7 +56,7 @@
                         }
                     },
                     ajax: {
-                        url: "{{ url('reviewer/checker/get_my_apply/1') }}",
+                        url: "{{ route('checker::get_my_apply',['type' => 1]) }}",
                         dataSrc: 'data'
                     },
                     rowId: 'id',
@@ -81,7 +81,7 @@
                             return str;
                         }},
                         { "data": "id",render: function (data) {
-                            var url = './download_draft/' + data;
+                            var url = '{{ route('') }}';
                             return '<a href=' + url + '><span class="glyphicon glyphicon-cloud-download"></span></a>';
                         }}
                     ],

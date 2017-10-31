@@ -22,7 +22,7 @@ class ApplyController extends Controller {
 		// 所有审议人
 		$checkers = Reviewer::where('role',0)->get();
 		// 由该审批人负责的所有申请书
-		$applies = $reviewer->reviewer_apply;
+		$applies = Apply::where('reviewer_id',$reviewer->id)->get();
 		return view('reviewer.apply_admin',[
 			'applies' => $applies,
 			'checkers' => $checkers,
