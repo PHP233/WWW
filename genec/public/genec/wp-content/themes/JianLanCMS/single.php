@@ -68,7 +68,7 @@
         <!-- 文章正文结束 -->
         </div>
         <div class="col-md-3">
-		    <?php require 'sider_left.php'?>
+		    <?php require 'sider_right.php'?>
         </div>
 	<?php require 'y-j.php'?>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
