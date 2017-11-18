@@ -31,7 +31,6 @@ class ProposerController extends Controller {
 			}
 			$email = Proposer::where('email',$request->email)->first();
 			if(isset($email)) {   // 如果邮箱已经注册过
-				var_dump($email);
 				return redirect()->back()->withInput()->with('error','该邮箱已被注册');
 			}
 			$register["activeCode"] = md5(uniqid(md5(microtime(true)),true));

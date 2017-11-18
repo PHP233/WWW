@@ -16,10 +16,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">简介 <span class="sr-only">(current)</span></a></li>
-                <li><a href="/genec?cat=4">最新公告</a></li>
-                <li><a href="/genec?cat=5">新闻资讯</a></li>
-                <li><a href="/genec?cat=6">行业动态</a></li>
+                <li><a href="/genec?cat=2">最新公告</a></li>
+                <li><a href="/genec?cat=3">新闻资讯</a></li>
+                <li><a href="/genec?cat=4">行业动态</a></li>
+                <li><a href="/genec?cat=5">教育培训</a></li>
+                <li><a href="/genec?cat=6">数据库建设</a></li>
                 <li><a href="/proposer">项目申报</a></li>
                 <li><a href="#">联系方式</a></li>
             </ul>
