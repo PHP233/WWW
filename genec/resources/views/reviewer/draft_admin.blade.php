@@ -185,7 +185,7 @@
             for(var i=0;i<=modify_time;i++) {
                 var item = '<div class="col-md-3"><a class="btn btn-default" style="margin-bottom: 5px" ' +
                     'href="{{ url('reviewer/draft/download') }}/'+ apply_id + '/'+ i +'">' +
-                    '<span class="glyphicon glyphicon-cloud-download"></span>第'+ i +'次修改</a></div>';
+                    '<span class="glyphicon glyphicon-cloud-download"></span>第'+ i +'次上传</a></div>';
                 content += item;
             }
             uploadHistoryModal.find('.row').html(content);

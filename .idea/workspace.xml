@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="521e020b-58eb-4f96-9601-3181e1ae068b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_21aa7a4709c6bb3ca82f394c5546b0d0.img.tds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_270cab6e343238ea6a1c3a1fa03ed645.img.tds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_30173a806790558c68b867289bdc70e2.img.tds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_3b9d5cdbca0b86532f0f6bef649c7316.img.tds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_41dcb8048333049341cac2fc4c927c25.img.tds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_657ddc8ed953d9f2e2796594643c4ce7.img.tds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_ab974df59b7cef1ca38db370adf476b8.img.tds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_aebfa8deaeeb815bb17b9f569e444de1.img.tds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_af05546b56003516169e64b153c1009d.img.tds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_af3d32e2d5c04a5ea4ce862cbbb186f9.img.tds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_ce3e1c09e947952ccb1e1d4c6cefa8ac.img.tds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tdsimg/taodushi_int_da56b89b0c0ec192ce58d072f96f66e4.img.tds" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" afterPath="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/category.php" afterPath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/category.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/index.php" afterPath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/js/w3cer.js" afterPath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/js/w3cer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/sider_right.php" afterPath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/sider_right.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tb-ty.php" afterPath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tb-ty.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/y-j.php" afterPath="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/y-j.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/checker/draft_checker.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/checker/draft_checker.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/proposer/add_apply.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/proposer/add_apply.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genec/resources/views/reviewer/draft_admin.blade.php" afterPath="$PROJECT_DIR$/genec/resources/views/reviewer/draft_admin.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,98 +22,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReviewController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ReviewController.php">
+      <file leaf-file-name="head.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/common/proposer/head.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+            <state relative-caret-position="487">
+              <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/index.php">
+      <file leaf-file-name="admin_layout.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/common/admin_layout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="298" column="67" lean-forward="false" selection-start-line="298" selection-start-column="67" selection-end-line="298" selection-end-column="67" />
-              <folding>
-                <marker date="1511028892274" expanded="true" signature="5458:6188" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="5519:6188" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="5575:6078" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="5788:6043" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="6137:6188" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="6458:6564" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="7011:7237" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="7072:7237" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="7128:7237" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="7686:7737" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="8000:8102" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="8397:8623" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="8458:8623" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="8514:8623" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="9080:9131" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="9403:9509" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="9804:10030" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="9865:10030" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="9921:10030" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="10477:10528" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="10795:10901" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="11197:11423" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="11258:11423" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="11314:11423" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="11880:11931" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="12203:12309" ph="..." />
-                <marker date="1511028892274" expanded="true" signature="12651:12682" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="w3cer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/js/w3cer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="38" column="3029" lean-forward="false" selection-start-line="38" selection-start-column="3029" selection-end-line="38" selection-end-column="3029" />
-              <folding>
-                <marker date="1511027406611" expanded="true" signature="2040:2092" ph="..." />
-                <marker date="1511027406611" expanded="true" signature="2234:2285" ph="..." />
-                <marker date="1511027406611" expanded="true" signature="2545:2596" ph="..." />
-                <marker date="1511027406611" expanded="true" signature="2866:2918" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1601">
-              <caret line="493" column="19" lean-forward="true" selection-start-line="493" selection-start-column="19" selection-end-line="493" selection-end-column="19" />
-              <folding>
-                <marker date="1504887629216" expanded="true" signature="6040:6127" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sider_right.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/sider_right.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="draft_admin.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/draft_admin.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="96" column="59" lean-forward="false" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
+            <state relative-caret-position="353">
+              <caret line="244" column="36" lean-forward="false" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -129,15 +45,35 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="150">
+              <caret line="70" column="62" lean-forward="false" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="head.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/resources/views/common/proposer/head.blade.php">
+      <file leaf-file-name="add_apply.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/add_apply.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="draft_admin.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/draft_admin.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="37" column="109" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="109" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verification_success.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/verification_success.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -146,21 +82,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tb-ty.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tb-ty.php">
+      <file leaf-file-name="ProposerController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="-273">
+              <caret line="213" column="51" lean-forward="false" selection-start-line="213" selection-start-column="51" selection-end-line="213" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="draft_checker.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="apply_admin.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="138" column="84" lean-forward="false" selection-start-line="138" selection-start-column="84" selection-end-line="138" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="draft_checker.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/genec/resources/views/checker/draft_checker.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1577">
-              <caret line="83" column="49" lean-forward="false" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+            <state relative-caret-position="-1468">
+              <caret line="78" column="67" lean-forward="false" selection-start-line="78" selection-start-column="61" selection-end-line="78" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genec/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="69" column="51" lean-forward="false" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -170,9 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>home_ico</find>
-      <find>ul</find>
-      <find>widget_text</find>
       <find>right</find>
       <find>navbar navbar-default</find>
       <find>modal</find>
@@ -200,6 +153,9 @@
       <find>index.css</find>
       <find>focusBox</find>
       <find>278</find>
+      <find>10</find>
+      <find>tb-</find>
+      <find>route</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,13 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/tb-ty.php" />
-        <option value="$PROJECT_DIR$/genec/resources/views/common/update_info_modal.blade.php" />
-        <option value="$PROJECT_DIR$/genec/app/Http/Controllers/CheckerController.php" />
-        <option value="$PROJECT_DIR$/genec/public/wordpress/wp-content/themes/JianLanCMS/css/article_list.css" />
-        <option value="$PROJECT_DIR$/genec/resources/views/proposer/apply_list_modal.blade.php" />
-        <option value="$PROJECT_DIR$/genec/config/mail.php" />
-        <option value="$PROJECT_DIR$/genec/.env" />
         <option value="$PROJECT_DIR$/genec/app/utils/Mail.php" />
         <option value="$PROJECT_DIR$/genec/app/utils/SendEmail.php" />
         <option value="$PROJECT_DIR$/genec/app/utils/Data.php" />
@@ -248,18 +197,25 @@
         <option value="$PROJECT_DIR$/genec/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/genec/app/Http/Controllers/ReviewController.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/common/admin_layout.blade.php" />
-        <option value="$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php" />
         <option value="$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php" />
         <option value="$PROJECT_DIR$/genec/storage/framework/views/f5f9a39f3022981be1315960e6fa8d0e8c4253c9.php" />
         <option value="$PROJECT_DIR$/genec/app/Http/Controllers/ApplyController.php" />
-        <option value="$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php" />
         <option value="$PROJECT_DIR$/genec/resources/views/reviewer/upload_draft.blade.php" />
         <option value="$PROJECT_DIR$/genec/app/Http/Controllers/DraftController.php" />
-        <option value="$PROJECT_DIR$/genec/resources/views/checker/draft_checker.blade.php" />
-        <option value="$PROJECT_DIR$/genec/resources/views/reviewer/draft_admin.blade.php" />
-        <option value="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tb-ty.php" />
         <option value="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/js/w3cer.js" />
+        <option value="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/category.php" />
+        <option value="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/js/jquery.min.js" />
         <option value="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/index.php" />
+        <option value="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tb-ty.php" />
+        <option value="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/sider_right.php" />
+        <option value="$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/y-j.php" />
+        <option value="$PROJECT_DIR$/genec/resources/views/common/proposer/head.blade.php" />
+        <option value="$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php" />
+        <option value="$PROJECT_DIR$/genec/resources/views/proposer/add_apply.blade.php" />
+        <option value="$PROJECT_DIR$/genec/storage/app/uploads/apply/1/1/6" />
+        <option value="$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php" />
+        <option value="$PROJECT_DIR$/genec/resources/views/reviewer/draft_admin.blade.php" />
+        <option value="$PROJECT_DIR$/genec/resources/views/checker/draft_checker.blade.php" />
       </list>
     </option>
   </component>
@@ -282,9 +238,9 @@
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-67" />
-    <option name="y" value="42" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-101" />
+    <option name="y" value="7" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -325,7 +281,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -342,47 +297,58 @@
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="JianLanCMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="checker" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="php_workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_workspace" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="genec" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="reviewer" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -502,6 +468,7 @@
       <workItem from="1509346063337" duration="17281000" />
       <workItem from="1509428845418" duration="9272000" />
       <workItem from="1511014962169" duration="12391000" />
+      <workItem from="1511080882386" duration="8363000" />
     </task>
     <task id="LOCAL-00001" summary="zjm">
       <created>1504500480456</created>
@@ -534,16 +501,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="603524000" />
+    <option name="totallyTimeSpent" value="611887000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-101" y="7" width="1386" height="788" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2269985" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22295082" sideWeight="0.5030257" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23442623" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -556,6 +522,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23442623" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -577,85 +544,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/genec/public/static/assets/js/scripts/layout.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/public/static/assets/js/scripts/demo.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/common/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="62" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/Test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/app/Model/Proposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/public/static/assets/js/scripts/initDataTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="57" column="128" lean-forward="false" selection-start-line="57" selection-start-column="128" selection-end-line="57" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/admin/reviewer_admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="131" column="36" lean-forward="false" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/common/reviewer/modal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-477">
-          <caret line="25" column="76" lean-forward="false" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/common/reviewer/apply_modal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="31" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/admin/assign_modal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/admin/assign.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="83" column="46" lean-forward="true" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genec/storage/framework/views/87c6fbc5a4a0ec3d5857a2a4f1c12b869956cb87.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -667,7 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -706,13 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/add_apply.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/CheckerController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6">
@@ -732,7 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,14 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/common/admin_layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="148" column="90" lean-forward="true" selection-start-line="148" selection-start-column="90" selection-end-line="148" selection-end-column="90" />
         </state>
       </provider>
     </entry>
@@ -779,86 +650,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genec/app/Model/Apply.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
           <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3800">
-          <caret line="213" column="51" lean-forward="false" selection-start-line="213" selection-start-column="51" selection-end-line="213" selection-end-column="51" />
-          <folding>
-            <marker date="1510737997150" expanded="true" signature="404:6800" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="469:1256" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="504:1217" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="804:892" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="1262:1278" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="1344:1869" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="1424:1448" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="1493:1515" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="1609:1713" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="1875:1889" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="1934:2441" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="1969:2405" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="2112:2132" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="2150:2159" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="2221:2294" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="2447:2469" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="2508:3035" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="2786:2810" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="2845:2928" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="2861:2923" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="2880:2922" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="2978:3031" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="2996:3030" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="3041:3054" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="3103:3915" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="3188:3875" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="3224:3249" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="3312:3337" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="3468:3501" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="3622:3661" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="3789:3814" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="3945:4006" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="4058:4176" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="4182:4219" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="4272:5007" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="4403:4431" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="4467:4490" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="4551:4574" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="4702:4733" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="4752:4778" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="4753:4777" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="4922:4945" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="5013:5036" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="5089:6002" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="5185:5208" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="5269:5292" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="5420:5451" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="5522:5552" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="5589:5704" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="5590:5703" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="5833:5871" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="5917:5940" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="6008:6020" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="6069:6352" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="6150:6212" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="6358:6376" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="6435:6798" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="6525:6552" ph="..." />
-            <marker date="1510737997150" expanded="true" signature="6615:6637" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -874,7 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,7 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="40" column="77" lean-forward="false" selection-start-line="40" selection-start-column="77" selection-end-line="40" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -896,58 +690,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/checker/draft_checker.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1577">
-          <caret line="83" column="49" lean-forward="false" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="82" column="118" lean-forward="false" selection-start-line="82" selection-start-column="104" selection-end-line="82" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/index-gz.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/common/proposer/head.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ReviewController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
+        <state relative-caret-position="0">
           <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -956,7 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,7 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,36 +720,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/sider_right.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/draft_admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="96" column="59" lean-forward="false" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tb-ty.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1601">
-          <caret line="493" column="19" lean-forward="true" selection-start-line="493" selection-start-column="19" selection-end-line="493" selection-end-column="19" />
+        <state relative-caret-position="9367">
+          <caret line="493" column="19" lean-forward="false" selection-start-line="493" selection-start-column="19" selection-end-line="493" selection-end-column="19" />
           <folding>
             <marker date="1504887629216" expanded="true" signature="6040:6127" ph="{...}" />
           </folding>
@@ -1014,7 +732,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/js/w3cer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="722">
           <caret line="38" column="3029" lean-forward="false" selection-start-line="38" selection-start-column="3029" selection-end-line="38" selection-end-column="3029" />
           <folding>
             <marker date="1511027406611" expanded="true" signature="2040:2092" ph="..." />
@@ -1025,39 +743,208 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/index-gz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2364">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="81" column="127" lean-forward="false" selection-start-line="81" selection-start-column="127" selection-end-line="81" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="4" column="1002" lean-forward="false" selection-start-line="4" selection-start-column="1002" selection-end-line="4" selection-end-column="1002" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/img.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="79" column="34" lean-forward="true" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/sider_right.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="17" column="124" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="124" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/y-j.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/common/proposer/guide.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/admin/assign.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="83" column="46" lean-forward="true" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="298" column="67" lean-forward="false" selection-start-line="298" selection-start-column="67" selection-end-line="298" selection-end-column="67" />
-          <folding>
-            <marker date="1511028892274" expanded="true" signature="5458:6188" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="5519:6188" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="5575:6078" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="5788:6043" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="6137:6188" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="6458:6564" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="7011:7237" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="7072:7237" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="7128:7237" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="7686:7737" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="8000:8102" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="8397:8623" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="8458:8623" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="8514:8623" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="9080:9131" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="9403:9509" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="9804:10030" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="9865:10030" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="9921:10030" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="10477:10528" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="10795:10901" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="11197:11423" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="11258:11423" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="11314:11423" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="11880:11931" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="12203:12309" ph="..." />
-            <marker date="1511028892274" expanded="true" signature="12651:12682" ph="..." />
-          </folding>
+        <state relative-caret-position="-59">
+          <caret line="286" column="95" lean-forward="true" selection-start-line="285" selection-start-column="32" selection-end-line="286" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/public/genec/wp-content/themes/JianLanCMS/tb-ty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="70" column="62" lean-forward="false" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/add_apply.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/proposer/verification_success.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/common/admin_layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="244" column="36" lean-forward="false" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/common/proposer/head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/storage/app/uploads/apply/1/1/6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/app/Http/Controllers/ProposerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-273">
+          <caret line="213" column="51" lean-forward="false" selection-start-line="213" selection-start-column="51" selection-end-line="213" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/apply_admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="138" column="84" lean-forward="false" selection-start-line="138" selection-start-column="84" selection-end-line="138" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/reviewer/draft_admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="37" column="109" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="69" column="51" lean-forward="false" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genec/resources/views/checker/draft_checker.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1468">
+          <caret line="78" column="67" lean-forward="false" selection-start-line="78" selection-start-column="61" selection-end-line="78" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>

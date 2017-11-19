@@ -27,3 +27,17 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
+<script>
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+    $(function () {
+       var cat = GetQueryString('cat');
+       if(cat == undefined) return;
+       $('ul.nav').children('li').eq(cat-2).addClass('active');
+    });
+</script>

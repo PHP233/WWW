@@ -15,7 +15,7 @@
 		<?php query_posts('cat='.$arr['company']); ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="media">
-				<a href="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 50,"..."); ?>">
+				<a href="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 100); ?>">
 					<img class="media-object" src="<?php bloginfo('template_url'); ?>/img.php?src=<?php echo catch_that_image() ?>&w=191&h=50&zc=1" alt="<?php the_title(); ?>">
 				</a>
 			</div>

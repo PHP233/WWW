@@ -80,8 +80,8 @@
                             }
                             return str;
                         }},
-                        { "data": "id",render: function (data) {
-                            var url = '{{ route('') }}';
+                        { "data": "id",render: function (data, type, row, meta) {
+                            var url = '/download/'+ row.id + '/' + row.modify_time;
                             return '<a href=' + url + '><span class="glyphicon glyphicon-cloud-download"></span></a>';
                         }}
                     ],
