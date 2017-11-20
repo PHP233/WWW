@@ -11,15 +11,9 @@ use App\Model\Apply;
 use App\Model\Draft;
 use App\Model\Suggest;
 use App\utils\Code;
-use App\utils\Data;
 use App\utils\Res;
-use App\Model\Reviewer;
-use Illuminate\Contracts\Validation\UnauthorizedException;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\App;
-use Mockery\Exception;
 use Illuminate\Support\Facades\DB;
 
 class ReviewController extends Controller {

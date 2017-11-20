@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// 不需要登录状态的操作
 Route::any('reviewer/login', ['uses' => 'Committee@login', 'as' => 'reviewer_login']);
 Route::any('reviewer/logout', ['uses' => 'Committee@logout', 'as' => 'reviewer_logout']);
 Route::post('changePwd', ['uses' => 'Committee@changePwd', 'as' => 'changePwd']);
@@ -25,6 +26,8 @@ Route::any('proposer/login', ['uses' => 'ProposerController@login','as' => 'prop
 Route::any('proposer/register', ['uses' => 'ProposerController@register','as' => 'proposer_register']);
 Route::any('proposer/logout', ['uses' => 'ProposerController@logout','as' => 'proposer_logout']);
 Route::get('emailVerification/{proposer_id}/{activeCode}', ['uses' => 'ProposerController@emailVerification', 'as' => 'emailVerification']);
+Route::any('proposer/sendResetPassword',['uses'=>'ProposerController@sendEmailResetPassword', 'as' => 'proposer_sendResetPassword']);
+Route::any('proposer/resetPassword/{proposer_id?}/{activeCode?}',['uses'=>'ProposerController@resetPassword', 'as' => 'proposer_resetPassword']);
 Route::get('test/{r?}','Test@test');
 
 
@@ -38,7 +41,9 @@ Route::get('test/{r?}','Test@test');
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
+/*
+ * 以下都进行登录验证和权限验证
+ */
 Route::group(['middleware' => ['web']], function () {
 	Route::group(['prefix' => 'admin', 'as'=>'admin::'], function () {
 		Route::any('/',['uses'=>'AdminController@index','as'=>'index']);
@@ -92,7 +97,6 @@ Route::group(['middleware' => ['web']], function () {
 		Route::any('no_passUpload',['uses' => 'ProposerController@no_passUpload', 'as' => 'no_passUpload']);
 		Route::post('changePwd',['uses' => 'ProposerController@changePwd','as'=>'proposer_changePwd']);
 		Route::any('download/{apply_id}',['uses'=>'ProposerController@download', 'as' => 'proposer_download']);
-		Route::any('resetPassword',['uses'=>'ProposerController@emailResetPassword', 'as' => 'proposer_resetPassword']);
 		Route::any('{id?}', ['uses' => 'ProposerController@index','as' => 'proposer_index']);
 	});
 

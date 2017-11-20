@@ -7,6 +7,7 @@
  */
 
 namespace App\utils;
+use function foo\func;
 use Mail;
 
 class SendEmail {
@@ -23,7 +24,7 @@ class SendEmail {
 	 * 组委会成员重置密码
 	 */
 	public static function resetPassword($newPassword, $url, $to) {
-		Mail::send('reviewer.reset_password',['newPassword' => $newPassword, 'url' => $url], function($message) use($to){
+		Mail::send('reviewer.reset_password',['newPassword' => $newPassword, 'url' => $url], function($message) use($to) {
 			$message->from(env('MAIL_USERNAME'),Code::FromName);
 			$message->subject(Code::reset_password_subject);
 			$message->to($to);
@@ -32,7 +33,11 @@ class SendEmail {
 	/*
 	 * 申请人找回密码
 	 */
-	public static function findPassword($activeCode, $url, $to) {
-
+	public static function proposer_reset_Password($call, $url, $to) {
+		Mail::send('proposer.reset_password_email',['call' => $call, 'url' => $url], function ($message) use($to) {
+			$message->from(env('MAIL_USERNAME'),Code::FromName);
+			$message->subject(Code::reset_password_subject);
+			$message->to($to);
+		});
 	}
 }

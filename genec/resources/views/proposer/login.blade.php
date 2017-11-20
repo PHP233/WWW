@@ -1,6 +1,6 @@
 @extends('common.layout')
 @section('send_email_url')
-    {{ route('proposer_resetPassword') }}
+    {{ route('proposer_sendResetPassword') }}
 @endsection
 @section('title','中国基因行业标准化技术委员会申报系统')
 

@@ -10,6 +10,7 @@
 namespace App\Http\Controllers;
 use App\Model\Apply;
 use App\Model\Proposer;
+use App\Model\Reviewer;
 use App\utils\Code;
 use App\utils\Res;
 use App\utils\SendEmail;
@@ -34,7 +35,8 @@ class ProposerController extends Controller {
 			$register["activeCode"] = Code::randomCode();
 			$proposer = Proposer::create($register);
 			// 发送验证邮箱的链接
-			SendEmail::register(Code::call($proposer),route('emailVerification',['proposer_id'=>$proposer->id,'activeCode'=>$proposer->activeCode]),$proposer->email);
+			SendEmail::register(Code::call($proposer),route('emailVerification',
+				['proposer_id'=>$proposer->id,'activeCode'=>$proposer->activeCode]),$proposer->email);
 			exit('邮件已发送，请进入邮箱点击验证链接完成验证');
 		}
 		return view('proposer/register');
@@ -63,15 +65,49 @@ class ProposerController extends Controller {
 	}
 
 	/*
-	 * 邮箱重置密码
+	 * 发送邮箱重置密码
 	 */
-	public function emailResetPassword(Request $request) {
+	public function sendEmailResetPassword(Request $request) {
 		$email = $request->email;
 		$proposer = Proposer::where('email',$email)->first();
-		if(isset($proposer)) {
-			return redirect()->back()->with('error','邮箱未注册');
+		if(!isset($proposer)) {
+			return redirect()->back()->with('error','该邮箱未被注册');
 		}
+		$activeCode = Code::randomCode();
+		$proposer->activeCode = $activeCode;
+		$proposer->save();
+		SendEmail::proposer_reset_Password(Code::call($proposer),route('proposer_resetPassword',
+			['activeCode' => $activeCode, 'proposer_id' => $proposer->id]), $email);
+		return redirect()->back()->with('error','重置密码链接已发送至您的邮箱');
+	}
 
+	/*
+	 * 跳转到密码重置的页面
+	 */
+	public function resetPassword(Request $request, $proposer_id = null, $activeCode = null) {
+		if($request->isMethod('get')) {
+			return view('proposer.reset_password', [
+				'activeCode' => $activeCode,
+				'proposer_id' => $proposer_id,
+			]);
+		}
+		else {
+			$activeCode = $request->activeCode;
+			$proposer_id = $request->proposer_id;
+			/*var_dump($activeCode);
+			var_dump($proposer_id);exit();*/
+			$proposer = Proposer::where('id',$proposer_id)->where('activeCode',$activeCode)->first();
+			if(!isset($proposer)) {
+				exit('无操作权限');
+			}
+			$password = $request->password;
+			$comfirm_password = $request->confirm_password;
+			if($password != $comfirm_password)
+				return redirect()->back()->withInput()->with('error','两次密码不一致');
+			$proposer->password = $password;
+			$proposer->save();
+			return view('proposer.reset_password_success');
+		}
 	}
 
 
