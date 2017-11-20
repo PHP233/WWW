@@ -69,7 +69,7 @@ class ProposerController extends Controller {
 	 */
 	public function sendEmailResetPassword(Request $request) {
 		$email = $request->email;
-		$proposer = Proposer::where('email',$email)->first();
+		$proposer = Proposer::where('email',$email)->where('state',1)->first();
 		if(!isset($proposer)) {
 			return redirect()->back()->with('error','该邮箱未被注册');
 		}
@@ -86,6 +86,12 @@ class ProposerController extends Controller {
 	 */
 	public function resetPassword(Request $request, $proposer_id = null, $activeCode = null) {
 		if($request->isMethod('get')) {
+			$proposer = Proposer::where('id',$proposer_id)
+			                    ->where('activeCode',$activeCode)
+			                    ->where('state',1)
+			                    ->first();
+			if(!isset($proposer))
+				exit('链接已失效');
 			return view('proposer.reset_password', [
 				'activeCode' => $activeCode,
 				'proposer_id' => $proposer_id,
@@ -96,7 +102,9 @@ class ProposerController extends Controller {
 			$proposer_id = $request->proposer_id;
 			/*var_dump($activeCode);
 			var_dump($proposer_id);exit();*/
-			$proposer = Proposer::where('id',$proposer_id)->where('activeCode',$activeCode)->first();
+			$proposer = Proposer::where('id',$proposer_id)
+			                    ->where('activeCode',$activeCode)
+			                    ->where('state',1)->first();
 			if(!isset($proposer)) {
 				exit('无操作权限');
 			}
@@ -105,6 +113,7 @@ class ProposerController extends Controller {
 			if($password != $comfirm_password)
 				return redirect()->back()->withInput()->with('error','两次密码不一致');
 			$proposer->password = $password;
+			$proposer->activeCode = '';     // 使本次验证码失效
 			$proposer->save();
 			return view('proposer.reset_password_success');
 		}

@@ -60,8 +60,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo">
-            <a href="index.html">
-                <img src="{{ asset('') }}" alt="logo" class="logo-default" /> </a>
+                <img src="{{ asset('static/assets/img/logo.gif') }}" alt="logo" class="logo-default" />
             <div class="menu-toggler sidebar-toggler"> </div>
         </div>
         <!-- END LOGO -->
@@ -188,8 +187,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN FOOTER -->
 <div id="loading" hidden><img src="{{ asset('static/assets/img/loading.gif') }}" alt="loading"></div>
 <div class="page-footer">
-    <div class="page-footer-inner"> 2014 &copy; Metronic by keenthemes.
-        <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+    <div class="page-footer-inner"> 中国基因行业标准技术委员会
     </div>
     <div class="scroll-to-top">
         <i class="icon-arrow-up"></i>
