@@ -305,6 +305,8 @@ License: You must have a valid license purchased only from themeforest(the above
             Table1.search(typeArr[type]).draw();
         }
     }
+
+
 </script>
 <!-- END THEME LAYOUT SCRIPTS -->
 </body>

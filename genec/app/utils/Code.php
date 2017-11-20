@@ -24,6 +24,7 @@ class Code {
 	const draft_pre = 'PSD';
 	const FromName = '中国基因行业标准网';
 	const regist_subject = '注册认证';
+	const reset_password_subject = '重置密码';
 	const authMsg = '无此操作权限';
 
 	/*
@@ -111,5 +112,19 @@ class Code {
 	    	return [false,'您输入的电子邮件地址不合法'];
 	    }
 	    return [true];
+    }
+
+    /*
+     * 生成随机验证码
+     */
+    public static function randomCode() {
+	    return md5(uniqid(md5(microtime(true)),true));
+    }
+
+    /*
+     * 生成新八位密码
+     */
+    public static function getNewPassword() {
+	    return rand('10000000','99999999');
     }
 }

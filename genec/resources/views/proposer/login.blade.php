@@ -1,4 +1,7 @@
 @extends('common.layout')
+@section('send_email_url')
+    {{ route('proposer_resetPassword') }}
+@endsection
 @section('title','中国基因行业标准化技术委员会申报系统')
 
 @section('form_title','中国基因行业标准化<br>技术委员会申报系统')

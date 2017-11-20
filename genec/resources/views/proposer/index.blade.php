@@ -1,4 +1,5 @@
 @extends('common.layout')
+
 <?php
 $applies = session('applies');
 $proposer = session('proposer');

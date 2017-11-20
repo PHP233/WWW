@@ -24,27 +24,6 @@ use Illuminate\Support\Facades\DB;
 
 class ReviewController extends Controller {
 
-	public function login(Request $request) {
-		if($request->isMethod('post')) {
-			$number = $request->input('number');
-			$password = $request->input('password');
-			$res = Reviewer::where('number',$number)
-			               ->where('password', $password)
-			               ->first();
-			if($res != null) {
-				session()->put(['reviewer' => $res]);
-				if($res->role == Reviewer::REVIEWER) {
-					return redirect()->route('apply::index');
-				} else if($res->role == Reviewer::ADMIN) {
-					return redirect()->route('admin::index');
-				}
-				return redirect()->route('checker::index');
-			}
-			return redirect()->back()->withInput()->with('error','工号或密码错误');
-		}
-		return view( 'reviewer.login');
-	}
-
 	public function draft_admin(Request $request) {
 		return view('reviewer.draft_admin');
 	}
@@ -191,35 +170,4 @@ class ReviewController extends Controller {
 		return response()->json(new Res(Code::success,'该项目已撤销！'));
 	}
 
-	// 登出
-	public function logout() {
-		session()->flush();
-		return redirect('reviewer/login');
-	}
-
-	// 修改个人信息
-	public function updateInfo(Request $request) {
-		$reviewer = session('reviewer');
-		$reviewer->name = $request->name;
-		$reviewer->phone = $request->phone;
-		$reviewer->email = $request->email;
-		$reviewer->save();
-		session()->put('reviewer',$reviewer);
-		$res = new Res(Code::success,'更新个人信息成功！');
-		$res->setReply($reviewer);
-		return response()->json($res);
-	}
-
-	// 修改密码
-	public function changePwd(Request $request) {
-		$reviewer = session('reviewer');
-		if($reviewer->password != $request->pwd0) {
-			$res = new Res(Code::error,'原密码错误！');
-			return response()->json($res);
-		}
-		$reviewer->password = $request->pwd1;
-		$reviewer->save();
-		session()->flush();
-		return response()->json(new Res(Code::success,''));
-	}
 }

@@ -15,12 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::any('reviewer/login', ['uses' => 'ReviewController@login', 'as' => 'reviewer_login']);
-Route::any('reviewer/logout', ['uses' => 'ReviewController@logout', 'as' => 'reviewer_logout']);
+Route::any('reviewer/login', ['uses' => 'Committee@login', 'as' => 'reviewer_login']);
+Route::any('reviewer/logout', ['uses' => 'Committee@logout', 'as' => 'reviewer_logout']);
+Route::post('changePwd', ['uses' => 'Committee@changePwd', 'as' => 'changePwd']);
+Route::post('updateInfo', ['uses' => 'Committee@updateInfo', 'as' => 'updateInfo']);
+Route::any('resetPassword/{reviewer_id}/{newPassword}/{activeCode}', ['uses' => 'Committee@resetPassword', 'as' => 'resetPassword']);
+Route::post('sendResetPasswordEmail', ['uses' => 'Committee@sendResetPasswordEmail', 'as' => 'sendResetPasswordEmail']);
 Route::any('proposer/login', ['uses' => 'ProposerController@login','as' => 'proposer_login']);
 Route::any('proposer/register', ['uses' => 'ProposerController@register','as' => 'proposer_register']);
 Route::any('proposer/logout', ['uses' => 'ProposerController@logout','as' => 'proposer_logout']);
-Route::post('changePwd', ['uses' => 'ReviewController@changePwd', 'as' => 'changePwd']);
 Route::get('emailVerification/{proposer_id}/{activeCode}', ['uses' => 'ProposerController@emailVerification', 'as' => 'emailVerification']);
 Route::get('test/{r?}','Test@test');
 
@@ -56,7 +59,7 @@ Route::group(['middleware' => ['web']], function () {
 		Route::any('get_review_list', ['uses' => 'ReviewController@get_review_list', 'as' => 'get_review_list']);
 		Route::get('publish', ['uses' => 'ReviewController@publish','as' => 'publish']);
 		Route::get('dropProject', ['uses' => 'ReviewController@dropProject','as' => 'dropProject']);
-		Route::post('updateInfo', ['uses' => 'ReviewController@updateInfo', 'as' => 'updateInfo']);
+
 
 		Route::group(['prefix' => 'apply', 'as' => 'apply::'], function () {
 			Route::any('/', ['uses' => 'ApplyController@index', 'as' => 'index']);
@@ -89,6 +92,7 @@ Route::group(['middleware' => ['web']], function () {
 		Route::any('no_passUpload',['uses' => 'ProposerController@no_passUpload', 'as' => 'no_passUpload']);
 		Route::post('changePwd',['uses' => 'ProposerController@changePwd','as'=>'proposer_changePwd']);
 		Route::any('download/{apply_id}',['uses'=>'ProposerController@download', 'as' => 'proposer_download']);
+		Route::any('resetPassword',['uses'=>'ProposerController@emailResetPassword', 'as' => 'proposer_resetPassword']);
 		Route::any('{id?}', ['uses' => 'ProposerController@index','as' => 'proposer_index']);
 	});
 

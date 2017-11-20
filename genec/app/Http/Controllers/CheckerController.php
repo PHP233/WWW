@@ -117,4 +117,37 @@ class CheckerController extends Controller {
 		return response()->json($res);
 	}
 
+	// 修改个人信息
+	public function updateInfo(Request $request) {
+		$res = new Res(Code::success,'');
+		$reviewer = session('reviewer');
+		$reviewer->name = $request->name;
+		$reviewer->phone = $request->phone;
+		$reviewer->email = $request->email;
+		$isExist = Reviewer::where('email',$request->email)->where('id','!=',$reviewer->id)->count();
+		if($isExist) {
+			$res->setCode(Code::error);
+			$res->setMsg('该邮箱存在其他人使用');
+			return response()->json($res);
+		}
+		$reviewer->save();
+		session()->put('reviewer',$reviewer);
+		$res->setMsg('更新个人信息成功！');
+		$res->setReply($reviewer);
+		return response()->json($res);
+	}
+
+	// 修改密码
+	public function changePwd(Request $request) {
+		$reviewer = session('reviewer');
+		if($reviewer->password != $request->pwd0) {
+			$res = new Res(Code::error,'原密码错误！');
+			return response()->json($res);
+		}
+		$reviewer->password = $request->pwd1;
+		$reviewer->save();
+		session()->flush();
+		return response()->json(new Res(Code::success,''));
+	}
+
 }

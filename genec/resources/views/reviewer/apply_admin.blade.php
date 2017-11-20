@@ -141,5 +141,7 @@
             }
             uploadHistoryModal.find('.row').html(content);
         }
+
+
     </script>
 @endsection

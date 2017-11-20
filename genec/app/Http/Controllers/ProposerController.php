@@ -10,12 +10,10 @@
 namespace App\Http\Controllers;
 use App\Model\Apply;
 use App\Model\Proposer;
-use App\Model\Reviewer;
 use App\utils\Code;
 use App\utils\Res;
 use App\utils\SendEmail;
 use \Illuminate\Http\Request;
-use MongoDB\Driver\Exception\AuthenticationException;
 
 class ProposerController extends Controller {
 	/*
@@ -33,7 +31,7 @@ class ProposerController extends Controller {
 			if(isset($email)) {   // 如果邮箱已经注册过
 				return redirect()->back()->withInput()->with('error','该邮箱已被注册');
 			}
-			$register["activeCode"] = md5(uniqid(md5(microtime(true)),true));
+			$register["activeCode"] = Code::randomCode();
 			$proposer = Proposer::create($register);
 			// 发送验证邮箱的链接
 			SendEmail::register(Code::call($proposer),route('emailVerification',['proposer_id'=>$proposer->id,'activeCode'=>$proposer->activeCode]),$proposer->email);
@@ -63,6 +61,19 @@ class ProposerController extends Controller {
 		session()->put('proposer',$proposer);
 		return view('proposer.verification_success');
 	}
+
+	/*
+	 * 邮箱重置密码
+	 */
+	public function emailResetPassword(Request $request) {
+		$email = $request->email;
+		$proposer = Proposer::where('email',$email)->first();
+		if(isset($proposer)) {
+			return redirect()->back()->with('error','邮箱未注册');
+		}
+
+	}
+
 
 	/*
 	 *  申请人登录

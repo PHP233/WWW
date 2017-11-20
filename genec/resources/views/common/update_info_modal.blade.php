@@ -22,6 +22,7 @@
                     </tr>
                     </tbody>
                 </table>
+
                 <form class="form-horizontal" hidden>
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">姓名</label>
@@ -138,11 +139,15 @@
             'phone': phone,
             'email': email
         },function (res) {
-            toast(res.msg, $('#self_info_modal'));
-            $('span.username').text(res.reply.name);
-            $('td#td_name').text(res.reply.name);
-            $('td#td_phone').text(res.reply.phone);
-            $('td#td_email').text(res.reply.email);
+            if(res.code) {
+                toast(res.msg, $('#self_info_modal'));
+                $('span.username').text(res.reply.name);
+                $('td#td_name').text(res.reply.name);
+                $('td#td_phone').text(res.reply.phone);
+                $('td#td_email').text(res.reply.email);
+            } else {
+                toast(res.msg,$('#self_info_modal'));
+            }
         });
     }
 

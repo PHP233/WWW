@@ -69,11 +69,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">请输入注册邮箱找回密码</h4>
+                <h4 class="modal-title">输入邮箱找回密码</h4>
             </div>
             <div class="modal-body">
-                <form action="#" class="form-inline">
-                    <input class="form-control input-lg" type="email" placeholder="注册邮箱" required autofocus>
+                <form action="@section('send_email_url'){{ route('sendResetPasswordEmail') }}@show" class="form-inline" method="post">
+                    <input name="email" class="form-control input-lg" type="email" placeholder="邮箱" required autofocus>
                     <button type="submit" class="btn btn-lg btn-success">找回</button>
                 </form>
             </div>
