@@ -81,7 +81,7 @@
                             return str;
                         }},
                         { "data": "id",render: function (data, type, row, meta) {
-                            var url = '/download/'+ row.id + '/' + row.modify_time;
+                            var url = '{{ route('checker::download_draft',['id'=>'','modify_time'=>'']) }}'+ '/' + row.id + '/' + row.modify_time;
                             return '<a href=' + url + '><span class="glyphicon glyphicon-cloud-download"></span></a>';
                         }}
                     ],
