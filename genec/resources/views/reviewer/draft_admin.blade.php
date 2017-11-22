@@ -72,6 +72,8 @@
         }
 
         function ajaxForFail(content) {
+            if(!confirm('确定不通过该送审稿？'))
+                return;
             $.get('{{ route('passOrFail') }}',{
                 isPass: 0,
                 draft_id: temp_documentId,
@@ -86,6 +88,8 @@
         }
 
         function ajaxForPass(content) {
+            if(!confirm('确定要通过该送审表？'))
+                return;
             $.get('{{ route('passOrFail') }}',{
                 isPass: 1,
                 draft_id: temp_documentId,

@@ -226,7 +226,10 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="{{ asset('static/assets/js/scripts/toast.js') }}"></script>
 @yield('javascript')
 <script>
-    const typeArr = ['','未审议','已审议','未通过审批','已批准','未分配','已分配','审批人','审议人'];
+    /*
+    dataTable 搜索栏关键字，点击按钮进行关键字的搜索
+     */
+    const typeArr = ['','未审议','已审议','未通过审批','已批准','未分配','已分配','审批人','审议人','项目完成','已撤销'];
     const url_arr = [
         '/reviewer/apply',
         '/reviewer/draft',

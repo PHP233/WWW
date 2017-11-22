@@ -184,15 +184,11 @@ function fail() {
         approve_sign.text('请输入理由和修改意见');
         return;
     }
-    if(!confirm('确定不通过该申请？'))
-        return;
     ajaxForFail(content);
 }
 
 // 审议通过 different
 function pass() {
-    if(!confirm('确定要通过该申请？'))
-        return;
     var content = approve_content.val().trim();
     // 如果通过没有给出理由就填写默认的
     if(content == '') {

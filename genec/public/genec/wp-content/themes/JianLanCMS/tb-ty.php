@@ -21,7 +21,7 @@
                 <li><a href="/genec?cat=4">行业动态</a></li>
                 <li><a href="/genec?cat=5">教育培训</a></li>
                 <li><a href="/genec?cat=6">数据库建设</a></li>
-                <li><a href="/proposer">项目申报</a></li>
+                <li><a href="/proposer" target="_blank">项目申报</a></li>
                 <li><a href="#">联系方式</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->

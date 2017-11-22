@@ -71,6 +71,8 @@
         }
 
         function ajaxForFail(content) {
+            if(!confirm('确定不通过该申请？'))
+                return;
             $.get('{{ route('passOrFail') }}',{
                 isPass: 0,
                 apply_id: temp_documentId,
@@ -85,6 +87,8 @@
         }
 
         function ajaxForPass(content) {
+            if(!confirm('确定要通过该申请？'))
+                return;
             $.get('{{ route('passOrFail') }}',{
                 isPass: 1,
                 apply_id: temp_documentId,

@@ -1,6 +1,6 @@
 <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
 	<p>
-		<a href="/proposer" class="btn btn-info btn-lg btn-block" type="button" >
+		<a href="/proposer" class="btn btn-info btn-lg btn-block" type="button"  target="_blank">
 			项目申请
 		</a>
 	</p>
@@ -15,7 +15,7 @@
 		<?php query_posts('cat='.$arr['company']); ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="media">
-				<a href="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 100); ?>">
+				<a  target="_blank" href="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 100); ?>">
 					<img class="media-object" src="<?php bloginfo('template_url'); ?>/img.php?src=<?php echo catch_that_image() ?>&w=191&h=50&zc=1" alt="<?php the_title(); ?>">
 				</a>
 			</div>
@@ -31,7 +31,7 @@
 		<?php query_posts('cat='.$arr['expert']); ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="media">
-				<a href="<?php the_permalink(); ?>" style="text-decoration:none; color: #000">
+				<a href="<?php the_permalink(); ?>" style="text-decoration:none; color: #000" target="_blank">
 			        <div class="media-left">
 			           <img class="media-object" alt="<?php the_title(); ?>" src="<?php bloginfo('template_url'); ?>/img.php?src=<?php echo catch_that_image() ?>&w=300&h=210&zc=1" data-holder-rendered="true" style="width: 64px; height: 64px;">
 			        </div>

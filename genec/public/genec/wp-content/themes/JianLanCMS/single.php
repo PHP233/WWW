@@ -53,17 +53,6 @@
                     </div>
 				    <?php endif ?>
                 </div>
-                <div class="duoshuo">
-				    <?php if (have_posts()) : ?>
-	<?php while (have_posts()) : the_post(); ?>
-                        <h2><span>此评论不代表本站观点</span>大家说</h2>
-
-
-				    <?php comments_template( '', true ); ?>
-
-<?php endwhile; ?>
-<?php endif ?>
-                </div>
             </div>
         <!-- 文章正文结束 -->
         </div>

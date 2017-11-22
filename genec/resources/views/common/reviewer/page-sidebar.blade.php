@@ -97,13 +97,13 @@
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:changeType(1,5);" class="nav-link ">
+                <a href="javascript:changeType(1,9);" class="nav-link ">
                     <i class="glyphicon glyphicon-ok"></i>
                     <span class="title">项目完成</span>
                 </a>
             </li>
             <li class="nav-item start ">
-                <a href="javascript:changeType(1,6);" class="nav-link ">
+                <a href="javascript:changeType(1,10);" class="nav-link ">
                     <i class="glyphicon glyphicon-remove"></i>
                     <span class="title">已撤销</span>
                 </a>
